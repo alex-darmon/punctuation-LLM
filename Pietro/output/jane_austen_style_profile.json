@@ -1,0 +1,99 @@
+{
+  "author_name": "Jane Austen",
+  "vocabulary_patterns": {
+    "word_complexity": "varied",
+    "archaic_words": [
+      "vex",
+      "disposition",
+      "indulgent",
+      "valetudinarian",
+      "connexions",
+      "chuse",
+      "backgammon",
+      "consequence",
+      "rejoined",
+      "grievously"
+    ],
+    "favorite_adjectives": [
+      "poor",
+      "dear",
+      "very",
+      "good",
+      "happy",
+      "pleasant",
+      "little",
+      "great",
+      "excellent",
+      "affectionate",
+      "comfortable",
+      "amiable"
+    ],
+    "favorite_verbs": [
+      "was",
+      "had",
+      "seemed",
+      "could",
+      "must",
+      "said",
+      "knew",
+      "thought",
+      "wished",
+      "feel"
+    ],
+    "lexical_diversity": "high"
+  },
+  "sentence_structure": {
+    "average_length": "long",
+    "complexity": "compound-complex",
+    "common_patterns": [
+      "Multiple clauses connected by semicolons",
+      "Lists of parallel descriptive phrases",
+      "Embedded dependent clauses with interrupted syntax",
+      "Balanced constructions with 'and' and 'but'",
+      "Long declarative sentences with multiple qualifications"
+    ],
+    "use_of_fragments": "rare",
+    "clause_preferences": "balanced"
+  },
+  "tone_characteristics": [
+    "gently ironic",
+    "observational",
+    "sympathetic",
+    "mildly satirical",
+    "elegant",
+    "measured",
+    "warmly critical"
+  ],
+  "common_phrases": [
+    "it was true that",
+    "she was aware that",
+    "it must be",
+    "there was some satisfaction in",
+    "she could not but",
+    "how was she to",
+    "it was a melancholy change",
+    "depend upon it",
+    "I am afraid",
+    "you know"
+  ],
+  "literary_devices": [
+    "irony",
+    "indirect discourse",
+    "understatement",
+    "characterization through dialogue",
+    "parallel structure",
+    "contrast",
+    "foreshadowing",
+    "epistrophe",
+    "anaphora",
+    "free indirect speech"
+  ],
+  "punctuation_style": {
+    "comma_usage": "heavy",
+    "dash_preference": "em-dash",
+    "semicolon_usage": "frequent",
+    "exclamation_usage": "occasional",
+    "ellipsis_usage": "rare"
+  },
+  "paragraph_structure": "Paragraphs vary in length from short transitional segments to extended passages. Longer paragraphs typically develop a single theme or scene with cumulative detail, building through layers of description, reflection, and qualification. Dialogue sections alternate between character speech and narrative commentary, with smooth transitions between action and inner thought. Narrative paragraphs often begin with a topic statement and expand through elaboration and illustration."
+}

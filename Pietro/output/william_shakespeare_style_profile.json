@@ -1,0 +1,123 @@
+{
+  "author_name": "William Shakespeare",
+  "vocabulary_patterns": {
+    "word_complexity": "varied",
+    "archaic_words": [
+      "thou",
+      "thee",
+      "thy",
+      "thine",
+      "hath",
+      "doth",
+      "wherefore",
+      "whither",
+      "sirrah",
+      "marry",
+      "anon",
+      "fortnight",
+      "betake",
+      "withal",
+      "holp",
+      "ope",
+      "e'er",
+      "ne'er",
+      "o'",
+      "colliers",
+      "bucklers",
+      "partisans"
+    ],
+    "favorite_adjectives": [
+      "fair",
+      "sweet",
+      "ancient",
+      "civil",
+      "gentle",
+      "good",
+      "old",
+      "young",
+      "dear",
+      "heavy",
+      "mad",
+      "pretty",
+      "rich",
+      "true"
+    ],
+    "favorite_verbs": [
+      "love",
+      "strike",
+      "draw",
+      "come",
+      "go",
+      "know",
+      "move",
+      "see",
+      "hear",
+      "speak",
+      "fear",
+      "bear",
+      "make"
+    ],
+    "lexical_diversity": "high"
+  },
+  "sentence_structure": {
+    "average_length": "varied",
+    "complexity": "compound-complex",
+    "common_patterns": [
+      "inverted syntax (object-verb-subject)",
+      "rhetorical questions",
+      "parallel constructions",
+      "conditional clauses (if/then)",
+      "imperative commands followed by explanation",
+      "subordinate clauses beginning with 'which', 'that', 'where'",
+      "apostrophe and direct address"
+    ],
+    "use_of_fragments": "occasional",
+    "clause_preferences": "balanced"
+  },
+  "tone_characteristics": [
+    "formal",
+    "elevated",
+    "dramatic",
+    "poetic",
+    "rhetorical",
+    "passionate",
+    "ceremonial"
+  ],
+  "common_phrases": [
+    "I pray thee",
+    "good my lord",
+    "what say you",
+    "by my word",
+    "God forbid",
+    "marry",
+    "in faith",
+    "what ho",
+    "ay me",
+    "O [noun]!"
+  ],
+  "literary_devices": [
+    "metaphor",
+    "simile",
+    "oxymoron",
+    "personification",
+    "alliteration",
+    "assonance",
+    "pun",
+    "wordplay",
+    "anaphora",
+    "apostrophe",
+    "imagery",
+    "parallelism",
+    "antithesis",
+    "hyperbole",
+    "allusion"
+  ],
+  "punctuation_style": {
+    "comma_usage": "moderate",
+    "dash_preference": "none",
+    "semicolon_usage": "frequent",
+    "exclamation_usage": "frequent",
+    "ellipsis_usage": "rare"
+  },
+  "paragraph_structure": "Dialogue-driven with verse passages organized in iambic pentameter; prose sections for comic relief and lower-status characters; poetic speeches structured in coherent thought units with strong use of enjambment; stage directions minimal and functional; soliloquies and extended metaphors developed over multiple lines with consistent rhythmic pattern"
+}

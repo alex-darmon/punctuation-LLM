@@ -1,0 +1,22 @@
+{
+  "overall_score": 82,
+  "vocabulary_match": 88,
+  "structure_match": 85,
+  "tone_match": 80,
+  "authenticity": 75,
+  "strengths": [
+    "Excellent use of Austenian archaic vocabulary including 'chused', 'connexions', 'grievously', and characteristic adjectives like 'considerable', 'melancholy', 'unfortunate'",
+    "Strong implementation of compound-complex sentences with multiple dependent clauses, semicolons, and balanced constructions using 'and' and 'but'",
+    "Effective deployment of Austenian phrases such as 'it must be acknowledged', 'it was true', 'could not but', 'appeared to be', 'seemed to promise'",
+    "Skillful use of indirect discourse and gentle irony, particularly in passages about Wilhelm II's temperament and the politicians' miscalculations",
+    "Appropriate heavy comma usage and frequent semicolons matching Austen's punctuation style"
+  ],
+  "improvements": [
+    "The observational tone sometimes becomes too overtly political and analytical for Austen's style, particularly in passages explaining military strategy and geopolitical analysis\u2014Austen typically focused on character and social observation rather than political theory",
+    "Some sentences are overly extended even for Austen (particularly the paragraph about German paranoia), losing the balanced elegance that characterizes her best prose",
+    "The earnest moralizing in later paragraphs (about governments and soldiers) lacks Austen's characteristic light touch and deflecting irony\u2014she would likely approach such serious subjects more obliquely",
+    "Several modern analytical phrases slip through ('demonstrates that', 'collective failure of judgment', 'cautionary tales') that feel more like 20th-century historical writing than early 19th-century narrative",
+    "The subject matter itself (military campaigns, geopolitical strategy, naval warfare) is quite distant from Austen's typical domestic and social focus, making full authenticity challenging regardless of stylistic execution"
+  ],
+  "recommendation": "accept"
+}

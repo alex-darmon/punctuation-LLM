@@ -1,0 +1,22 @@
+{
+  "overall_score": 72,
+  "vocabulary_match": 78,
+  "structure_match": 65,
+  "tone_match": 75,
+  "authenticity": 70,
+  "strengths": [
+    "Excellent use of archaic vocabulary including 'thy', 'thou', 'doth', 'hath', 'e'er', 'ne'er', 'o'er', 'twixt', and appropriate Shakespearean phrases like 'What ho', 'Mark', 'good friends'",
+    "Strong deployment of Shakespearean literary devices including apostrophe ('O ancient enemies'), metaphor ('Russian bear and British lion'), personification (Time as character), and parallel constructions",
+    "Effective use of inverted syntax and subordinate clauses ('Chief 'mongst these stood Wilhelm', 'whereof the ancient poets sang')",
+    "Appropriate dramatic structure with Chorus narration, character entrances/exits, asides, and stage directions in Shakespearean format",
+    "Good command of elevated, formal, and dramatic tone with rhetorical flourishes"
+  ],
+  "improvements": [
+    "The verse does not consistently maintain iambic pentameter, which is fundamental to Shakespeare's style - many lines have irregular meter or wrong syllable counts",
+    "Overuse of modern conceptual language that Shakespeare would not employ: 'naval rivalry', 'diplomatic resolution', 'historical context', 'virtue-signal' (especially jarring)",
+    "Stage directions are too modern and explanatory ('as a ghost or memory', 'as monarchs or personifications') - Shakespeare's are minimal and functional",
+    "The Chorus device, while Shakespearean, is used excessively here in ways more reminiscent of Greek drama than Shakespeare's typical structure where Chorus appears at act beginnings",
+    "Some sentences remain too syntactically modern despite archaic vocabulary ('Germania plans not to conquer Britain' could be more inverted); needs more complex compound-complex structures"
+  ],
+  "recommendation": "revise"
+}

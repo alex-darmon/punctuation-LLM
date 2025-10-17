@@ -1,0 +1,22 @@
+{
+  "overall_score": 72,
+  "vocabulary_match": 78,
+  "structure_match": 75,
+  "tone_match": 70,
+  "authenticity": 65,
+  "strengths": [
+    "Excellent use of Fleming's archaic vocabulary ('orgies', 'dolorous', 'vast', 'glorious', 'dreadful') and favorite adjectives integrated naturally throughout",
+    "Strong implementation of common phrases ('as if', 'no doubt', 'to be sure', 'thank Heaven', 'in a manner most') that create authentic period voice",
+    "Effective use of complex sentence structures with multiple clauses, semicolons, and em-dashes matching Fleming's punctuation style",
+    "Good employment of melodramatic tone and Gothic dramatic flourishes ('like serpents from the grass', 'hell upon earth', 'thunderbolt from a clear sky')",
+    "Successful cataloguing technique in descriptive passages, particularly in the funeral scene description"
+  ],
+  "improvements": [
+    "Overuse of intensifiers and exclamatory constructions ('nay', 'most', 'utterly', 'exceedingly') creates excessive ornamentation that feels forced rather than natural",
+    "Modern historical content sometimes clashes with 19th-century narrative voice, particularly in factual passages about treaties and political details",
+    "Fleming's style includes wry humor and lighter touches that are largely absent here\u2014the tone is relentlessly heavy and dramatic throughout",
+    "Some phrases are repetitive ('vast and horrible', 'dark and dolorous') where Fleming would vary her descriptive language more creatively",
+    "The rewrite occasionally loses narrative momentum in favor of stylistic flourishes, whereas Fleming balanced ornate description with forward movement"
+  ],
+  "recommendation": "revise"
+}

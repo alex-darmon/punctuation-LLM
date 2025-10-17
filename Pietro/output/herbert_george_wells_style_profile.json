@@ -1,0 +1,93 @@
+{
+  "author_name": "Herbert George Wells",
+  "vocabulary_patterns": {
+    "word_complexity": "varied",
+    "archaic_words": [
+      "portmanteau",
+      "sovereigns",
+      "\u00e9clat",
+      "brooked",
+      "loath",
+      "stateliness",
+      "brisked",
+      "lymphatic"
+    ],
+    "favorite_adjectives": [
+      "white",
+      "little",
+      "black",
+      "blue",
+      "muffled",
+      "bandaged",
+      "thick",
+      "dark",
+      "curious",
+      "strange"
+    ],
+    "favorite_verbs": [
+      "went",
+      "said",
+      "stood",
+      "turned",
+      "carried",
+      "noticed",
+      "glanced",
+      "took",
+      "placed",
+      "flung"
+    ],
+    "lexical_diversity": "high"
+  },
+  "sentence_structure": {
+    "average_length": "varied",
+    "complexity": "compound-complex",
+    "common_patterns": [
+      "Long descriptive openings followed by action",
+      "Sequential action chains connected by 'and'",
+      "Dialogue followed by physical description of speaker",
+      "Compound sentences with multiple clauses",
+      "Inverted constructions for emphasis"
+    ],
+    "use_of_fragments": "occasional",
+    "clause_preferences": "balanced"
+  },
+  "tone_characteristics": [
+    "observational",
+    "matter-of-fact",
+    "mildly ironic",
+    "suspenseful",
+    "detailed",
+    "conversational",
+    "subtly humorous"
+  ],
+  "common_phrases": [
+    "more dead than alive",
+    "with emphasis",
+    "as she saw now",
+    "for a moment",
+    "it would seem",
+    "so to speak",
+    "bless me",
+    "to be sure",
+    "and then",
+    "and with that"
+  ],
+  "literary_devices": [
+    "visual imagery",
+    "simile (like a man of stone)",
+    "onomatopoeia (Chirk, chirk, chirk)",
+    "repetition",
+    "foreshadowing",
+    "dramatic irony",
+    "physical description for characterization",
+    "detailed sensory description"
+  ],
+  "punctuation_style": {
+    "comma_usage": "heavy",
+    "dash_preference": "em-dash",
+    "semicolon_usage": "occasional",
+    "exclamation_usage": "occasional",
+    "ellipsis_usage": "occasional"
+  },
+  "paragraph_structure": "Paragraphs vary from short dramatic moments to longer descriptive passages. Often structured around a single action or observation, building from setup through action to consequence. Dialogue paragraphs are brief and functional. Descriptive paragraphs layer physical details progressively. Scene-setting paragraphs use cumulative sentences with multiple clauses. Transitions between paragraphs follow chronological progression or shift perspective from character to character."
+}
