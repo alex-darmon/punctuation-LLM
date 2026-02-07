@@ -1,0 +1,6 @@
+# Dependencies for chunk_size_analysis.py
+configargparse
+spacy
+scipy
+matplotlib
+numpy
