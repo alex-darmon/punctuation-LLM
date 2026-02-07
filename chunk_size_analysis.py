@@ -5,18 +5,28 @@ Separate plots for visual and statistical analysis - V2.
 Plot 1: Heatmaps showing FIRST HALF vs SECOND HALF at each chunk size
 Plot 2: KL mean ± std dev, one subplot per author
 
-Uses the punctuation-stylometry codebase for analysis.
-Run from this directory: python chunk_size_analysis.py
+Uses the punctuation-stylometry-master codebase for analysis.
 """
 
+import sys
 from pathlib import Path
+
+# Add punctuation-stylometry-master to path for imports
+_SCRIPT_DIR = Path(__file__).resolve().parent
+_PUNCT_STYLOMETRY_DIR = _SCRIPT_DIR / 'punctuation-stylometry-master'
+sys.path.insert(0, str(_PUNCT_STYLOMETRY_DIR))
+
+# Pass config path so punctuation.config finds it (must be before importing punctuation)
+_config_path = str(_PUNCT_STYLOMETRY_DIR / 'conf' / 'punctuation.ini')
+if '-c' not in sys.argv and '--config' not in sys.argv:
+    sys.argv = [sys.argv[0], '-c', _config_path] + sys.argv[1:]
 
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from matplotlib.colors import ListedColormap
 
-# Imports from punctuation-stylometry
+# Imports from punctuation-stylometry-master
 from punctuation.config import options
 from punctuation.parser.punctuation_parser import (
     get_textinfo,
@@ -32,10 +42,8 @@ from punctuation.feature_operations.distances import d_KL, d_KL_mat
 # Punctuation vector from original codebase
 PUNCTUATION_VECTOR = options.punctuation_vector
 
-# Paths relative to project root (parent of punctuation-stylometry-master)
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
-FULL_BOOKS_DIR = _PROJECT_ROOT / 'full_books'
-OUTPUT_DIR = _PROJECT_ROOT / 'separate_plots_comparison'
+FULL_BOOKS_DIR = Path('full_books')
+OUTPUT_DIR = Path('separate_plots_comparison')
 
 
 def load_text(filepath):
