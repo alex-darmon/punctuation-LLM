@@ -1,0 +1,40 @@
+{
+  "f1": [
+    0.02714478503952188,
+    0.15415461731251204,
+    0.003277424330055909,
+    0.00335454019664546,
+    0.4613071139386929,
+    0.24395604395604395,
+    0.005320994794679005,
+    0.08559861191440139,
+    0.015885868517447464,
+    0.0
+  ],
+  "freq_lines": [
+    "  comma (,): 46.1%",
+    "  period (.): 24.4%",
+    "  quotation mark (\"): 15.4%",
+    "  semicolon (;): 8.6%",
+    "  exclamation mark (!): 2.7%",
+    "  question mark (?): 1.6%",
+    "  colon (:): 0.5%"
+  ],
+  "transition_lines": [
+    "  After exclamation mark (!), the next punctuation is typically: comma (,) (40%), quotation mark (\") (22%), period (.) (20%)",
+    "  After quotation mark (\"), the next punctuation is typically: comma (,) (43%), quotation mark (\") (26%), period (.) (16%)",
+    "  After comma (,), the next punctuation is typically: comma (,) (50%), period (.) (28%), semicolon (;) (10%)",
+    "  After period (.), the next punctuation is typically: comma (,) (38%), quotation mark (\") (25%), period (.) (23%)",
+    "  After semicolon (;), the next punctuation is typically: comma (,) (59%), period (.) (24%), semicolon (;) (9%)",
+    "  After question mark (?), the next punctuation is typically: quotation mark (\") (57%), comma (,) (17%), period (.) (12%)"
+  ],
+  "mean_sentence_length": 21.572081150073895,
+  "median_sentence_length": 15.0,
+  "sentence_p25": 8.0,
+  "sentence_p75": 28.0,
+  "short_pct": 34.797796587397556,
+  "medium_pct": 36.82654843477093,
+  "long_pct": 20.220341260244528,
+  "very_long_pct": 8.155313717586994,
+  "mean_words_between_punctuation": 6.190900327742433
+}

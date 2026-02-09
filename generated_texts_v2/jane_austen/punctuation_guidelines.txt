@@ -1,0 +1,35 @@
+=== PUNCTUATION STYLE GUIDELINES FOR JANE AUSTEN ===
+
+1. PUNCTUATION FREQUENCY TARGETS
+   Match these approximate percentages of total punctuation marks:
+     comma (,): 46.1%
+     period (.): 24.4%
+     quotation mark ("): 15.4%
+     semicolon (;): 8.6%
+     exclamation mark (!): 2.7%
+     question mark (?): 1.6%
+     colon (:): 0.5%
+
+2. PUNCTUATION SEQUENCING PATTERNS
+   Follow these patterns for which punctuation typically follows which:
+     After exclamation mark (!), the next punctuation is typically: comma (,) (40%), quotation mark (") (22%), period (.) (20%)
+     After quotation mark ("), the next punctuation is typically: comma (,) (43%), quotation mark (") (26%), period (.) (16%)
+     After comma (,), the next punctuation is typically: comma (,) (50%), period (.) (28%), semicolon (;) (10%)
+     After period (.), the next punctuation is typically: comma (,) (38%), quotation mark (") (25%), period (.) (23%)
+     After semicolon (;), the next punctuation is typically: comma (,) (59%), period (.) (24%), semicolon (;) (9%)
+     After question mark (?), the next punctuation is typically: quotation mark (") (57%), comma (,) (17%), period (.) (12%)
+
+3. SENTENCE LENGTH DISTRIBUTION
+   Average sentence length: ~22 words
+   Most sentences fall between 8 and 28 words
+   Sentence length mix:
+     Short (1-10 words):    ~35%
+     Medium (11-25 words):  ~37%
+     Long (26-50 words):    ~20%
+     Very long (50+ words): ~8%
+
+4. PUNCTUATION DENSITY
+   Average words between consecutive punctuation marks: ~6.2
+   This controls the overall rhythm and density of punctuation.
+
+=== END PUNCTUATION GUIDELINES ===

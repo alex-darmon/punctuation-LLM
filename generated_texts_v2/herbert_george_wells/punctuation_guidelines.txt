@@ -1,0 +1,34 @@
+=== PUNCTUATION STYLE GUIDELINES FOR H.G. WELLS ===
+
+1. PUNCTUATION FREQUENCY TARGETS
+   Match these approximate percentages of total punctuation marks:
+     comma (,): 35.6%
+     period (.): 31.7%
+     quotation mark ("): 24.2%
+     exclamation mark (!): 4.0%
+     question mark (?): 2.8%
+     semicolon (;): 1.2%
+
+2. PUNCTUATION SEQUENCING PATTERNS
+   Follow these patterns for which punctuation typically follows which:
+     After exclamation mark (!), the next punctuation is typically: quotation mark (") (56%), exclamation mark (!) (14%), period (.) (13%)
+     After quotation mark ("), the next punctuation is typically: comma (,) (39%), period (.) (31%), quotation mark (") (15%)
+     After comma (,), the next punctuation is typically: comma (,) (41%), period (.) (39%), quotation mark (") (15%)
+     After period (.), the next punctuation is typically: quotation mark (") (34%), comma (,) (32%), period (.) (28%)
+     After semicolon (;), the next punctuation is typically: comma (,) (46%), period (.) (35%), quotation mark (") (15%)
+     After question mark (?), the next punctuation is typically: quotation mark (") (69%), period (.) (12%), question mark (?) (9%)
+
+3. SENTENCE LENGTH DISTRIBUTION
+   Average sentence length: ~13 words
+   Most sentences fall between 5 and 18 words
+   Sentence length mix:
+     Short (1-10 words):    ~54%
+     Medium (11-25 words):  ~34%
+     Long (26-50 words):    ~11%
+     Very long (50+ words): ~1%
+
+4. PUNCTUATION DENSITY
+   Average words between consecutive punctuation marks: ~4.9
+   This controls the overall rhythm and density of punctuation.
+
+=== END PUNCTUATION GUIDELINES ===

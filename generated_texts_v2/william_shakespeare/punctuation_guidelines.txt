@@ -1,0 +1,34 @@
+=== PUNCTUATION STYLE GUIDELINES FOR WILLIAM SHAKESPEARE ===
+
+1. PUNCTUATION FREQUENCY TARGETS
+   Match these approximate percentages of total punctuation marks:
+     comma (,): 43.0%
+     period (.): 41.0%
+     question mark (?): 5.9%
+     semicolon (;): 5.1%
+     exclamation mark (!): 3.9%
+     colon (:): 1.1%
+
+2. PUNCTUATION SEQUENCING PATTERNS
+   Follow these patterns for which punctuation typically follows which:
+     After exclamation mark (!), the next punctuation is typically: comma (,) (41%), period (.) (33%), exclamation mark (!) (19%)
+     After comma (,), the next punctuation is typically: comma (,) (45%), period (.) (36%), semicolon (;) (7%)
+     After period (.), the next punctuation is typically: period (.) (47%), comma (,) (41%), question mark (?) (5%)
+     After colon (:), the next punctuation is typically: comma (,) (77%), period (.) (16%), semicolon (;) (6%)
+     After semicolon (;), the next punctuation is typically: comma (,) (52%), period (.) (38%), semicolon (;) (6%)
+     After question mark (?), the next punctuation is typically: period (.) (53%), comma (,) (30%), question mark (?) (12%)
+
+3. SENTENCE LENGTH DISTRIBUTION
+   Average sentence length: ~8 words
+   Most sentences fall between 1 and 10 words
+   Sentence length mix:
+     Short (1-10 words):    ~76%
+     Medium (11-25 words):  ~18%
+     Long (26-50 words):    ~6%
+     Very long (50+ words): ~1%
+
+4. PUNCTUATION DENSITY
+   Average words between consecutive punctuation marks: ~4.2
+   This controls the overall rhythm and density of punctuation.
+
+=== END PUNCTUATION GUIDELINES ===

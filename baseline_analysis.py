@@ -14,12 +14,32 @@ Both questions use Option A (empirical random authors: 47 Gutenberg texts).
 
 Usage:
     python baseline_analysis.py
+    python baseline_analysis.py --generated-dir generated_texts_v1_rerun --output-dir baseline_results_v1_rerun
 """
 
 import sys
 import json
 import numpy as np
 from pathlib import Path
+
+# ---------------------------------------------------------------------------
+# Extract custom CLI args before configargparse sees them
+# ---------------------------------------------------------------------------
+_generated_dir = None
+_output_dir = None
+_clean_argv = [sys.argv[0]]
+_i = 1
+while _i < len(sys.argv):
+    if sys.argv[_i] == '--generated-dir' and _i + 1 < len(sys.argv):
+        _generated_dir = sys.argv[_i + 1]
+        _i += 2
+    elif sys.argv[_i] == '--output-dir' and _i + 1 < len(sys.argv):
+        _output_dir = sys.argv[_i + 1]
+        _i += 2
+    else:
+        _clean_argv.append(sys.argv[_i])
+        _i += 1
+sys.argv = _clean_argv
 
 # ---------------------------------------------------------------------------
 # punctuation-stylometry-master imports
@@ -53,8 +73,8 @@ AUTHORS = {
 
 FULL_BOOKS_DIR = Path('full_books')
 GUTENBERG_DIR = Path('gutenberg_texts')
-GENERATED_DIR = Path('generated_texts')
-OUTPUT_DIR = Path('baseline_results')
+GENERATED_DIR = Path(_generated_dir) if _generated_dir else Path('generated_texts')
+OUTPUT_DIR = Path(_output_dir) if _output_dir else Path('baseline_results')
 
 
 # =============================================================================

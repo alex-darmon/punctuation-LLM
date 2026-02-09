@@ -1,15 +1,20 @@
 #!/usr/bin/env python3
 """
-Pipeline to generate LLM-authored text in the style of classic authors,
-then compare punctuation fingerprints using the punctuation-stylometry codebase.
+Pipeline v3: Generate LLM-authored text with NO excerpt — only the author's
+name as a style cue.  Tests the LLM's internal / parametric knowledge of
+each author's writing (and punctuation) style.
+
+Differences from v1:
+  - No excerpt from the real book is provided in the prompt.
+  - The LLM must rely entirely on its training-time knowledge of the author.
+  - Outputs go to generated_texts_v3/.
 
 Usage:
     export GEMINI_API_KEY="your-key-here"
-    python generate_llm_texts.py                       # all authors, 10 runs each
-    python generate_llm_texts.py --author jane_austen   # one author only
-    python generate_llm_texts.py --runs 5               # custom number of runs
-    python generate_llm_texts.py --skip-existing        # resume, reuse completed runs
-    python generate_llm_texts.py --output-dir generated_texts_v1_rerun  # custom output dir
+    python generate_llm_texts_v3.py                       # all authors, 10 runs
+    python generate_llm_texts_v3.py --author jane_austen   # one author only
+    python generate_llm_texts_v3.py --runs 5               # custom runs
+    python generate_llm_texts_v3.py --skip-existing        # resume
 """
 
 import sys
@@ -26,9 +31,8 @@ import threading
 # ---------------------------------------------------------------------------
 _author_filter = None
 _num_runs = 10
-_parallel = 5  # concurrent runs
+_parallel = 5
 _skip_existing = False
-_output_dir = None  # override OUTPUT_DIR if set
 _clean_argv = [sys.argv[0]]
 _i = 1
 while _i < len(sys.argv):
@@ -40,9 +44,6 @@ while _i < len(sys.argv):
         _i += 2
     elif sys.argv[_i] == '--parallel' and _i + 1 < len(sys.argv):
         _parallel = int(sys.argv[_i + 1])
-        _i += 2
-    elif sys.argv[_i] == '--output-dir' and _i + 1 < len(sys.argv):
-        _output_dir = sys.argv[_i + 1]
         _i += 2
     elif sys.argv[_i] == '--skip-existing':
         _skip_existing = True
@@ -114,26 +115,19 @@ AUTHORS = {
 }
 
 FULL_BOOKS_DIR = Path('full_books')
-OUTPUT_DIR = Path(_output_dir) if _output_dir else Path('generated_texts')
+OUTPUT_DIR = Path('generated_texts_v3')
 
 MODEL = 'gemini-2.5-flash'
 
-# Target punctuation marks for generated text
 TARGET_MARKS = 2000
-
-# How many words to include as a style excerpt in the prompt
-EXCERPT_WORDS = 1500
-
-# Max generation attempts (continuation rounds) per run
 MAX_ROUNDS = 30
 
-# Gemini config
-TEMPERATURE = 1.0        # creative but not wild
-MAX_OUTPUT_TOKENS = 8192  # per call
+TEMPERATURE = 1.0
+MAX_OUTPUT_TOKENS = 8192
 
 
 # =============================================================================
-# PUNCTUATION HELPERS (thin wrappers around stylometry-master)
+# PUNCTUATION HELPERS
 # =============================================================================
 
 def extract_punctuation(text):
@@ -160,8 +154,6 @@ def compute_all_features(punctuation_seq):
     if f2 is None:
         return None
     f3 = normalised_transition_mat(f2, f1)
-    # Flatten f3 to a 100-element vector (joint probability distribution),
-    # consistent with the paper & library: dKL is applied to flattened f3.
     f3_flat = f3.flatten().tolist()
     return {'f1': f1, 'f2': f2, 'f3': f3_flat}
 
@@ -176,57 +168,37 @@ def load_text(filepath):
         return f.read()
 
 
-def get_excerpt(text, n_words=EXCERPT_WORDS):
-    """
-    Extract a representative excerpt from the middle of the text.
-    Taking from the middle avoids title pages, preambles, and
-    end-matter / appendices.
-    """
-    words = text.split()
-    mid = len(words) // 2
-    half = n_words // 2
-    start = max(0, mid - half)
-    excerpt_words = words[start:start + n_words]
-    return ' '.join(excerpt_words)
-
-
 def clean_em_dashes(text):
     """Remove em-dashes from generated text (LLMs overuse them)."""
     return text.replace('—', ', ').replace('–', ', ').replace(' ,', ',')
 
 
 # =============================================================================
-# PROMPT TEMPLATES
+# PROMPT TEMPLATES (v3: name-only, no excerpt)
 # =============================================================================
 
-PROSE_PROMPT = """Here is a passage by {author_name}:
+PROSE_PROMPT_V3 = """Write an original piece of fiction in the writing style of {author_name}. Create your own characters and story — do not retell or reference any of {author_name}'s existing works.
 
----
-{excerpt}
----
-
-Write an original piece of fiction in the same writing style as the passage above. Create your own characters and story — do not retell or reference any of {author_name}'s existing works.
+Your writing should closely replicate {author_name}'s distinctive prose style, including sentence structure, vocabulary, tone, and punctuation habits.
 
 Important:
 - Do NOT use em-dashes or en-dashes (— or –) anywhere in the text.
 - Output plain prose text only, with no markdown formatting whatsoever (no #, **, *, etc.).
 - The text should read exactly as it would appear in a printed book."""
 
-PLAY_PROMPT = """Here is a passage from a play by {author_name}:
 
----
-{excerpt}
----
+PLAY_PROMPT_V3 = """Write an original scene of a play in the writing style of {author_name}. Create your own characters and story — do not retell or reference any of {author_name}'s existing works.
 
-Write an original scene of a play in the same writing style as the passage above. Create your own characters and story — do not retell or reference any of {author_name}'s existing works.
+Your writing should closely replicate {author_name}'s distinctive dramatic style, including verse structure, vocabulary, tone, and punctuation habits.
 
 Important:
 - Do NOT use em-dashes or en-dashes (— or –) anywhere in the text.
-- Format the play exactly as in the passage: character name in CAPITALS on its own line, then dialogue on the next line. No colons after character names.
+- Format the play in the style of {author_name}: character name in CAPITALS on its own line, then dialogue on the next line. No colons after character names.
 - Output plain text only, with no markdown formatting whatsoever (no #, **, *, etc.).
 - The text should read exactly as it would appear in a printed play."""
 
-CONTINUATION_PROMPT = """Continue the story below from where it left off. Maintain the same writing style consistently. Write at least 2000 words.
+
+CONTINUATION_PROMPT_V3 = """Continue the story below from where it left off. Maintain the same writing style of {author_name} consistently. Write at least 2000 words.
 
 Important:
 - Do NOT use em-dashes or en-dashes (— or –) anywhere in the text.
@@ -239,7 +211,8 @@ Story so far (last section):
 
 Continue:"""
 
-PLAY_CONTINUATION_PROMPT = """Continue the play below from where it left off. Maintain the same writing style and play format consistently. Write at least 2000 words.
+
+PLAY_CONTINUATION_PROMPT_V3 = """Continue the play below from where it left off. Maintain the same writing style of {author_name} and play format consistently. Write at least 2000 words.
 
 Important:
 - Do NOT use em-dashes or en-dashes (— or –) anywhere in the text.
@@ -261,24 +234,20 @@ Continue:"""
 def generate_text(model, author_key, author_info, run_id):
     """
     Generate text in the style of an author until we reach TARGET_MARKS
-    punctuation marks. Each run is independent (fresh story).
+    punctuation marks.  Each run is independent (fresh story).
+    No excerpt is provided — the LLM uses only its parametric knowledge.
     """
     author_name = author_info['name']
     form = author_info['form']
     tag = f"[{author_name[:12]:>12} run {run_id:02d}]"
 
-    # Load the real book and extract an excerpt
-    book_path = FULL_BOOKS_DIR / f"{author_key}_full.txt"
-    book_text = load_text(book_path)
-    excerpt = get_excerpt(book_text)
-
     # Pick the right prompt template
     if form == 'play':
-        initial_prompt = PLAY_PROMPT.format(author_name=author_name, excerpt=excerpt)
-        cont_prompt_template = PLAY_CONTINUATION_PROMPT
+        initial_prompt = PLAY_PROMPT_V3.format(author_name=author_name)
+        cont_prompt_template = PLAY_CONTINUATION_PROMPT_V3
     else:
-        initial_prompt = PROSE_PROMPT.format(author_name=author_name, excerpt=excerpt)
-        cont_prompt_template = CONTINUATION_PROMPT
+        initial_prompt = PROSE_PROMPT_V3.format(author_name=author_name)
+        cont_prompt_template = CONTINUATION_PROMPT_V3
 
     accumulated_text = ""
     current_marks = 0
@@ -290,7 +259,10 @@ def generate_text(model, author_key, author_info, run_id):
             # Use last ~500 words as context for continuation
             last_words = accumulated_text.split()[-500:]
             last_section = ' '.join(last_words)
-            prompt = cont_prompt_template.format(last_section=last_section)
+            prompt = cont_prompt_template.format(
+                last_section=last_section,
+                author_name=author_name,
+            )
 
         safe_print(f"  {tag} round {round_num}: {current_marks}/{TARGET_MARKS} marks...")
 
@@ -349,9 +321,7 @@ def analyze_comparison(author_key, real_text, generated_text):
     if real_seq is None or gen_seq is None:
         return None
 
-    # Truncate both to TARGET_MARKS for fair comparison
     chunk_size = min(TARGET_MARKS, len(real_seq), len(gen_seq))
-    # Take from middle of real text
     real_start = (len(real_seq) - chunk_size) // 2
     real_chunk = real_seq[real_start:real_start + chunk_size]
     gen_chunk = gen_seq[:chunk_size]
@@ -382,7 +352,6 @@ def analyze_comparison(author_key, real_text, generated_text):
 # =============================================================================
 
 def main():
-    # Check for API key
     api_key = os.environ.get('GEMINI_API_KEY')
     if not api_key:
         print("ERROR: Set GEMINI_API_KEY environment variable.")
@@ -394,7 +363,6 @@ def main():
 
     OUTPUT_DIR.mkdir(exist_ok=True)
 
-    # Filter to single author if requested (parsed before configargparse ran)
     if _author_filter:
         if _author_filter not in AUTHORS:
             print(f"ERROR: Unknown author '{_author_filter}'")
@@ -408,7 +376,7 @@ def main():
     max_workers = min(_parallel, num_runs)
 
     print("=" * 60)
-    print("LLM Text Generation Pipeline")
+    print("LLM Text Generation Pipeline v3 (name-only, no excerpt)")
     print(f"Model: {MODEL}")
     print(f"Target: {TARGET_MARKS} punctuation marks per run")
     print(f"Runs per author: {num_runs}")
@@ -423,7 +391,6 @@ def main():
         author_name = author_info['name']
         real_text = load_text(FULL_BOOKS_DIR / f"{author_key}_full.txt")
 
-        # Create author subdirectory
         author_dir = OUTPUT_DIR / author_key
         author_dir.mkdir(exist_ok=True)
 
@@ -433,21 +400,22 @@ def main():
 
         author_results = []
 
-        # Determine which runs need generating vs which already exist
         runs_to_generate = []
         runs_to_reanalyze = []
         for rid in range(1, num_runs + 1):
             out_path = author_dir / f"run_{rid:02d}.txt"
-            if _skip_existing and out_path.exists() and out_path.stat().st_size > 0:
+            if (_skip_existing and out_path.exists()
+                    and out_path.stat().st_size > 0):
                 runs_to_reanalyze.append(rid)
             else:
                 runs_to_generate.append(rid)
 
         if runs_to_reanalyze:
-            safe_print(f"  Reusing {len(runs_to_reanalyze)} existing runs: "
-                        f"{runs_to_reanalyze}")
+            safe_print(
+                f"  Reusing {len(runs_to_reanalyze)} existing runs: "
+                f"{runs_to_reanalyze}"
+            )
 
-        # Re-analyze existing runs
         for rid in runs_to_reanalyze:
             out_path = author_dir / f"run_{rid:02d}.txt"
             generated = load_text(out_path)
@@ -455,17 +423,17 @@ def main():
             if comparison:
                 comparison['run_id'] = rid
                 author_results.append(comparison)
-                safe_print(f"  [cached]  run {rid:02d}: "
-                           f"f1 KL={comparison['f1_kl']:.4f}  "
-                           f"f3 KL={comparison['f3_kl']:.4f}  "
-                           f"marks={comparison['gen_marks']}")
+                safe_print(
+                    f"  [cached]  run {rid:02d}: "
+                    f"f1 KL={comparison['f1_kl']:.4f}  "
+                    f"f3 KL={comparison['f3_kl']:.4f}  "
+                    f"marks={comparison['gen_marks']}"
+                )
 
-        # Generate remaining runs
         def run_one(run_id):
-            """Generate + analyze a single run. Returns (run_id, comparison)."""
+            """Generate + analyze a single run."""
             generated = generate_text(model, author_key, author_info, run_id)
 
-            # Save generated text
             out_path = author_dir / f"run_{run_id:02d}.txt"
             with open(out_path, 'w', encoding='utf-8') as f:
                 f.write(generated)
@@ -477,22 +445,24 @@ def main():
 
         if runs_to_generate:
             with ThreadPoolExecutor(max_workers=max_workers) as pool:
-                futures = {pool.submit(run_one, rid): rid
-                           for rid in runs_to_generate}
+                futures = {
+                    pool.submit(run_one, rid): rid
+                    for rid in runs_to_generate
+                }
 
                 for future in as_completed(futures):
                     run_id, comparison = future.result()
                     if comparison:
                         author_results.append(comparison)
-                        safe_print(f"  [result] run {run_id:02d}: "
-                                   f"f1 KL={comparison['f1_kl']:.4f}  "
-                                   f"f3 KL={comparison['f3_kl']:.4f}  "
-                                   f"marks={comparison['gen_marks']}")
+                        safe_print(
+                            f"  [result] run {run_id:02d}: "
+                            f"f1 KL={comparison['f1_kl']:.4f}  "
+                            f"f3 KL={comparison['f3_kl']:.4f}  "
+                            f"marks={comparison['gen_marks']}"
+                        )
 
-        # Sort by run id for clean output
         author_results.sort(key=lambda r: r['run_id'])
 
-        # Summary stats for this author
         if author_results:
             f1_vals = [r['f1_kl'] for r in author_results]
             f3_vals = [r['f3_kl'] for r in author_results]
@@ -511,7 +481,7 @@ def main():
     # Final summary table
     if all_results:
         print("\n" + "=" * 70)
-        print("SUMMARY: Real vs LLM-Generated Punctuation (mean ± std)")
+        print("SUMMARY: Real vs LLM-Generated Punctuation v3 (mean ± std)")
         print("=" * 70)
         print(f"{'Author':<25} {'Runs':>5} {'f1 KL':>16} {'f3 KL':>16}")
         print("-" * 65)
@@ -521,9 +491,11 @@ def main():
                 f1 = [r['f1_kl'] for r in runs]
                 f3 = [r['f3_kl'] for r in runs]
                 name = AUTHORS[author_key]['name']
-                print(f"{name:<25} {len(runs):>5} "
-                      f"{np.mean(f1):7.4f}±{np.std(f1):.4f} "
-                      f"{np.mean(f3):7.4f}±{np.std(f3):.4f}")
+                print(
+                    f"{name:<25} {len(runs):>5} "
+                    f"{np.mean(f1):7.4f}±{np.std(f1):.4f} "
+                    f"{np.mean(f3):7.4f}±{np.std(f3):.4f}"
+                )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,34 @@
+=== PUNCTUATION STYLE GUIDELINES FOR AGNES MAY FLEMING ===
+
+1. PUNCTUATION FREQUENCY TARGETS
+   Match these approximate percentages of total punctuation marks:
+     comma (,): 44.0%
+     quotation mark ("): 23.3%
+     period (.): 17.2%
+     semicolon (;): 5.7%
+     exclamation mark (!): 5.2%
+     question mark (?): 4.0%
+
+2. PUNCTUATION SEQUENCING PATTERNS
+   Follow these patterns for which punctuation typically follows which:
+     After exclamation mark (!), the next punctuation is typically: quotation mark (") (54%), comma (,) (23%), exclamation mark (!) (11%)
+     After quotation mark ("), the next punctuation is typically: comma (,) (45%), quotation mark (") (24%), period (.) (11%)
+     After comma (,), the next punctuation is typically: comma (,) (49%), period (.) (28%), quotation mark (") (8%)
+     After period (.), the next punctuation is typically: quotation mark (") (43%), comma (,) (39%), period (.) (6%)
+     After semicolon (;), the next punctuation is typically: comma (,) (62%), period (.) (18%), quotation mark (") (10%)
+     After question mark (?), the next punctuation is typically: quotation mark (") (78%), comma (,) (11%)
+
+3. SENTENCE LENGTH DISTRIBUTION
+   Average sentence length: ~18 words
+   Most sentences fall between 6 and 26 words
+   Sentence length mix:
+     Short (1-10 words):    ~42%
+     Medium (11-25 words):  ~32%
+     Long (26-50 words):    ~23%
+     Very long (50+ words): ~3%
+
+4. PUNCTUATION DENSITY
+   Average words between consecutive punctuation marks: ~4.6
+   This controls the overall rhythm and density of punctuation.
+
+=== END PUNCTUATION GUIDELINES ===
