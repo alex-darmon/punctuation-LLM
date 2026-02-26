@@ -29,6 +29,7 @@ _num_runs = 10
 _parallel = 5  # concurrent runs
 _skip_existing = False
 _output_dir = None  # override OUTPUT_DIR if set
+_model_override = None  # override MODEL if set
 _clean_argv = [sys.argv[0]]
 _i = 1
 while _i < len(sys.argv):
@@ -43,6 +44,9 @@ while _i < len(sys.argv):
         _i += 2
     elif sys.argv[_i] == '--output-dir' and _i + 1 < len(sys.argv):
         _output_dir = sys.argv[_i + 1]
+        _i += 2
+    elif sys.argv[_i] == '--model' and _i + 1 < len(sys.argv):
+        _model_override = sys.argv[_i + 1]
         _i += 2
     elif sys.argv[_i] == '--skip-existing':
         _skip_existing = True
@@ -116,7 +120,7 @@ AUTHORS = {
 FULL_BOOKS_DIR = Path('full_books')
 OUTPUT_DIR = Path(_output_dir) if _output_dir else Path('generated_texts')
 
-MODEL = 'gemini-2.5-flash'
+MODEL = _model_override or 'gemini-2.5-flash'
 
 # Target punctuation marks for generated text
 TARGET_MARKS = 2000
