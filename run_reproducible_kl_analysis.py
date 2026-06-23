@@ -6,13 +6,19 @@ This script rebuilds key "future direction" KL tables directly from:
   - generated LLM runs (generated_texts* directories)
   - reference full books (full_books/*_full.txt)
 
-Outputs:
+Outputs (per chunk size):
   1) run_level_kl_long.csv
   2) all_author_pairwise_self_vs_other.csv
   3) all_author_pairwise_self_vs_other_summary.csv
   4) austen_vs_wells_validation.csv
   5) austen_nearest_of_all_validation.csv
   6) cross_author_kl_means.csv
+  7) significance_summary.csv
+  8) significance_run_deltas.csv
+
+Step 3 aggregate outputs:
+  9) chunk_size_significance_summary.csv
+ 10) chunk_size_within_author_baseline.csv
 """
 
 from __future__ import annotations
@@ -30,10 +36,10 @@ from scipy.stats import ks_2samp, mannwhitneyu
 
 
 DEFAULT_AUTHORS = {
-    "jane_austen": "Jane Austen",
-    "william_shakespeare": "William Shakespeare",
-    "herbert_george_wells": "H.G. Wells",
-    "agnes_may_fleming": "Agnes May Fleming",
+    "jane_austen": {"name": "Jane Austen", "form": "prose"},
+    "william_shakespeare": {"name": "William Shakespeare", "form": "play"},
+    "herbert_george_wells": {"name": "H.G. Wells", "form": "prose"},
+    "agnes_may_fleming": {"name": "Agnes May Fleming", "form": "prose"},
 }
 
 DEFAULT_CONDITION_DIRS = {
@@ -69,6 +75,13 @@ def parse_args() -> argparse.Namespace:
         help="Punctuation chunk size for comparisons.",
     )
     parser.add_argument(
+        "--chunk-sizes",
+        nargs="+",
+        type=int,
+        default=None,
+        help="Optional chunk-size sweep (overrides --chunk-size).",
+    )
+    parser.add_argument(
         "--full-books-dir",
         default="full_books",
         help="Directory containing *_full.txt files.",
@@ -94,6 +107,17 @@ def parse_args() -> argparse.Namespace:
         "--no-significance",
         action="store_true",
         help="Skip significance outputs (Step 2).",
+    )
+    parser.add_argument(
+        "--prose-only",
+        action="store_true",
+        help="Keep only prose authors in analysis.",
+    )
+    parser.add_argument(
+        "--within-human-samples",
+        type=int,
+        default=200,
+        help="Number of non-overlapping within-book chunk pairs per author/size.",
     )
     return parser.parse_args()
 
@@ -261,6 +285,166 @@ def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]])
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
+
+
+def _resolve_author_keys() -> list[str]:
+    author_keys: list[str] = []
+    for author in ARGS.authors:
+        meta = DEFAULT_AUTHORS.get(author)
+        if meta is None:
+            print(f"[warn] Unknown author '{author}' (ignored).")
+            continue
+        if ARGS.prose_only and meta["form"] != "prose":
+            print(f"[info] Skipping non-prose author '{author}' in --prose-only mode.")
+            continue
+        author_keys.append(author)
+
+    if not author_keys:
+        raise ValueError("No valid authors selected after filtering.")
+    return author_keys
+
+
+def _resolve_chunk_sizes() -> list[int]:
+    if ARGS.chunk_sizes:
+        chunk_sizes = sorted(set(int(s) for s in ARGS.chunk_sizes))
+    else:
+        chunk_sizes = [int(ARGS.chunk_size)]
+
+    if any(s <= 0 for s in chunk_sizes):
+        raise ValueError(f"Chunk sizes must be positive integers. Got: {chunk_sizes}")
+    return chunk_sizes
+
+
+def _sample_non_overlapping_chunk_pairs(
+    seq_len: int, chunk_size: int, n_samples: int, rng: np.random.Generator
+) -> list[tuple[int, int]]:
+    """
+    Sample non-overlapping chunk start pairs (start_a, start_b).
+    """
+    max_start = seq_len - chunk_size
+    if max_start < 0 or n_samples <= 0:
+        return []
+
+    pairs: list[tuple[int, int]] = []
+    attempts = 0
+    max_attempts = max(200, n_samples * 40)
+
+    while len(pairs) < n_samples and attempts < max_attempts:
+        attempts += 1
+        start_a = int(rng.integers(0, max_start + 1))
+
+        # Ensure no overlap.
+        candidate_ranges: list[tuple[int, int]] = []
+        left_end = start_a - chunk_size
+        right_start = start_a + chunk_size
+        if left_end >= 0:
+            candidate_ranges.append((0, left_end))
+        if right_start <= max_start:
+            candidate_ranges.append((right_start, max_start))
+        if not candidate_ranges:
+            continue
+
+        widths = np.asarray([b - a + 1 for a, b in candidate_ranges], dtype=float)
+        probs = widths / widths.sum()
+        idx = int(rng.choice(len(candidate_ranges), p=probs))
+        lo, hi = candidate_ranges[idx]
+        start_b = int(rng.integers(lo, hi + 1))
+        pairs.append((start_a, start_b))
+
+    return pairs
+
+
+def _build_within_author_baseline_rows(
+    author_keys: list[str],
+    chunk_size: int,
+    n_samples: int,
+    seed: int = 42,
+) -> list[dict[str, object]]:
+    """
+    Build within-author (human-vs-human) KL baseline summary rows for one chunk size.
+    """
+    rng = np.random.default_rng(seed + chunk_size)
+    summary_rows: list[dict[str, object]] = []
+    pooled_values: dict[str, list[float]] = {feature: [] for feature in TARGET_FEATURES}
+
+    for author_key in author_keys:
+        path = _author_full_book_path(author_key)
+        if not path.exists():
+            print(f"[warn] Missing full book for baseline: {path}")
+            continue
+
+        text = path.read_text(encoding="utf-8", errors="ignore")
+        seq = _extract_punctuation(text)
+        if seq is None or len(seq) < 2 * chunk_size:
+            print(
+                f"[warn] Not enough punctuation for within-author baseline "
+                f"({author_key}, chunk={chunk_size})"
+            )
+            continue
+
+        sampled_pairs = _sample_non_overlapping_chunk_pairs(
+            seq_len=len(seq),
+            chunk_size=chunk_size,
+            n_samples=n_samples,
+            rng=rng,
+        )
+        if not sampled_pairs:
+            continue
+
+        values_by_feature: dict[str, list[float]] = {feature: [] for feature in TARGET_FEATURES}
+        for start_a, start_b in sampled_pairs:
+            chunk_a = seq[start_a : start_a + chunk_size]
+            chunk_b = seq[start_b : start_b + chunk_size]
+            feats_a = _compute_features(chunk_a)
+            feats_b = _compute_features(chunk_b)
+            if feats_a is None or feats_b is None:
+                continue
+
+            for feature in TARGET_FEATURES:
+                values_by_feature[feature].append(
+                    float(d_KL(feats_a[feature], feats_b[feature]))
+                )
+
+        for feature in TARGET_FEATURES:
+            vals = np.asarray(values_by_feature[feature], dtype=float)
+            if vals.size == 0:
+                continue
+            pooled_values[feature].extend(vals.tolist())
+            summary_rows.append(
+                {
+                    "chunk_size": chunk_size,
+                    "scope": "per_author",
+                    "author_key": author_key,
+                    "feature": feature,
+                    "n_pairs": int(vals.size),
+                    "mean_kl": float(np.mean(vals)),
+                    "std_kl": float(np.std(vals)),
+                    "median_kl": float(np.median(vals)),
+                    "p25_kl": float(np.percentile(vals, 25)),
+                    "p75_kl": float(np.percentile(vals, 75)),
+                }
+            )
+
+    for feature in TARGET_FEATURES:
+        vals = np.asarray(pooled_values[feature], dtype=float)
+        if vals.size == 0:
+            continue
+        summary_rows.append(
+            {
+                "chunk_size": chunk_size,
+                "scope": "pooled",
+                "author_key": "all_authors",
+                "feature": feature,
+                "n_pairs": int(vals.size),
+                "mean_kl": float(np.mean(vals)),
+                "std_kl": float(np.std(vals)),
+                "median_kl": float(np.median(vals)),
+                "p25_kl": float(np.percentile(vals, 25)),
+                "p75_kl": float(np.percentile(vals, 75)),
+            }
+        )
+
+    return summary_rows
 
 
 def _build_run_level_kl_rows(
@@ -793,24 +977,20 @@ def _build_significance_tables(
     return summary_rows, delta_rows
 
 
-def main() -> None:
-    author_keys = [a for a in ARGS.authors if a in DEFAULT_AUTHORS]
-    if not author_keys:
-        raise ValueError("No valid authors selected.")
-
-    for author in ARGS.authors:
-        if author not in DEFAULT_AUTHORS:
-            print(f"[warn] Unknown author '{author}' (ignored).")
-
+def _run_single_chunk_analysis(
+    chunk_size: int,
+    author_keys: list[str],
+    output_dir: Path,
+) -> dict[str, list[dict[str, object]]]:
     condition_paths = _condition_paths(ARGS.conditions)
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    output_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"[info] chunk_size={ARGS.chunk_size}")
+    print(f"\n[chunk] {chunk_size}")
     print(f"[info] authors={author_keys}")
     print(f"[info] conditions={list(condition_paths.keys())}")
-    print(f"[info] output_dir={OUTPUT_DIR}")
+    print(f"[info] output_dir={output_dir}")
 
-    real_features = _load_real_author_features(author_keys, ARGS.chunk_size)
+    real_features = _load_real_author_features(author_keys, chunk_size)
     missing_real = sorted(set(author_keys) - set(real_features.keys()))
     if missing_real:
         print(f"[warn] Missing real features for: {missing_real}")
@@ -819,11 +999,11 @@ def main() -> None:
         condition_paths=condition_paths,
         author_keys=author_keys,
         real_features=real_features,
-        chunk_size=ARGS.chunk_size,
+        chunk_size=chunk_size,
     )
 
     if not run_level_rows:
-        raise RuntimeError("No run-level KL rows generated.")
+        raise RuntimeError(f"No run-level KL rows generated for chunk size {chunk_size}.")
 
     # 1) Pairwise self-vs-other tables.
     pairwise_rows, pairwise_summary_rows = _build_pairwise_tables(
@@ -834,7 +1014,7 @@ def main() -> None:
         pairwise_rows,
         ["own_mean_kl", "target_mean_kl", "own_smaller_runs_pct"],
     )
-    pairwise_csv = OUTPUT_DIR / "all_author_pairwise_self_vs_other.csv"
+    pairwise_csv = output_dir / "all_author_pairwise_self_vs_other.csv"
     _write_csv(
         path=pairwise_csv,
         fieldnames=[
@@ -860,7 +1040,7 @@ def main() -> None:
             "own_mean_kl",
         ],
     )
-    pairwise_summary_csv = OUTPUT_DIR / "all_author_pairwise_self_vs_other_summary.csv"
+    pairwise_summary_csv = output_dir / "all_author_pairwise_self_vs_other_summary.csv"
     _write_csv(
         path=pairwise_summary_csv,
         fieldnames=[
@@ -888,7 +1068,7 @@ def main() -> None:
             "pct_runs_austen_smaller",
         ],
     )
-    austen_vs_wells_csv = OUTPUT_DIR / "austen_vs_wells_validation.csv"
+    austen_vs_wells_csv = output_dir / "austen_vs_wells_validation.csv"
     _write_csv(
         path=austen_vs_wells_csv,
         fieldnames=[
@@ -915,7 +1095,7 @@ def main() -> None:
             "mean_to_fleming",
         ],
     )
-    austen_nearest_csv = OUTPUT_DIR / "austen_nearest_of_all_validation.csv"
+    austen_nearest_csv = output_dir / "austen_nearest_of_all_validation.csv"
     _write_csv(
         path=austen_nearest_csv,
         fieldnames=[
@@ -946,7 +1126,7 @@ def main() -> None:
             "vs_agnes_may_fleming",
         ],
     )
-    cross_author_csv = OUTPUT_DIR / "cross_author_kl_means.csv"
+    cross_author_csv = output_dir / "cross_author_kl_means.csv"
     _write_csv(
         path=cross_author_csv,
         fieldnames=[
@@ -968,7 +1148,7 @@ def main() -> None:
     # 4) Long-form run-level KL output.
     run_level_rows_out = [dict(r) for r in run_level_rows]
     _format_float_columns(run_level_rows_out, ["kl_value"])
-    run_level_csv = OUTPUT_DIR / "run_level_kl_long.csv"
+    run_level_csv = output_dir / "run_level_kl_long.csv"
     _write_csv(
         path=run_level_csv,
         fieldnames=[
@@ -983,6 +1163,8 @@ def main() -> None:
         rows=run_level_rows_out,
     )
 
+    significance_rows: list[dict[str, object]] = []
+    significance_delta_rows: list[dict[str, object]] = []
     significance_csv = None
     significance_deltas_csv = None
     if not ARGS.no_significance:
@@ -993,8 +1175,9 @@ def main() -> None:
             permutation_iters=ARGS.permutation_iters,
         )
 
+        significance_rows_out = [dict(r) for r in significance_rows]
         _format_float_columns(
-            significance_rows,
+            significance_rows_out,
             [
                 "mean_own_kl",
                 "mean_target_kl",
@@ -1012,7 +1195,7 @@ def main() -> None:
                 "mannwhitney_p_fdr_bh",
             ],
         )
-        significance_csv = OUTPUT_DIR / "significance_summary.csv"
+        significance_csv = output_dir / "significance_summary.csv"
         _write_csv(
             path=significance_csv,
             fieldnames=[
@@ -1039,14 +1222,15 @@ def main() -> None:
                 "perm_significant_fdr_0_05",
                 "mannwhitney_significant_fdr_0_05",
             ],
-            rows=significance_rows,
+            rows=significance_rows_out,
         )
 
+        significance_delta_rows_out = [dict(r) for r in significance_delta_rows]
         _format_float_columns(
-            significance_delta_rows,
+            significance_delta_rows_out,
             ["own_kl", "target_kl", "delta_target_minus_own"],
         )
-        significance_deltas_csv = OUTPUT_DIR / "significance_run_deltas.csv"
+        significance_deltas_csv = output_dir / "significance_run_deltas.csv"
         _write_csv(
             path=significance_deltas_csv,
             fieldnames=[
@@ -1060,10 +1244,10 @@ def main() -> None:
                 "delta_target_minus_own",
                 "own_smaller_run",
             ],
-            rows=significance_delta_rows,
+            rows=significance_delta_rows_out,
         )
 
-    print("\nWrote:")
+    print("[wrote]")
     print(f"  {run_level_csv}")
     print(f"  {pairwise_csv}")
     print(f"  {pairwise_summary_csv}")
@@ -1074,6 +1258,126 @@ def main() -> None:
         print(f"  {significance_csv}")
     if significance_deltas_csv is not None:
         print(f"  {significance_deltas_csv}")
+
+    return {
+        "run_level_rows": run_level_rows,
+        "significance_rows": significance_rows,
+    }
+
+
+def main() -> None:
+    author_keys = _resolve_author_keys()
+    chunk_sizes = _resolve_chunk_sizes()
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    print(f"[info] prose_only={ARGS.prose_only}")
+    print(f"[info] chunk_sizes={chunk_sizes}")
+    print(f"[info] output_dir={OUTPUT_DIR}")
+
+    aggregate_significance_rows: list[dict[str, object]] = []
+    aggregate_within_human_rows: list[dict[str, object]] = []
+
+    for chunk_size in chunk_sizes:
+        chunk_output_dir = (
+            OUTPUT_DIR if len(chunk_sizes) == 1 else OUTPUT_DIR / f"chunk_{chunk_size:04d}"
+        )
+        chunk_result = _run_single_chunk_analysis(
+            chunk_size=chunk_size,
+            author_keys=author_keys,
+            output_dir=chunk_output_dir,
+        )
+
+        if not ARGS.no_significance:
+            for row in chunk_result["significance_rows"]:
+                row_out = dict(row)
+                row_out["chunk_size"] = chunk_size
+                aggregate_significance_rows.append(row_out)
+
+        baseline_rows = _build_within_author_baseline_rows(
+            author_keys=author_keys,
+            chunk_size=chunk_size,
+            n_samples=ARGS.within_human_samples,
+            seed=42,
+        )
+        aggregate_within_human_rows.extend(baseline_rows)
+
+    if aggregate_significance_rows:
+        significance_chunk_csv = OUTPUT_DIR / "chunk_size_significance_summary.csv"
+        significance_chunk_rows_out = [dict(r) for r in aggregate_significance_rows]
+        _format_float_columns(
+            significance_chunk_rows_out,
+            [
+                "mean_own_kl",
+                "mean_target_kl",
+                "mean_delta_target_minus_own",
+                "median_delta_target_minus_own",
+                "cliffs_delta_target_vs_own",
+                "bootstrap_mean_delta_ci_low",
+                "bootstrap_mean_delta_ci_high",
+                "bootstrap_median_delta_ci_low",
+                "bootstrap_median_delta_ci_high",
+                "perm_p_one_sided",
+                "mannwhitney_p_one_sided",
+                "ks_p_two_sided",
+                "perm_p_fdr_bh",
+                "mannwhitney_p_fdr_bh",
+            ],
+        )
+        _write_csv(
+            path=significance_chunk_csv,
+            fieldnames=[
+                "chunk_size",
+                "condition",
+                "feature",
+                "llm_copying",
+                "compare_target",
+                "n_runs",
+                "mean_own_kl",
+                "mean_target_kl",
+                "mean_delta_target_minus_own",
+                "median_delta_target_minus_own",
+                "cliffs_delta_target_vs_own",
+                "bootstrap_mean_delta_ci_low",
+                "bootstrap_mean_delta_ci_high",
+                "bootstrap_median_delta_ci_low",
+                "bootstrap_median_delta_ci_high",
+                "perm_p_one_sided",
+                "perm_test_mode",
+                "mannwhitney_p_one_sided",
+                "ks_p_two_sided",
+                "perm_p_fdr_bh",
+                "mannwhitney_p_fdr_bh",
+                "perm_significant_fdr_0_05",
+                "mannwhitney_significant_fdr_0_05",
+            ],
+            rows=significance_chunk_rows_out,
+        )
+        print(f"[wrote] {significance_chunk_csv}")
+
+    if aggregate_within_human_rows:
+        within_human_csv = OUTPUT_DIR / "chunk_size_within_author_baseline.csv"
+        within_human_rows_out = [dict(r) for r in aggregate_within_human_rows]
+        _format_float_columns(
+            within_human_rows_out,
+            ["mean_kl", "std_kl", "median_kl", "p25_kl", "p75_kl"],
+        )
+        _write_csv(
+            path=within_human_csv,
+            fieldnames=[
+                "chunk_size",
+                "scope",
+                "author_key",
+                "feature",
+                "n_pairs",
+                "mean_kl",
+                "std_kl",
+                "median_kl",
+                "p25_kl",
+                "p75_kl",
+            ],
+            rows=within_human_rows_out,
+        )
+        print(f"[wrote] {within_human_csv}")
 
 
 if __name__ == "__main__":
