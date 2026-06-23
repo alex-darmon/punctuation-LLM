@@ -21,8 +21,12 @@ import argparse
 import csv
 import sys
 from collections import defaultdict
+from itertools import product
 from pathlib import Path
 from statistics import mean
+
+import numpy as np
+from scipy.stats import ks_2samp, mannwhitneyu
 
 
 DEFAULT_AUTHORS = {
@@ -73,6 +77,23 @@ def parse_args() -> argparse.Namespace:
         "--output-dir",
         default="reproducible_kl_results",
         help="Directory where CSV outputs are written.",
+    )
+    parser.add_argument(
+        "--bootstrap-iters",
+        type=int,
+        default=5000,
+        help="Bootstrap iterations for confidence intervals.",
+    )
+    parser.add_argument(
+        "--permutation-iters",
+        type=int,
+        default=100000,
+        help="Monte Carlo iterations for paired permutation test when exact is too large.",
+    )
+    parser.add_argument(
+        "--no-significance",
+        action="store_true",
+        help="Skip significance outputs (Step 2).",
     )
     return parser.parse_args()
 
@@ -562,6 +583,216 @@ def _format_float_columns(rows: list[dict[str, object]], columns: list[str]) -> 
                 row[col] = _fmt_float(row[col]) if row[col] is not None else ""
 
 
+def _paired_perm_pvalue_one_sided(
+    diffs: np.ndarray, monte_carlo_iters: int, rng: np.random.Generator
+) -> tuple[float, str]:
+    """
+    One-sided paired permutation (sign-flip) p-value.
+    H1: mean(diffs) > 0, where diffs = target_kl - own_kl.
+    """
+    n = len(diffs)
+    observed = float(np.mean(diffs))
+    if n == 0:
+        return float("nan"), "none"
+
+    # Exact test is feasible for small n and avoids MC noise.
+    if n <= 20:
+        ge_count = 0
+        total = 0
+        for signs in product((-1.0, 1.0), repeat=n):
+            stat = float(np.mean(diffs * np.asarray(signs)))
+            if stat >= observed:
+                ge_count += 1
+            total += 1
+        pvalue = (ge_count + 1.0) / (total + 1.0)
+        return pvalue, "exact"
+
+    signs = rng.choice([-1.0, 1.0], size=(monte_carlo_iters, n))
+    stats = (signs * diffs[None, :]).mean(axis=1)
+    ge_count = int(np.sum(stats >= observed))
+    pvalue = (ge_count + 1.0) / (monte_carlo_iters + 1.0)
+    return pvalue, "monte_carlo"
+
+
+def _cliffs_delta(x: np.ndarray, y: np.ndarray) -> float:
+    """
+    Cliff's delta = P(X>Y) - P(X<Y).
+    """
+    gt = 0
+    lt = 0
+    for xv in x:
+        gt += int(np.sum(xv > y))
+        lt += int(np.sum(xv < y))
+    denom = len(x) * len(y)
+    if denom == 0:
+        return float("nan")
+    return float((gt - lt) / denom)
+
+
+def _paired_bootstrap_ci(
+    diffs: np.ndarray, iters: int, rng: np.random.Generator
+) -> tuple[float, float, float, float]:
+    """
+    Returns:
+      mean_ci_low, mean_ci_high, median_ci_low, median_ci_high
+    """
+    n = len(diffs)
+    if n == 0:
+        nan = float("nan")
+        return nan, nan, nan, nan
+
+    samples_idx = rng.integers(0, n, size=(iters, n))
+    sampled = diffs[samples_idx]
+    mean_stats = sampled.mean(axis=1)
+    median_stats = np.median(sampled, axis=1)
+
+    mean_low, mean_high = np.percentile(mean_stats, [2.5, 97.5])
+    med_low, med_high = np.percentile(median_stats, [2.5, 97.5])
+    return float(mean_low), float(mean_high), float(med_low), float(med_high)
+
+
+def _bh_fdr(pvals: list[float | None]) -> list[float | None]:
+    """
+    Benjamini-Hochberg FDR correction.
+    """
+    indexed = [(i, p) for i, p in enumerate(pvals) if p is not None and np.isfinite(p)]
+    m = len(indexed)
+    qvals = [None] * len(pvals)
+    if m == 0:
+        return qvals
+
+    indexed.sort(key=lambda x: x[1])
+    adjusted = [0.0] * m
+    prev = 1.0
+    for rank in range(m, 0, -1):
+        idx, p = indexed[rank - 1]
+        q = min(prev, (p * m) / rank)
+        adjusted[rank - 1] = q
+        prev = q
+
+    for (ranked_pair, q) in zip(indexed, adjusted):
+        idx, _ = ranked_pair
+        qvals[idx] = float(q)
+    return qvals
+
+
+def _build_significance_tables(
+    run_level_rows: list[dict[str, object]],
+    author_keys: list[str],
+    bootstrap_iters: int,
+    permutation_iters: int,
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    """
+    Returns:
+      - significance_summary_rows
+      - significance_delta_rows (run-level paired deltas)
+    """
+    indexed = _index_kl_rows(run_level_rows)
+    grouped_keys = sorted(
+        {(r["condition"], r["feature"], r["llm_copying"]) for r in run_level_rows}
+    )
+
+    summary_rows: list[dict[str, object]] = []
+    delta_rows: list[dict[str, object]] = []
+    rng = np.random.default_rng(42)
+
+    for condition, feature, llm_copying in grouped_keys:
+        own_key = (condition, feature, llm_copying, llm_copying)
+        own_by_run = indexed.get(own_key, {})
+        if not own_by_run:
+            continue
+
+        for compare_target in author_keys:
+            if compare_target == llm_copying:
+                continue
+
+            target_key = (condition, feature, llm_copying, compare_target)
+            target_by_run = indexed.get(target_key, {})
+            if not target_by_run:
+                continue
+
+            run_ids = sorted(set(own_by_run).intersection(target_by_run))
+            if not run_ids:
+                continue
+
+            own_vals = np.asarray([own_by_run[rid] for rid in run_ids], dtype=float)
+            target_vals = np.asarray([target_by_run[rid] for rid in run_ids], dtype=float)
+            diffs = target_vals - own_vals
+
+            for rid, own_v, target_v, delta in zip(run_ids, own_vals, target_vals, diffs):
+                delta_rows.append(
+                    {
+                        "condition": condition,
+                        "feature": feature,
+                        "llm_copying": llm_copying,
+                        "compare_target": compare_target,
+                        "run_id": rid,
+                        "own_kl": float(own_v),
+                        "target_kl": float(target_v),
+                        "delta_target_minus_own": float(delta),
+                        "own_smaller_run": bool(own_v < target_v),
+                    }
+                )
+
+            perm_p, perm_mode = _paired_perm_pvalue_one_sided(
+                diffs=diffs,
+                monte_carlo_iters=permutation_iters,
+                rng=rng,
+            )
+            mw_p = float(
+                mannwhitneyu(own_vals, target_vals, alternative="less").pvalue
+            )
+            ks_p = float(ks_2samp(own_vals, target_vals).pvalue)
+
+            mean_delta = float(np.mean(diffs))
+            median_delta = float(np.median(diffs))
+            cliffs = _cliffs_delta(target_vals, own_vals)
+            ci_mean_low, ci_mean_high, ci_median_low, ci_median_high = _paired_bootstrap_ci(
+                diffs=diffs,
+                iters=bootstrap_iters,
+                rng=rng,
+            )
+
+            summary_rows.append(
+                {
+                    "condition": condition,
+                    "feature": feature,
+                    "llm_copying": llm_copying,
+                    "compare_target": compare_target,
+                    "n_runs": len(run_ids),
+                    "mean_own_kl": float(np.mean(own_vals)),
+                    "mean_target_kl": float(np.mean(target_vals)),
+                    "mean_delta_target_minus_own": mean_delta,
+                    "median_delta_target_minus_own": median_delta,
+                    "cliffs_delta_target_vs_own": cliffs,
+                    "bootstrap_mean_delta_ci_low": ci_mean_low,
+                    "bootstrap_mean_delta_ci_high": ci_mean_high,
+                    "bootstrap_median_delta_ci_low": ci_median_low,
+                    "bootstrap_median_delta_ci_high": ci_median_high,
+                    "perm_p_one_sided": perm_p,
+                    "perm_test_mode": perm_mode,
+                    "mannwhitney_p_one_sided": mw_p,
+                    "ks_p_two_sided": ks_p,
+                }
+            )
+
+    # Multiple-testing correction (BH) across all pair tests.
+    perm_qvals = _bh_fdr([r.get("perm_p_one_sided") for r in summary_rows])
+    mw_qvals = _bh_fdr([r.get("mannwhitney_p_one_sided") for r in summary_rows])
+
+    for i, row in enumerate(summary_rows):
+        row["perm_p_fdr_bh"] = perm_qvals[i]
+        row["mannwhitney_p_fdr_bh"] = mw_qvals[i]
+        row["perm_significant_fdr_0_05"] = (
+            perm_qvals[i] is not None and perm_qvals[i] <= 0.05
+        )
+        row["mannwhitney_significant_fdr_0_05"] = (
+            mw_qvals[i] is not None and mw_qvals[i] <= 0.05
+        )
+
+    return summary_rows, delta_rows
+
+
 def main() -> None:
     author_keys = [a for a in ARGS.authors if a in DEFAULT_AUTHORS]
     if not author_keys:
@@ -752,6 +983,86 @@ def main() -> None:
         rows=run_level_rows_out,
     )
 
+    significance_csv = None
+    significance_deltas_csv = None
+    if not ARGS.no_significance:
+        significance_rows, significance_delta_rows = _build_significance_tables(
+            run_level_rows=run_level_rows,
+            author_keys=author_keys,
+            bootstrap_iters=ARGS.bootstrap_iters,
+            permutation_iters=ARGS.permutation_iters,
+        )
+
+        _format_float_columns(
+            significance_rows,
+            [
+                "mean_own_kl",
+                "mean_target_kl",
+                "mean_delta_target_minus_own",
+                "median_delta_target_minus_own",
+                "cliffs_delta_target_vs_own",
+                "bootstrap_mean_delta_ci_low",
+                "bootstrap_mean_delta_ci_high",
+                "bootstrap_median_delta_ci_low",
+                "bootstrap_median_delta_ci_high",
+                "perm_p_one_sided",
+                "mannwhitney_p_one_sided",
+                "ks_p_two_sided",
+                "perm_p_fdr_bh",
+                "mannwhitney_p_fdr_bh",
+            ],
+        )
+        significance_csv = OUTPUT_DIR / "significance_summary.csv"
+        _write_csv(
+            path=significance_csv,
+            fieldnames=[
+                "condition",
+                "feature",
+                "llm_copying",
+                "compare_target",
+                "n_runs",
+                "mean_own_kl",
+                "mean_target_kl",
+                "mean_delta_target_minus_own",
+                "median_delta_target_minus_own",
+                "cliffs_delta_target_vs_own",
+                "bootstrap_mean_delta_ci_low",
+                "bootstrap_mean_delta_ci_high",
+                "bootstrap_median_delta_ci_low",
+                "bootstrap_median_delta_ci_high",
+                "perm_p_one_sided",
+                "perm_test_mode",
+                "mannwhitney_p_one_sided",
+                "ks_p_two_sided",
+                "perm_p_fdr_bh",
+                "mannwhitney_p_fdr_bh",
+                "perm_significant_fdr_0_05",
+                "mannwhitney_significant_fdr_0_05",
+            ],
+            rows=significance_rows,
+        )
+
+        _format_float_columns(
+            significance_delta_rows,
+            ["own_kl", "target_kl", "delta_target_minus_own"],
+        )
+        significance_deltas_csv = OUTPUT_DIR / "significance_run_deltas.csv"
+        _write_csv(
+            path=significance_deltas_csv,
+            fieldnames=[
+                "condition",
+                "feature",
+                "llm_copying",
+                "compare_target",
+                "run_id",
+                "own_kl",
+                "target_kl",
+                "delta_target_minus_own",
+                "own_smaller_run",
+            ],
+            rows=significance_delta_rows,
+        )
+
     print("\nWrote:")
     print(f"  {run_level_csv}")
     print(f"  {pairwise_csv}")
@@ -759,6 +1070,10 @@ def main() -> None:
     print(f"  {austen_vs_wells_csv}")
     print(f"  {austen_nearest_csv}")
     print(f"  {cross_author_csv}")
+    if significance_csv is not None:
+        print(f"  {significance_csv}")
+    if significance_deltas_csv is not None:
+        print(f"  {significance_deltas_csv}")
 
 
 if __name__ == "__main__":
