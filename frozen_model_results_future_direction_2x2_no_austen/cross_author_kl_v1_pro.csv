@@ -1,0 +1,9 @@
+condition,llm_copying,feature,own_author_kl,best_target,best_target_kl,own_is_smallest,vs_jane_austen,vs_william_shakespeare,vs_herbert_george_wells,vs_agnes_may_fleming
+v1_pro,jane_austen,f1,0.086889,william_shakespeare,0.059275,False,0.086889,0.059275,0.099291,0.177878
+v1_pro,jane_austen,f3,0.193450,william_shakespeare,0.192627,False,0.193450,0.192627,0.222198,0.459037
+v1_pro,william_shakespeare,f1,0.092073,william_shakespeare,0.092073,True,0.241894,0.092073,0.154210,0.448350
+v1_pro,william_shakespeare,f3,0.182012,william_shakespeare,0.182012,True,0.479584,0.182012,0.329813,1.398000
+v1_pro,herbert_george_wells,f1,0.098457,william_shakespeare,0.080774,False,0.127100,0.080774,0.098457,0.258731
+v1_pro,herbert_george_wells,f3,0.212279,william_shakespeare,0.198169,False,0.220680,0.198169,0.212279,0.660309
+v1_pro,agnes_may_fleming,f1,0.283184,william_shakespeare,0.093829,False,0.149522,0.093829,0.177812,0.283184
+v1_pro,agnes_may_fleming,f3,0.716706,william_shakespeare,0.226452,False,0.287422,0.226452,0.373117,0.716706

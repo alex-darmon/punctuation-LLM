@@ -1,0 +1,5 @@
+author_key,mode,true_label,true_in_model_classes,pred_top1,pred_top1_prob,true_label_prob,top5
+jane_austen,full_book,"Austen, Jane",False,"Gaskell, Elizabeth Cleghorn",0.984987,,"Gaskell, Elizabeth Cleghorn:0.984987; Lytton, Edward Bulwer Lytton, Baron:0.004132; Meredith, George:0.003335; Stevenson, Robert Louis:0.001305; Burke, Edmund:0.001238"
+william_shakespeare,full_book,"Shakespeare, William",True,"Shakespeare, William",0.998911,0.998911,"Shakespeare, William:0.998911; Shakespeare (spurious and doubtful works):0.001082; Lawrence, D. H. (David Herbert):0.000004; Euripides:0.000001; Saltus, Edgar:0.000001"
+herbert_george_wells,full_book,"Wells, H. G. (Herbert George)",True,"Wilde, Oscar",0.920919,0.001061,"Wilde, Oscar:0.920919; Daudet, Alphonse:0.047413; Stables, Gordon:0.007953; Mitford, Bertram:0.007747; Aldrich, Thomas Bailey:0.005198"
+agnes_may_fleming,full_book,"Fleming, May Agnes",True,"Hawthorne, Nathaniel",0.793186,0.000000,"Hawthorne, Nathaniel:0.793186; Reid, Mayne:0.199251; Andreyev, Leonid:0.002369; Steel, Flora Annie Webster:0.001890; Goethe, Johann Wolfgang von:0.001614"

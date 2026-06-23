@@ -1,0 +1,5 @@
+condition,n_files,n_in_vocab,n_oov,top1_acc_in_vocab,topk_acc_in_vocab,mean_true_label_prob_in_vocab
+v1_flash,40,30,10,0.000000,0.066667,0.002877
+v1_pro,40,30,10,0.000000,0.033333,0.000005
+v2_flash,40,30,10,0.000000,0.333333,0.000584
+v3_flash,40,30,10,0.000000,0.000000,0.000016

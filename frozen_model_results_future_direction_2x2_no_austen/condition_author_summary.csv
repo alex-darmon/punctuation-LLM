@@ -1,0 +1,13 @@
+condition,true_author_dir,n_files,n_in_vocab,n_oov,top1_acc_in_vocab,topk_acc_in_vocab,mean_true_label_prob_in_vocab
+v1_flash,agnes_may_fleming,10,10,0,0.000000,0.000000,0.000000
+v1_flash,herbert_george_wells,10,10,0,0.000000,0.000000,0.000000
+v1_flash,william_shakespeare,10,10,0,0.000000,0.200000,0.008630
+v1_pro,agnes_may_fleming,10,10,0,0.000000,0.000000,0.000000
+v1_pro,herbert_george_wells,10,10,0,0.000000,0.000000,0.000001
+v1_pro,william_shakespeare,10,10,0,0.000000,0.100000,0.000015
+v2_flash,agnes_may_fleming,10,10,0,0.000000,0.000000,0.000000
+v2_flash,herbert_george_wells,10,10,0,0.000000,0.000000,0.000000
+v2_flash,william_shakespeare,10,10,0,0.000000,1.000000,0.001752
+v3_flash,agnes_may_fleming,10,10,0,0.000000,0.000000,0.000000
+v3_flash,herbert_george_wells,10,10,0,0.000000,0.000000,0.000000
+v3_flash,william_shakespeare,10,10,0,0.000000,0.000000,0.000049

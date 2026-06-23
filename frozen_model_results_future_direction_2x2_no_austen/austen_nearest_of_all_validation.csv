@@ -1,0 +1,9 @@
+condition,feature,mean_best_target,mean_austen_is_best,run_level_austen_best_count,run_level_austen_best_pct,mean_to_austen,mean_to_shakespeare,mean_to_wells,mean_to_fleming
+v1_flash,f1,william_shakespeare,False,2,0.200000,0.119920,0.097947,0.182569,0.138946
+v1_flash,f3,jane_austen,True,4,0.400000,0.262688,0.283648,0.390206,0.284996
+v1_pro,f1,william_shakespeare,False,0,0.000000,0.086889,0.059275,0.099291,0.177878
+v1_pro,f3,william_shakespeare,False,4,0.400000,0.193450,0.192627,0.222198,0.459037
+v2_flash,f1,agnes_may_fleming,False,0,0.000000,0.115045,0.130399,0.222397,0.083228
+v2_flash,f3,agnes_may_fleming,False,0,0.000000,0.272345,0.347337,0.473158,0.172720
+v3_flash,f1,agnes_may_fleming,False,0,0.000000,0.148867,0.141202,0.228564,0.133235
+v3_flash,f3,agnes_may_fleming,False,1,0.100000,0.314207,0.368431,0.467286,0.256464
