@@ -1,0 +1,15 @@
+unit,chunk_size,feature,n,correct,accuracy_pct,chance_pct,author
+document,,f1,12,11,91.66666666666667,20.0,
+document,,f3,12,12,100.0,20.0,
+chunk,2000,f1,21,18,85.71428571428571,20.0,jane_austen
+chunk,2000,f1,34,30,88.23529411764706,20.0,charles_dickens
+chunk,2000,f1,15,10,66.66666666666667,20.0,mark_twain
+chunk,2000,f1,17,17,100.0,20.0,arthur_conan_doyle
+chunk,2000,f1,18,16,88.88888888888889,20.0,mary_shelley
+chunk,2000,f1,105,91,86.66666666666667,20.0,ALL
+chunk,2000,f3,21,19,90.47619047619048,20.0,jane_austen
+chunk,2000,f3,34,34,100.0,20.0,charles_dickens
+chunk,2000,f3,15,13,86.66666666666667,20.0,mark_twain
+chunk,2000,f3,17,17,100.0,20.0,arthur_conan_doyle
+chunk,2000,f3,18,16,88.88888888888889,20.0,mary_shelley
+chunk,2000,f3,105,99,94.28571428571429,20.0,ALL

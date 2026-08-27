@@ -1,0 +1,124 @@
+{
+  "campaign_name": "meeting_may20_phaseA_flash_two_samples_per_author",
+  "campaign_config_path": "/Users/pietroaluffi/warwick/punctuation-LLM/campaigns/generation_campaign_phaseA_two_samples.json",
+  "model": "gemini-2.5-flash",
+  "auth_mode_requested": "adc",
+  "auth_mode_used": "adc(project=project-a1ea5f06-866e-498b-9e6, location=us-central1)",
+  "target_marks": 5000,
+  "runs_per_author": 20,
+  "authors": [
+    {
+      "key": "jane_austen",
+      "name": "Jane Austen",
+      "form": "prose",
+      "period": "early_19c",
+      "book_paths": [
+        "full_books/jane_austen_full.txt",
+        "gutenberg_texts/158.txt",
+        "gutenberg_texts/161.txt"
+      ],
+      "source": "local corpus (3 works)"
+    },
+    {
+      "key": "herbert_george_wells",
+      "name": "H.G. Wells",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "full_books/herbert_george_wells_full.txt",
+        "gutenberg_texts/35.txt"
+      ],
+      "source": "local corpus (2 works)"
+    },
+    {
+      "key": "agnes_may_fleming",
+      "name": "Agnes May Fleming",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "full_books/agnes_may_fleming_full.txt",
+        "gutenberg_texts/7063.txt"
+      ],
+      "source": "local corpus (2 works)"
+    },
+    {
+      "key": "charles_dickens",
+      "name": "Charles Dickens",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/46.txt",
+        "gutenberg_texts/98.txt",
+        "gutenberg_texts/1400.txt"
+      ],
+      "source": "local corpus (3 works)"
+    },
+    {
+      "key": "mark_twain",
+      "name": "Mark Twain",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/74.txt",
+        "gutenberg_texts/76.txt"
+      ],
+      "source": "local corpus (2 works)"
+    },
+    {
+      "key": "arthur_conan_doyle",
+      "name": "Arthur Conan Doyle",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/1661.txt",
+        "gutenberg_texts/244.txt",
+        "gutenberg_texts/2852.txt"
+      ],
+      "source": "local corpus (3 works)"
+    },
+    {
+      "key": "mary_shelley",
+      "name": "Mary Shelley",
+      "form": "prose",
+      "period": "early_19c",
+      "book_paths": [
+        "gutenberg_texts/84.txt",
+        "gutenberg_texts/18247.txt"
+      ],
+      "source": "local corpus (2 works)"
+    },
+    {
+      "key": "charlotte_bronte",
+      "name": "Charlotte Bronte",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/1260.txt",
+        "gutenberg_texts/30486.txt"
+      ],
+      "source": "local corpus (2 works)"
+    },
+    {
+      "key": "oscar_wilde",
+      "name": "Oscar Wilde",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/174.txt",
+        "gutenberg_texts/773.txt"
+      ],
+      "source": "local corpus (2 works)"
+    },
+    {
+      "key": "joseph_conrad",
+      "name": "Joseph Conrad",
+      "form": "prose",
+      "period": "turn_20c",
+      "book_paths": [
+        "gutenberg_texts/219.txt",
+        "gutenberg_texts/5658.txt"
+      ],
+      "source": "local corpus (2 works)"
+    }
+  ]
+}

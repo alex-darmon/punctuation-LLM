@@ -1,0 +1,56 @@
+{
+  "generated_utc": "2026-08-26T17:39:31.195834+00:00",
+  "git": {
+    "commit": "ce321187bcf6c7be790535fd21e2b15f27e7655f",
+    "branch": "main",
+    "dirty": true
+  },
+  "python": "3.10.16",
+  "numpy": "2.2.6",
+  "authors_config": "campaigns/generation_campaign_phaseA_two_samples.json",
+  "cache_path": "cache/punct_sequences.json",
+  "cache_sha256": "e704422adb0be8defd42a4c98c325cdbea5fc07df49793c61135fd195e8534b1",
+  "conditions": {
+    "flash": "generated_texts_campaign_phaseA_two_samples",
+    "pro": "generated_texts_campaign_phaseB_two_samples"
+  },
+  "chunk_sizes": [
+    1000,
+    2000,
+    4000
+  ],
+  "headline_chunk_size": 2000,
+  "drift_window_size": 1000,
+  "drift_windows": 5,
+  "authors": [
+    "jane_austen",
+    "herbert_george_wells",
+    "agnes_may_fleming",
+    "charles_dickens",
+    "mark_twain",
+    "arthur_conan_doyle",
+    "mary_shelley",
+    "charlotte_bronte",
+    "oscar_wilde",
+    "joseph_conrad"
+  ],
+  "margin_gt_1_subset": [
+    "arthur_conan_doyle",
+    "jane_austen",
+    "mark_twain",
+    "mary_shelley"
+  ],
+  "n_reference_profiles_built": 84618,
+  "punctuation_vector": [
+    "!",
+    "\"",
+    "(",
+    ")",
+    ",",
+    ".",
+    ":",
+    ";",
+    "?",
+    "^"
+  ]
+}

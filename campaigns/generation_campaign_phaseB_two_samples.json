@@ -1,0 +1,118 @@
+{
+  "campaign_name": "meeting_may20_phaseB_pro_two_samples_per_author",
+  "description": "Robustness campaign on strict 10-author 2+ source works per author set.",
+  "default_model": "gemini-2.5-pro",
+  "default_runs": 10,
+  "default_target_marks": 6000,
+  "min_source_books_per_author": 2,
+  "output_dir": "generated_texts_campaign_phaseB_two_samples",
+  "excerpt_words": 1500,
+  "max_rounds": 30,
+  "temperature": 1.0,
+  "max_output_tokens": 8192,
+  "authors": [
+    {
+      "key": "jane_austen",
+      "name": "Jane Austen",
+      "form": "prose",
+      "period": "early_19c",
+      "book_paths": [
+        "full_books/jane_austen_full.txt",
+        "gutenberg_texts/158.txt",
+        "gutenberg_texts/161.txt"
+      ]
+    },
+    {
+      "key": "herbert_george_wells",
+      "name": "H.G. Wells",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "full_books/herbert_george_wells_full.txt",
+        "gutenberg_texts/35.txt"
+      ]
+    },
+    {
+      "key": "agnes_may_fleming",
+      "name": "Agnes May Fleming",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "full_books/agnes_may_fleming_full.txt",
+        "gutenberg_texts/7063.txt"
+      ]
+    },
+    {
+      "key": "charles_dickens",
+      "name": "Charles Dickens",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/46.txt",
+        "gutenberg_texts/98.txt",
+        "gutenberg_texts/1400.txt"
+      ]
+    },
+    {
+      "key": "mark_twain",
+      "name": "Mark Twain",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/74.txt",
+        "gutenberg_texts/76.txt"
+      ]
+    },
+    {
+      "key": "arthur_conan_doyle",
+      "name": "Arthur Conan Doyle",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/1661.txt",
+        "gutenberg_texts/244.txt",
+        "gutenberg_texts/2852.txt"
+      ]
+    },
+    {
+      "key": "mary_shelley",
+      "name": "Mary Shelley",
+      "form": "prose",
+      "period": "early_19c",
+      "book_paths": [
+        "gutenberg_texts/84.txt",
+        "gutenberg_texts/18247.txt"
+      ]
+    },
+    {
+      "key": "charlotte_bronte",
+      "name": "Charlotte Bronte",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/1260.txt",
+        "gutenberg_texts/30486.txt"
+      ]
+    },
+    {
+      "key": "oscar_wilde",
+      "name": "Oscar Wilde",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/174.txt",
+        "gutenberg_texts/773.txt"
+      ]
+    },
+    {
+      "key": "joseph_conrad",
+      "name": "Joseph Conrad",
+      "form": "prose",
+      "period": "turn_20c",
+      "book_paths": [
+        "gutenberg_texts/219.txt",
+        "gutenberg_texts/5658.txt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "campaign_name": "meeting_may20_phaseA_flash",
+  "description": "Core expansion campaign: 10 prose authors, fixed prompt setup, larger punctuation targets.",
+  "default_model": "gemini-2.5-flash",
+  "default_runs": 20,
+  "default_target_marks": 6000,
+  "output_dir": "generated_texts_campaign_phaseA",
+  "excerpt_words": 1500,
+  "max_rounds": 30,
+  "temperature": 1.0,
+  "max_output_tokens": 8192,
+  "authors": [
+    {
+      "key": "jane_austen",
+      "name": "Jane Austen",
+      "form": "prose",
+      "period": "early_19c",
+      "book_path": "full_books/jane_austen_full.txt",
+      "source": "existing full_books corpus"
+    },
+    {
+      "key": "herbert_george_wells",
+      "name": "H.G. Wells",
+      "form": "prose",
+      "period": "late_19c",
+      "book_path": "full_books/herbert_george_wells_full.txt",
+      "source": "existing full_books corpus"
+    },
+    {
+      "key": "agnes_may_fleming",
+      "name": "Agnes May Fleming",
+      "form": "prose",
+      "period": "late_19c",
+      "book_path": "full_books/agnes_may_fleming_full.txt",
+      "source": "existing full_books corpus"
+    },
+    {
+      "key": "charles_dickens",
+      "name": "Charles Dickens",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_path": "gutenberg_texts/98.txt",
+      "source": "Project Gutenberg ID 98"
+    },
+    {
+      "key": "mark_twain",
+      "name": "Mark Twain",
+      "form": "prose",
+      "period": "late_19c",
+      "book_path": "gutenberg_texts/74.txt",
+      "source": "Project Gutenberg ID 74"
+    },
+    {
+      "key": "arthur_conan_doyle",
+      "name": "Arthur Conan Doyle",
+      "form": "prose",
+      "period": "late_19c",
+      "book_path": "gutenberg_texts/1661.txt",
+      "source": "Project Gutenberg ID 1661"
+    },
+    {
+      "key": "mary_shelley",
+      "name": "Mary Shelley",
+      "form": "prose",
+      "period": "early_19c",
+      "book_path": "gutenberg_texts/84.txt",
+      "source": "Project Gutenberg ID 84"
+    },
+    {
+      "key": "charlotte_bronte",
+      "name": "Charlotte Bronte",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_path": "gutenberg_texts/1260.txt",
+      "source": "Project Gutenberg ID 1260"
+    },
+    {
+      "key": "oscar_wilde",
+      "name": "Oscar Wilde",
+      "form": "prose",
+      "period": "late_19c",
+      "book_path": "gutenberg_texts/174.txt",
+      "source": "Project Gutenberg ID 174"
+    },
+    {
+      "key": "joseph_conrad",
+      "name": "Joseph Conrad",
+      "form": "prose",
+      "period": "turn_20c",
+      "book_path": "gutenberg_texts/219.txt",
+      "source": "Project Gutenberg ID 219"
+    }
+  ]
+}

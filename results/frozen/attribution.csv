@@ -1,0 +1,513 @@
+experiment,author_set,condition,policy,unit,chunk_size,feature,author,n,correct,accuracy_pct,chance_pct,binomial_p_greater_than_chance,most_predicted,skipped
+human_attribution,all_authors,,leave_one_book_out,document,,f1,ALL,22,10,45.45454545454545,10.0,2.072311815879747e-05,arthur_conan_doyle:4; charles_dickens:3; agnes_may_fleming:3,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,jane_austen,2,2,100.0,10.0,0.010000000000000002,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,herbert_george_wells,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,agnes_may_fleming,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,charles_dickens,3,2,66.66666666666667,10.0,0.028000000000000008,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,mark_twain,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,arthur_conan_doyle,3,3,100.0,10.0,0.0010000000000000002,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,mary_shelley,2,2,100.0,10.0,0.010000000000000002,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,charlotte_bronte,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,oscar_wilde,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f1,joseph_conrad,2,1,50.0,10.0,0.19000000000000003,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,ALL,410,154,37.5609756097561,10.0,6.867548444362849e-50,charles_dickens:87; mark_twain:70; jane_austen:56,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,jane_austen,44,28,63.63636363636363,10.0,8.222857001830568e-18,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,herbert_george_wells,14,1,7.142857142857143,10.0,0.7712320754503901,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,agnes_may_fleming,49,2,4.081632653061225,10.0,0.9630964244414115,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,charles_dickens,69,54,78.26086956521739,10.0,1.203527026975137e-40,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,mark_twain,32,4,12.5,10.0,0.39969409753596663,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,arthur_conan_doyle,36,27,75.0,10.0,3.781662847093204e-20,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,mary_shelley,37,31,83.78378378378379,10.0,1.261663855552002e-25,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,charlotte_bronte,83,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,oscar_wilde,20,1,5.0,10.0,0.8784233454094308,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f1,joseph_conrad,26,6,23.076923076923077,10.0,0.03985931226989224,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,ALL,198,81,40.90909090909091,10.0,4.529350661854832e-30,charles_dickens:44; jane_austen:30; mark_twain:27,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,jane_austen,21,17,80.95238095238095,10.0,4.0254355000000035e-14,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,herbert_george_wells,7,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,agnes_may_fleming,24,1,4.166666666666667,10.0,0.9202335569231275,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,charles_dickens,34,29,85.29411764705883,10.0,1.673941956400003e-24,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,mark_twain,15,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,arthur_conan_doyle,17,16,94.11764705882354,10.0,1.5400000000000016e-15,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,mary_shelley,18,16,88.88888888888889,10.0,1.255600000000001e-14,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,charlotte_bronte,41,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,oscar_wilde,9,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f1,joseph_conrad,12,2,16.666666666666668,10.0,0.3409977482110001,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,ALL,92,39,42.391304347826086,10.0,6.276716525021323e-16,charles_dickens:21; mark_twain:13; jane_austen:11,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,jane_austen,10,9,90.0,10.0,9.100000000000004e-09,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,herbert_george_wells,3,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,agnes_may_fleming,11,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,charles_dickens,16,14,87.5,10.0,9.865000000000009e-13,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,mark_twain,7,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,arthur_conan_doyle,7,7,100.0,10.0,1.0000000000000004e-07,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,mary_shelley,8,8,100.0,10.0,1.0000000000000005e-08,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,oscar_wilde,4,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f1,joseph_conrad,6,1,16.666666666666668,10.0,0.46855900000000006,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,ALL,22,11,50.0,10.0,2.4599251540681827e-06,mark_twain:4; arthur_conan_doyle:3; charles_dickens:3,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,jane_austen,2,2,100.0,10.0,0.010000000000000002,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,herbert_george_wells,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,agnes_may_fleming,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,charles_dickens,3,2,66.66666666666667,10.0,0.028000000000000008,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,mark_twain,2,2,100.0,10.0,0.010000000000000002,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,arthur_conan_doyle,3,2,66.66666666666667,10.0,0.028000000000000008,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,mary_shelley,2,2,100.0,10.0,0.010000000000000002,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,charlotte_bronte,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,oscar_wilde,2,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,document,,f3,joseph_conrad,2,1,50.0,10.0,0.19000000000000003,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,ALL,410,176,42.926829268292686,10.0,3.9438830449118745e-67,charles_dickens:95; mark_twain:65; jane_austen:64,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,jane_austen,44,30,68.18181818181819,10.0,2.7679887135654474e-20,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,herbert_george_wells,14,2,14.285714285714286,10.0,0.41537085948433,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,agnes_may_fleming,49,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,charles_dickens,69,60,86.95652173913044,10.0,2.2321080838354965e-50,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,mark_twain,32,16,50.0,10.0,1.2420273562943506e-08,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,arthur_conan_doyle,36,27,75.0,10.0,3.781662847093204e-20,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,mary_shelley,37,33,89.1891891891892,10.0,4.390398550000008e-29,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,charlotte_bronte,83,1,1.2048192771084338,10.0,0.9998407320891148,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,oscar_wilde,20,1,5.0,10.0,0.8784233454094308,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,1000,f3,joseph_conrad,26,6,23.076923076923077,10.0,0.03985931226989224,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,ALL,198,94,47.474747474747474,10.0,3.509269009202798e-41,charles_dickens:49; jane_austen:35; mark_twain:34,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,jane_austen,21,19,90.47619047619048,10.0,1.720000000000002e-17,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,herbert_george_wells,7,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,agnes_may_fleming,24,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,charles_dickens,34,32,94.11764705882354,10.0,4.574800000000008e-30,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,mark_twain,15,9,60.0,10.0,2.8464824530000017e-06,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,arthur_conan_doyle,17,16,94.11764705882354,10.0,1.5400000000000016e-15,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,mary_shelley,18,16,88.88888888888889,10.0,1.255600000000001e-14,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,charlotte_bronte,41,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,oscar_wilde,9,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,2000,f3,joseph_conrad,12,2,16.666666666666668,10.0,0.3409977482110001,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,ALL,92,47,51.08695652173913,10.0,3.9149608293865877e-23,charles_dickens:22; jane_austen:16; mark_twain:16,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,jane_austen,10,9,90.0,10.0,9.100000000000004e-09,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,herbert_george_wells,3,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,agnes_may_fleming,11,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,charles_dickens,16,15,93.75,10.0,1.4500000000000014e-14,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,mark_twain,7,6,85.71428571428571,10.0,6.400000000000001e-06,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,arthur_conan_doyle,7,7,100.0,10.0,1.0000000000000004e-07,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,mary_shelley,8,8,100.0,10.0,1.0000000000000005e-08,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,oscar_wilde,4,0,0.0,10.0,1.0,,0
+human_attribution,all_authors,,leave_one_book_out,chunk,4000,f3,joseph_conrad,6,2,33.333333333333336,10.0,0.11426500000000002,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f1,ALL,9,9,100.0,25.0,3.814697265625e-06,arthur_conan_doyle:3; jane_austen:2; mark_twain:2,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f1,arthur_conan_doyle,3,3,100.0,25.0,0.015625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f1,jane_austen,2,2,100.0,25.0,0.0625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f1,mark_twain,2,2,100.0,25.0,0.0625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f1,mary_shelley,2,2,100.0,25.0,0.0625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f1,ALL,149,117,78.52348993288591,25.0,1.4580364381903323e-42,jane_austen:47; mary_shelley:37; arthur_conan_doyle:36,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f1,arthur_conan_doyle,36,35,97.22222222222223,25.0,2.3081647812679684e-20,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f1,jane_austen,44,30,68.18181818181819,25.0,2.0851703361000097e-09,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f1,mark_twain,32,21,65.625,25.0,1.4796568723783534e-06,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f1,mary_shelley,37,31,83.78378378378379,25.0,9.562239898958406e-14,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f1,ALL,71,62,87.32394366197182,25.0,2.7598876739929837e-28,jane_austen:24; arthur_conan_doyle:17; mary_shelley:17,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f1,arthur_conan_doyle,17,17,100.0,25.0,5.820766091346741e-11,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f1,jane_austen,21,18,85.71428571428571,25.0,8.609276846982539e-09,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f1,mark_twain,15,11,73.33333333333333,25.0,0.00011533591896295547,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f1,mary_shelley,18,16,88.88888888888889,25.0,2.0838342607021332e-08,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f1,ALL,32,30,93.75,25.0,2.472523054353193e-16,jane_austen:12; mary_shelley:8; arthur_conan_doyle:7,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f1,arthur_conan_doyle,7,7,100.0,25.0,6.103515625e-05,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f1,jane_austen,10,10,100.0,25.0,9.5367431640625e-07,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f1,mark_twain,7,5,71.42857142857143,25.0,0.01287841796875,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f1,mary_shelley,8,8,100.0,25.0,1.52587890625e-05,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f3,ALL,9,9,100.0,25.0,3.814697265625e-06,arthur_conan_doyle:3; jane_austen:2; mark_twain:2,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f3,arthur_conan_doyle,3,3,100.0,25.0,0.015625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f3,jane_austen,2,2,100.0,25.0,0.0625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f3,mark_twain,2,2,100.0,25.0,0.0625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,document,,f3,mary_shelley,2,2,100.0,25.0,0.0625,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f3,ALL,149,128,85.90604026845638,25.0,4.1981475483539875e-55,jane_austen:43; mary_shelley:38; arthur_conan_doyle:37,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f3,arthur_conan_doyle,36,36,100.0,25.0,2.117582368135751e-22,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f3,jane_austen,44,34,77.27272727272727,25.0,5.225508738705092e-13,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f3,mark_twain,32,25,78.125,25.0,4.376775986449956e-10,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,1000,f3,mary_shelley,37,33,89.1891891891892,25.0,2.9463728726841537e-16,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f3,ALL,71,66,92.95774647887323,25.0,5.818829921815799e-34,jane_austen:24; arthur_conan_doyle:17; mary_shelley:16,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f3,arthur_conan_doyle,17,17,100.0,25.0,5.820766091346741e-11,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f3,jane_austen,21,20,95.23809523809524,25.0,1.4551915228366852e-11,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f3,mark_twain,15,13,86.66666666666667,25.0,9.229406714439392e-07,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,2000,f3,mary_shelley,18,16,88.88888888888889,25.0,2.0838342607021332e-08,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f3,ALL,32,32,100.0,25.0,5.421010862427522e-20,jane_austen:10; mary_shelley:8; arthur_conan_doyle:7,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f3,arthur_conan_doyle,7,7,100.0,25.0,6.103515625e-05,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f3,jane_austen,10,10,100.0,25.0,9.5367431640625e-07,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f3,mark_twain,7,7,100.0,25.0,6.103515625e-05,,0
+human_attribution,margin_gt_1,,leave_one_book_out,chunk,4000,f3,mary_shelley,8,8,100.0,25.0,1.52587890625e-05,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,ALL,200,40,20.0,10.0,1.700733319727222e-05,oscar_wilde:89; mary_shelley:53; charles_dickens:21,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,jane_austen,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,herbert_george_wells,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,charles_dickens,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,arthur_conan_doyle,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,mary_shelley,20,16,80.0,10.0,3.2634676000000035e-13,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,oscar_wilde,20,15,75.0,10.0,9.481303720000011e-12,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f1,joseph_conrad,20,3,15.0,10.0,0.32307319481053404,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,ALL,200,29,14.5,10.0,0.027092230118281976,oscar_wilde:72; mary_shelley:52; charles_dickens:24,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,jane_austen,20,3,15.0,10.0,0.32307319481053404,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,herbert_george_wells,20,5,25.0,10.0,0.04317449528446339,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,charles_dickens,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,arthur_conan_doyle,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,mary_shelley,20,16,80.0,10.0,3.2634676000000035e-13,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,oscar_wilde,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f1,joseph_conrad,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,ALL,200,33,16.5,10.0,0.0029159414760629916,oscar_wilde:123; mary_shelley:50; joseph_conrad:14,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,jane_austen,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,herbert_george_wells,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,charles_dickens,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,arthur_conan_doyle,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,mary_shelley,20,12,60.0,10.0,5.814917984782005e-08,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,oscar_wilde,20,16,80.0,10.0,3.2634676000000035e-13,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f1,joseph_conrad,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,ALL,200,25,12.5,10.0,0.14489402348904823,oscar_wilde:107; mary_shelley:48; joseph_conrad:27,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,jane_austen,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,herbert_george_wells,20,4,20.0,10.0,0.1329533234343351,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,charles_dickens,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,arthur_conan_doyle,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,mary_shelley,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,oscar_wilde,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f1,joseph_conrad,20,6,30.0,10.0,0.011253134164509005,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,ALL,200,31,15.5,10.0,0.009508311946973217,oscar_wilde:134; mary_shelley:49; joseph_conrad:14,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,jane_austen,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,herbert_george_wells,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,charles_dickens,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,arthur_conan_doyle,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,mary_shelley,20,13,65.0,10.0,3.923225404120003e-09,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,oscar_wilde,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f1,joseph_conrad,20,3,15.0,10.0,0.32307319481053404,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,ALL,200,32,16.0,10.0,0.005353820271651245,oscar_wilde:115; mary_shelley:43; joseph_conrad:27,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,jane_austen,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,herbert_george_wells,20,7,35.0,10.0,0.002386089408966118,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,charles_dickens,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,arthur_conan_doyle,20,3,15.0,10.0,0.32307319481053404,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,mary_shelley,20,13,65.0,10.0,3.923225404120003e-09,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,oscar_wilde,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f1,joseph_conrad,20,7,35.0,10.0,0.002386089408966118,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,ALL,200,47,23.5,10.0,2.3308725377847675e-08,mary_shelley:64; charles_dickens:55; oscar_wilde:49,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,jane_austen,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,herbert_george_wells,20,5,25.0,10.0,0.04317449528446339,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,charles_dickens,20,8,40.0,10.0,0.00041563501884547615,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,arthur_conan_doyle,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,mary_shelley,20,17,85.0,10.0,8.466310000000009e-15,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,oscar_wilde,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,1000,f3,joseph_conrad,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,ALL,200,35,17.5,10.0,0.0007843466540671624,mary_shelley:61; charles_dickens:54; oscar_wilde:36,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,jane_austen,20,3,15.0,10.0,0.32307319481053404,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,herbert_george_wells,20,5,25.0,10.0,0.04317449528446339,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,charles_dickens,20,6,30.0,10.0,0.011253134164509005,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,arthur_conan_doyle,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,mary_shelley,20,17,85.0,10.0,8.466310000000009e-15,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,oscar_wilde,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,1000,f3,joseph_conrad,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,ALL,200,38,19.0,10.0,8.629689531870192e-05,oscar_wilde:95; mary_shelley:61; charles_dickens:24,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,jane_austen,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,herbert_george_wells,20,4,20.0,10.0,0.1329533234343351,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,charles_dickens,20,3,15.0,10.0,0.32307319481053404,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,arthur_conan_doyle,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,mary_shelley,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,oscar_wilde,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,2000,f3,joseph_conrad,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,ALL,200,31,15.5,10.0,0.009508311946973217,oscar_wilde:79; mary_shelley:57; charles_dickens:28,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,jane_austen,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,herbert_george_wells,20,6,30.0,10.0,0.011253134164509005,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,charles_dickens,20,3,15.0,10.0,0.32307319481053404,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,arthur_conan_doyle,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,mary_shelley,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,oscar_wilde,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,2000,f3,joseph_conrad,20,4,20.0,10.0,0.1329533234343351,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,ALL,200,35,17.5,10.0,0.0007843466540671624,oscar_wilde:120; mary_shelley:60; arthur_conan_doyle:10,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,jane_austen,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,herbert_george_wells,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,charles_dickens,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,arthur_conan_doyle,20,7,35.0,10.0,0.002386089408966118,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,mary_shelley,20,13,65.0,10.0,3.923225404120003e-09,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,oscar_wilde,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,pooled_all_books,run,4000,f3,joseph_conrad,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,ALL,200,35,17.5,10.0,0.0007843466540671624,oscar_wilde:100; mary_shelley:56; herbert_george_wells:20,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,jane_austen,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,herbert_george_wells,20,9,45.0,10.0,5.985853174036023e-05,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,agnes_may_fleming,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,charles_dickens,20,1,5.0,10.0,0.8784233454094308,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,mark_twain,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,arthur_conan_doyle,20,5,25.0,10.0,0.04317449528446339,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,mary_shelley,20,14,70.0,10.0,2.154678353200002e-10,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,charlotte_bronte,20,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,oscar_wilde,20,2,10.0,10.0,0.6082530018748321,,0
+llm_attribution,all_authors,flash,leave_one_book_out,run,4000,f3,joseph_conrad,20,4,20.0,10.0,0.1329533234343351,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,ALL,100,14,14.0,10.0,0.12387679259933032,oscar_wilde:43; herbert_george_wells:23; arthur_conan_doyle:18,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,herbert_george_wells,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,arthur_conan_doyle,10,5,50.0,10.0,0.0016349374000000003,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,oscar_wilde,10,6,60.0,10.0,0.0001469026,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f1,joseph_conrad,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,ALL,100,6,6.0,10.0,0.942423113512966,oscar_wilde:39; herbert_george_wells:28; arthur_conan_doyle:18,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,herbert_george_wells,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,arthur_conan_doyle,10,5,50.0,10.0,0.0016349374000000003,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,oscar_wilde,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f1,joseph_conrad,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,ALL,100,15,15.0,10.0,0.07257296526488023,oscar_wilde:49; herbert_george_wells:25; joseph_conrad:18,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,herbert_george_wells,10,4,40.0,10.0,0.0127951984,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,arthur_conan_doyle,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,oscar_wilde,10,4,40.0,10.0,0.0127951984,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f1,joseph_conrad,10,4,40.0,10.0,0.0127951984,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,ALL,100,7,7.0,10.0,0.8828443845641155,oscar_wilde:51; herbert_george_wells:21; joseph_conrad:19,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,herbert_george_wells,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,arthur_conan_doyle,10,4,40.0,10.0,0.0127951984,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,oscar_wilde,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f1,joseph_conrad,10,2,20.0,10.0,0.2639010709,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,ALL,100,14,14.0,10.0,0.12387679259933032,oscar_wilde:67; joseph_conrad:17; herbert_george_wells:10,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,herbert_george_wells,10,2,20.0,10.0,0.2639010709,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,arthur_conan_doyle,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,oscar_wilde,10,5,50.0,10.0,0.0016349374000000003,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f1,joseph_conrad,10,4,40.0,10.0,0.0127951984,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,ALL,100,10,10.0,10.0,0.5487098345579952,oscar_wilde:63; joseph_conrad:16; herbert_george_wells:14,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,herbert_george_wells,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,arthur_conan_doyle,10,4,40.0,10.0,0.0127951984,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,oscar_wilde,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f1,joseph_conrad,10,2,20.0,10.0,0.2639010709,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,ALL,100,17,17.0,10.0,0.02059881014530016,herbert_george_wells:48; oscar_wilde:23; joseph_conrad:15,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,herbert_george_wells,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,arthur_conan_doyle,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,oscar_wilde,10,5,50.0,10.0,0.0016349374000000003,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,1000,f3,joseph_conrad,10,6,60.0,10.0,0.0001469026,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,ALL,100,5,5.0,10.0,0.9762889173365231,herbert_george_wells:49; oscar_wilde:23; arthur_conan_doyle:12,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,herbert_george_wells,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,arthur_conan_doyle,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,mary_shelley,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,oscar_wilde,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,1000,f3,joseph_conrad,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,ALL,100,14,14.0,10.0,0.12387679259933032,herbert_george_wells:46; oscar_wilde:38; joseph_conrad:14,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,herbert_george_wells,10,5,50.0,10.0,0.0016349374000000003,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,arthur_conan_doyle,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,oscar_wilde,10,5,50.0,10.0,0.0016349374000000003,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,2000,f3,joseph_conrad,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,ALL,100,6,6.0,10.0,0.942423113512966,herbert_george_wells:39; oscar_wilde:38; joseph_conrad:17,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,herbert_george_wells,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,arthur_conan_doyle,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,oscar_wilde,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,2000,f3,joseph_conrad,10,2,20.0,10.0,0.2639010709,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,ALL,100,12,12.0,10.0,0.2969668997112463,herbert_george_wells:45; oscar_wilde:42; joseph_conrad:13,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,herbert_george_wells,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,arthur_conan_doyle,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,oscar_wilde,10,5,50.0,10.0,0.0016349374000000003,,0
+llm_attribution,all_authors,pro,pooled_all_books,run,4000,f3,joseph_conrad,10,4,40.0,10.0,0.0127951984,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,ALL,100,7,7.0,10.0,0.8828443845641155,herbert_george_wells:45; oscar_wilde:41; joseph_conrad:12,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,jane_austen,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,herbert_george_wells,10,3,30.0,10.0,0.0701908264,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,agnes_may_fleming,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,charles_dickens,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,mark_twain,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,arthur_conan_doyle,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,mary_shelley,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,charlotte_bronte,10,0,0.0,10.0,1.0,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,oscar_wilde,10,2,20.0,10.0,0.2639010709,,0
+llm_attribution,all_authors,pro,leave_one_book_out,run,4000,f3,joseph_conrad,10,1,10.0,10.0,0.6513215599000001,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f1,ALL,80,34,42.5,25.0,0.0004635212695802052,arthur_conan_doyle:28; mary_shelley:28; jane_austen:23,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f1,arthur_conan_doyle,20,10,50.0,25.0,0.01386441694376117,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f1,jane_austen,20,8,40.0,25.0,0.10181185692272265,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f1,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f1,mary_shelley,20,16,80.0,25.0,3.865316102746874e-07,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f1,ALL,80,39,48.75,25.0,3.929249967268996e-06,mary_shelley:28; arthur_conan_doyle:27; jane_austen:24,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f1,arthur_conan_doyle,20,10,50.0,25.0,0.01386441694376117,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f1,jane_austen,20,11,55.0,25.0,0.003942141664083465,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f1,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f1,mary_shelley,20,18,90.0,25.0,1.610715116839856e-09,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f1,ALL,80,34,42.5,25.0,0.0004635212695802052,arthur_conan_doyle:31; mary_shelley:31; jane_austen:18,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f1,arthur_conan_doyle,20,12,60.0,25.0,0.000935391579332645,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f1,jane_austen,20,6,30.0,25.0,0.38282734561289544,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f1,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f1,mary_shelley,20,16,80.0,25.0,3.865316102746874e-07,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f1,ALL,80,38,47.5,25.0,1.1220843136441677e-05,mary_shelley:32; arthur_conan_doyle:29; jane_austen:18,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f1,arthur_conan_doyle,20,12,60.0,25.0,0.000935391579332645,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f1,jane_austen,20,8,40.0,25.0,0.10181185692272265,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f1,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f1,mary_shelley,20,18,90.0,25.0,1.610715116839856e-09,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f1,ALL,80,38,47.5,25.0,1.1220843136441677e-05,arthur_conan_doyle:37; mary_shelley:30; jane_austen:13,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f1,arthur_conan_doyle,20,15,75.0,25.0,3.813027433352545e-06,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f1,jane_austen,20,8,40.0,25.0,0.10181185692272265,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f1,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f1,mary_shelley,20,15,75.0,25.0,3.813027433352545e-06,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f1,ALL,80,40,50.0,25.0,1.3117549834634142e-06,arthur_conan_doyle:36; mary_shelley:31; jane_austen:13,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f1,arthur_conan_doyle,20,15,75.0,25.0,3.813027433352545e-06,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f1,jane_austen,20,9,45.0,25.0,0.04092516770651855,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f1,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f1,mary_shelley,20,16,80.0,25.0,3.865316102746874e-07,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f3,ALL,80,38,47.5,25.0,1.1220843136441677e-05,mary_shelley:31; arthur_conan_doyle:24; jane_austen:23,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f3,arthur_conan_doyle,20,10,50.0,25.0,0.01386441694376117,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f3,jane_austen,20,10,50.0,25.0,0.01386441694376117,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f3,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,1000,f3,mary_shelley,20,18,90.0,25.0,1.610715116839856e-09,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f3,ALL,80,37,46.25,25.0,3.055204363145765e-05,mary_shelley:31; jane_austen:24; arthur_conan_doyle:23,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f3,arthur_conan_doyle,20,9,45.0,25.0,0.04092516770651855,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f3,jane_austen,20,10,50.0,25.0,0.01386441694376117,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f3,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,1000,f3,mary_shelley,20,18,90.0,25.0,1.610715116839856e-09,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f3,ALL,80,34,42.5,25.0,0.0004635212695802052,mary_shelley:34; arthur_conan_doyle:32; jane_austen:13,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f3,arthur_conan_doyle,20,11,55.0,25.0,0.003942141664083465,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f3,jane_austen,20,6,30.0,25.0,0.38282734561289544,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f3,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,2000,f3,mary_shelley,20,17,85.0,25.0,2.9604962037410587e-08,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f3,ALL,80,36,45.0,25.0,7.931939033479396e-05,mary_shelley:36; arthur_conan_doyle:32; jane_austen:11,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f3,arthur_conan_doyle,20,12,60.0,25.0,0.000935391579332645,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f3,jane_austen,20,6,30.0,25.0,0.38282734561289544,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f3,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,2000,f3,mary_shelley,20,18,90.0,25.0,1.610715116839856e-09,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f3,ALL,80,33,41.25,25.0,0.001043315848517547,arthur_conan_doyle:44; mary_shelley:30; jane_austen:6,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f3,arthur_conan_doyle,20,15,75.0,25.0,3.813027433352545e-06,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f3,jane_austen,20,3,15.0,25.0,0.9087395675351218,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f3,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,pooled_all_books,run,4000,f3,mary_shelley,20,15,75.0,25.0,3.813027433352545e-06,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f3,ALL,80,39,48.75,25.0,3.929249967268996e-06,arthur_conan_doyle:39; mary_shelley:33; jane_austen:8,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f3,arthur_conan_doyle,20,15,75.0,25.0,3.813027433352545e-06,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f3,jane_austen,20,6,30.0,25.0,0.38282734561289544,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f3,mark_twain,20,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,flash,leave_one_book_out,run,4000,f3,mary_shelley,20,18,90.0,25.0,1.610715116839856e-09,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f1,ALL,40,10,25.0,25.0,0.560460268327467,arthur_conan_doyle:32; mark_twain:3; jane_austen:3,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f1,arthur_conan_doyle,10,9,90.0,25.0,2.956390380859375e-05,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f1,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f1,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f1,mary_shelley,10,1,10.0,25.0,0.9436864852905273,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f1,ALL,40,13,32.5,25.0,0.1791342423460413,arthur_conan_doyle:31; mary_shelley:5; mark_twain:3,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f1,arthur_conan_doyle,10,9,90.0,25.0,2.956390380859375e-05,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f1,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f1,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f1,mary_shelley,10,4,40.0,25.0,0.22412490844726562,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f1,ALL,40,11,27.5,25.0,0.41609592197121037,arthur_conan_doyle:34; mary_shelley:3; jane_austen:3,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f1,arthur_conan_doyle,10,9,90.0,25.0,2.956390380859375e-05,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f1,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f1,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f1,mary_shelley,10,2,20.0,25.0,0.7559747695922852,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f1,ALL,40,15,37.5,25.0,0.05443724801863482,arthur_conan_doyle:33; mary_shelley:7,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f1,arthur_conan_doyle,10,9,90.0,25.0,2.956390380859375e-05,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f1,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f1,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f1,mary_shelley,10,6,60.0,25.0,0.019727706909179688,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f1,ALL,40,10,25.0,25.0,0.560460268327467,arthur_conan_doyle:40,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f1,arthur_conan_doyle,10,10,100.0,25.0,9.5367431640625e-07,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f1,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f1,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f1,mary_shelley,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f1,ALL,40,11,27.5,25.0,0.41609592197121037,arthur_conan_doyle:39; mary_shelley:1,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f1,arthur_conan_doyle,10,10,100.0,25.0,9.5367431640625e-07,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f1,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f1,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f1,mary_shelley,10,1,10.0,25.0,0.9436864852905273,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f3,ALL,40,11,27.5,25.0,0.41609592197121037,arthur_conan_doyle:31; mark_twain:4; mary_shelley:3,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f3,arthur_conan_doyle,10,9,90.0,25.0,2.956390380859375e-05,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f3,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f3,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,1000,f3,mary_shelley,10,2,20.0,25.0,0.7559747695922852,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f3,ALL,40,16,40.0,25.0,0.026244884083742925,arthur_conan_doyle:28; mary_shelley:6; mark_twain:6,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f3,arthur_conan_doyle,10,9,90.0,25.0,2.956390380859375e-05,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f3,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f3,mark_twain,10,2,20.0,25.0,0.7559747695922852,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,1000,f3,mary_shelley,10,5,50.0,25.0,0.07812690734863281,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f3,ALL,40,12,30.0,25.0,0.28485560710188595,arthur_conan_doyle:36; mary_shelley:2; jane_austen:1,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f3,arthur_conan_doyle,10,10,100.0,25.0,9.5367431640625e-07,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f3,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f3,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,2000,f3,mary_shelley,10,2,20.0,25.0,0.7559747695922852,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f3,ALL,40,16,40.0,25.0,0.026244884083742925,arthur_conan_doyle:32; mary_shelley:7; mark_twain:1,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f3,arthur_conan_doyle,10,9,90.0,25.0,2.956390380859375e-05,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f3,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f3,mark_twain,10,1,10.0,25.0,0.9436864852905273,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,2000,f3,mary_shelley,10,6,60.0,25.0,0.019727706909179688,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f3,ALL,40,10,25.0,25.0,0.560460268327467,arthur_conan_doyle:40,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f3,arthur_conan_doyle,10,10,100.0,25.0,9.5367431640625e-07,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f3,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f3,mark_twain,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,pooled_all_books,run,4000,f3,mary_shelley,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f3,ALL,40,12,30.0,25.0,0.28485560710188595,arthur_conan_doyle:38; mark_twain:1; mary_shelley:1,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f3,arthur_conan_doyle,10,10,100.0,25.0,9.5367431640625e-07,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f3,jane_austen,10,0,0.0,25.0,1.0,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f3,mark_twain,10,1,10.0,25.0,0.9436864852905273,,0
+llm_attribution,margin_gt_1,pro,leave_one_book_out,run,4000,f3,mary_shelley,10,1,10.0,25.0,0.9436864852905273,,0

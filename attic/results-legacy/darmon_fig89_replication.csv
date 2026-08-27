@@ -1,0 +1,67 @@
+protocol,feature,n_within_pairs,n_between_pairs,within_mean,within_median,between_mean,between_median,paper_within_mean,paper_between_mean,within_ratio_to_paper,between_ratio_to_paper,separation_ratio,paper_separation_ratio,ks_statistic,ks_pvalue,author_consistency_author,author_consistency_n_docs,author_consistency_mean_kl,consistency_baseline
+"paper protocol: full documents, no truncation",f1,28,434,0.05653054620788243,0.026814961913605405,0.12205754490084311,0.09128589609405063,0.0828,0.24,0.6827360653125897,0.508573103753513,2.159143208204555,2.898550724637681,0.5299539170506913,2.219598587557433e-07,,,,
+"paper protocol: full documents, no truncation",f3,28,434,0.1292877164091146,0.06751370848461125,0.2707096271025802,0.2134704916286086,0.167,0.433,0.7741779425695484,0.6251954436549195,2.093854192968757,2.592814371257485,0.5506912442396313,5.6477191722752165e-08,,,,
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,agnes_may_fleming,2,0.03775610929775194,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,agnes_may_fleming,2,0.1244100287898478,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,arthur_conan_doyle,3,0.01328221542304431,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,arthur_conan_doyle,3,0.044883187262354046,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,charles_dickens,3,0.018862247101405587,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,charles_dickens,3,0.051400675522920374,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,charlotte_bronte,2,0.12737109452961964,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,charlotte_bronte,2,0.27601316008632243,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,herbert_george_wells,2,0.09761683220594981,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,herbert_george_wells,2,0.19604343178943173,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,jane_austen,2,0.0075438759260652525,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,jane_austen,2,0.023947194233857355,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,joseph_conrad,2,0.0704158906225753,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,joseph_conrad,2,0.18241064541839627,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,mark_twain,2,0.029750091320481172,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,mark_twain,2,0.06562610022273271,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,mary_shelley,2,0.023662295584045274,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,mary_shelley,2,0.058320401766031996,0.2707096271025802
+"paper protocol: full documents, no truncation",f1,,,,,,,,,,,,,,,oscar_wilde,2,0.300878069850516,0.12205754490084311
+"paper protocol: full documents, no truncation",f3,,,,,,,,,,,,,,,oscar_wilde,2,0.5944054790651611,0.2707096271025802
+current pipeline: single middle 2000-mark chunk per document,f1,28,434,0.10120446978722808,0.050639734003789745,0.15783417431538727,0.12557717535907156,0.0828,0.24,1.2222762051597595,0.6576423929807803,1.5595573461055354,2.898550724637681,0.3951612903225806,0.0003348144360761805,,,,
+current pipeline: single middle 2000-mark chunk per document,f3,28,434,0.1962587236879824,0.12162921535867063,0.3214628552544136,0.25948214927965235,0.167,0.433,1.1752019382513914,0.7424084416961053,1.637954477710169,2.592814371257485,0.4412442396313364,3.661891060037959e-05,,,,
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,agnes_may_fleming,2,0.08110564568961368,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,agnes_may_fleming,2,0.23131115393916243,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,arthur_conan_doyle,3,0.020786483636684047,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,arthur_conan_doyle,3,0.0747925062896268,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,charles_dickens,3,0.038317443331027955,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,charles_dickens,3,0.09160748770004166,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,charlotte_bronte,2,0.2056276700450148,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,charlotte_bronte,2,0.20119345767233937,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,herbert_george_wells,2,0.4053466278699005,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,herbert_george_wells,2,0.5873861333836936,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,jane_austen,2,0.05110414001194114,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,jane_austen,2,0.12487865385590595,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,joseph_conrad,2,0.1019139524403255,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,joseph_conrad,2,0.22094245132673698,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,mark_twain,2,0.04955332460909967,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,mark_twain,2,0.11567988748039049,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,mary_shelley,2,0.0265472266189715,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,mary_shelley,2,0.11871586796331257,0.3214628552544136
+current pipeline: single middle 2000-mark chunk per document,f1,,,,,,,,,,,,,,,oscar_wilde,2,0.31835220883319026,0.15783417431538727
+current pipeline: single middle 2000-mark chunk per document,f3,,,,,,,,,,,,,,,oscar_wilde,2,0.6483145440412069,0.3214628552544136
+current pipeline: single middle 3000-mark chunk per document,f1,28,434,0.0831498859635059,0.0350646297826508,0.1476077255825459,0.11551153706865672,0.0828,0.24,1.0042256758877526,0.6150321899272746,1.7752005775128812,2.898550724637681,0.4792626728110599,4.733780563083553e-06,,,,
+current pipeline: single middle 3000-mark chunk per document,f3,28,434,0.18262807676028917,0.0876940955011643,0.3172088351682604,0.26144878672204097,0.167,0.433,1.0935812979658033,0.7325839149382457,1.736911655619179,2.592814371257485,0.47465437788018433,6.133276098489961e-06,,,,
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,agnes_may_fleming,2,0.07773669633823461,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,agnes_may_fleming,2,0.22141019438960247,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,arthur_conan_doyle,3,0.014409048896970823,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,arthur_conan_doyle,3,0.05424427842832582,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,charles_dickens,3,0.030562731066849275,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,charles_dickens,3,0.07845642868623097,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,charlotte_bronte,2,0.19826597529884932,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,charlotte_bronte,2,0.26143671769052645,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,herbert_george_wells,2,0.3350968878520326,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,herbert_george_wells,2,0.7235554188824513,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,jane_austen,2,0.03721067252723352,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,jane_austen,2,0.09851684619196933,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,joseph_conrad,2,0.10543428659528495,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,joseph_conrad,2,0.23219701554952038,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,mark_twain,2,0.032012738516575684,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,mark_twain,2,0.07539330423310411,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,mary_shelley,2,0.019707351069832714,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,mary_shelley,2,0.07839275145739155,0.3172088351682604
+current pipeline: single middle 3000-mark chunk per document,f1,,,,,,,,,,,,,,,oscar_wilde,2,0.22371845539957907,0.1476077255825459
+current pipeline: single middle 3000-mark chunk per document,f3,,,,,,,,,,,,,,,oscar_wilde,2,0.4677887049058125,0.3172088351682604

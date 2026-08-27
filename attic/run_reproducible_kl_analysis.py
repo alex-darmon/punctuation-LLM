@@ -15,16 +15,22 @@ Outputs (per chunk size):
   6) cross_author_kl_means.csv
   7) significance_summary.csv
   8) significance_run_deltas.csv
+  9) llm_within_author_kl_long.csv
+ 10) llm_within_author_kl_summary.csv
+ 11) llm_vs_human_within_variance_summary.csv
 
 Step 3 aggregate outputs:
-  9) chunk_size_significance_summary.csv
- 10) chunk_size_within_author_baseline.csv
+ 12) chunk_size_significance_summary.csv
+ 13) chunk_size_within_author_baseline.csv
+ 14) chunk_size_llm_within_author_baseline.csv
+ 15) chunk_size_llm_vs_human_variance_summary.csv
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import json
 import sys
 from collections import defaultdict
 from itertools import product
@@ -63,10 +69,28 @@ def parse_args() -> argparse.Namespace:
         help="Subset of conditions to run.",
     )
     parser.add_argument(
+        "--condition-dir",
+        action="append",
+        default=[],
+        help=(
+            "Custom condition directory mapping in the form name=path. "
+            "Can be repeated; overrides built-in condition names."
+        ),
+    )
+    parser.add_argument(
         "--authors",
         nargs="+",
-        default=list(DEFAULT_AUTHORS.keys()),
-        help="Subset of authors to include.",
+        default=None,
+        help="Subset of authors to include. Default: all authors from built-in map or --authors-config.",
+    )
+    parser.add_argument(
+        "--authors-config",
+        default=None,
+        help=(
+            "Optional campaign-style authors JSON. If provided, author metadata "
+            "and source books are loaded from config['authors'] entries "
+            "(supports book_path or book_paths)."
+        ),
     )
     parser.add_argument(
         "--chunk-size",
@@ -127,6 +151,60 @@ ARGS = parse_args()
 ROOT = Path(__file__).resolve().parent
 FULL_BOOKS_DIR = ROOT / ARGS.full_books_dir
 OUTPUT_DIR = ROOT / ARGS.output_dir
+AUTHOR_BOOK_PATHS: dict[str, list[Path]] = {}
+
+
+def _resolve_local_path(path_like: str) -> Path:
+    path = Path(path_like)
+    return path if path.is_absolute() else ROOT / path
+
+
+def _load_author_metadata() -> dict[str, dict[str, str]]:
+    """
+    Returns mapping:
+      author_key -> {"name": str, "form": str}
+
+    If --authors-config is provided, it overrides built-in metadata and can
+    also define per-author book_path/book_paths values.
+    """
+    if not ARGS.authors_config:
+        return {k: {"name": v["name"], "form": v["form"]} for k, v in DEFAULT_AUTHORS.items()}
+
+    cfg_path = _resolve_local_path(ARGS.authors_config)
+    with open(cfg_path, "r", encoding="utf-8") as f:
+        cfg = json.load(f)
+
+    author_entries = cfg.get("authors", [])
+    if not isinstance(author_entries, list) or not author_entries:
+        raise ValueError(
+            f"--authors-config must contain a non-empty 'authors' list: {cfg_path}"
+        )
+
+    metadata: dict[str, dict[str, str]] = {}
+    for entry in author_entries:
+        key = entry.get("key")
+        if not key:
+            raise ValueError(f"Invalid author entry (missing 'key') in {cfg_path}: {entry}")
+        form = entry.get("form", "prose")
+        if form not in {"prose", "play"}:
+            raise ValueError(f"Unsupported form '{form}' for author '{key}' in {cfg_path}")
+        metadata[key] = {
+            "name": entry.get("name", key),
+            "form": form,
+        }
+
+        raw_paths: list[str] = []
+        if isinstance(entry.get("book_paths"), list):
+            raw_paths.extend(entry["book_paths"])
+        if entry.get("book_path"):
+            raw_paths.append(entry["book_path"])
+        if raw_paths:
+            AUTHOR_BOOK_PATHS[key] = [_resolve_local_path(p) for p in raw_paths]
+
+    return metadata
+
+
+AUTHOR_METADATA = _load_author_metadata()
 
 # ---------------------------------------------------------------------------
 # punctuation-stylometry imports (config-aware)
@@ -197,8 +275,10 @@ def _chunk_sequence(
     return punctuation_seq[start : start + chunk_size]
 
 
-def _author_full_book_path(author_key: str) -> Path:
-    return FULL_BOOKS_DIR / f"{author_key}_full.txt"
+def _author_book_paths(author_key: str) -> list[Path]:
+    if author_key in AUTHOR_BOOK_PATHS:
+        return AUTHOR_BOOK_PATHS[author_key]
+    return [FULL_BOOKS_DIR / f"{author_key}_full.txt"]
 
 
 def _load_real_author_features(
@@ -207,27 +287,42 @@ def _load_real_author_features(
     features_by_author: dict[str, dict[str, list[float]]] = {}
 
     for author_key in author_keys:
-        path = _author_full_book_path(author_key)
-        if not path.exists():
-            print(f"[warn] Missing full book for '{author_key}': {path}")
+        f1_rows: list[list[float]] = []
+        f3_rows: list[list[float]] = []
+        used_paths = 0
+
+        for path in _author_book_paths(author_key):
+            if not path.exists():
+                print(f"[warn] Missing source book for '{author_key}': {path}")
+                continue
+
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            punctuation_seq = _extract_punctuation(text)
+            chunk = _chunk_sequence(punctuation_seq, chunk_size, position="middle")
+            if chunk is None:
+                print(
+                    f"[warn] Source text too short for chunk size {chunk_size}: "
+                    f"{author_key} ({path})"
+                )
+                continue
+
+            feats = _compute_features(chunk)
+            if feats is None:
+                print(f"[warn] Could not compute real features for '{author_key}' from {path}")
+                continue
+
+            f1_rows.append(feats["f1"])
+            f3_rows.append(feats["f3"])
+            used_paths += 1
+
+        if used_paths == 0:
             continue
 
-        text = path.read_text(encoding="utf-8", errors="ignore")
-        punctuation_seq = _extract_punctuation(text)
-        chunk = _chunk_sequence(punctuation_seq, chunk_size, position="middle")
-        if chunk is None:
-            print(
-                f"[warn] Full book too short for chunk size {chunk_size}: "
-                f"{author_key}"
-            )
-            continue
-
-        feats = _compute_features(chunk)
-        if feats is None:
-            print(f"[warn] Could not compute real features for '{author_key}'")
-            continue
-
-        features_by_author[author_key] = feats
+        # Average reference profile across source books for the author.
+        features_by_author[author_key] = {
+            "f1": np.mean(np.asarray(f1_rows, dtype=float), axis=0).tolist(),
+            "f3": np.mean(np.asarray(f3_rows, dtype=float), axis=0).tolist(),
+        }
 
     return features_by_author
 
@@ -271,12 +366,28 @@ def _load_llm_runs(
 
 
 def _condition_paths(selected_conditions: list[str]) -> dict[str, Path]:
+    condition_dir_map = dict(DEFAULT_CONDITION_DIRS)
+    for mapping in ARGS.condition_dir:
+        if "=" not in mapping:
+            raise ValueError(
+                f"Invalid --condition-dir '{mapping}'. Expected format name=path."
+            )
+        name, rel_path = mapping.split("=", 1)
+        name = name.strip()
+        rel_path = rel_path.strip()
+        if not name or not rel_path:
+            raise ValueError(
+                f"Invalid --condition-dir '{mapping}'. Expected format name=path."
+            )
+        condition_dir_map[name] = rel_path
+
     paths = {}
     for condition in selected_conditions:
-        rel = DEFAULT_CONDITION_DIRS.get(condition)
+        rel = condition_dir_map.get(condition)
         if rel is None:
             raise ValueError(f"Unknown condition '{condition}'")
-        paths[condition] = ROOT / rel
+        path = Path(rel)
+        paths[condition] = path if path.is_absolute() else ROOT / rel
     return paths
 
 
@@ -288,9 +399,10 @@ def _write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]])
 
 
 def _resolve_author_keys() -> list[str]:
+    requested_authors = ARGS.authors if ARGS.authors is not None else list(AUTHOR_METADATA.keys())
     author_keys: list[str] = []
-    for author in ARGS.authors:
-        meta = DEFAULT_AUTHORS.get(author)
+    for author in requested_authors:
+        meta = AUTHOR_METADATA.get(author)
         if meta is None:
             print(f"[warn] Unknown author '{author}' (ignored).")
             continue
@@ -368,42 +480,43 @@ def _build_within_author_baseline_rows(
     pooled_values: dict[str, list[float]] = {feature: [] for feature in TARGET_FEATURES}
 
     for author_key in author_keys:
-        path = _author_full_book_path(author_key)
-        if not path.exists():
-            print(f"[warn] Missing full book for baseline: {path}")
-            continue
-
-        text = path.read_text(encoding="utf-8", errors="ignore")
-        seq = _extract_punctuation(text)
-        if seq is None or len(seq) < 2 * chunk_size:
-            print(
-                f"[warn] Not enough punctuation for within-author baseline "
-                f"({author_key}, chunk={chunk_size})"
-            )
-            continue
-
-        sampled_pairs = _sample_non_overlapping_chunk_pairs(
-            seq_len=len(seq),
-            chunk_size=chunk_size,
-            n_samples=n_samples,
-            rng=rng,
-        )
-        if not sampled_pairs:
-            continue
-
         values_by_feature: dict[str, list[float]] = {feature: [] for feature in TARGET_FEATURES}
-        for start_a, start_b in sampled_pairs:
-            chunk_a = seq[start_a : start_a + chunk_size]
-            chunk_b = seq[start_b : start_b + chunk_size]
-            feats_a = _compute_features(chunk_a)
-            feats_b = _compute_features(chunk_b)
-            if feats_a is None or feats_b is None:
+
+        for path in _author_book_paths(author_key):
+            if not path.exists():
+                print(f"[warn] Missing source book for baseline: {path}")
                 continue
 
-            for feature in TARGET_FEATURES:
-                values_by_feature[feature].append(
-                    float(d_KL(feats_a[feature], feats_b[feature]))
+            text = path.read_text(encoding="utf-8", errors="ignore")
+            seq = _extract_punctuation(text)
+            if seq is None or len(seq) < 2 * chunk_size:
+                print(
+                    f"[warn] Not enough punctuation for within-author baseline "
+                    f"({author_key}, chunk={chunk_size}, path={path})"
                 )
+                continue
+
+            sampled_pairs = _sample_non_overlapping_chunk_pairs(
+                seq_len=len(seq),
+                chunk_size=chunk_size,
+                n_samples=n_samples,
+                rng=rng,
+            )
+            if not sampled_pairs:
+                continue
+
+            for start_a, start_b in sampled_pairs:
+                chunk_a = seq[start_a : start_a + chunk_size]
+                chunk_b = seq[start_b : start_b + chunk_size]
+                feats_a = _compute_features(chunk_a)
+                feats_b = _compute_features(chunk_b)
+                if feats_a is None or feats_b is None:
+                    continue
+
+                for feature in TARGET_FEATURES:
+                    values_by_feature[feature].append(
+                        float(d_KL(feats_a[feature], feats_b[feature]))
+                    )
 
         for feature in TARGET_FEATURES:
             vals = np.asarray(values_by_feature[feature], dtype=float)
@@ -445,6 +558,135 @@ def _build_within_author_baseline_rows(
         )
 
     return summary_rows
+
+
+def _build_llm_within_author_kl_tables(
+    condition_paths: dict[str, Path],
+    author_keys: list[str],
+    chunk_size: int,
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    """
+    Build LLM-vs-LLM within-author KL tables for one chunk size.
+
+    Returns:
+      - long_rows: one row per (condition, author, feature, run_a, run_b)
+      - summary_rows: per-author and pooled summaries by condition+feature
+    """
+    long_rows: list[dict[str, object]] = []
+    summary_rows: list[dict[str, object]] = []
+    pooled_values: dict[tuple[str, str], list[float]] = defaultdict(list)
+
+    for condition, condition_dir in condition_paths.items():
+        if not condition_dir.exists():
+            continue
+
+        for author_key in author_keys:
+            runs = _load_llm_runs(condition_dir, author_key, chunk_size)
+            if len(runs) < 2:
+                continue
+
+            for feature in TARGET_FEATURES:
+                pair_vals: list[float] = []
+                for i in range(len(runs) - 1):
+                    run_a = runs[i]
+                    for j in range(i + 1, len(runs)):
+                        run_b = runs[j]
+                        kl_value = float(d_KL(run_a[feature], run_b[feature]))
+                        pair_vals.append(kl_value)
+                        long_rows.append(
+                            {
+                                "condition": condition,
+                                "author_key": author_key,
+                                "feature": feature,
+                                "run_id_a": run_a["run_id"],
+                                "run_id_b": run_b["run_id"],
+                                "kl_value": kl_value,
+                            }
+                        )
+
+                vals = np.asarray(pair_vals, dtype=float)
+                if vals.size == 0:
+                    continue
+                pooled_values[(condition, feature)].extend(vals.tolist())
+                summary_rows.append(
+                    {
+                        "condition": condition,
+                        "scope": "per_author",
+                        "author_key": author_key,
+                        "feature": feature,
+                        "n_pairs": int(vals.size),
+                        "mean_kl": float(np.mean(vals)),
+                        "std_kl": float(np.std(vals)),
+                        "median_kl": float(np.median(vals)),
+                        "p25_kl": float(np.percentile(vals, 25)),
+                        "p75_kl": float(np.percentile(vals, 75)),
+                    }
+                )
+
+    for (condition, feature), vals_list in pooled_values.items():
+        vals = np.asarray(vals_list, dtype=float)
+        if vals.size == 0:
+            continue
+        summary_rows.append(
+            {
+                "condition": condition,
+                "scope": "pooled",
+                "author_key": "all_authors",
+                "feature": feature,
+                "n_pairs": int(vals.size),
+                "mean_kl": float(np.mean(vals)),
+                "std_kl": float(np.std(vals)),
+                "median_kl": float(np.median(vals)),
+                "p25_kl": float(np.percentile(vals, 25)),
+                "p75_kl": float(np.percentile(vals, 75)),
+            }
+        )
+
+    return long_rows, summary_rows
+
+
+def _build_llm_vs_human_variance_rows(
+    chunk_size: int,
+    llm_within_summary_rows: list[dict[str, object]],
+    within_human_rows: list[dict[str, object]],
+) -> list[dict[str, object]]:
+    """
+    Build chunk-level comparison rows between LLM-within and human-within KL.
+    """
+    human_pooled_by_feature: dict[str, dict[str, object]] = {}
+    for row in within_human_rows:
+        if row.get("scope") == "pooled" and row.get("author_key") == "all_authors":
+            human_pooled_by_feature[str(row["feature"])] = row
+
+    rows: list[dict[str, object]] = []
+    for row in llm_within_summary_rows:
+        if row.get("scope") != "pooled" or row.get("author_key") != "all_authors":
+            continue
+        feature = str(row["feature"])
+        human_row = human_pooled_by_feature.get(feature)
+        if human_row is None:
+            continue
+
+        llm_mean = float(row["mean_kl"])
+        human_mean = float(human_row["mean_kl"])
+        ratio = (llm_mean / human_mean) if human_mean > 0 else None
+
+        rows.append(
+            {
+                "chunk_size": chunk_size,
+                "condition": str(row["condition"]),
+                "feature": feature,
+                "llm_within_mean_kl": llm_mean,
+                "human_within_mean_kl": human_mean,
+                "llm_minus_human_mean_kl": llm_mean - human_mean,
+                "llm_to_human_mean_kl_ratio": ratio,
+                "llm_n_pairs": int(row["n_pairs"]),
+                "human_n_pairs": int(human_row["n_pairs"]),
+            }
+        )
+
+    rows.sort(key=lambda r: (r["condition"], r["feature"]))
+    return rows
 
 
 def _build_run_level_kl_rows(
@@ -1005,6 +1247,12 @@ def _run_single_chunk_analysis(
     if not run_level_rows:
         raise RuntimeError(f"No run-level KL rows generated for chunk size {chunk_size}.")
 
+    llm_within_long_rows, llm_within_summary_rows = _build_llm_within_author_kl_tables(
+        condition_paths=condition_paths,
+        author_keys=author_keys,
+        chunk_size=chunk_size,
+    )
+
     # 1) Pairwise self-vs-other tables.
     pairwise_rows, pairwise_summary_rows = _build_pairwise_tables(
         run_level_rows=run_level_rows,
@@ -1115,16 +1363,10 @@ def _run_single_chunk_analysis(
 
     # 3) Cross-author mean table (all conditions/features).
     cross_author_rows = _build_cross_author_means_table(run_level_rows, author_keys)
+    dynamic_vs_cols = [f"vs_{target}" for target in author_keys]
     _format_float_columns(
         cross_author_rows,
-        [
-            "own_author_kl",
-            "best_target_kl",
-            "vs_jane_austen",
-            "vs_william_shakespeare",
-            "vs_herbert_george_wells",
-            "vs_agnes_may_fleming",
-        ],
+        ["own_author_kl", "best_target_kl"] + dynamic_vs_cols,
     )
     cross_author_csv = output_dir / "cross_author_kl_means.csv"
     _write_csv(
@@ -1137,11 +1379,8 @@ def _run_single_chunk_analysis(
             "best_target",
             "best_target_kl",
             "own_is_smallest",
-            "vs_jane_austen",
-            "vs_william_shakespeare",
-            "vs_herbert_george_wells",
-            "vs_agnes_may_fleming",
-        ],
+        ]
+        + dynamic_vs_cols,
         rows=cross_author_rows,
     )
 
@@ -1161,6 +1400,46 @@ def _run_single_chunk_analysis(
             "comparison_type",
         ],
         rows=run_level_rows_out,
+    )
+
+    # 5) LLM-vs-LLM within-author KL tables.
+    llm_within_long_rows_out = [dict(r) for r in llm_within_long_rows]
+    _format_float_columns(llm_within_long_rows_out, ["kl_value"])
+    llm_within_long_csv = output_dir / "llm_within_author_kl_long.csv"
+    _write_csv(
+        path=llm_within_long_csv,
+        fieldnames=[
+            "condition",
+            "author_key",
+            "feature",
+            "run_id_a",
+            "run_id_b",
+            "kl_value",
+        ],
+        rows=llm_within_long_rows_out,
+    )
+
+    llm_within_summary_rows_out = [dict(r) for r in llm_within_summary_rows]
+    _format_float_columns(
+        llm_within_summary_rows_out,
+        ["mean_kl", "std_kl", "median_kl", "p25_kl", "p75_kl"],
+    )
+    llm_within_summary_csv = output_dir / "llm_within_author_kl_summary.csv"
+    _write_csv(
+        path=llm_within_summary_csv,
+        fieldnames=[
+            "condition",
+            "scope",
+            "author_key",
+            "feature",
+            "n_pairs",
+            "mean_kl",
+            "std_kl",
+            "median_kl",
+            "p25_kl",
+            "p75_kl",
+        ],
+        rows=llm_within_summary_rows_out,
     )
 
     significance_rows: list[dict[str, object]] = []
@@ -1254,6 +1533,8 @@ def _run_single_chunk_analysis(
     print(f"  {austen_vs_wells_csv}")
     print(f"  {austen_nearest_csv}")
     print(f"  {cross_author_csv}")
+    print(f"  {llm_within_long_csv}")
+    print(f"  {llm_within_summary_csv}")
     if significance_csv is not None:
         print(f"  {significance_csv}")
     if significance_deltas_csv is not None:
@@ -1262,6 +1543,7 @@ def _run_single_chunk_analysis(
     return {
         "run_level_rows": run_level_rows,
         "significance_rows": significance_rows,
+        "llm_within_summary_rows": llm_within_summary_rows,
     }
 
 
@@ -1276,6 +1558,8 @@ def main() -> None:
 
     aggregate_significance_rows: list[dict[str, object]] = []
     aggregate_within_human_rows: list[dict[str, object]] = []
+    aggregate_within_llm_rows: list[dict[str, object]] = []
+    aggregate_llm_vs_human_rows: list[dict[str, object]] = []
 
     for chunk_size in chunk_sizes:
         chunk_output_dir = (
@@ -1300,6 +1584,47 @@ def main() -> None:
             seed=42,
         )
         aggregate_within_human_rows.extend(baseline_rows)
+
+        llm_within_rows = chunk_result["llm_within_summary_rows"]
+        for row in llm_within_rows:
+            row_out = dict(row)
+            row_out["chunk_size"] = chunk_size
+            aggregate_within_llm_rows.append(row_out)
+
+        llm_vs_human_rows = _build_llm_vs_human_variance_rows(
+            chunk_size=chunk_size,
+            llm_within_summary_rows=llm_within_rows,
+            within_human_rows=baseline_rows,
+        )
+        if llm_vs_human_rows:
+            llm_vs_human_rows_out = [dict(r) for r in llm_vs_human_rows]
+            _format_float_columns(
+                llm_vs_human_rows_out,
+                [
+                    "llm_within_mean_kl",
+                    "human_within_mean_kl",
+                    "llm_minus_human_mean_kl",
+                    "llm_to_human_mean_kl_ratio",
+                ],
+            )
+            llm_vs_human_csv = chunk_output_dir / "llm_vs_human_within_variance_summary.csv"
+            _write_csv(
+                path=llm_vs_human_csv,
+                fieldnames=[
+                    "chunk_size",
+                    "condition",
+                    "feature",
+                    "llm_within_mean_kl",
+                    "human_within_mean_kl",
+                    "llm_minus_human_mean_kl",
+                    "llm_to_human_mean_kl_ratio",
+                    "llm_n_pairs",
+                    "human_n_pairs",
+                ],
+                rows=llm_vs_human_rows_out,
+            )
+            print(f"[wrote] {llm_vs_human_csv}")
+            aggregate_llm_vs_human_rows.extend(llm_vs_human_rows)
 
     if aggregate_significance_rows:
         significance_chunk_csv = OUTPUT_DIR / "chunk_size_significance_summary.csv"
@@ -1378,6 +1703,63 @@ def main() -> None:
             rows=within_human_rows_out,
         )
         print(f"[wrote] {within_human_csv}")
+
+    if aggregate_within_llm_rows:
+        within_llm_csv = OUTPUT_DIR / "chunk_size_llm_within_author_baseline.csv"
+        within_llm_rows_out = [dict(r) for r in aggregate_within_llm_rows]
+        _format_float_columns(
+            within_llm_rows_out,
+            ["mean_kl", "std_kl", "median_kl", "p25_kl", "p75_kl"],
+        )
+        _write_csv(
+            path=within_llm_csv,
+            fieldnames=[
+                "chunk_size",
+                "condition",
+                "scope",
+                "author_key",
+                "feature",
+                "n_pairs",
+                "mean_kl",
+                "std_kl",
+                "median_kl",
+                "p25_kl",
+                "p75_kl",
+            ],
+            rows=within_llm_rows_out,
+        )
+        print(f"[wrote] {within_llm_csv}")
+
+    if aggregate_llm_vs_human_rows:
+        llm_vs_human_chunk_csv = (
+            OUTPUT_DIR / "chunk_size_llm_vs_human_variance_summary.csv"
+        )
+        llm_vs_human_chunk_rows_out = [dict(r) for r in aggregate_llm_vs_human_rows]
+        _format_float_columns(
+            llm_vs_human_chunk_rows_out,
+            [
+                "llm_within_mean_kl",
+                "human_within_mean_kl",
+                "llm_minus_human_mean_kl",
+                "llm_to_human_mean_kl_ratio",
+            ],
+        )
+        _write_csv(
+            path=llm_vs_human_chunk_csv,
+            fieldnames=[
+                "chunk_size",
+                "condition",
+                "feature",
+                "llm_within_mean_kl",
+                "human_within_mean_kl",
+                "llm_minus_human_mean_kl",
+                "llm_to_human_mean_kl_ratio",
+                "llm_n_pairs",
+                "human_n_pairs",
+            ],
+            rows=llm_vs_human_chunk_rows_out,
+        )
+        print(f"[wrote] {llm_vs_human_chunk_csv}")
 
 
 if __name__ == "__main__":
