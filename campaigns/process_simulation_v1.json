@@ -1,0 +1,162 @@
+{
+  "analysis_name": "pre_registered_punctuation_process_simulation_v1",
+  "description": "Tests whether homogeneous punctuation dependence or persistent dialogue/narration switching can reproduce the length-dependent human G-statistic overdispersion.",
+  "authors_config": "campaigns/author_panel_20.json",
+  "cache": "cache/author_panel_20_with_runs.json",
+  "output_dir": "results/author_panel_20/process_simulation_v1",
+  "parameter_artifact": {
+    "path": "results/author_panel_20/process_simulation_v1/frozen_parameters.json",
+    "sha256": "d3ec77055035f0b21678acd626a575357dcae97e842dd60c526f9dd5274009e7"
+  },
+  "pre_registration": {
+    "status": "frozen_before_simulation",
+    "freeze_instruction": "After manual segmentation validation, review this file, set status to frozen_before_simulation, and commit or externally timestamp it before the inferential run. Engineering smoke runs must use explicit bypass settings and are not evidence.",
+    "claim": "Sufficiency, not uniqueness: compare homogeneous oracle and finite-reference processes with a two-state discourse process fitted without the evaluation authors.",
+    "primary_feature": "f3",
+    "primary_targets": {
+      "phi": {
+        "1000": 1.5118478780851468,
+        "2000": 2.2402522241351823,
+        "4000": 3.5552584205001576
+      },
+      "fixed_intercept_rho": 0.0006292088575407687,
+      "implied_delta_df90": 0.02831439858933459
+    },
+    "unexcluded_alternatives": [
+      "genre",
+      "chapter structure",
+      "editorial house style",
+      "higher-order dependence",
+      "changing speakers",
+      "reference-profile estimation error",
+      "between-book heterogeneity"
+    ]
+  },
+  "segmentation": {
+    "unit": "punctuation_marks",
+    "rule": "quote-delimited spans; quote marks belong to dialogue; quote state resets at blank-line paragraph boundaries",
+    "nested_quotes": "stack directional and symmetric quote pairs",
+    "tokenization": "apply the frozen full-text spaCy tokenizer after Gutenberg stripping and ellipsis normalization; only exact quote tokens can change state",
+    "apostrophes": "standalone straight apostrophe tokens follow the frozen parser and are treated as symmetric quote marks; apostrophes embedded in contraction tokens do not change state",
+    "unmatched_closer": "retain current state and record an error",
+    "unclosed_quote": "close at paragraph boundary and record it",
+    "strip_gutenberg_boilerplate": true,
+    "known_limitations": [
+      "quotes glued into a larger spaCy token are neither extracted nor used as state boundaries",
+      "title-page and metadata quotations remaining after boilerplate removal are treated like prose quotations",
+      "OCR-damaged and elision-like standalone apostrophes can be misclassified and are assessed by the blinded manual sample"
+    ]
+  },
+  "manual_validation": {
+    "sample_path": "annotations/dialogue_segmentation_sample_v1.csv",
+    "seed": 20260908,
+    "sample_size": 200,
+    "sampling": "100 marks per automatic state, shuffled; automatic labels withheld from the annotation file",
+    "required_before_simulation": true,
+    "max_balanced_error_rate": 0.1,
+    "max_per_state_error_rate": 0.15,
+    "labels": [
+      "narration",
+      "dialogue"
+    ]
+  },
+  "evaluation": {
+    "split_unit": "author",
+    "parameter_training": "all books from the other four author folds",
+    "test_information_used_by_simulator": "held-out book punctuation lengths only",
+    "reference_design": "two synthetic whole books scored against one synthetic target, matching each real three-book rotation",
+    "fold_by_author": {
+      "herbert_george_wells": 0,
+      "agnes_may_fleming": 1,
+      "mark_twain": 2,
+      "charles_dickens": 3,
+      "mary_shelley": 4,
+      "joseph_conrad": 0,
+      "arthur_conan_doyle": 1,
+      "jane_austen": 2,
+      "oscar_wilde": 3,
+      "charlotte_bronte": 4,
+      "mildred_wirt": 0,
+      "robert_sidney_bowen": 1,
+      "louis_joseph_vance": 2,
+      "john_c_hutcheson": 3,
+      "arthur_scott_bailey": 4,
+      "kathleen_thompson_norris": 0,
+      "luis_senarens": 1,
+      "harold_l_goodwin": 2,
+      "susan_warner": 3,
+      "ethel_m_dell": 4
+    }
+  },
+  "simulation": {
+    "seed": 20260908,
+    "chunk_sizes": [
+      1000,
+      2000,
+      4000
+    ],
+    "smoothing_eps": 0.5,
+    "replicates_per_cell": 250,
+    "tail_replicates_at_fitted_point": 2000,
+    "human_author_bootstrap_iterations": 2000,
+    "reference_length_cap": null,
+    "models": {
+      "iid": {
+        "references": [
+          "oracle",
+          "estimated"
+        ],
+        "prediction": "phi approximately one with an oracle reference; finite-reference growth is measured separately"
+      },
+      "markov": {
+        "references": [
+          "oracle",
+          "estimated"
+        ],
+        "prediction": "f3 phi approaches one with an oracle reference; finite-reference growth is measured separately"
+      },
+      "two_state_hsmm": {
+        "references": [
+          "estimated"
+        ],
+        "prediction": "persistent discourse-state switching can produce approximately linear f3 phi growth"
+      }
+    },
+    "dwell_scales": [
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.0
+    ],
+    "contrast_levels": [
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "fitted_point": {
+      "dwell_scale": 1.0,
+      "contrast": 1.0
+    }
+  },
+  "estimands": {
+    "sampling_frame": "At each n, human phi pools every complete non-overlapping chunk. Each simulated observation independently samples one entry uniformly from that exact book-by-chunk frame, generates through the selected chunk position, and scores that chunk. This gives books probability proportional to their number of observed chunks and includes 60/59/56 books at n=1000/2000/4000.",
+    "phi_n": "pooled-chunk mean G divided by nominal feature degrees of freedom",
+    "rho_at_n": "(phi(n)-1)/n, reported separately at every chunk size to diagnose f1 versus f3 drift",
+    "fixed_intercept_rho": "least-squares slope of phi(n)-1 on n with intercept fixed at one",
+    "implied_delta": "rho times degrees of freedom divided by two",
+    "raw_delta": "G/(2n) for f1 and G/(2(n-1)) for f3",
+    "excess_delta": "(G-df)/(2n), the observation-level estimator corresponding to E[G]=df+2n*delta",
+    "tail": "CV and Fisher-Pearson skew for signed excess_delta; two-sample KS distance, Wasserstein distance, negative mass and upper quantiles compare human and fitted-point distributions without imposing positive support. A moment-matched gamma KS distance is descriptive and applies only to positive raw_delta.",
+    "human_uncertainty": "author-cluster bootstrap percentile interval for pooled-chunk mean G and phi",
+    "monte_carlo_uncertainty": "normal 95% interval for each simulated mean plus empirical 2.5% and 97.5% observation quantiles"
+  }
+}

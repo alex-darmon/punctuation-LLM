@@ -25,6 +25,8 @@ PANEL_CONFIG = ROOT / "campaigns" / "author_panel_20.json"
 SOURCE_MANIFEST = ROOT / "results" / "author_panel_20" / "source_manifest.json"
 INFERENCE_CONFIG = ROOT / "campaigns" / "inference_v2.json"
 INFERENCE_RESULTS = ROOT / "results" / "author_panel_20" / "inference_v2"
+PROCESS_CONFIG = ROOT / "campaigns" / "process_simulation_v1.json"
+PROCESS_RESULTS = ROOT / "results" / "author_panel_20" / "process_simulation_v1"
 FULL_GRID_RESULTS = ROOT / "results" / "author_panel_20" / "full_grid"
 FROZEN_RESULTS = ROOT / "results" / "frozen"
 GENERATION_CONFIGS = (
@@ -271,6 +273,136 @@ def verify_inference(checks: Checks, candidate: Path | None) -> None:
     )
 
 
+def verify_process_simulation(checks: Checks) -> list[Path]:
+    """Verify process artifacts automatically once the canonical run exists."""
+    manifest_path = PROCESS_RESULTS / "manifest.json"
+    if not manifest_path.exists():
+        return []
+
+    config = read_json(PROCESS_CONFIG)
+    manifest = read_json(manifest_path)
+    checks.same_hash(
+        PROCESS_CONFIG,
+        manifest["analysis_config_sha256"],
+        "process-simulation config",
+    )
+    checks.require(
+        config["pre_registration"]["status"] == "frozen_before_simulation",
+        "process-simulation config is not frozen",
+    )
+    checks.require(
+        manifest["pre_registration_status"] == "frozen_before_simulation"
+        and not manifest["engineering_smoke"],
+        "canonical process manifest is not an inferential frozen run",
+    )
+
+    inputs = manifest["inputs"]
+    checks.same_hash(
+        resolve(inputs["authors_config"]["path"]),
+        inputs["authors_config"]["sha256"],
+        "process author config",
+    )
+    checks.same_hash(
+        resolve(inputs["cache"]["path"]),
+        inputs["cache"]["sha256"],
+        "process cache",
+    )
+    for relative, expected in inputs["human_text_sha256"].items():
+        checks.same_hash(resolve(relative), expected, f"process human source {relative}")
+    for relative, expected in manifest["source_sha256"].items():
+        checks.same_hash(resolve(relative), expected, f"process source {relative}")
+
+    parameter = manifest["parameter_artifact"]
+    configured_parameter = config["parameter_artifact"]
+    checks.require(
+        parameter == configured_parameter,
+        "process parameter artifact does not match the frozen config",
+    )
+    parameter_path = resolve(parameter["path"])
+    checks.same_hash(
+        parameter_path,
+        parameter["sha256"],
+        "process frozen parameter artifact",
+    )
+    validation = manifest["manual_validation"]
+    checks.require(
+        validation["status"] == "complete"
+        and validation["thresholds_pass"]
+        and validation["n_sampled"] == config["manual_validation"]["sample_size"],
+        "process manual validation is incomplete or outside thresholds",
+    )
+    checks.same_hash(
+        resolve(validation["path"]),
+        validation["sha256"],
+        "process manual validation sample",
+    )
+
+    for distribution, expected in manifest["environment"]["packages"].items():
+        try:
+            actual = importlib.metadata.version(distribution)
+        except importlib.metadata.PackageNotFoundError:
+            actual = None
+        checks.require(
+            actual == expected,
+            f"process package version mismatch for {distribution}: "
+            f"{actual} != {expected}",
+        )
+    for filename, expected in manifest["output_sha256"].items():
+        checks.same_hash(
+            PROCESS_RESULTS / filename,
+            expected,
+            f"process output {filename}",
+        )
+
+    with (PROCESS_RESULTS / "summaries.csv").open(
+        newline="", encoding="utf-8"
+    ) as handle:
+        summaries = list(csv.DictReader(handle))
+    observed = {
+        int(row["chunk_size"]): float(row["phi"])
+        for row in summaries
+        if row["phase"] == "observed" and row["feature"] == "f3"
+    }
+    declared = {
+        int(size): float(value)
+        for size, value in config["pre_registration"]["primary_targets"]["phi"].items()
+    }
+    checks.require(
+        observed == declared,
+        f"process observed phi targets changed: {observed}",
+    )
+    sizes = sorted(observed)
+    numerator = sum(size * (observed[size] - 1.0) for size in sizes)
+    denominator = sum(size * size for size in sizes)
+    rho = numerator / denominator
+    delta = rho * 90 / 2
+    targets = config["pre_registration"]["primary_targets"]
+    checks.require(
+        abs(rho - float(targets["fixed_intercept_rho"])) <= 1e-12,
+        f"process observed rho target changed: {rho}",
+    )
+    checks.require(
+        abs(delta - float(targets["implied_delta_df90"])) <= 1e-12,
+        f"process observed delta target changed: {delta}",
+    )
+    checks.require(
+        manifest["effective_settings"]["sampling_frame_counts"]
+        == {
+            "1000": {"n_chunks": 1003, "n_books": 60},
+            "2000": {"n_chunks": 485, "n_books": 59},
+            "4000": {"n_chunks": 225, "n_books": 56},
+        },
+        "process simulation sampling frame changed",
+    )
+    return [
+        PROCESS_CONFIG,
+        manifest_path,
+        parameter_path,
+        resolve(validation["path"]),
+        *(PROCESS_RESULTS / name for name in manifest["output_sha256"]),
+    ]
+
+
 def compare_csv_directories(checks: Checks, canonical: Path, candidate: Path) -> None:
     canonical_files = sorted(canonical.glob("*.csv"))
     checks.require(bool(canonical_files), f"no canonical CSVs found in {canonical}")
@@ -333,6 +465,7 @@ def main() -> None:
         checks,
         resolve(args.candidate_inference) if args.candidate_inference else None,
     )
+    tracked.extend(verify_process_simulation(checks))
     tracked.extend(verify_paper(checks))
     tracked.extend(
         [

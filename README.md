@@ -224,6 +224,56 @@ accuracy, and the 20-author positional analysis shows target-KL increases for
 both models, superseding the frozen 10-author statement that Flash drift was
 not detected.
 
+## Pre-registered punctuation-process simulation
+
+`campaigns/process_simulation_v1.json` declares the process models, author
+folds, segmentation policy, 8x8 dwell/contrast grid, estimands, seeds and
+observed targets. It distinguishes oracle from finite two-book
+references: for f3, a correctly specified homogeneous Markov process is expected
+to approach `phi = 1` only under its oracle transition matrix.
+
+First create the fixed, state-balanced hand-check sample:
+
+```bash
+make process-validation
+```
+
+Fill `manual_state` in `annotations/dialogue_segmentation_sample_v1.csv`. The
+automatic labels are withheld to keep this check blind. The runner reconstructs
+the seeded sample and verifies its size, order, IDs, marks and unique membership,
+then enforces the declared overall and per-state error thresholds.
+
+Fit parameters in a separate non-simulation invocation:
+
+```bash
+make process-fit
+```
+
+Record the printed parameter-artifact SHA-256 in the configuration. Then review
+the configuration, change its status to `frozen_before_simulation`, and commit
+or externally timestamp both files. The inferential run accepts no runtime
+overrides and refuses to overwrite canonical outputs:
+
+```bash
+make process-simulation
+make process-figures
+```
+
+Model parameters for each fold are estimated from the other 16 authors. The
+held-out fold supplies only its three-book punctuation-length design. At each
+chunk size, simulation samples uniformly from the exact pooled human chunk
+frame, so book weights and chunk positions match the human estimand. Outputs
+include every simulated observation, hash-locked fitted parameters, clustered
+human uncertainty, `phi(n)` summaries, fixed-intercept and length-specific rho,
+distribution-free tail comparisons, and a checksum manifest under
+`results/author_panel_20/process_simulation_v1/`. The plotter verifies that
+manifest and refuses smoke outputs unless explicitly overridden.
+The repository-wide reproducibility verifier automatically begins checking the
+parameter artifact, inputs, environment, targets and outputs once the canonical
+simulation manifest exists.
+An engineering smoke run may explicitly bypass both gates; the bypass and all
+runtime overrides are recorded in its manifest and are not inferential results.
+
 ## Layout
 
 | Path | Role |
@@ -231,9 +281,12 @@ not detected.
 | `punctlib/` | frozen library: corpus, features, the reference builder, statistics |
 | `run_frozen_grid.py` | the frozen LLM analysis entry point; runs all nine experiments |
 | `run_inference_v2.py` | additive cluster-aware and cross-fitted 20-author inference |
+| `run_process_simulation.py` | pre-registered oracle, finite-reference and two-state simulations |
 | `campaigns/inference_v2.json` | declared primary estimands, sensitivities, folds and seeds |
+| `campaigns/process_simulation_v1.json` | frozen simulation predictions, grid, splits and seeds |
 | `tools/build_punct_cache.py` | parses texts to punctuation sequences (the one input step) |
 | `tools/plot_inference_v2.py` | generates the five principal chapter figures |
+| `tools/plot_process_simulation.py` | generates the process-model comparison figures |
 | `tools/render_inference_tables.py` | renders manuscript tables from pinned CSVs |
 | `tools/verify_reproducibility.py` | verifies source, generation, cache, manifest and golden-output hashes |
 | `tools/analyze_original_gutenberg_dc.py` | standalone D/C analysis of the archived full corpus |

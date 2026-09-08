@@ -7,8 +7,8 @@ PRO_CONDITION := generated_texts_campaign_author20_pro
 REPRO := results/repro_check
 
 .PHONY: help install check-environment assemble20 cache-frozen cache20 \
-	full-grid inference-v2 test verify-assets figures tables paper verify \
-	reproduce-no-api
+	full-grid inference-v2 process-validation process-fit process-simulation process-figures \
+	test verify-assets figures tables paper verify reproduce-no-api
 
 help:
 	@echo "Supported targets:"
@@ -17,6 +17,10 @@ help:
 	@echo "  cache20           Rebuild the ignored 20-author parse cache"
 	@echo "  full-grid         Regenerate canonical 20-author grid outputs"
 	@echo "  inference-v2      Regenerate canonical clustered inference"
+	@echo "  process-validation  Create the hand-labelling sample once"
+	@echo "  process-fit         Fit the lockable process-parameter artifact"
+	@echo "  process-simulation  Run the pre-registered process sweep"
+	@echo "  process-figures     Plot completed process-simulation outputs"
 	@echo "  test              Run every discovered unit/integration test"
 	@echo "  verify            Check canonical artifacts and build manuscript"
 	@echo "  reproduce-no-api  Rerun frozen/grid/inference into ignored paths"
@@ -67,6 +71,21 @@ full-grid: cache20
 
 inference-v2: full-grid
 	$(PYTHON) run_inference_v2.py
+
+process-validation:
+	test -f $(PANEL_CACHE)
+	$(PYTHON) run_process_simulation.py --prepare-validation-sample
+
+process-fit:
+	test -f $(PANEL_CACHE)
+	$(PYTHON) run_process_simulation.py --fit-parameters
+
+process-simulation:
+	test -f $(PANEL_CACHE)
+	$(PYTHON) run_process_simulation.py
+
+process-figures:
+	$(PYTHON) tools/plot_process_simulation.py
 
 test:
 	$(PYTHON) -m unittest discover -s tests -p 'test_*.py' -v

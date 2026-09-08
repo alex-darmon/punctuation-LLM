@@ -15,7 +15,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import sys
 from pathlib import Path
 
@@ -61,40 +60,18 @@ ARGS = parse_args()
 
 # punctuation.config reads sys.argv at import time, so it has to be rewritten
 # only after our own arguments have been consumed.
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "punctuation-stylometry-master"))
 _CONFIG = str(ROOT / "punctuation-stylometry-master" / "conf" / "punctuation.ini")
 sys.argv = [sys.argv[0], "-c", _CONFIG]
 
+from punctlib.text import normalise_text  # noqa: E402
 from punctuation.parser.punctuation_parser import get_textinfo, seq_pun_only  # noqa: E402
-
-GUTENBERG_START = re.compile(
-    r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG[^\n]*\*\*\*", re.IGNORECASE
-)
-GUTENBERG_END = re.compile(
-    r"\*\*\*\s*END OF (THE|THIS) PROJECT GUTENBERG[^\n]*\*\*\*", re.IGNORECASE
-)
-# Files whose header/footer boilerplate is present without the *** markers.
-LEGAL_PREAMBLE = re.compile(
-    r"This eBook is for the use of anyone anywhere.*?(?:\n\n|\r\n\r\n)", re.IGNORECASE | re.DOTALL
-)
-
-
-def strip_boilerplate(text: str) -> str:
-    start = GUTENBERG_START.search(text)
-    if start:
-        text = text[start.end() :]
-    end = GUTENBERG_END.search(text)
-    if end:
-        text = text[: end.start()]
-    text = LEGAL_PREAMBLE.sub("", text, count=1)
-    return text
 
 
 def punct_sequence(path: Path, strip: bool) -> list[str]:
     text = path.read_text(encoding="utf-8", errors="ignore")
-    if strip:
-        text = strip_boilerplate(text)
-    text = text.replace("...", "^")
+    text = normalise_text(text, strip=strip)
     seq = seq_pun_only(get_textinfo(text))
     return list(seq) if seq else []
 
