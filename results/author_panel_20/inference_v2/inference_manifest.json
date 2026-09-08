@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-09-08T12:57:52.308526+00:00",
+  "generated_utc": "2026-09-08T13:16:10.311759+00:00",
   "analysis_config": "campaigns/inference_v2.json",
   "analysis_config_sha256": "5eeb33080d51c4805b99688ccb2f1eb5db455b15b16c3f5ca4ef27779083dd69",
   "authors_config": "campaigns/author_panel_20.json",
@@ -39,7 +39,7 @@
     "punctlib/vendored.py": "63ef6eb4c65d6edbbb6c4976fe339c002ad7d135ccd33dafdedce11e082f1384"
   },
   "git": {
-    "commit": "85681454057e9b4a50c9f5096058a1b7f293cbb8",
+    "commit": "414dc28419b34dedeebc54ec1767cfe4ba6ed213",
     "branch": "main",
     "dirty_outside_declared_outputs": false
   },
