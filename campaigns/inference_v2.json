@@ -1,0 +1,71 @@
+{
+  "analysis_name": "author_panel_20_inference_v2",
+  "description": "Cluster-aware, cross-fitted inference for the balanced 20-author punctuation evaluation instrument.",
+  "authors_config": "campaigns/author_panel_20.json",
+  "cache": "cache/author_panel_20_with_runs.json",
+  "conditions": {
+    "flash": "generated_texts_campaign_author20_flash",
+    "pro": "generated_texts_campaign_author20_pro"
+  },
+  "upstream_results": {
+    "full_grid_dir": "results/author_panel_20/full_grid",
+    "context_drift": "results/author_panel_20/full_grid/context_drift.csv"
+  },
+  "output_dir": "results/author_panel_20/inference_v2",
+  "primary": {
+    "author_set": "all_authors",
+    "feature": "f3",
+    "chunk_size": 2000,
+    "reference_policy": "leave_one_book_out",
+    "detection_fpr": 0.05
+  },
+  "sensitivity": {
+    "features": [
+      "f1",
+      "f3"
+    ],
+    "chunk_sizes": [
+      1000,
+      2000,
+      4000
+    ],
+    "author_sets": [
+      "all_authors",
+      "existing",
+      "new"
+    ],
+    "smoothing_eps": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "include_pooled_leakage_contrast": true,
+    "include_dash_sensitivity_for_raw_runs": true
+  },
+  "inference": {
+    "seed": 20260908,
+    "bootstrap_iterations": 2000,
+    "detection_folds": 5,
+    "detection_split_unit": "author",
+    "detection_stratify_by": "cohort",
+    "human_cluster_unit": "author",
+    "llm_cluster_unit": "author",
+    "llm_secondary_cluster_unit": "prompt_source_book",
+    "confidence_level": 0.95
+  },
+  "estimands": {
+    "human_identifiability": "Author-equal mean leave-one-book-out attribution accuracy.",
+    "llm_imitability": "Author-equal mean target-author attribution accuracy with the prompt-source book excluded.",
+    "model_difference": "Paired author-level difference in imitability between Flash and Pro.",
+    "detection": "Out-of-fold AUC, empirical human false-positive rate, and LLM true-positive rate at a threshold calibrated on other authors.",
+    "separability": "Association between cross-fitted human-only D/C and attribution of books excluded from D/C construction.",
+    "positional_stability": "Author-equal first-to-fifth-window change in target KL and attribution geometry."
+  },
+  "claim_policy": {
+    "primary_panel": "The screened 20-author panel is the primary conditional evaluation population.",
+    "frozen_panel": "The frozen 10-author analysis is retained as discovery and replication evidence.",
+    "pooled_references": "Pooled-reference results are leakage contrasts, not headline estimates.",
+    "run_level_tests": "Run-level binomial tests are descriptive and are not used as population-level inference.",
+    "novelty": "The contribution is the integrated leakage-controlled evaluation instrument, not KL, punctuation features, or the language models."
+  }
+}

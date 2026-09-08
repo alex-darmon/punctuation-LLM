@@ -7,19 +7,22 @@ and avoids hard-coding authors/prompts in multiple files.
 
 Example:
   export GEMINI_API_KEY="your-key"
-  python generate_llm_texts_campaign.py --campaign-config campaigns/generation_campaign_phaseA.json --dry-run
-  python generate_llm_texts_campaign.py --campaign-config campaigns/generation_campaign_phaseA.json --skip-existing
+  python generate_llm_texts_campaign.py --campaign-config campaigns/generation_campaign_new10_flash.json --dry-run
+  python generate_llm_texts_campaign.py --campaign-config campaigns/generation_campaign_new10_flash.json --skip-existing
 """
 
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
+import platform
 import sys
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -154,6 +157,22 @@ def resolve_path(path_like: str) -> Path:
     return p if p.is_absolute() else ROOT / p
 
 
+def portable_path(path: Path) -> str:
+    """Use repository-relative paths in metadata whenever possible."""
+    try:
+        return path.resolve().relative_to(ROOT).as_posix()
+    except ValueError:
+        return str(path)
+
+
+def file_sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
 DEFAULT_MODEL = CAMPAIGN.get("default_model", "gemini-2.5-flash")
 DEFAULT_RUNS = int(CAMPAIGN.get("default_runs", 10))
 DEFAULT_TARGET_MARKS = int(CAMPAIGN.get("default_target_marks", 2000))
@@ -161,6 +180,8 @@ EXCERPT_WORDS = int(CAMPAIGN.get("excerpt_words", 1500))
 MAX_ROUNDS = int(CAMPAIGN.get("max_rounds", 30))
 TEMPERATURE = float(CAMPAIGN.get("temperature", 1.0))
 MAX_OUTPUT_TOKENS = int(CAMPAIGN.get("max_output_tokens", 8192))
+DASH_POLICY = CAMPAIGN.get("dash_policy", "replace_with_comma")
+SAVE_RAW_OUTPUTS = bool(CAMPAIGN.get("save_raw_outputs", False))
 MIN_BOOK_SAMPLES = (
     ARGS.min_book_samples_per_author
     if ARGS.min_book_samples_per_author is not None
@@ -179,6 +200,11 @@ if TARGET_MARKS <= 0:
 if MIN_BOOK_SAMPLES <= 0:
     raise ValueError(
         f"--min-book-samples-per-author must be positive, got {MIN_BOOK_SAMPLES}"
+    )
+if DASH_POLICY not in {"replace_with_comma", "preserve"}:
+    raise ValueError(
+        "Campaign 'dash_policy' must be 'replace_with_comma' or 'preserve', "
+        f"got {DASH_POLICY!r}"
     )
 
 # ---------------------------------------------------------------------------
@@ -312,6 +338,22 @@ def clean_em_dashes(text: str) -> str:
     return text.replace("—", ", ").replace("–", ", ").replace(" ,", ",")
 
 
+def apply_dash_policy(text: str) -> str:
+    if DASH_POLICY == "preserve":
+        return text
+    return clean_em_dashes(text)
+
+
+def dash_metadata(raw_text: str, raw_path: Path | None) -> dict:
+    return {
+        "dash_policy": DASH_POLICY,
+        "raw_output_available": raw_path is not None,
+        "raw_output_path": portable_path(raw_path) if raw_path is not None else None,
+        "raw_em_dash_count": raw_text.count("—"),
+        "raw_en_dash_count": raw_text.count("–"),
+    }
+
+
 def select_authors():
     author_entries = CAMPAIGN["authors"]
     if not ARGS.author:
@@ -338,18 +380,26 @@ def validate_author_books(author_entries):
     under_min = []
     for author in author_entries:
         paths = author_book_paths(author)
+        signatures: set[str] = set()
         for book_path in paths:
             if not book_path.exists():
                 missing.append((author["key"], str(book_path)))
-        distinct_paths = len({str(p.resolve()) for p in paths})
-        if distinct_paths < MIN_BOOK_SAMPLES:
-            under_min.append((author["key"], distinct_paths))
+                continue
+            sequence = extract_punctuation(load_text(book_path))
+            if sequence:
+                signature = hashlib.sha256(
+                    "".join(sequence).encode("utf-8")
+                ).hexdigest()
+                signatures.add(signature)
+        if len(signatures) < MIN_BOOK_SAMPLES:
+            under_min.append((author["key"], len(signatures)))
     if missing:
         lines = "\n".join(f"  - {k}: {p}" for k, p in missing)
         raise FileNotFoundError(f"Missing author source books:\n{lines}")
     if under_min:
         lines = "\n".join(
-            f"  - {k}: {n} source books (min required: {MIN_BOOK_SAMPLES})"
+            f"  - {k}: {n} content-distinct source books "
+            f"(min required: {MIN_BOOK_SAMPLES})"
             for k, n in under_min
         )
         raise ValueError(f"Authors below minimum source-book count:\n{lines}")
@@ -502,7 +552,9 @@ def source_book_for_run(run_id: int, book_paths: list[Path], book_texts: list[st
     return idx, book_paths[idx], book_texts[idx]
 
 
-def generate_text(model, author_name: str, form: str, book_text: str, run_id: int) -> str:
+def generate_text(
+    model, author_name: str, form: str, book_text: str, run_id: int
+) -> tuple[str, str]:
     if GENERATION_CONFIG_FACTORY is None:
         raise RuntimeError("Generation backend is not initialized.")
 
@@ -517,6 +569,7 @@ def generate_text(model, author_name: str, form: str, book_text: str, run_id: in
         continuation_template = PROSE_CONTINUATION_PROMPT
 
     accumulated_text = ""
+    raw_accumulated_text = ""
     current_marks = 0
 
     for round_num in range(1, MAX_ROUNDS + 1):
@@ -543,11 +596,14 @@ def generate_text(model, author_name: str, form: str, book_text: str, run_id: in
             time.sleep(30)
             continue
 
-        new_text = clean_em_dashes(new_text)
+        raw_new_text = new_text
+        new_text = apply_dash_policy(raw_new_text)
         if accumulated_text:
             accumulated_text += "\n\n" + new_text
+            raw_accumulated_text += "\n\n" + raw_new_text
         else:
             accumulated_text = new_text
+            raw_accumulated_text = raw_new_text
 
         current_marks = count_marks(accumulated_text)
         if current_marks >= TARGET_MARKS:
@@ -555,7 +611,7 @@ def generate_text(model, author_name: str, form: str, book_text: str, run_id: in
             break
         time.sleep(2)
 
-    return accumulated_text
+    return accumulated_text, raw_accumulated_text
 
 
 def main() -> None:
@@ -570,6 +626,8 @@ def main() -> None:
     safe_print(f"Target marks: {TARGET_MARKS}")
     safe_print(f"Runs per author: {NUM_RUNS}")
     safe_print(f"Min source books/author: {MIN_BOOK_SAMPLES}")
+    safe_print(f"Dash policy: {DASH_POLICY}")
+    safe_print(f"Save raw outputs: {SAVE_RAW_OUTPUTS}")
     safe_print(f"Parallel workers: {max(1, min(ARGS.parallel, NUM_RUNS))}")
     safe_print(f"Skip existing: {ARGS.skip_existing}")
     safe_print(f"Auth mode: {ARGS.auth_mode}")
@@ -590,21 +648,86 @@ def main() -> None:
                 safe_print(f"      * {p}")
         return
 
-    model, GENERATION_CONFIG_FACTORY, auth_label = initialize_generation_backend(MODEL)
-    safe_print(f"Authenticated via: {auth_label}")
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    missing_runs = [
+        OUTPUT_DIR / author["key"] / f"run_{run_id:02d}.txt"
+        for author in authors
+        for run_id in range(1, NUM_RUNS + 1)
+        if not (
+            ARGS.skip_existing
+            and (OUTPUT_DIR / author["key"] / f"run_{run_id:02d}.txt").is_file()
+            and (OUTPUT_DIR / author["key"] / f"run_{run_id:02d}.txt").stat().st_size
+            > 0
+        )
+    ]
+    if missing_runs:
+        model, GENERATION_CONFIG_FACTORY, auth_label = initialize_generation_backend(
+            MODEL
+        )
+        safe_print(f"Authenticated via: {auth_label}")
+    else:
+        model = None
+        auth_label = "not required (all existing runs were re-analysed)"
+        safe_print("Authentication not required: all requested runs already exist.")
 
     # Write run metadata for reproducibility.
+    source_books = [
+        {
+            "author_key": author["key"],
+            "path": portable_path(path),
+            "sha256": file_sha256(path),
+        }
+        for author in authors
+        for path in author_book_paths(author)
+    ]
+    prompt_protocol = "\n".join(
+        (
+            PROSE_PROMPT,
+            PLAY_PROMPT,
+            PROSE_CONTINUATION_PROMPT,
+            PLAY_CONTINUATION_PROMPT,
+        )
+    )
     metadata_out = {
+        "generated_utc": datetime.now(timezone.utc).isoformat(),
         "campaign_name": CAMPAIGN.get("campaign_name", CAMPAIGN_CONFIG_PATH.stem),
-        "campaign_config_path": str(CAMPAIGN_CONFIG_PATH),
+        "campaign_config_path": portable_path(CAMPAIGN_CONFIG_PATH),
+        "campaign_config_sha256": file_sha256(CAMPAIGN_CONFIG_PATH),
+        "generator_script_sha256": file_sha256(Path(__file__).resolve()),
+        "prompt_protocol_sha256": hashlib.sha256(
+            prompt_protocol.encode("utf-8")
+        ).hexdigest(),
+        "python": platform.python_version(),
+        "numpy": np.__version__,
         "model": MODEL,
         "auth_mode_requested": ARGS.auth_mode,
         "auth_mode_used": auth_label,
         "target_marks": TARGET_MARKS,
         "runs_per_author": NUM_RUNS,
+        "excerpt_words": EXCERPT_WORDS,
+        "max_rounds": MAX_ROUNDS,
+        "temperature": TEMPERATURE,
+        "max_output_tokens": MAX_OUTPUT_TOKENS,
+        "source_rotation": "(run_id - 1) modulo source-book count",
+        "dash_policy": DASH_POLICY,
+        "save_raw_outputs": SAVE_RAW_OUTPUTS,
+        "source_books": source_books,
         "authors": authors,
     }
+    previous_metadata_path = OUTPUT_DIR / "campaign_metadata.json"
+    if not missing_runs and previous_metadata_path.is_file():
+        previous = json.loads(previous_metadata_path.read_text(encoding="utf-8"))
+        for provenance_key in (
+            "generated_utc",
+            "generator_script_sha256",
+            "auth_mode_requested",
+            "auth_mode_used",
+        ):
+            if provenance_key in previous:
+                metadata_out[provenance_key] = previous[provenance_key]
+        metadata_out["metadata_normalised_by_sha256"] = file_sha256(
+            Path(__file__).resolve()
+        )
     with open(OUTPUT_DIR / "campaign_metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata_out, f, indent=2)
 
@@ -643,6 +766,13 @@ def main() -> None:
         for run_id in runs_to_reanalyze:
             out_path = author_dir / f"run_{run_id:02d}.txt"
             generated = load_text(out_path)
+            raw_path = author_dir / "raw" / f"run_{run_id:02d}.txt"
+            if raw_path.exists() and raw_path.stat().st_size > 0:
+                raw_generated = load_text(raw_path)
+                recorded_raw_path: Path | None = raw_path
+            else:
+                raw_generated = generated
+                recorded_raw_path = None
             source_idx, source_path, source_text = source_book_for_run(
                 run_id=run_id,
                 book_paths=book_paths,
@@ -657,9 +787,10 @@ def main() -> None:
                     "author_name": author_name,
                     "run_id": run_id,
                     "source_book_index": source_idx,
-                    "source_book_path": str(source_path),
+                    "source_book_path": portable_path(source_path),
                 }
             )
+            comparison.update(dash_metadata(raw_generated, recorded_raw_path))
             author_results.append(comparison)
             safe_print(
                 f"  [cached] run {run_id:02d}: "
@@ -674,7 +805,7 @@ def main() -> None:
                 book_paths=book_paths,
                 book_texts=book_texts,
             )
-            generated = generate_text(
+            generated, raw_generated = generate_text(
                 model=model,
                 author_name=author_name,
                 form=form,
@@ -684,6 +815,12 @@ def main() -> None:
             out_path = author_dir / f"run_{run_id:02d}.txt"
             with open(out_path, "w", encoding="utf-8") as f:
                 f.write(generated)
+            raw_path: Path | None = None
+            if SAVE_RAW_OUTPUTS:
+                raw_path = author_dir / "raw" / f"run_{run_id:02d}.txt"
+                raw_path.parent.mkdir(parents=True, exist_ok=True)
+                with open(raw_path, "w", encoding="utf-8") as f:
+                    f.write(raw_generated)
 
             comparison = analyze_comparison(source_text, generated)
             if comparison is not None:
@@ -693,9 +830,10 @@ def main() -> None:
                         "author_name": author_name,
                         "run_id": run_id,
                         "source_book_index": source_idx,
-                        "source_book_path": str(source_path),
+                        "source_book_path": portable_path(source_path),
                     }
                 )
+                comparison.update(dash_metadata(raw_generated, raw_path))
             return run_id, comparison
 
         if runs_to_generate:

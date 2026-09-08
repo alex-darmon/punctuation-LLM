@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+# Corpus bytes are checksum-pinned, so Git must not rewrite their line endings.
+*.txt -text
+*.md text eol=lf
+*.tex text eol=lf
+*.ini text eol=lf
+*.p binary
+*.png binary
+*.pdf binary

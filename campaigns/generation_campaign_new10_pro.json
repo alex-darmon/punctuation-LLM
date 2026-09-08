@@ -1,0 +1,119 @@
+{
+  "campaign_name": "author20_extension_new10_pro",
+  "description": "Gemini Pro robustness generation for the 10 new authors admitted by the balanced 20-author human preflight.",
+  "source_panel_config": "campaigns/author_panel_20.json",
+  "default_model": "gemini-2.5-pro",
+  "default_runs": 10,
+  "default_target_marks": 5000,
+  "min_source_books_per_author": 2,
+  "output_dir": "generated_texts_campaign_author20_pro_new10",
+  "excerpt_words": 1500,
+  "max_rounds": 30,
+  "temperature": 1.0,
+  "max_output_tokens": 8192,
+  "dash_policy": "replace_with_comma",
+  "save_raw_outputs": true,
+  "preprocessing_note": "The analysed run files retain the frozen campaign's dash-to-comma transform for comparability. Unmodified model responses are saved under each author's raw/ directory.",
+  "authors": [
+    {
+      "key": "mildred_wirt",
+      "name": "Mildred A. Wirt",
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/34592.txt",
+        "gutenberg_texts/34832.txt"
+      ]
+    },
+    {
+      "key": "robert_sidney_bowen",
+      "name": "Robert Sidney Bowen",
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/32440.txt",
+        "gutenberg_texts/32331.txt"
+      ]
+    },
+    {
+      "key": "luis_senarens",
+      "name": "Luis Senarens",
+      "form": "prose",
+      "period": "turn_20c",
+      "book_paths": [
+        "gutenberg_texts/54629.txt",
+        "gutenberg_texts/54648.txt"
+      ]
+    },
+    {
+      "key": "john_c_hutcheson",
+      "name": "John C. Hutcheson",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/21107.txt",
+        "gutenberg_texts/24267.txt"
+      ]
+    },
+    {
+      "key": "harold_l_goodwin",
+      "name": "Harold L. Goodwin",
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/31581.txt",
+        "gutenberg_texts/31589.txt"
+      ]
+    },
+    {
+      "key": "kathleen_thompson_norris",
+      "name": "Kathleen Thompson Norris",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/3635.txt",
+        "gutenberg_texts/4787.txt"
+      ]
+    },
+    {
+      "key": "arthur_scott_bailey",
+      "name": "Arthur Scott Bailey",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/9462.txt",
+        "gutenberg_texts/18656.txt"
+      ]
+    },
+    {
+      "key": "louis_joseph_vance",
+      "name": "Louis Joseph Vance",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/8741.txt",
+        "gutenberg_texts/9378.txt"
+      ]
+    },
+    {
+      "key": "susan_warner",
+      "name": "Susan Warner",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/16918.txt",
+        "gutenberg_texts/8874.txt"
+      ]
+    },
+    {
+      "key": "ethel_m_dell",
+      "name": "Ethel M. Dell",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/12360.txt",
+        "gutenberg_texts/13960.txt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1109 @@
+"Report, Lieutenant," Captain Eva Rostova said, not bothering to look up from the map spread across the munitions crate. "Did you find him?"
+
+Lieutenant Yuri Orlov shook his head, pulling off his gloves finger by finger. "Nothing, Captain. We followed the tracks until they vanished at the river. If Sergeant Volkov made it that far, the current took him."
+
+"Or he was taken," Rostova said, finally lifting her eyes. They were as cold and grey as the winter sky outside the barn. "What about the package?"
+
+"Gone, ma'am," Orlov replied, his jaw tight. "We searched a two kilometer radius from where his horse went down. Not a trace of it. Whoever ambushed him took the satchel."
+
+"I see," the captain said, and her voice was dangerously quiet. She folded her hands and stared at a point just past Orlov's shoulder. "You were Volkov's closest friend, were you not?"
+
+"Yes, Captain," Orlov said, bracing himself. "We trained together."
+
+"And you knew the contents of his mission?"
+
+"Only what was necessary, ma'am. He was to deliver a sealed satchel of radio crystals to the partisans in the Polonina mountains. The standard weekly supply run."
+
+"The standard weekly supply run that has been ambushed three times in a row," Rostova corrected him, a bitter twist on her lips. "I had a theory, Lieutenant. A theory that our enemy was not simply lucky. A theory that they knew exactly which courier to hit, and when."
+
+Orlov frowned. "A leak, Captain? Here?"
+
+"Precisely," she said. "Which is why the satchel Sergeant Volkov was carrying did not contain radio crystals."
+
+The silence in the drafty barn was suddenly absolute, broken only by the distant whistle of the wind. Orlov felt a chill that had nothing to do with the cold. "What, ma'am? Then what was he carrying?"
+
+"A brick," the captain said flatly. "A brick wrapped in oilcloth and placed in a weighted satchel. The real crystals never left this command post. I wanted to see if the enemy would strike at a decoy. They did. This proves the leak is close. Very close."
+
+Orlov felt a surge of anger mixed with a dawning, dreadful understanding. "You sent him out there to die, Captain? You sacrificed him just to prove a theory?"
+
+"Do not mistake me for a fool, Lieutenant!" Rostova's voice cracked like a whip. "I would have staked my life on Volkov's ability to handle himself. He was the best scout we had. I did not forsee him being ambushed by a full platoon. That was a risk, yes. A terrible risk that I was forced to take. But war is the business of risks. Now we know. Now we can act."
+
+She stood up and walked to a smaller, locked chest in the corner of the barn. "But knowing there is a traitor is only half the battle. Now we must use him."
+
+"I don't understand, ma'am," Orlov said, his voice hoarse.
+
+Rostova unlocked the chest and removed an identical leather satchel. She placed it on the map. "The enemy believes they have our radio crystals. They will be listening for our partisans to come on the air with new frequencies. They will be waiting to triangulate the signal and wipe them out."
+
+She looked straight at Orlov, her expression grim. "They will get their signal. But it will not be coming from the mountains." She tapped the new satchel. "These crystals are programmed to a single, high-power frequency. You will take them fifty kilometers west of here, to the old comms tower at Chernaya. You will transmit a single, repeating coded message for exactly five minutes, and then you will get out. Is that clear?"
+
+"You want me to be the target," Orlov stated, the words tasting like ash. "You want them to think I'm the partisan command."
+
+"I want our traitor to report your position," she confirmed. "And when the enemy sends their bombers and their artillery to level that tower, our forces, who are already in position, will be waiting for them. We will turn their own trap against them. Volkov's death will not be for nothing, Lieutenant. I give you my word on that."
+
+Orlov stared at the satchel, then back at the captain's unyielding face. The plan was brutal, elegant, and terrifying. It was a trade. His life for an enemy battalion.
+
+"What's the message I'm to transmit, Captain?" he asked after a long moment.
+
+A flicker of something, perhaps respect, showed in Rostova's eyes. "The message is 'The dawn is red'."
+
+"Understood," Orlov said, and reached for the satchel. "Let's hope they're listening."
+
+Orlov’s fingers, numb with cold, closed around the leather strap of the satchel. The weight was familiar, dense, a solid promise of the lethal technology within. It felt heavier than Volkov’s decoy. Heavier with purpose. He slung it over his shoulder, the strap settling into the worn wool of his greatcoat like a yoke. He did not look at Rostova again. There was nothing left to say. Words were a luxury they could no longer afford. Every syllable from this point forward would be a lie broadcast to a listening enemy. His only true communication would be the silent press of a telegraph key.
+
+He turned without a word and walked towards the barn’s great, splintered doors. A quartermaster sergeant, a man with a face like a worn boot sole, stood waiting by the entrance. He held out a PPSH-41 submachine gun, its metal gleaming dully in the lantern light, and a canvas bandolier heavy with drum magazines. He also offered a rucksack containing a water flask, a small block of hard cheese, two dense loaves of black bread, and a spare battery for the transmitter. A soldier’s final meal. Orlov took the items, his movements economical, practiced. He checked the action on the submachine gun, the familiar clack of the bolt a small, cold comfort.
+
+"The wind is from the north, Lieutenant," the sergeant said, his voice a low rumble. "It will cover your sound but it will bite deep. God go with you."
+
+Orlov just nodded, pulling his ushanka down further over his ears. He did not want blessings or well wishes. He wanted to get this over with. He pushed open the heavy door, a sliver at first, then wide enough to slip through. The wind hit him like a physical blow, a blast of Siberian fury that stole the air from his lungs and plastered his coat against his body. He stepped out into the churning darkness, and the barn door creaked shut behind him, the sliver of warm, yellow light vanishing, leaving him utterly alone.
+
+The fifty kilometers to Chernaya was not a straight line. A straight line was for birds and fools, and the sky was full of German reconnaissance planes. Orlov moved through a broken world, a landscape of ghosts. He followed the skeletal remains of hedgerows, crept along the bottoms of frozen ditches, and skirted the open fields that shone pale and treacherous under a sliver of moon. Every tree was a potential sniper’s nest, every shadow a waiting ambush.
+
+His anger, the hot, righteous fury he had felt in the barn, had cooled into a hard, dense knot in his gut. It was a fuel, but a bitter one. He thought of Volkov. He saw his friend's easy smile, the way he could find a sliver of humor in the bleakest of situations. He remembered sharing a cigarette with him just three days ago, Volkov complaining about the holes in his socks. A man dies, and the world remembers the trivial things. Rostova had called it a terrible risk. Orlov called it murder by proxy. And now he was the next piece in her brutal chess game.
+
+The thought of the traitor was a constant, itching presence at the back of his mind. Who? Who in their small, tight-knit command post would sell them out? Was it the quiet signals officer who always seemed to be listening? The supply sergeant with his access to everything? Could it be one of Rostova’s own aides, someone who sat in on the briefings? The paranoia was a poison. He looked over his shoulder and saw only the wind whipping snow devils across the barren earth, but he felt a thousand eyes on his back. The traitor was already a more terrifying enemy than the German platoons he was hiding from. The traitor knew him. The traitor was counting on his death.
+
+After two hours of slow, painstaking progress, he heard it. The low, guttural thrum of engines. He threw himself flat in a shallow depression, the icy mud soaking through his trousers instantly. He pressed his face into the frozen soil, the smell of damp earth and decay filling his nostrils. A pair of Sd.Kfz. 251 half-tracks rumbled past on a nearby track, their headlights cutting brilliant, deadly cones through the darkness. Figures in German grey sat hunched in the back, their helmets silhouetted against the night. They were less than a hundred meters away. Orlov held his breath, his heart a frantic drum against his ribs. He willed himself to be a rock, a lump of frozen mud, invisible. They passed. The sound of their engines faded, leaving a silence that was somehow louder than the noise had been. He lay there for a full five minutes, his body shaking from cold and adrenaline, before he dared to move.
+
+He pushed himself up, his legs stiff, his hands stinging. The satchel felt like it was filled with lead. He pressed on.
+
+The landscape grew more desolate. He passed the blackened shell of a village, the chimneys standing like grave markers against the bruised twilight of pre-dawn. There was no sign of life, only the pervading silence of death. He imagined the traitor, snug and warm back at the command post, making a mark on a map. 'Orlov is here'. The thought made him grip his submachine gun tighter.
+
+By morning, he was deep in the grey woods that surrounded the Chernaya region. The trees were tall pines, their branches heavy with snow that muffled all sound. It was an eerie, cathedral-like quiet. He found a small, collapsed hunter's cabin, barely more than a pile of rotting logs, and crawled inside to wait out the daylight hours. He couldn't risk moving in the open.
+
+He sat with his back against the damp wood, the PPSH across his lap. He broke off a piece of the black bread. It was hard as a rock and tasted of rye and sawdust. He chewed it slowly, methodically, forcing it down. He took a small sip of water from his flask, careful to conserve it. As he ate, his mind drifted. He thought not of the war, not of the mission, but of his mother’s kitchen in Leningrad. The smell of baking bread, the warmth of the stove, the gentle clatter of plates. It was a memory from another life, a world away from this frozen hell. He had been a student of engineering. He had wanted to build bridges, not blow them up. The war had stolen that man, leaving this cold, functional soldier in his place. He wondered if he would ever get that man back. He wondered if he even wanted to.
+
+He slept in short, fitful bursts, waking with a start at the snap of a twig or the moan of the wind. Each time he woke, the first thing he did was touch the satchel, reassuring himself it was still there. It was his burden and his purpose, the alpha and omega of his current existence.
+
+As dusk began to settle, painting the snow in shades of purple and grey, he prepared to move again. He checked his map, a simple, hand-drawn affair, orienting himself by the shape of a ridge line. The tower was only ten kilometers away now. The final leg.
+
+He chose a route through a marshy lowland, hoping the difficult terrain would deter patrols. It was a miserable choice. The ground was a treacherous mix of solid ice and semi-frozen muck. Twice, he went through the ice up to his knee, the shock of the frigid water a brutal, gasp-inducing agony. His trousers froze solid almost immediately, chafing his skin raw. Every step was a struggle. His body screamed in protest. His lungs burned. But the tower was out there. And the traitor was waiting for his signal.
+
+He climbed a final ridge and saw it. The Chernaya comms tower. It stood against the darkening sky like the skeleton of some prehistoric beast, a latticework of rusted iron, stark and menacing. It was taller than he had imagined, a spear aimed at the heart of the heavens. The wind howled through its superstructure, a lonely, wailing song. This was the place. This was the altar for his sacrifice.
+
+Getting to the base of the tower was the easy part. The area was deserted, littered with the detritus of a hasty retreat: spent shell casings, a single tattered boot, coils of rusted barbed wire. He found the access ladder, a simple iron affair bolted to one of the tower's massive legs. It was slick with ice.
+
+He took a deep breath, the cold air searing his throat. He slung his submachine gun over his back and started to climb. The satchel banged against his hip with every upward movement, a constant, heavy reminder of his task. The wind tried to tear him from the ladder, a physical force pushing and pulling, screaming in his ears. He didn't look down. He focused only on the next rung, then the next. Hand over hand, his frozen fingers aching, his muscles trembling with exhaustion.
+
+Halfway up, a wave of vertigo washed over him. The ground seemed to spin away into an infinite, black void. He stopped, clinging to the frozen metal, his forehead pressed against a rung. He could feel the entire tower swaying slightly in the powerful gusts. This was insane. This was a suicide Rostova had gift-wrapped as a mission. He could climb down. He could run, disappear into the woods, try to survive.
+
+No.
+
+The thought of Volkov’s face, smiling in the face of oblivion, solidified his resolve. The thought of the traitor winning, of his friends in the partisan units being slaughtered because he failed. Rostova's words came back to him. *Volkov’s death will not be for nothing.* Neither would his. He pushed the fear down, locked it away in an iron box in his soul, and continued to climb.
+
+The comms room at the top was a small, exposed platform with a shack-like structure built onto it. The wind had torn most of the panelling away, leaving a skeletal frame. Inside, the equipment was smashed and useless, save for a sturdy wooden table bolted to the floor. This was his stage.
+
+He unslung the satchel and placed it on the table. His hands, clumsy with cold, fumbled with the buckles. He pulled out the radio set, the spare battery, and the telegraph key. It was a standard army model, rugged and simple. He connected the battery, attached the antenna, and grounded the unit to a metal beam of the tower itself. The power light blinked on, a small, defiant green eye in the oppressive darkness. He checked his watch. 22:53. He would begin at 23:00. Seven minutes.
+
+He spent the time scanning the horizon. He could see for miles. The world was a patchwork of dark forests and pale, snow-covered fields. It was beautiful, in a stark and terrible way. He wondered where Rostova's forces were hidden. In those woods? Behind that ridge? He had to trust they were there. He had to trust that his life was being traded for something worthwhile.
+
+He pulled out his PPSH, chambered a round, and laid it on the table next to the radio, its muzzle pointing towards the ladder. If they came for him, he would not die easily.
+
+22:59.
+
+He took off his gloves and placed his bare fingers on the cold, unforgiving plastic of the telegraph key. His heart was pounding a slow, heavy rhythm against his ribs. He was no longer a man. He was a beacon. He was a target.
+
+23:00.
+
+He took a final, deep breath. Then he began to transmit.
+
+Dot-dash-dot. Dash. Dot. Dash-dot-dash-dot. The rhythmic clicks were unnaturally loud in the howling wind. He didn't need to think about the letters. The message was burned into his brain.
+
+*The dawn is red.*
+
+He sent it again.
+
+*The dawn is red.*
+
+And again. A simple phrase, repeated over and over. A poem of death broadcast into the ether. He imagined it racing outwards, caught by German listening posts, decoded, reported. He imagined the traitor, somewhere warm, hearing the report and smiling a secret, triumphant smile. 'He is there. At Chernaya. Just as I said.'
+
+The minutes crawled by. One. Two. The world was silent except for the wind and the clicking of the key. Three. He felt a strange sense of calm settle over him. He was doing the one thing he could do. He was completing the circuit. Four. A flicker of light on the distant horizon. Or was it just his imagination?
+
+Five minutes. 23:05.
+
+He stopped. The silence that followed was absolute, deafening.
+
+He moved with a speed born of pure survival instinct. He disconnected the battery, shoved the radio and key back into the satchel, leaving the heavy battery behind. He slung the satchel and his submachine gun over his shoulder and scrambled out of the shack.
+
+He didn't bother with the ladder. There was no time. Next to the platform was a thick bundle of comms cables that ran down the side of the tower. They were slick with ice, but they were his only chance. He took a deep breath, grabbed the cables with his gloved hands, and launched himself over the side.
+
+He slid, an uncontrolled, burning descent. The friction tore at his gloves. His legs banged violently against the iron crossbeams. Sparks flew. He smelled burning canvas. But he was moving fast. He was getting away.
+
+He was about thirty meters from the ground when he heard it. Not the drone of bombers he was expecting, but a sound far more terrifying. A high, thin whistle that grew louder with every microsecond. Incoming artillery. They weren't bothering with planes. They were simply going to obliterate the grid square.
+
+He let go.
+
+He fell the last ten meters, landing in a deep drift of snow at the base of the tower. The impact knocked the wind out of him, but the snow cushioned the worst of it. He scrambled on all fours, clawing his way out of the drift, driven by a primal need to put distance between himself and that iron skeleton.
+
+He was fifty meters away, sprinting, his lungs on fire, when the first shell hit.
+
+The world dissolved into a cataclysm of light and sound. The ground bucked beneath him, throwing him into the air like a doll. A wall of superheated air and shrapnel ripped past him. He landed hard, his head slamming against the frozen earth. His ears rang, a high, piercing tone that blotted out all other sound.
+
+He pushed himself up onto his elbows, his vision swimming. He turned to look at the tower. Another shell hit, a direct impact on the upper third of the structure. The great iron beast screamed, a symphony of tortured, tearing metal. It began to fold in on itself, collapsing with a slow, majestic grace, a dying giant bowing to an unseen king. A third shell, and a fourth, turned the entire area into a churning cauldron of fire and smoke.
+
+Orlov lay in the shallow crater the first blast had created, his body numb, his mind a blank slate of shock. He had done it. He had survived.
+
+And then, from the east, came the answer. A deep, throaty roar that was not German artillery. It was the sound of a hundred Katyusha rockets leaving their launchers in a single, earth-shaking volley. He watched, mesmerized, as a constellation of fiery streaks rose into the night sky, arcing over his head towards the source of the enemy artillery.
+
+Rostova. She was there. She was waiting.
+
+He saw the distant flashes as the rockets impacted. A series of brilliant, silent blossoms of orange and white on the horizon. The trap had been sprung. The counter-trap was closing.
+
+Orlov pushed himself to his feet. His legs were shaky. There was a warm wetness on the side of his head, but he didn't care. He looked at the fiery destruction where the tower used to be, then at the fiery destruction he had helped bring upon the enemy.
+
+*Volkov's death will not be for nothing.*
+
+No, he thought, the words tasting of cordite and frozen earth. It would not.
+
+He adjusted the satchel on his shoulder, picked up his submachine gun, and began the long, slow walk back towards his own lines. The dawn, when it came, would be red.
+
+The walk was a journey through a newly minted hell. Each step was a negotiation with gravity, a conscious effort of will against the screaming protests of his body. The world was still a muted, ringing void, the high pitched whine in his ears a constant companion. He navigated by instinct, by the vague sense of direction he had maintained before the world came apart. East. He had to go east. His own lines were somewhere in that direction, past a kilometer of churned earth that had once been a quiet, snow covered field.
+
+The ground was treacherous. What wasn't a crater was a jagged mound of frozen dirt and rock thrown up by the shells. He stumbled often, his legs feeling disconnected from his mind. The wetness on his head had turned into a sticky, cold crust that pulled at his hair. He touched it once, his fingers coming away dark. He didn't have the energy to care. Survival was a simpler, more brutal equation. Move or die.
+
+He passed the first body twenty minutes into his trek. It was a German, or what was left of one, sprawled face down in the snow. The back of his greatcoat was shredded, a dark stain spreading out around him like a melting shadow. Orlov didn't pause. He kept his eyes fixed on the murky horizon, on the occasional flicker of distant fire that guided him. The dead were just landmarks now, signposts in a landscape of ruin.
+
+The ringing in his ears began to subside, replaced by the symphony of the front. The distant, angry chatter of machine guns, the crump of mortars, the low, continuous rumble of artillery duels farther down the line. The sounds were a comfort, in a way. They were the sounds of life, however violent and precarious. The silence of the void had been worse.
+
+He fell, his foot catching on a buried strand of barbed wire. He went down hard, his chin striking something metallic and unyielding. For a moment, he just lay there, the rough, frozen fabric of his coat scratching his cheek. The PPSh-41, still slung over his shoulder, dug into his ribs. The urge to simply close his eyes, to let the cold seep in and take him, was immense. It was a sweet, seductive thought. No more pain. No more fear. Just the quiet dark of the snow.
+
+*Volkov.*
+
+The name was a spark in the cold emptiness of his mind. He saw his friend's face, not as it was at the end, a mask of agony, but as it had been two days ago, laughing as he tried to trade a stale crust of bread for a cigarette. The memory was a jolt, a current of shame and duty. He had to report. He had to tell them what Volkov had died for. He had to see Rostova, to close the circle.
+
+With a groan, he pushed himself up. The thing his chin had hit was the rim of a German helmet. It was attached to a head, which was attached to a body, half buried in the loose earth of a shell crater. This one was on his back, his eyes open and staring at the starless, smoky sky. A boy, no older than eighteen, his face smooth and pale in the gloom. A neat, black hole was drilled in the center of his forehead. A sniper's work. Orlov felt nothing. He looked at the boy's rifle, a Mauser, lying beside him. He left it. He had his own. He scanned the body for anything useful. A canteen. His own was empty, probably punctured. He unclipped it from the dead boy's belt. He shook it. It was half full. He didn't drink. Not yet. He clipped it to his own belt and moved on.
+
+The cold was becoming a serious problem. It was a physical presence, a predator stalking him. It gnawed at his fingers and toes, a dull, persistent ache that promised worse to come. His thin gloves were useless. He shoved his hands into his pockets, walking hunched over, his submachine gun held awkwardly under one arm. His head throbbed in time with his labored footsteps. Each jarring impact sent a spike of pain through his skull. He was beginning to feel dizzy, his vision blurring at the edges.
+
+He stumbled into a trench. He didn't see it until he was falling, his legs windmilling in the air before he landed in a heap at the bottom. It was a shallow, hastily dug communication trench, part of the German front line. And it was not empty.
+
+He landed almost on top of a soldier who was propped against the muddy wall. The man grunted in pain, his eyes flying open. They were blue, wide with shock and fear. A German. He was holding his stomach, his hands slick with a dark fluid that steamed in the frigid air. Orlov scrambled back, fumbling for his weapon, his heart hammering against his ribs. He brought the barrel of the PPSh-41 up, the metal cold against his trembling hands.
+
+The German didn't reach for a weapon. He just stared at Orlov, his breathing coming in wet, shallow rasps. "Wasser," he whispered, the word a cloud of vapor in the air. Water. He licked his dry, cracked lips. "Bitte." Please.
+
+Orlov stared back. The boy in the crater had been an object, a part of the landscape. This was different. This was a man, dying, asking for a simple act of mercy. He thought of the canteen at his belt. It would be so easy. A small sip of water for a dying man. What harm could it do?
+
+He remembered Volkov, bleeding out in the snow. Had any German offered him water? He remembered the stories from the villages, the hangings, the burnings. He remembered the high, thin whistle of the shells meant to vaporize him. This man, with his blue eyes and his polite request, was part of that. He was the enemy. Mercy was a luxury for a different world, a different time. This was Stalingrad. Here, there was only survival.
+
+Orlov said nothing. He kept the gun trained on the German, his finger resting on the trigger. The German’s eyes searched his face, looking for something, a flicker of humanity. He found none. The hope in his eyes died, replaced by a flat, dull resignation. He closed them, his head slumping back against the frozen dirt. A shudder ran through his body, and then he was still.
+
+Orlov waited, his own breath pluming in front of him. He watched the man for a full minute, making sure it wasn't a trick. But there was no trick. There was only death, quiet and unremarkable in a muddy ditch. Orlov slowly lowered his weapon. He felt a hollowness inside him, but it was not guilt. It was just an emptiness, a part of him that had been scoured clean by the war. He climbed out of the other side of the trench and continued east, the German's canteen a heavy weight on his hip.
+
+The sky was beginning to change. The oppressive blackness was softening to a deep, bruised purple in the east. The dawn was coming. And as the light grew, it revealed the full extent of the devastation. The landscape was a monochromatic nightmare of white snow, black earth, and grey smoke. Twisted skeletons of tanks and trucks dotted the field, their metal hides peppered with holes. And everywhere, there were the bodies. They lay in clusters where platoons had been cut down, and they lay alone, frozen in the grotesque postures of sudden death.
+
+The fires from the Katyusha strike had mostly died down, but the horizon was still aglow. A thick pall of smoke hung over the German rear, and through it, the first rays of the rising sun filtered, painting the entire sky in obscene shades of orange and blood red. The dawn, when it came, was red. He had known it would be. It was the only color that fit.
+
+He could see them now. The jagged, familiar lines of the Soviet trenches. A thin wisp of smoke from a hidden stove. The silhouette of a sentry's helmet against the crimson sky. He was close. So close. His legs felt like lead. The initial shock was wearing off, and a deep, bone numbing exhaustion was setting in. The pain in his head was a constant, blinding hammer. He put one foot in front of the other. That was all that mattered.
+
+He was a hundred meters away when the challenge came, a sharp, nervous bark from the trench. "Stoi! Kto idyot?" Halt! Who goes there?
+
+Orlov stopped. He tried to raise his hands but found the effort enormous. He let them hang at his sides. "Svoi," he called out, his voice a dry, rasping croak. Friendly.
+
+"Parol!" The password.
+
+He blinked. The password. It changed every day. What was yesterday's password? Was it yesterday? He couldn't think. His mind was a fog. He remembered Volkov joking about it. Something about a river. The Volga? No, that was too obvious.
+
+"Parol!" the voice insisted, sharper this time. He could hear the click of a bolt being drawn.
+
+"Don," he croaked. "The password is Don." He wasn't sure. It was a guess, a fragment of a half forgotten conversation.
+
+There was a tense silence. He stood there, a lone, swaying figure in the middle of a field of death, waiting for the bullet.
+
+Then, a different voice, lower, calmer. "Let him approach. Slowly."
+
+Orlov began to walk again, his steps unsteady. He was fifty meters away. Thirty. Twenty. He could see the faces now, peering at him over the parapet. Young, old, all of them gaunt and bearded, their eyes hollowed out by sleeplessness and fear. They looked at him as if he were a ghost.
+
+He reached the edge of the trench and practically fell in, sliding down the muddy embankment. Two soldiers grabbed him, their hands rough, holding him up. He smelled sour bread and stale sweat, the familiar smells of the front. He was back.
+
+"Who are you?" one of them asked, his eyes scanning Orlov's ragged uniform. "Where did you come from?"
+
+"Orlov," he managed to say. "Private. 3rd Battalion. I was... with the tower."
+
+The soldiers exchanged a look. The tower. They had all seen it go down. They had all felt the ground shake. "The officer of the watch," Orlov mumbled, his knees buckling. "I need to report."
+
+They half carried him through the winding, narrow trench. Men were huddled in small groups, trying to keep warm, their breath misting in the air. They stared at him as he passed, a silent, curious procession. He was a specter from the other side.
+
+The command dugout was just a deeper hole in the earth, covered with thick logs and packed dirt. A blanket served as a door. They pushed it aside and helped him in. The air was thick with smoke from a lantern and the bitter smell of cheap tobacco. A man with a deeply lined face and the insignia of a captain on his collar looked up from a map spread over a crate. A political commissar with cold, intelligent eyes stood beside him.
+
+"Captain," one of the soldiers said. "This man says he came from the tower."
+
+The captain's eyes narrowed, taking in Orlov's state. The dried blood, the torn uniform, the exhaustion etched on his face. "Your name and unit."
+
+"Private Orlov, Grigory. 3rd Battalion, 2nd Rifle Company." His voice was a little stronger in the warm air.
+
+"You were part of Volkov's team," the captain stated. It wasn't a question.
+
+"Yes, Comrade Captain."
+
+"Volkov is dead," the commissar said, his voice flat. "We saw the flare."
+
+"Yes, Comrade Commissar. He died getting me on the tower."
+
+The captain leaned forward. "The artillery. Did you direct it?"
+
+"Yes. The German batteries were located in grid square forty seven dash beta. Three concentrations. Heavy guns. They were preparing a major barrage."
+
+The captain nodded slowly, glancing at his map. "Forty seven dash beta. The rockets hit them hard. We haven't heard a peep from them for two hours." He looked back at Orlov. "You confirmed the location."
+
+"I saw them from the tower. Before they shelled it."
+
+"You were on the tower when it was shelled?" the commissar asked, a flicker of disbelief in his cold eyes.
+
+"I was climbing down. I jumped the last ten meters."
+
+The two officers looked at each other. For a moment, there was a silence in the dugout, broken only by the hiss of the lantern. Orlov had done the impossible. He had gone into the heart of the enemy's fire, called down destruction upon them, and returned.
+
+"You did well, Private," the captain said, his voice holding a new note of respect. "Your actions likely saved this entire sector from annihilation this morning."
+
+Orlov just nodded, his body swaying. The warmth of the dugout was making him lightheaded. The room was starting to spin.
+
+"He needs a medic," the captain said to one of the soldiers. "And get him some food. And water."
+
+As the soldiers turned to help him out, the blanket over the entrance was pushed aside. A figure stood there, silhouetted against the red morning light. Slender, wrapped in a heavy coat, a fur shapka on her head. Rostova.
+
+Her eyes found him immediately. They were dark and serious, and they took in his condition in a single, sweeping glance. She stepped inside, letting the blanket fall. She didn't say a word. She walked past the captain, past the commissar, and stopped in front of him.
+
+She reached out, her gloved fingers gently touching the side of his head, near the crusted blood. Her touch was surprisingly soft. "You're hurt," she said. Her voice was low, steady.
+
+"It's nothing," he lied.
+
+"You did it," she said, her eyes locked on his. "The signal was clear. The timing was perfect."
+
+"We did it," he corrected her, his voice barely a whisper. He saw Volkov's face again, and for the first time, a wave of grief washed over him, so powerful it almost brought him to his knees.
+
+She saw the change in his expression. She understood. "Volkov's name will be included in the report," she said quietly. "As a Hero of the Soviet Union."
+
+He nodded, unable to speak. The commissar cleared his throat, a sharp, impatient sound. "Sergeant Rostova, the private needs medical attention."
+
+She didn't take her eyes off Orlov. "I will take him," she said. It was not a request. She put a firm hand on his arm, supporting him. "Come, Grigory. Let's get you looked at."
+
+She led him out of the dugout, back into the trench. The soldiers who had brought him in melted back into the flow of the front. The sky was brighter now, a brilliant, bloody canvas. Rostova guided him through the maze of trenches, her grip on his arm the only thing keeping him upright. They didn't speak. There was nothing that needed to be said. They had shared a night of fire and death, connected by a radio signal and a volley of rockets. In the brutal calculus of the war, that was a bond stronger than any words.
+
+He finally drank from the German's canteen, the water metallic and cold, the most wonderful thing he had ever tasted. He drank until the canteen was empty, then let it fall from his numb fingers into the mud. He didn't need it anymore. He was back. He was alive. The dawn was red, and he had lived to see it.
+
+The aid station was a deeper circle of hell carved into the frozen earth. It was another dugout, larger than the captain's, but it felt smaller, choked with the smell of unwashed bodies, iodine, and the thick, sweet odor of gangrene. Men lay on rough wooden bunks, packed shoulder to shoulder. Some were silent, staring at the dirt ceiling. Others groaned with a low, animal rhythm that was the true sound of the war, the sound that continued long after the guns fell silent. A medic with a stained tunic and dark circles under his eyes moved between them, a ghost of a man tending to other ghosts.
+
+Rostova did not hesitate. She guided Orlov past a man whose leg ended in a bloody bundle of rags, past another who was coughing his lungs into a small tin bowl. Her presence seemed to cut a path through the misery. The soldiers who were conscious looked at her, their gazes lingering on the clean lines of her uniform, the authority in her carriage. She was a piece of a different world, a world where things still made sense.
+
+"This one needs attention," she said to the medic. Her voice was not loud, but it cut through the chorus of groans.
+
+The medic glanced up, his eyes weary and resentful. He saw Orlov, swaying on his feet, the caked blood on his head. He saw another piece of meat for the grinder. "They all need attention, Sergeant," he said, his voice flat. "Get in line." He gestured vaguely at the row of wounded men waiting against the wall.
+
+Rostova's grip on Orlov's arm tightened. She stepped forward, placing herself directly in the medic's path. "This is Private Grigory Orlov," she said, her voice dropping lower, each word a piece of ice. "He just returned from Hill 217. He was the forward observer for the rocket battery this morning."
+
+The medic stopped. His tired eyes widened slightly. He looked from Rostova to Orlov, then back again. Every soldier on this front knew what the rockets had done at dawn. They had heard the ungodly scream, felt the earth shake. It was the only good news they had had in weeks. The man who had called that fire down was already a legend, a faceless phantom of victory. And here he was, bleeding from a small cut on his head, looking like a lost boy.
+
+"Sit him here," the medic said, his tone changing completely. He cleared a space on a crate, pushing aside a jumble of dirty bandages. He looked at Orlov now with a kind of awe. "The German counter attack. It just… stopped."
+
+"Yes," Rostova said. "It stopped."
+
+She helped Orlov sit. The room tilted violently, and he had to plant his hands on the crate to keep from falling. The medic brought a small bowl of tepid water and a rag that looked only slightly less dirty than the floor. He began to dab at the wound on Orlov's head. Orlov flinched as the rag touched the raw skin.
+
+"Let me," Rostova said. She took the bowl and rag from the medic's hands. He didn't protest. He just stepped back, watching. She knelt in the mud and filth in front of Orlov. Her movements were careful, efficient. She dipped the rag in the water, wrung it out, and began to clean the wound. Her touch was firm but gentle, infinitely more patient than the medic's had been. She worked in silence, her brow furrowed in concentration. She was washing away not just the dirt and the blood, but some of the horror of the night.
+
+Orlov watched her. He watched the way her dark hair escaped from under her shapka. He saw the small smudge of soot on her cheek. He could smell the faint, clean scent of winter on her coat, a scent that cut through the dugout's foul air. In this place of death and decay, she was intensely, impossibly alive. He felt a sudden, sharp pang in his chest that had nothing to do with his injuries.
+
+"It is not deep," she said, her work finished. "But it will need stitching."
+
+The medic moved back in, now carrying a needle and a strand of gut suture. "This will hurt, Private," he warned.
+
+Orlov barely felt it. He kept his eyes on Rostova. She stood beside him, her hand resting lightly on his shoulder. Her presence was a shield. The needle pierced his skin again and again. The medic worked quickly, his hands surprisingly steady. He tied off the last stitch and smeared a foul smelling yellow salve over the wound.
+
+"Good as new," the medic said, without a trace of irony. He looked at Orlov. "You are lucky, son. The things I have seen today…" His voice trailed off. He shook his head and moved on to the next man.
+
+"We need to get him food," Rostova said. The medic nodded and pointed to a corner where a large pot sat over a small, sputtering stove. A soldier with a bandaged arm was ladling thin broth into bowls.
+
+Rostova led Orlov to the corner. She procured a bowl of the steaming broth and a thick slice of black bread. She pressed them into his hands. "Eat," she commanded.
+
+He obeyed. The broth was mostly hot water, with a few shreds of cabbage and a greasy film on top. It was the best thing he had ever tasted. He drank it down, the warmth spreading through his frozen body, chasing away the chill that had settled in his bones. He ate the bread slowly, chewing each mouthful with a profound sense of purpose. It was coarse and hard, but it was real. It was food. It was life.
+
+When he was finished, he felt more human. The dizziness had receded. The world was still a grim, gray place, but it was no longer spinning out of control. Rostova was watching him, her expression unreadable.
+
+"Thank you," he said. The words felt small, inadequate.
+
+"You need to rest," she replied, ignoring his thanks. "My dugout is nearby. It is quiet."
+
+She led him out of the aid station, back into the trench. The air was cold and clean on his face. The sun was higher now, a pale disk in a white sky. The sounds of the front had settled into a routine. The distant chatter of a machine gun. The crump of a mortar shell falling somewhere far away. The shouts of men shoring up a collapsed trench wall.
+
+Her dugout was small, even for one person. It was dug neatly into the side of the trench, with a floor of wooden planks that kept the mud at bay. A single bunk was built into the wall, covered with a thick army blanket. A small table and a crate served as a desk. On it, a map was laid out, weighted down with rocks. A field telephone sat next to it. It was a space of order and discipline.
+
+"Sit," she said, pointing to the bunk. He sat on the edge, his body sinking into the relative softness. She took off her heavy coat and hung it on a nail. Underneath, she wore a standard issue tunic, but it seemed different on her. Sharper. She took the shapka from her head, and her dark hair fell to her shoulders. She ran a hand through it, a surprisingly human gesture, and for a moment she looked younger, less like a sergeant and more like a girl. Then she tied it back with a piece of string, and the sergeant was back.
+
+She sat on the crate opposite him. The silence stretched between them, but it was no longer the silence of shared trauma. It was something else. A quiet space they had both created.
+
+"Tell me about Volkov," she said.
+
+Orlov looked up, surprised. He had expected questions about the Germans, about their numbers, their positions.
+
+"He was a good driver," Orlov began, his voice hoarse. "From Smolensk. He… he talked about his sister. He was going to take her to see the ballet in Moscow after the war." The memory of Volkov's cheerful, hopeful voice was like a physical blow. "He knew the roads. Even in the dark. He got me there. He got me to the hill."
+
+"And he did not leave," she stated. It was not a question.
+
+"No," Orlov said. "He could have. When the first shells started to fall. I told him to go. He just… shook his head. He said his job was to get me back, not just get me there. He stayed with the truck. He was trying to cover it with his camouflage tarp when the shell hit." Orlov's own voice was shaking now. The grief he had held at bay was rising again, a bitter flood. "It should have been me. I was the one in the open. It landed twenty meters away from me. But him… it was a direct hit. There was nothing left. Just a crater."
+
+He looked down at his hands. They were trembling. He clenched them into fists, trying to make them stop.
+
+Rostova reached across the small space between them and placed her hand over his. Her hand was warm, strong. "In this war, Grigory," she said, her voice soft but firm, "what 'should have been' does not matter. What matters is what is. You are here. You completed the mission. Because of you, and because of him, hundreds of our men are alive who would be dead. His sacrifice had meaning. That is more than most of us can hope for."
+
+He looked up at her. Her dark eyes were serious, unwavering. There was no pity in them, only a deep, weary understanding. He felt the trembling in his hands begin to subside. He nodded slowly.
+
+The blanket over the dugout entrance was thrust aside without warning. The commissar stood there, his face a mask of cold fury. His small, piggy eyes darted from Rostova to Orlov, lingering on her hand, which was still covering his.
+
+"Sergeant Rostova," he said, his voice dripping with venom. "A word."
+
+Rostova withdrew her hand. She stood up slowly, her body language calm, but Orlov could see the muscles in her jaw tighten. "Commissar," she said, her tone level.
+
+"I find you here," he said, stepping into the small dugout and making it feel even smaller. "In your personal quarters. With a private. A wounded private who should be in the medical bay."
+
+"The private has been seen by a medic," Rostova said. "He has received food and his wound has been dressed. He needs rest, something he cannot get in the aid station. He is also the primary witness for the operation this morning. I am debriefing him."
+
+The commissar laughed, a short, ugly sound. "Debriefing him? Is that what you call it? It looks more like fraternization to me, Sergeant. A dangerous breach of discipline."
+
+"The only thing dangerous here, Commissar, is your attempt to interfere with a military matter," she retorted, her voice like steel. "Private Orlov's testimony is vital for the after action report. A report which will be sent directly to Army command."
+
+"I will be writing the report," the commissar snapped. "It will emphasize the glorious spirit of the Red Army and the guiding wisdom of the Party, which inspired this victory."
+
+"It will be a factual report, Commissar," Rostova countered. "It will include weapon trajectories, enemy troop concentrations, and the names of the men who carried it out. It will name Private Grigory Orlov. And it will name Private Pyotr Volkov as a Hero of the Soviet Union for his actions."
+
+The commissar's face went purple. "A driver? You want to make a hero out of a truck driver? Heroism is a collective act, Sergeant, not the result of one or two men stumbling into luck. The Party decides who the heroes are."
+
+"Volkov drove a radio operator through a minefield under artillery fire to a forward position and gave his life defending that position," Rostova said, her voice low and dangerous. "If that is not heroism, then the word has no meaning."
+
+"You are overstepping, Sergeant," the commissar hissed. "Your affection for this… boy… is clouding your judgment."
+
+"He is not a boy," Rostova said, her gaze flicking to Orlov. "He is a soldier of the Red Army who did his duty."
+
+Orlov felt a surge of something hot and unfamiliar. It was rage. He had been a ghost, a number, a piece of equipment for so long. He had been willing to die. But he would not let this man erase Volkov. He pushed himself off the bunk, his legs unsteady but his voice clear.
+
+"He got me there," Orlov said.
+
+The commissar turned to him, his eyes narrowing. "What did you say, Private?"
+
+"Volkov," Orlov said, meeting the commissar's gaze. "He got me there. We would have failed without him."
+
+The commissar stared at him for a long moment, then a slow, cruel smile spread across his lips. "I see. The hero speaks. We will have to have a long talk, you and I, Private. About your 'mission'. About what you really saw out there. Sometimes, under stress, a man's memory can play tricks on him." He looked back at Rostova. "I will be watching you, Sergeant. Both of you."
+
+He turned and left as abruptly as he had arrived, letting the blanket fall and plunge the dugout back into dimness.
+
+The air was thick with unspoken threats. Orlov felt drained, the brief surge of anger leaving him weaker than before.
+
+Rostova turned to him. The hardness was gone from her face, replaced by a quiet intensity. "He will try to change the report. He will try to discredit you. To discredit Volkov."
+
+"Why?" Orlov asked, sinking back onto the bunk. "We won."
+
+"Because he did not," she said simply. "The victory was not his. It was yours. And in his world, that is a crime. He needs to control the story." She walked to the small table and picked up a pencil. She pulled a fresh sheet of paper toward her. "So we will write our own story. And we will make sure it is the one the general reads."
+
+She looked at him, and her expression was not that of a sergeant to a private. It was the look of a co conspirator. "Tell me everything, Grigory," she said. "Start from the beginning. Leave nothing out."
+
+And so he did. He spoke for hours, his voice growing stronger as he went on. He talked about the mud, the darkness, the fear. He described the German patrol, the shape of their helmets in the gloom. He recounted every shell fall, every radio transmission. And he spoke of Volkov, of his courage, of his final, defiant act.
+
+Rostova wrote, her pencil scratching across the paper, a small, determined sound in the quiet of the dugout. She was not just taking notes. She was building a fortress of words, a fortress to protect a dead man's honor and a living man's truth. As he spoke, Orlov felt the weight on his soul begin to lift, just a little. He was not alone with it anymore. He had given it to her, and she had accepted the burden.
+
+When he was finally finished, his throat was raw and the light outside had begun to fade. Rostova put down her pencil. She had filled several pages with her small, neat script.
+
+"Good," she said. "This will be enough." She stood and stretched. "Now, you will sleep. That is an order, Private."
+
+She pointed to the bunk. "But… where will you sleep?" he asked.
+
+"I will sit watch," she said, gesturing to the crate. "Someone has to."
+
+He was too exhausted to argue. He lay down on the bunk, not even bothering to take off his boots. She picked up one of the heavy blankets and laid it over him. It smelled of wool and cold air. He closed his eyes. The last thing he saw before sleep took him was the image of Sergeant Rostova, sitting at her small table in the faint lamplight, the telephone on one side, her report on the other, a solitary guardian against the darkness, both outside the trench and within it. For the first time since he had arrived at the front, he felt safe.
+
+He woke to the cold. It was a deep, invasive cold that had seeped through the wool blanket and into his bones. For a moment, he did not know where he was. The darkness was absolute, the silence profound. Then memory returned, a slow and painful tide. The hill. Volkov. The major. Sergeant Rostova. He shifted, and the rough fabric of his greatcoat scraped against the wooden bunk. His eyes adjusted, finding the single, tiny flame of the lantern. It was turned down so low it was hardly more than a yellow smear in the gloom.
+
+And she was there. Sergeant Rostova was still sitting on the crate, a rigid silhouette against the faint light. Her back was straight, her head erect. She had not moved, it seemed, all night. She had kept her promise. She had stood watch. He felt a strange pang in his chest, a feeling he could not name. It was not gratitude, not exactly. It was something more akin to awe. He had seen officers doze on watch. He had seen men trade their guard shifts for a cigarette or a crust of bread. But she had sat there, alone in the dark, guarding his sleep and the story he had given her.
+
+He must have made a sound, a rustle of the blanket, because her head turned toward him. Her voice was a low whisper, not wanting to carry outside the dugout. "You are awake."
+
+"Yes, Sergeant." He pushed himself up, his muscles screaming in protest. Every part of him ached.
+
+"There is tea," she said, gesturing with her chin toward a metal pot on the corner of the table. "And bread."
+
+The tea was lukewarm and bitter, but it was wet and it washed the foul taste from his mouth. The bread was hard, a dark, rye brick that he had to chew with determined effort. They ate in silence. The intimacy of the small meal in the pre dawn dark was unsettling. It was the kind of quiet he might have shared with a brother, not a sergeant. The war had a way of stripping away the old rules, leaving behind something raw and uncertain.
+
+When they were finished, she took the pages she had written and read through them one last time. Her face was pale in the growing light from the dugout entrance, a grey, tired light that promised another day of mud and misery. There were dark circles under her eyes, but her gaze was as sharp as ever.
+
+"The major will come soon," she said, as if commenting on the weather. She folded the papers neatly and tucked them into an inside pocket of her tunic. "He will not have slept well. Men like him, they hate loose ends. You are a loose end, Private Orlov."
+
+"What will he do?" Orlov asked. His own voice sounded thin, a child's voice.
+
+"He will try to frighten you," she said. "He will tell you that you are confused. That the battle confused you. He will offer you a simple path. Agree with his version, and you will be safe. You will be a hero, even. A confused hero who was saved by the major's decisive action. He will be generous in his lies."
+
+"And if I do not agree?"
+
+Rostova looked at him, and her expression was serious. "Then he will threaten you. He will speak of tribunals. Of cowardice in the face of the enemy. Of the penal battalions. He will try to break you, because he cannot afford for a private to have a different story than a major."
+
+Orlov felt a familiar knot of fear tighten in his stomach. The penal battalions. They were a death sentence. They were sent to clear minefields by walking through them, or to charge machine gun nests with nothing but sharpened spades. To be sent there was to be erased.
+
+"I cannot…" he started, his voice failing him.
+
+"Yes, you can," she said, her tone sharp, cutting through his fear. "You told me the truth last night, Grigory. It was not easy. But you did it. All you have to do now is hold on to it. Do not let him take it from you. It is yours. It is Volkov's."
+
+She tapped the telephone on the table. "This is a signals dugout. It is my command. He is a guest here. Remember that."
+
+They did not have to wait long. The sound came first. The heavy, confident tread of expensive leather boots squelching in the mud of the communication trench. It was a sound that did not belong here, a sound of headquarters, of staff cars and polished desks. The blanket over the entrance was torn aside, and Major Belov filled the opening, blocking the weak morning light.
+
+He had to stoop to enter. He brought the smell of the cold, damp air with him, and something else. A faint, cloying scent of cologne. It was obscene in the earthy confines of the dugout. He did not look at Rostova. His eyes, small and hard like chips of granite, fixed on Orlov.
+
+"Private," he said. His voice was calm, almost fatherly. It was a hundred times more menacing than his anger had been. "I trust you have had time to rest. To clear your head."
+
+Orlov looked from the major to Sergeant Rostova. She gave a slight, almost imperceptible nod. It was all the encouragement he needed.
+
+"My head is clear, Comrade Major," Orlov said, his voice steadier than he expected.
+
+"Good. Good," Belov said, smiling. It was a predator's smile. "Battle can be a confusing business. Smoke, noise, fear. A man's memory can play tricks on him. He can misinterpret things. It is understandable." He took a step closer, his bulk seeming to suck the air from the small space. "I have been working on the after action report. It is important we get the details right. For the sake of the men who fell. For the sake of Trooper Volkov."
+
+He said Volkov's name as if he were laying a wreath on his grave. The hypocrisy was so blatant it made Orlov feel sick.
+
+"I remember what happened, Comrade Major," Orlov said.
+
+Belov's smile tightened. "I am sure you think you do. But you were wounded. In shock. I, on the other hand, had a clear view of the entire engagement. Trooper Volkov fought bravely. But he was overwhelmed. I personally led the counter attack that drove the Germans back and secured the position. I was there when he fell."
+
+It was a lie. A clean, polished, damnable lie. Orlov could feel the blood pounding in his ears. He remembered Volkov's face, the surprise and the pain. He remembered the major hiding in the ditch. He looked at Rostova. Her face was a stony mask, but her eyes willed him to be strong.
+
+"That is not what I saw," Orlov said quietly.
+
+The major's facade cracked. The smile vanished. "What did you say, Private?"
+
+"I said that is not what I saw," Orlov repeated, his voice louder now. "I saw Trooper Volkov hold the line by himself. I saw him destroy the machine gun. I saw you in the drainage ditch. You were not leading any attack."
+
+The silence in the dugout was absolute. The only sound was the faint hiss of the lantern. Major Belov stared at Orlov, his face slowly turning a dark, mottled red. The mask of the reasonable staff officer had fallen away, revealing the bully beneath.
+
+"You are mistaken, Private," he hissed. "You are grievously mistaken. And your mistake is bordering on insubordination. On slander."
+
+He turned his glare on Rostova. "And you, Sergeant. What is your role in this fantasy? Have you been filling this boy's head with nonsense? I am ordering you to hand over your report. I will consolidate it with my own to ensure a unified and accurate account is sent to headquarters."
+
+Rostova did not flinch. She stood up slowly, her small frame seeming to possess an unshakable solidity. "With respect, Comrade Major, that is not possible."
+
+"Not possible?" Belov scoffed. "I am a major in the Red Army. I am giving you a direct order."
+
+"And I am a Sergeant in the Signals Corps," Rostova replied, her voice level and cold. "My report is a signals report, detailing communications and operational status of this post during the engagement. As per Signals directive 7B, all such after action reports are to be transmitted directly to Signals Command at Stavka. They are not subject to review by line officers of other branches. It prevents tampering."
+
+She said the last word with a deliberate, pointed emphasis. Belov's eyes narrowed. He was being challenged on procedural grounds. On his own territory of rules and regulations. And he was losing.
+
+"This is ridiculous," he snarled. "This is not a signals report. This is a combat report. You are sheltering a lying private who is trying to besmirch the name of an officer."
+
+"I am reporting the facts as they were relayed to me by the sole surviving witness of the action at listening post four," Rostova said. "The same witness you yourself commended for his bravery yesterday."
+
+"His bravery is not in question!" Belov roared, his voice shaking the loose dirt from the ceiling. "His judgment is! His memory! And your loyalty, Sergeant, is now severely in question." He took a menacing step toward her, his hand resting on the butt of the pistol at his hip. "I could have you arrested. Both of you. I could send you to a penal battalion so fast your head would spin. Do you think anyone would listen to the story of a hysterical sergeant and a shell shocked private? I will write the story, Sergeant. I will write the history of this battle."
+
+Orlov felt his resolve waver. The penal battalion. The words were a physical blow. He saw himself in a frozen minefield, the snow turning red around him. He looked at Rostova, expecting to see fear in her eyes.
+
+Instead, he saw a flicker of something else. Something cold and triumphant.
+
+"You are right about one thing, Major," Rostova said, her voice dropping into an almost conversational tone. "The story is everything. But you are too late to write this one."
+
+She reached out and picked up the receiver of the field telephone. The metallic click echoed in the tense silence. Belov froze, his hand still on his pistol. He watched her as if she were holding a primed grenade.
+
+She cranked the handle on the side of the phone. The whirring sound was loud in the small dugout. "Get me headquarters," she said into the mouthpiece. "General Petrov's aide. Yes, I will hold."
+
+Belov’s face went white. General Petrov. The commander of the entire army group. A man known for his ruthless efficiency and his utter contempt for incompetence and cowardice.
+
+"What are you doing?" Belov whispered, his voice suddenly stripped of all its bluster.
+
+Rostova looked at him, her eyes like ice. "My job, Major. I am a communications specialist. I communicate." She turned her attention back to the phone. "Captain Semyonov? Yes, this is Sergeant Rostova at post 734. I have the after action report on the engagement at Hill 112. The one the general was asking about... Yes, the one involving Trooper Volkov... Excellent. I am preparing to transmit the encrypted text now. The general will have it on his desk within the hour."
+
+She held Belov's gaze as she spoke. In that moment, Orlov understood. She had not just been sitting watch all night. She had been on the phone. Laying the groundwork. Checking the channels. She had not just written a report; she had prepared a battlefield. And she had just led Major Belov directly into the kill zone.
+
+To stop her now would be to actively interfere with a direct communication to the army group commander. It would be an admission of guilt, an act of career suicide so profound it was unthinkable. Belov was trapped. He was a master of bureaucratic warfare, and he had just been comprehensively outmaneuvered by a sergeant with a field telephone.
+
+"Yes, Captain," Rostova continued, a hint of steel in her voice. "The report is fully corroborated by the surviving witness, Private G. S. Orlov, who is here with me now. His testimony is quite… detailed... No, Major Belov is here as well. I am sure he will be submitting his own perspective in due course." She gave Belov a smile that was all sharp edges. "I will begin transmission now."
+
+She placed the receiver back on its cradle. The finality of the sound was like a gunshot.
+
+For a long moment, Major Belov did not move. He stood there, his face a contorted mess of fury, humiliation, and disbelief. He looked from Rostova to Orlov, and the hatred in his eyes was a tangible thing. It was a promise of future payment, a debt he would one day collect.
+
+Then, without another word, he turned. He had to duck again to get through the entrance, a final, ignominious bow. His footsteps squelched away down the trench, the sound of them angry and defeated.
+
+The tension in the dugout did not break. It simply transformed. The immediate threat was gone, but a larger, more ominous one had taken its place. They had won. But they had made an enemy of a powerful man.
+
+Orlov let out a breath he did not realize he had been holding. His legs felt weak. He sank back onto the bunk.
+
+"He will not forget this," Orlov said.
+
+"No," Rostova agreed. She was already at the table, attaching wires from a small, boxy encryption device to the telephone. "He will not. But today, the truth won. That is enough for one day."
+
+She began to tap out the report in Morse code, the rhythmic clicks and beeps a stark contrast to the violence of the morning's confrontation. It was the sound of her fortress of words being sent, stone by stone, to a place where it might actually matter.
+
+Orlov watched her, his fear slowly receding, replaced by a new feeling. It was not the passive safety of being protected. It was the sharp, bracing feeling of having stood his ground, of having fought a battle with weapons he did not know he possessed: the truth, and a single, unwavering ally.
+
+He was still afraid. The war was still here. The cold was still in his bones. But he was no longer just a victim of the chaos. He was a part of a story. Their story. And as he listened to the steady, determined clicking of the telegraph, he knew it was a story worth fighting for. The war outside would continue to kill men's bodies. But here, in the dim light of a muddy hole in the ground, they had managed to save a man's soul. And maybe, just maybe, their own as well.
+
+The clicks stopped. The silence that followed was heavier than the noise had been, thick with unspoken questions. Rostova methodically unclipped the wires from the telephone, coiling them with a practiced efficiency that seemed almost alien in the damp, chaotic dugout. She packed the encryption device back into its oilcloth wrap, her movements precise and final. Each action was a small, deliberate closing of a door.
+
+Orlov watched her, his heart still a frantic drum against his ribs. The fear had not vanished. It had simply changed its shape, from a sharp, immediate terror of Belov’s physical presence to a colder, more pervasive dread of his unseen influence. He was a spider, and they had just torn a hole in the center of his web. He would not ignore it. He would rebuild, and he would remember the creatures who had dared to defy him.
+
+"You should eat something, Private," Rostova said, her voice quiet. She did not look at him, her attention fixed on organizing the small table. "And drink. The cold will take more from you than a major's temper."
+
+She gestured to a tin of hard biscuits and the lukewarm tea that was always stewing on the small, sputtering stove. The simple domesticity of the offer felt jarring. It was as if they had just finished a routine chore, not declared war on a man who held the power of life and death over them. Orlov's stomach churned at the thought of food, but he obeyed. He took a biscuit, its dry, tasteless texture grating in his mouth, and washed it down with a swig of the metallic tasting tea. The warmth spread slowly through his chest, a small comfort in a vast sea of cold.
+
+"What happens now, Sergeant?" he asked, his voice barely a whisper.
+
+Rostova finally looked up. Her face, illuminated by the single flickering lantern, was unreadable. There was no triumph in her expression, only a deep, settled weariness. "Now, we wait," she said. "The report will travel up the chain. It will land on a desk at Front headquarters. Someone will read it. They will see the name of the corroborating witness, and your name, and Major Belov's name. They will see a discrepancy between the initial field report he filed and the one we have just sent."
+
+"And then?" Orlov pressed.
+
+"And then," she paused, choosing her words with care, "one of two things will happen. Either an investigator from the STAVKA special departments will be dispatched, a man who answers to no one but the highest command, and the truth will be pursued. Or… the report will be quietly filed away. A political calculation will be made. It will be decided that the word of a Major, a man with connections and a certain reputation, is more valuable than the word of a sergeant and a private. It may be deemed that rocking the boat is more dangerous than letting one injustice slide."
+
+The cold dread in Orlov's stomach intensified. "So it could all be for nothing."
+
+"No," Rostova said, and for the first time, a flicker of that iron resolve returned to her eyes. "It is never for nothing. It is on the record now. It exists. It cannot be unwritten. Belov knows this. Even if nothing comes of it officially, he knows there is a piece of paper in a file in Moscow that calls him a liar and a butcher. That is a stain he cannot wash away. Men like him care about their files more than they care about their men. We have wounded him in the place he is most vulnerable. His reputation."
+
+She sat down on the crate opposite Orlov’s bunk. For a long moment, they just existed in the shared space, the silence broken only by the drip of water seeping through the earth above them and the distant, rhythmic thump of artillery. It was a sound so constant it had become a part of the silence itself.
+
+"I am still afraid," Orlov admitted, the words feeling small and inadequate.
+
+"You would be a fool if you were not," Rostova replied simply. "Courage is not the absence of fear. It is the assessment that something else is more important. Today, the life of Private Sidorov was more important. The truth was more important."
+
+He thought of Sidorov, the boy with the perpetually surprised eyes, lying broken in the snow. He thought of the casual cruelty of Belov’s lie. He had not thought of it as courage when he spoke. He had only felt a burning, desperate need for the truth to be heard, a final act of service to a dead friend. Rostova had given that need a name. Courage. It felt too large a word for him.
+
+The dugout flap was pushed aside, and another soldier entered, bringing a gust of frigid air with him. It was Private Volkov, an older man with a face like a worn leather map and eyes that had seen too much. He was from their squad, a veteran of the winter campaign, known for his quiet cynicism and his uncanny ability to procure tobacco when there was none to be had.
+
+Volkov looked from Rostova to Orlov, his gaze lingering on Orlov. He said nothing at first, just began to unwrap the filthy bindings from his feet, his movements slow and deliberate. The air in the dugout grew thick with a new kind of tension.
+
+"The whole trench is talking," Volkov finally said, his voice a low rasp. He did not look at them. He was addressing the damp wall in front of him. "They saw the Major leave. He looked like he had swallowed a live grenade."
+
+Neither Orlov nor Rostova replied.
+
+Volkov grunted, a sound of weary resignation. He looked at Orlov now, his eyes not angry, but filled with a kind of profound, sorrowful pity. "You are a fool, boy. A brave one, I grant you that. But a fool all the same."
+
+"He was just telling the truth, Volkov," Rostova said, her tone level.
+
+"The truth?" Volkov gave a short, bitter laugh. "The truth is a luxury we cannot afford out here. The truth is that we are all expendable. The only goal is to make it to the next day. You do that by keeping your head down. By not making waves. By not attracting the attention of men like Belov." He gestured with his thumb towards the entrance. "That man is a crocodile. He will lie in the mud and wait. He can wait a long time. And when he moves, you will not see him coming."
+
+He turned his attention back to his feet. "You did not just make an enemy for yourself, Orlov. You made one for the whole platoon. Whose rations will be 'lost' in transit next week? Whose company will be 'volunteered' for the next frontal assault on a fortified position? His memory is long, and his reach is longer. You have painted a target on all our backs."
+
+The weight of his words settled on Orlov like a physical blow. He had been so focused on his own fear, on the personal battle between himself, Rostova, and Belov. He had not considered the splash, the ripples that would spread outwards and touch everyone. He looked at the other bunks, empty for now, and imagined the faces of his comrades. Would they see him as a hero, or as a curse?
+
+Volkov finished with his bindings and stood up, groaning as his knees cracked. He looked at Rostova. "And you, Sergeant. I always thought you were the smart one. The one who knew how the real world worked. You should have protected him. You should have told him to swallow it, like we all do."
+
+"There are some things that cannot be swallowed, Volkov," Rostova said, her voice quiet but unyielding.
+
+Volkov just shook his head slowly. "I hope you are right. For all our sakes." He ducked out of the dugout, leaving his warning hanging in the air like cordite smoke.
+
+The fear returned, colder and sharper than before. It was no longer just for himself. It was for Rostova, who had stood in front of him. It was for the men in his squad, who might pay the price for his moment of defiance. He had wanted to save a man's soul, but what if he had only damned the bodies of many more?
+
+Days passed. The war ground on with its brutal, indifferent rhythm. The shelling continued. Men died. The cold deepened. For a while, it seemed as if Volkov’s prediction was wrong, or at least premature. Nothing happened. The rations arrived on time. Their platoon was rotated in and out of the front line trenches on a normal schedule. A strange, tense normality settled over them. Belov was not seen. His name was not spoken. It was as if he had vanished.
+
+Orlov began to feel a sliver of hope. Perhaps the report had worked. Perhaps Belov had been quietly reassigned, or reprimanded. Perhaps the system, for all its flaws, had a shred of integrity after all. He saw the looks from the other soldiers change. The initial fear and resentment in their eyes began to be replaced by a grudging respect. They started calling him "Orlov the Truthful," a nickname that was part jest, part honor. He found himself walking a little taller. The story he was a part of, their story, felt real and solid.
+
+Rostova did not share his optimism. She remained watchful, her calm demeanor a thin sheet of ice over a deep, cold lake of caution. "Do not mistake a sleeping crocodile for a dead one, Private," she warned him one evening as they shared a smoke. "He is waiting. He is choosing his moment."
+
+The moment arrived two weeks after the confrontation in the dugout. It did not come with a roar, but with a whisper. A runner arrived, slithering through the communications trench, a folded piece of paper in his hand. He found Rostova, handed her the dispatch, and disappeared as quickly as he had come.
+
+Rostova read it, her face betraying no emotion. Then she read it again. She folded it carefully and tucked it into her tunic pocket.
+
+"What is it?" Orlov asked, a familiar knot tightening in his stomach.
+
+"Orders," she said. "A new directive from Regimental Command."
+
+"For the platoon?"
+
+"No," she said, finally meeting his gaze. Her eyes were dark and serious. "For us. We have been… volunteered."
+
+She pulled the paper out and flattened it on the table. The order was typed, official, and chilling in its polite phrasing. It called for two soldiers with specific qualifications, a communications specialist with field experience and a rifleman with proven reconnaissance skills, to undertake a "special intelligence gathering mission of high priority." The mission was to proceed under the cover of darkness into the No Man's Land to the west of Hill 114, into the frozen marsh known to the soldiers as the Devil's Jawbone. Their objective: to verify and map suspected enemy mortar emplacements.
+
+It was a death sentence. The Devil's Jawbone was a treacherous maze of frozen hummocks and thin ice over deep, black water. It offered no cover, and the Germans had it sighted from three different directions. Men sent there did not come back. The phrase that sealed their fate was the one at the bottom, signed by the Regimental Chief of Staff, but undoubtedly dictated by a vengeful major. "Selected for this vital task on the personal recommendation of Major Belov, in recognition of their exemplary initiative and resourcefulness."
+
+Belov had not forgotten. He had waited. He had let them hope. And then he had struck, using the very system they had tried to use against him. It was a masterpiece of bureaucratic malice. He was not ordering their execution. He was honoring them with a suicide mission. Their names were on it. Sergeant K. V. Rostova. Private G. S. Orlov. It was not a request. It was an order. There was no refusing it.
+
+Orlov felt the blood drain from his face. The dugout seemed to sway. This was it. This was the crocodile's bite.
+
+Rostova, however, was already moving. Her brief stillness shattered, replaced by a focused, terrifying calm. She did not rail against the injustice. She did not curse Belov's name. She accepted the reality of their situation and immediately began to counter it.
+
+"Get your rifle," she said, her voice sharp and commanding. "Strip it. Clean it. Every single piece. There can be no jams. No hesitation."
+
+She went to her own small footlocker and began laying out equipment with a speed and precision that was mesmerizing. Extra ammunition clips. Two grenades for each of them. A compass. A roll of medical bandages. A length of rope. A wire cutter. She moved like a surgeon preparing for a complex and dangerous operation.
+
+Orlov, shaking, did as he was told. He fumbled with the bolt of his Mosin Nagant, his fingers numb and clumsy. He forced himself to breathe. He looked at Rostova. She was not afraid. Or if she was, she had locked her fear in a deep, iron box and was focusing only on the task ahead. Her calm was an anchor. He held onto it.
+
+He disassembled the rifle, laying each piece on an oily rag. He cleaned the carbon from the bolt, scrubbed the inside of the barrel until it gleamed, oiled the mechanism with a light, careful touch. The familiar, repetitive task steadied his hands. As he worked, his mind cleared. Belov wanted them dead. He had sent them into the Devil's Jawbone to be swallowed by the mud or torn apart by machine gun fire. But they were not dead yet.
+
+Rostova spread a map on the table, weighing its corners down with ammunition clips. It was a detailed topographical map of the area, crisscrossed with blue and red pencil marks. "Here," she said, pointing with the tip of a knife. "This is Hill 114. The Germans hold the crest. Their machine gun nests are here, and here. They have interlocking fields of fire across the entire marsh."
+
+She traced a line with the knife. "The direct route is suicide. They will be expecting anyone to come that way. But the map shows a drainage ditch here, running from our lines almost two thirds of the way across. It will be frozen, but it is lower than the surrounding ground. It will offer some cover, if we stay low. The last section, here, will be open ground. We will have to crawl. We will have to be ghosts."
+
+She looked at him, her eyes searching his. "We move in four hours. No talking once we leave the wire. We communicate with hand signals. I will lead. You will cover our rear. You will watch for flares. If a flare goes up, you do not move. You do not breathe. You become a part of the ground. Do you understand?"
+
+"I understand," Orlov said, his voice hoarse but steady. He was no longer just the protected. He was a participant. He was the rear guard. His life depended on her, but her life also depended on him. The fear was still there, a cold, hard knot in his gut, but the feeling of helplessness was gone, replaced by a grim determination.
+
+He finished reassembling his rifle, the action of the bolt now smooth and clean. He looked at the map. He pointed to a small, almost invisible contour line near their objective. "What is this?"
+
+Rostova leaned closer. "An old stream bed, it looks like. Probably dry. Why?"
+
+"It is thirty meters from where they suspect the mortars are," Orlov said, his mind racing, seeing the terrain in his head. "If we can make it to the drainage ditch, and then across the open ground to here… we could observe them from cover. We would not have to expose ourselves at the final position."
+
+Rostova studied the map for a long moment. A slow smile touched her lips. It was not a happy smile. It was a sharp, dangerous thing, the smile of a wolf who has found a weakness in the hunter's trap. "Good," she said. "That is good, Orlov. We will aim for the stream bed."
+
+She handed him two of the grenades. Their weight was cold and heavy in his palm. "We will complete the mission," she said, her voice low and intense. "We will get the intelligence. We will come back. And we will file our report. Another piece of paper for the file. A report on the success of a mission recommended by Major Belov. He wants to kill us. Instead, we will make him look like a genius."
+
+The bitter irony of it was not lost on Orlov. They were being sent to die, but if they succeeded, they would be tightening a different kind of noose around Belov's neck. They would survive out of spite. They would succeed to prove him wrong.
+
+As they made their final preparations, checking straps and blackening their faces with soot from the stove, Orlov felt the last vestiges of the boy who had arrived at the front fall away. The war had tried to turn him into a number, a body, a victim. Belov had tried to erase him. But in this moment, in the face of certain death, he felt more alive and more himself than he ever had. He was Private Orlov. He was the rear guard. He was the other half of a two person army. And he was going into the Devil's Jawbone not just to survive, but to fight back with the only weapon they had left: their own stubborn, defiant existence. The story was not over. A new, terrifying chapter was about to begin.
+
+The stove was a black lump in the corner, its warmth already a memory. The only light came from the single, sputtering tallow lamp that threw their shadows, long and distorted, against the damp earth walls. They did not speak. There was nothing left to say that was not already understood in the taut set of Rostova's jaw or the deliberate, careful way Orlov checked the magazine of his rifle for the third time. The air in the dugout was thick with the smell of soot, damp wool, and the metallic tang of fear.
+
+Rostova moved first. She blew out the lamp, plunging them into absolute darkness. For a moment, Orlov was disoriented, a child again, afraid of what the night held. Then her hand found his arm, her grip firm and cool through the fabric of his sleeve. "Stay behind me. Step where I step. Breathe when I breathe." Her voice was a low whisper, not a sound so much as a vibration in the close air.
+
+He nodded, a useless gesture in the blackness, but the motion was for himself. "I will," he whispered back.
+
+She led him to the dugout entrance. The heavy blanket that served as a door was pushed aside, and the night rushed in. It was a physical assault. The cold was a blade that cut through his greatcoat, and the air, clean of the dugout’s stagnant fug, was sharp with the scent of frost and distant, rotting things. The sky was a shard of obsidian, starless and vast, occluded by a low, heavy blanket of clouds. The war had even stolen the stars.
+
+Rostova went out, a shadow detaching from other shadows. Orlov followed, his rifle held across his chest, the cold of the stock seeping into his gloved fingers. He felt horribly exposed, a black shape against the slightly less black snow patched ground. He crouched, mimicking her posture, his eyes straining to pierce the gloom. The trench was a familiar world, but it had transformed. By day it was a muddy, miserable home. By night, it was a labyrinth of ghosts.
+
+They moved along the communications trench, their felt boots making almost no sound on the frozen duckboards. A cough echoed from a nearby listening post, quickly stifled. The scrape of a shovel on frozen earth sounded somewhere to their right. Their own lines were alive with the nervous, nocturnal energy of a thousand men trying not to die.
+
+They passed a sentry, a boy no older than Orlov, his face a pale oval under his helmet. He stiffened as they approached, his bayonet coming up.
+
+"The moon has no friends," Rostova breathed, the first half of the countersign.
+
+The boy relaxed fractionally. "She walks alone," he completed, his voice cracking. He looked from Rostova's hard face to Orlov's sooted cheeks. "Good hunting," he mumbled, and they were past him, melting back into the darkness.
+
+Good hunting. The phrase hung in Orlov's mind. They were the predators now, not just the prey. The thought gave him no comfort.
+
+They reached the forward most listening post, the last stop before the wire and the field of frozen bodies that lay beyond. This was the edge of the world. Rostova exchanged a few hushed words with a grizzled sergeant who looked more like a creature of the earth than a man. The sergeant grunted, then pointed a mittened hand towards a gap in the barbed wire, a narrow, barely visible corridor marked by two splintered posts. "God be with you," he said, without a trace of piety. It was a formality, a phrase used when there was nothing else to say.
+
+Then they were through. They were in no man's land.
+
+The ground fell away into a chaotic jumble of shell craters and frozen mud. The air smelled different here. It was a thick, foul perfume of churned earth, cordite, and something else. Something sweet and sickly that Orlov did not want to name. He had smelled it before, from a distance. To be in the heart of it was to feel it coat the back of his throat.
+
+Rostova moved with an unnatural grace, a phantom in the gloom. She did not walk, she flowed from one pool of shadow to the next. Orlov scrambled to keep up, his heart a frantic drum against his ribs. Every scrape of his boot on a loose rock sounded like a gunshot. Every gust of wind whistling through the tangles of wire sounded like a scream. He tripped, his foot catching on something soft but unyielding. He fell to one knee, his hand sinking into the snow. His fingers brushed against the rough wool of a greatcoat, and beneath it, the impossible hardness of a frozen torso.
+
+He recoiled, stifling a cry. His breath hitched in his throat. Rostova was instantly beside him, her hand on his shoulder, pressing him down. She did not speak. She simply waited, a statue of patience, until the frantic hammering in his chest subsided. He could see the dead man now, a German by his helmet, half buried in the snow, his face a black smudge turned towards the unblinking sky. He had been here for weeks.
+
+Orlov took a ragged breath and pushed himself up. He looked at Rostova, her eyes invisible in the dark, but he could feel their intensity. He was ashamed of his panic, but she showed no sign of judgment. She simply gave a short, sharp nod and continued on, her message clear. We do not have time for this. The dead are dead. We are not.
+
+They moved in a rhythm of crawling, crouching, and running. From the lip of one crater, a mad dash across ten meters of open, pockmarked ground, and a desperate slide into the frozen mud of the next. The world was reduced to this. The next piece of cover. The burning in his lungs. The weight of the rifle in his hands.
+
+He was learning. He was learning to read the ground, to use the contours of the earth his map had only hinted at. He was learning to listen, to distinguish the groan of freezing earth from the scrape of a German boot. He was learning to see in the dark, not with his eyes, but with his entire body, feeling the terrain, sensing the empty spaces.
+
+They were halfway to the drainage ditch when the world exploded in white light.
+
+A German flare hissed upwards, a sickly green comet that burst directly overhead, bathing the battlefield in a brilliant, merciless magnesium glare.
+
+"Ground," Rostova's voice was a sharp crack of sound just before the light hit.
+
+Orlov did not think. He obeyed. He threw himself flat, his face pressed into the freezing mud and snow. He became part of the ground, as she had commanded. He did not move. He did not breathe. The light was blinding, even through his closed eyelids. It bleached all color from the world, turning the landscape of craters and corpses into a stark, silent photograph.
+
+He forced his eyes open a crack. The light was so intense it hurt. He could see everything with an impossible, terrifying clarity. Twenty meters to his right, a cluster of bodies lay tangled in the wire, their limbs thrown out at artistic angles, a grotesque sculpture. Ten meters in front of him, the splintered stump of a tree pointed a jagged finger at the sky. And five meters to his left, he saw Rostova.
+
+She was frozen in place, half coiled on the ground, one hand outstretched. She was perfectly, utterly still, her face turned away, a dark shape pressed against the earth. She looked like a rock, a lump of frozen mud, a thing that had always been there. She was not a person. She was landscape.
+
+Orlov understood then. This was how you survived. You ceased to be human. You became a thing. An object. Uninteresting. Unworthy of a bullet.
+
+The flare began to flicker, its light sputtering. The shadows, which had been banished, rushed back in, long and distorted, dancing a mad jig as the flare died. Then, with a final, pathetic hiss, it was gone.
+
+The darkness that returned was deeper, more profound than before. It was a physical weight, pressing down on his eyes. A green and purple afterimage of the flare swam in his vision. For a long moment, there was no sound but the ringing in his ears and the frantic thumping of his own blood.
+
+A low whistle, like the call of a night bird, cut through the silence. It was Rostova. He waited. The whistle came again, closer. He risked lifting his head. A shadow was moving towards him, low and fast. It was her. She knelt beside him, her breath ghosting in the frigid air.
+
+"You did well," she said. The praise was like a shot of brandy, warming him from the inside out. "The worst is over. The ditch is just ahead."
+
+They reached the drainage ditch a few minutes later. It was deeper than he had expected, a long, dark scar on the land, running parallel to the German lines. They slid down its icy bank, landing in a foot of sludge and frozen water that crunched under their boots. Here, below ground level, they were shielded from view. Orlov felt a wave of relief so profound it almost made his knees buckle.
+
+"Now for your stream bed," Rostova whispered, her voice tight with anticipation.
+
+They moved along the ditch for another two hundred meters, the tension ratcheting up with every step. They were close now. The sounds of the German trenches were clear, no longer distant murmurs but distinct noises. A low laugh. The clatter of a mess tin. A snatch of a song, melancholic and out of tune. These sounds of life were more terrifying than any scream. They were the sounds of men who did not know they were being watched. Men who were about to die. Or men who were about to kill them.
+
+Rostova stopped, holding up a hand. She pointed to a shallow depression leading away from the ditch. "There. The map was right."
+
+It was the dry stream bed. It was little more than a gentle fold in the earth, barely a meter wide and half a meter deep, filled with loose scree and the skeletal remains of last summer's weeds. It was their path to the heart of the enemy.
+
+"I will go first," she said. "Give me twenty meters. Then follow. If you hear a shot, do not help me. Turn back. Get the map to the sergeant. That is the mission."
+
+"I understand," Orlov said, his throat dry. He understood the brutal logic of it. The intelligence was more important than their lives.
+
+She slipped into the bed without a sound, a snake disappearing into the undergrowth. Orlov counted to thirty, his heart beating a slow, heavy rhythm. Then he followed her.
+
+Crawling in the stream bed was slow, agonizing work. Every pebble that shifted under his weight sounded like an avalanche. The dry weeds scraped against his coat with a sound like sandpaper. He kept his eyes fixed on the spot where he had last seen Rostova, a moving patch of deeper darkness.
+
+They crawled for what felt like an eternity. The stream bed curved gently, bringing them closer and closer to the German position. The smell of cooking cabbage and cheap tobacco now mixed with the foul air. They were in the lion's den.
+
+Rostova stopped. She was lying flat, her body pressed into a slight curve in the bank. She motioned for him to come up alongside her. He crawled the final few meters, his rifle scraping on the stones, and lay down beside her. She pointed.
+
+He slowly, carefully, raised his head just enough to peer over the edge of the bank. His breath caught in his chest.
+
+They were there.
+
+Not thirty meters away, dug into a reinforced revetment, were the mortars. Two of them, squat and ugly, their tubes pointing accusingly at the sky. A small crew of four men moved around them with a lazy, practiced efficiency. One was smoking a cigarette, the red tip glowing in the gloom. Another was leaning against a stack of ammunition crates, his head nodding as if he were about to fall asleep. They were just men. Tired, bored men, serving a machine of death.
+
+It was so simple. So mundane. And so utterly terrifying.
+
+Rostova had already taken out her binoculars and a small, leather bound notebook. Keeping her body low, she began to study the position, her hand moving quickly, sketching the layout, the number of men, the position of the ammunition. Her focus was absolute. She was a scientist observing an insect colony.
+
+Orlov's job was to watch. He was the rear guard. He tore his eyes away from the hypnotic scene of the mortar pit and scanned the terrain around them, his gaze sweeping back and forth, from the tangled wire on their left to the dark maw of the German trenches on their right. He watched their back trail, the way they had come.
+
+He saw it then. A flicker of movement at the far end of the stream bed, back towards the main drainage ditch.
+
+He froze, his eyes straining. It could be a trick of the light, a branch swaying in the wind. But there was no wind.
+
+There it was again. A shape, detaching itself from the shadows. Then another.
+
+Two men. Moving slowly, carefully. Coming up the stream bed. Towards them.
+
+Orlov's blood ran cold. It was a patrol. A German patrol, sweeping the gullies and ditches in front of their line. They were being hunted from behind. They were trapped. The stream bed was not a path to safety. It was a channel, a funnel, leading the wolves directly to them.
+
+He reached out and grabbed Rostova's arm. He did not need to speak. The urgency of his grip was enough.
+
+She lowered the binoculars instantly, her head snapping around to follow his gaze. She saw them. Her body went rigid. The notebook disappeared into her coat. Her hand went to the pistol holstered at her hip. The slow, wolfish smile was gone, replaced by a look of pure, cold concentration. She looked at the patrol, then at the mortar pit, then at Orlov.
+
+There was no way back. There was no way forward. They were caught between the hammer and the anvil.
+
+She drew her pistol, the click of the safety being released impossibly loud in the sudden, absolute silence of Orlov's world. He raised his rifle, the stock pressing hard against his cheek, the front sight finding the chest of the lead German soldier. The mission was over. The report would not be filed. The new, terrifying chapter had lasted only a few minutes. And a newer, more final one was about to be written in blood and frozen earth.
+
+His finger tightened on the trigger. The German’s chest was a dark, solid block in his sights. It would be so easy. A clean shot. A moment of noise, a flash of fire, and then the world would erupt. He would be dead in the next ten seconds. Rostova would be dead. They would die here, in this frozen ditch, for nothing. His entire being strained towards that final, definitive act. To pull the trigger was to accept the end. To choose the shape of his own oblivion.
+
+But Rostova’s hand was on his rifle. Not grabbing, not pulling. Just a light, firm pressure on the barrel, pushing it down. Down into the mud. He looked at her, his mind a storm of confusion and protest. Her eyes were not on him. They were locked on the approaching patrol, but her face held none of the fatalistic resolve he felt. It was sharp. It was predatory. She put a single finger to her lips. The gesture was absolute. Then she pointed down, into the black, oily water at the bottom of the stream bed. She wanted them to hide. It was insane. They would be seen. They would be shot like rats in a barrel.
+
+He did not move. He could not. His mind refused to process the command. She saw the paralysis in his eyes. Her expression did not change, but her hand left his rifle and grabbed the front of his coat. She pulled. It was not a violent motion, but it was irresistible. It was the pull of a current, of gravity itself. He stumbled, his boots sinking into the thick, foul smelling mud, and followed her down. They crouched, then lay flat in the shallow, freezing water, their bodies pressed against the slimy bank.
+
+The water was a shock, a violation. It seeped through the thick wool of his coat, a creeping, liquid cold that stole the breath from his lungs. The smell was overpowering. Rot and filth and the metallic tang of old death. He pressed his face against the frozen earth of the bank, the side of his cheek screaming with cold. He could hear his own heart, a frantic, hammering drum against his ribs. Above them, somewhere on the lip of the gully, were the Germans. He could hear them now. The scuff of a boot on gravel. A low, guttural cough, quickly suppressed. They were close. So close.
+
+He risked a glance at Rostova. She was a statue of mud and shadow. Only her eyes moved, watching the top of the bank. Her pistol was gone. In its place, she held a knife. It was a simple, brutal thing. A slab of dark steel with a leather wrapped hilt. She held it with the blade pointing down her forearm, a killer’s grip. She looked at him, then at his belt. She did not need to speak the question. He fumbled with numb fingers, his own knife scraping against its sheath. The sound was like a thunderclap in his own ears. He pulled it free, the cold steel of the hilt a dead weight in his hand. He was not a knife fighter. He had been taught, of course. The thrusts, the parries, the brutal, efficient moves designed to kill. But it was a theoretical knowledge. A drill performed on straw dummies in a training yard. This was different. This was for a man’s life.
+
+The scraping sound came again, closer this time. A German soldier was sliding down the bank, his hobnailed boots searching for purchase. He was just a shape, a silhouette against the slightly less black sky. Orlov could see the outline of his helmet, the long, straight line of his rifle slung over his shoulder. The man landed in the stream bed with a soft splash, not ten feet away. He muttered something under his breath. A complaint about the mud, the cold. He was just a man. Another tired, bored man.
+
+The second soldier followed, more carefully. They stood for a moment, their backs to Orlov and Rostova, looking up the stream bed towards the mortar pit. They were talking in low tones. Orlov could not understand the words, but the cadence was conversational. They had no idea. They were blind.
+
+Rostova moved. She did not rise. She flowed. A ripple in the dark water, a shadow detaching from other shadows. She moved behind the second soldier, the one who had been more careful. Orlov’s world narrowed to that single, silent tableau. He knew what he had to do. His body was a leaden, unresponsive thing. His lungs burned. His mind screamed. Do it. Move.
+
+He forced his legs to obey. He rose from the water like a swamp creature, mud and filth dripping from his coat. The first soldier, the one who had coughed, was turning. His head was swiveling around, a sixth sense, a flicker of movement caught in his peripheral vision. His mouth opened. To shout a warning, to call a name. Orlov did not let him. He lunged, a desperate, clumsy rush. He did not think about the practiced moves from the training yard. He brought his left hand up, clamping it over the man’s mouth and nose, driving his head back against the muddy bank. The soldier’s rifle clattered against the stones. The man grunted, a panicked, animal sound, and began to struggle.
+
+Orlov’s right hand, the one with the knife, came up. He saw a flash of movement to his right. Rostova was a blur of vicious, economical motion. There was no struggle. No sound. Just a swift, upward thrust under the second soldier's helmet, a choked gasp, and the slow, heavy crumpling of a body. Her part was done. She was already turning, her eyes on him, on his fight.
+
+His own fight was not so clean. The German was strong. His hands came up, grabbing at Orlov’s wrist, trying to tear his hand away from his face. Orlov felt the man’s teeth sink into the flesh of his palm. Pain, sharp and electric, shot up his arm. He cried out, a muffled grunt of agony. The German bucked, trying to throw him off. Orlov could feel his grip slipping. He was losing. In a moment, the man would be free. He would shout. The mortars would hear. They would all die.
+
+He drove his knee into the German’s groin. The man’s body went rigid, his struggles ceasing for a single, precious second. It was enough. Orlov found a new strength, a reservoir of pure, hateful desperation. He was no longer a soldier following orders. He was an animal fighting for its life. He ignored the pain in his hand, the man’s struggles. He looked into the man’s wide, terrified eyes, visible in the gloom. And he brought the knife down.
+
+It was not a clean thrust. It was a panicked, hacking blow. The blade glanced off a rib with a sickening, grinding crack. The German screamed, but the sound was trapped, a wet, gurgling noise muffled by Orlov’s hand. Orlov pulled the knife free and stabbed again. And again. He did not stop until the struggling beneath him ceased. He did not stop until the body went limp. He did not stop until the only movement was the slow, inexorable slide of the corpse into the filthy water.
+
+He stayed there for a long time, kneeling over the dead man, his body shaking uncontrollably. The adrenaline drained away, leaving him hollow and sick. He could feel the blood from his bitten hand, warm and sticky, mixing with the cold mud. The smell of fresh blood, coppery and thick, cut through the stench of the ditch. He had killed a man. Not with a rifle from a hundred yards away. Not as a faceless target. He had held him. He had felt his life ebb away under his own hands.
+
+Rostova was beside him. She said nothing. She reached out and took his shaking hand, turning it over in the gloom. She examined the bite wound with the same detached focus she had used to study the mortar pit. She took a small flask from her belt, unscrewed the cap, and poured a clear, stinging liquid over the wound. Vodka. The pain was immense, a clean, white fire, and Orlov hissed through his teeth. It was a good pain. It burned away the fog in his mind. She tore a strip of cloth from the dead German’s tunic and wrapped his hand, her movements quick and efficient.
+
+“Get his rifle,” she said. Her voice was a low whisper, completely calm. As if she had not just killed a man and watched him kill another. “And any grenades.”
+
+Orlov obeyed, his movements stiff and clumsy. He retrieved the German’s Mauser rifle. It felt heavier, more solid than his own Mosin. He found two stick grenades tucked into the soldier's belt. He handed one to Rostova. She took it without a word, hooking it onto her own belt. The other bodies were searched with the same cold professionalism. They yielded another grenade and a full magazine for a pistol Rostova did not seem to have.
+
+They dragged the bodies to the side of the stream bed, pushing them deep into a tangle of roots and overhanging brush. It was a crude burial. The spring thaw would reveal them. But for now, they were hidden. The evidence was gone.
+
+Orlov sank back against the bank, his legs threatening to give out. The mission was over. They had survived. They could slip away now, back the way they came. Back to their own lines. The report would be incomplete, but they were alive. He looked at Rostova, expecting to see a sign of retreat in her eyes. A nod. A gesture towards their own trenches.
+
+She was not looking back. She was looking forward. Towards the mortar pit. The lazy glow of the cigarette was still visible. The murmur of voices still carried on the still, cold air. They were still oblivious. Untouched.
+
+“The mission has changed, Orlov,” she said, her voice so low he barely heard it.
+
+He stared at her, uncomprehending. “Changed? We are alive. That is the mission now. We go back.”
+
+The wolfish smile returned to her lips, but this time it was different. It was not predatory. It was something harder. Something colder. It was the smile of a fanatic. “Go back? With what? A half finished sketch? A guess? They sent us to look. What we found is too important to leave.”
+
+“It’s a mortar pit,” he whispered, his voice hoarse. “There are hundreds of them on this front.”
+
+“Not like this one,” she said. Her eyes were glowing with a strange intensity. “Did you see the ammunition crates? The markings? Those are not standard high explosive shells. They are gas. Phosgene, by the look of the canister tops. They are preparing for a gas attack. Our assault is scheduled for dawn. They will wait for our men to leave the trenches, to be packed in the open, and then they will saturate the field. It will be a slaughter.”
+
+Orlov’s blood ran cold again, but for a different reason. Not fear for himself, but a vast, bottomless horror for the thousands of men who would walk into that poison cloud. The new recruits. The boys from his own village. He saw their faces, choking, their lungs turning to acid.
+
+“We have to warn them,” he said, his voice urgent. “We have to get back.”
+
+“There is no time,” Rostova said flatly. “By the time we get back, by the time we convince some fat colonel in a bunker that our report is more than a bad dream, it will be too late. The assault will have started. The gas will be in the air.” She looked at the mortar pit, then back at him. Her face was a hard, pale mask in the darkness. “There is only one way to stop it. We do not report the threat. We remove it.”
+
+He understood then. The full, terrifying scope of her madness. He was not looking at a soldier anymore. He was looking at a force of nature. A storm contained in a human form.
+
+“There are four of them,” he said, his voice weak. “Maybe more. We have a rifle, a pistol, and three grenades. It is suicide.”
+
+“Dying in this ditch was suicide,” she countered, her voice sharp as broken glass. “Dying in a gas cloud is suicide. This… this is an opportunity. To die for something. To save thousands of our comrades. Which death do you choose, Orlov?”
+
+He had no answer. He looked at his bandaged hand, the dark stain of blood seeping through the cloth. He thought of the weight of the German soldier, the life draining out of him. He had crossed a line tonight. There was no going back to the man he was before. Perhaps she was right. Perhaps some paths only led forward, into deeper darkness.
+
+“What is the plan?” he asked, the words tasting like ash in his mouth.
+
+The smile on her face softened, just for a moment. It was not warmth. It was approval. “The plan is simple. They are lazy. They are comfortable. They think they are safe. We will use that. We will get close. Very close. The wire is thin to the left of their position. I saw it. We crawl. When we are close enough, I will use the pistol. You will use the rifle. Aim for the men first. The ones by the tubes. Create chaos. Then, the grenades. Not into the pit. Into the ammunition.”
+
+Orlov’s mind reeled. Into the ammunition. The gas shells.
+
+“If a bullet hits one of those shells…” he started.
+
+“It will go up,” she finished for him. “All of it. A big fire. It will be seen for miles. The Germans will know their position is compromised. The gas attack will be called off. And the mortars will be gone.”
+
+“And us with them,” he said quietly.
+
+“Perhaps,” she admitted. “Or perhaps, in the confusion, we make it back. The odds are poor. But they are not zero. And it is a better death than choking on our own lungs.”
+
+She did not wait for his agreement. She started moving, a low crawl, keeping to the deepest shadows of the ditch. She moved with a liquid grace that defied the cumbersome layers of her uniform. Orlov watched her go for a moment, a silhouette against the dark earth. He was being led to his death by a madwoman. But she was right. It was a better death. He took a deep breath, the cold air burning his throat. He checked the action on the German rifle. It was smooth. He chambered a round. The click was loud and final. Then, he followed her, crawling on his belly through the mud and the filth, towards the waiting fires of hell.
+
+The mud was a living thing. It sucked at his knees and elbows, a cold, greedy mouth pulling him down into the earth. It smelled of decay and iron and the latrines of a thousand forgotten soldiers. Each movement was a struggle, a slow, agonizing tear against the suction. He kept his head low, the rough wool of his collar scratching his chin. The German rifle was a leaden weight, its stock slick with grime. He pushed it ahead of him, then dragged his body forward, an inch at a time.
+
+Ahead of him, the woman was a shadow within a shadow. She did not seem to fight the mud. She flowed through it. Her movements were economical, patient, silent. A ripple in the darkness. Orlov tried to mimic her, to find that same rhythm, but his body was clumsy, his fear a clumsy weight. Every scrape of a stone under his boot, every gasp of breath felt like a shout in the oppressive quiet of no man's land. The night was not truly silent. It was a tapestry of distant, terrible sounds. The sporadic cough of a machine gun miles away. The mournful whistle of a falling shell that landed with a dull, gut-shaking whump far to their right. The whisper of the wind through the skeletal remains of trees. And closer, much closer, the thrumming of his own blood in his ears.
+
+She stopped. He froze, his heart seizing in his chest. He pressed his face into the stinking mud, willing himself to become part of the landscape. What did she hear? What did she see? He risked lifting his head a fraction. A flare arced into the sky, a dying star that bloomed into a terrible, fizzing sun. The world was bleached in a ghastly white light. Every crater, every strand of barbed wire, every lump of earth was thrown into stark, unforgiving relief. Orlov saw a boot, sticking out of the mud not five feet from him. A Russian boot. He did not dare look for the rest of the man.
+
+He held his breath, his muscles screaming with the effort of remaining still. He chanced a look at the woman. She was motionless, a part of a shallow depression in the ground, her face turned away from the light. Only her eyes moved, scanning the German line, drinking in the details revealed by the artificial daylight. The flare hissed and sputtered, its light beginning to fail. As it fell, it cast long, dancing shadows that made the ground seem to writhe and crawl. Then, darkness rushed back in, deeper and more absolute than before. The image of the battlefield was burned onto the inside of his eyelids.
+
+She moved again, and he followed. They crawled on. Time ceased to have meaning. There was only the crawl, the cold, the fear. He felt a change in the texture of the ground beneath him. It became softer, lumpier. A smell rose up, sweet and cloying. He put his hand down and it met not mud, but rough cloth stretched tight over something that gave way slightly. He recoiled. It was a body. A German, judging by the shape of the helmet lying beside the head. Its face was turned to the sky, a pale, blank oval in the gloom. His eyes were open. Orlov felt a wave of nausea. He scrambled sideways, his breath catching in a sob he had to swallow. The woman paused, looking back at him. He could not see her expression, but he felt her impatience like a physical force. He gritted his teeth and kept moving, the image of the dead man's empty gaze following him.
+
+He was beginning to understand her. This landscape, this world of mud and wire and death, it had stripped everything from her but purpose. She was not mad. She was simply… refined. Burned down to the essential elements required to survive and to kill. He, on the other hand, was still burdened by the ghost of the man he had been. The teacher who read poetry. The son who wrote letters home. Those things were luxuries here. They were weaknesses. As he crawled, he felt them flaking away, like old paint from a weathered wall.
+
+Finally, she stopped again. This time for good. She raised a hand, a slow, deliberate gesture. He crawled up beside her. They were at the edge of a deeper shell crater, a great black bowl in the earth. Beyond it, perhaps thirty yards away, was the German position. A low parapet of sandbags, a length of concertina wire glinting faintly. He could hear them now. A low murmur of voices. A cough. The clink of metal on metal. They were so close. His stomach twisted into a knot of pure terror.
+
+“The wire,” she whispered, her voice barely a breath of sound. It was cut directly in front of them, a narrow gap just wide enough for a man to squeeze through. A patrol path, maybe. Or just laziness. She pointed. “To the left. The ammunition. Stacked by the large crater. You see it?”
+
+Orlov strained his eyes. He could just make out a dark, geometric shape. A pile of crates and long, cylindrical shells. His target. To the right of it was the mortar pit itself, where darker shapes moved. The men.
+
+“They are not watching,” she continued, her voice cold and precise. “Two on duty by the tubes. One is smoking. One is walking. The other two are in the dugout. I can hear them talking.”
+
+How could she know all this? She saw in the dark. She heard silence. She was not human.
+
+She laid the pistol on a patch of dry earth between them. Then she took three grenades from her coat. They were German stick grenades, a gift from some previous, bloody encounter. She handed one to him. The wooden handle was rough in his palm. She placed the other two beside the pistol. “Wait for my first shot. It will be the smoker. He is the most still. You take the one who walks. Fire two rounds. Quickly. Then we throw. For the pile. Not for the men. For the pile. Understand?”
+
+Orlov nodded, his throat too dry for words. He could feel the pulse in his bandaged hand, a dull, painful throb that matched the pounding in his head. This was it. The final moments. He thought of his mother. He thought of the sun on a field of wheat. The images were distant, like memories from someone else’s life.
+
+“Do not hesitate, Orlov,” she said, her voice softening for a second, but it was not with kindness. It was a surgeon’s instruction. “Hesitation is what kills you. Not the bullet.”
+
+She reached out and laid her hand on his arm. Her touch was firm, cold through the layers of his uniform. It was the signal. He looked from her silhouette to the German line. He saw the tiny red glow of the cigarette. A man talking, his voice a low, guttural rumble. He saw another man yawn and stretch, silhouetted for a moment against the faint glow from the dugout entrance. They were just men. Tired, cold soldiers waiting for the morning.
+
+Then the woman moved. She picked up the pistol, her motion a single, fluid act. She did not aim so much as point, an extension of her will.
+
+The crack of her pistol was the first sound. And the last sound of the old world.
+
+The tiny red ember of the cigarette vanished. A man grunted and fell out of sight. Chaos erupted. A shout of alarm. The second German, the walker, spun around, fumbling for his rifle. Orlov did not think. He did not feel. He acted. He brought the Mauser to his shoulder, the stock fitting into the hollow with a familiarity that horrified him. He found the walking man in his sights. He squeezed the trigger.
+
+The rifle bucked against his shoulder, the report a deafening cannonade next to his ear. The man jerked, stumbled, but did not fall. Orlov worked the bolt, the metallic slide and click a frantic, desperate rhythm. Eject. Chamber. Aim. He fired again. This time the man folded, dropping his rifle and collapsing into a heap.
+
+“Now!” the woman yelled, her voice cutting through the ringing in his ears.
+
+Men were scrambling out of the dugout now, shadows yelling in confusion. A rifle fired blindly in their direction, the bullet whining high over their heads. Orlov grabbed the grenade from the ground. He pulled the porcelain bead at the base of the handle. He heard the hiss of the five second fuse. The woman was already on one knee, her arm cocked back. She threw with a fluid motion, underhand, like skipping a stone. Her grenade sailed in a low arc towards the ammunition pile.
+
+Orlov stood. He did not know why. He felt impossibly tall, a perfect target against the night sky. He drew his arm back and threw his grenade with all the strength he possessed. He saw it tumble through the air, a dark shape against the slightly less dark sky. He saw it land, short of the main pile but among a smaller stack of wooden crates.
+
+He dropped to the ground, pulling his head down, burying his face in the mud he had come to know so well. He heard the woman yell, “Again!” She had already armed the other two grenades. She passed one to him. He fumbled with it, his hands clumsy and slick with sweat. He pulled the cord.
+
+The world turned white and silent.
+
+It was not a sound. It was a force. A physical blow that lifted him from the ground. The air was sucked from his lungs in a single, violent gasp. He felt a wave of crushing heat sear his face and the back of his neck. The ground punched him in the chest, the back, the head, all at once. There was a roar that was not a roar, but the tearing of the universe itself. He was tumbling through a void of pure, screaming light.
+
+Then, nothing.
+
+Blackness. Silence. The high pitched whine started slowly, a tiny needle of sound in the center of his brain. It grew and grew until it was all that existed. He felt a wetness on his face. He tried to open his eyes, but they were caked with dirt. He managed to force one open. The world was a blurry, swimming nightmare. Fire. A pillar of white hot fire reached for the sky where the German position had been. It was beautiful and terrible, a man made sun burning away the night.
+
+The ground was shaking. Secondary explosions began, popping and cracking like a string of firecrackers. A shell casing, glowing red, cartwheeled through the air and landed sizzling in the mud a few feet away. Pain began to register. His ears. His head. A sharp, piercing agony in his left leg. He looked down. A splinter of wood, the size of a bayonet, was sticking out of his thigh. Blood was already soaking his trousers, a dark, hot flood.
+
+He was alive. The thought was a surprise. He had been so certain of death.
+
+The woman.
+
+He pushed himself up onto his elbows. His vision swam. The world tilted and spun. “Anna!” he called out, the name coming to him from nowhere. He did not know her name. But it felt right. He called it again, his voice a hoarse croak. “Anna!”
+
+A groan from his right. He crawled, dragging his wounded leg. The pain was nauseating. He found her. She was lying on her side, her face a mask of dirt. One arm was bent at an unnatural angle. Her eyes were closed. For a terrible moment, he thought she was dead. Then her eyelids fluttered.
+
+“Orlov,” she breathed. Her voice was thin, reedy.
+
+“I am here,” he said, his own voice sounding strange to him.
+
+“Is it done?” she asked.
+
+He looked back at the inferno. The fire was so bright it cast their shadows long and stark against the cratered earth. The entire front for miles must be awake, watching. The gas attack was over before it began. “It is done,” he said.
+
+“Good.” She tried to push herself up, then gasped and fell back, her face pale. “My arm. It is broken.”
+
+He saw it then. The jagged end of a bone was pushing against the cloth of her sleeve. His stomach heaved. He fought down the bile. He looked at his own leg. He looked at her. They were both crippled, deep inside German territory, with an inferno lighting them up for every machine gunner on the line. The odds were not poor. They were zero.
+
+“We have to move,” he said. The words came from a place he did not recognize. A place of cold certainty. The old Orlov was gone, burned away in the fire.
+
+“We will not make it,” she stated, not with despair, but with simple fact.
+
+“Perhaps,” he said, echoing her own words back at her. “But it is a better death than waiting here.”
+
+He saw it then in her eyes. The flicker of a smile. Not approval. Not warmth. Recognition. She had created a monster, and it was looking back at her.
+
+“Help me,” she said.
+
+He shuffled closer. The fire was beginning to die down, but the sky was still bright with its glow. Flares were going up all along the German line now, and the nervous chatter of machine guns had begun, scything through the darkness. He grabbed the front of her coat with his good hand. “On three,” he gritted out. “One. Two. Three.”
+
+He pulled. She cried out, a sharp, strangled sound, but she used her good arm and her legs to help. He got her to her feet, or at least to a leaning crouch. She sagged against him, her weight almost unbearable. Her broken arm dangled uselessly.
+
+“The rifle,” she gasped.
+
+“Leave it.”
+
+“No. Get the rifle.”
+
+He looked back. The Mauser was lying where he had dropped it, its wooden stock gleaming in the firelight. It seemed insane. But he understood. It was a tool. It was a part of them now. He limped back, the pain in his leg a blinding white sheet. He scooped it up.
+
+He slung it over his shoulder and went back to her. He put his shoulder under her good arm, taking most of her weight. And they started to move. It was not a crawl. It was a stumbling, lurching, agonizing shuffle. Every step sent a jolt of pure agony up his leg. Every step made her gasp in pain as her broken arm swayed. They were two broken puppets, dancing in the flickering light of the fire they had made.
+
+They headed not for the gap in the wire, but away from the fire, towards the deepest darkness they could find. A German machine gun opened up, its tracers a string of angry red hornets zipping past them. They fell together into a shallow crater, landing in a heap of tangled limbs and shared pain. They lay there, panting, their breath misting in the cold air. The machine gun fired another burst, chewing up the lip of the crater above their heads, showering them with dirt.
+
+“We go between the bursts,” she panted, her face pressed against his shoulder. “When they reload. Five seconds. Maybe six.”
+
+He just nodded, his mind a numb landscape of pain and adrenaline. He listened. The gun fired a long, sustained burst. Then silence. “Now!” he grunted, and they scrambled out of the crater, half running, half falling, for ten desperate yards before collapsing into another.
+
+This was how they crossed no man’s land. A terrifying, excruciating game of inches. From crater to crater, in the brief windows of silence between the storms of lead. He lost track of time. He lost track of everything but the weight of her body, the fire in his leg, and the sound of the machine gun. At some point, he realized their own artillery had started up, a counter-battery fire aimed at the German guns. Shells screamed overhead in both directions, a deadly steel canopy. They were caught in the middle of a conversation between gods, and they were nothing but insects.
+
+He did not know how long they moved like this. An hour. A lifetime. His strength was gone. His leg was a dead weight of screaming nerves. He was leaving a trail of blood in the mud. He stumbled and fell, pulling her down with him.
+
+“I cannot,” he wheezed, the world turning grey at the edges. “I cannot go on.”
+
+“Yes you can,” she said, her voice weak but still possessing that core of steel. “Look.”
+
+He lifted his head. Not fifty yards away, he saw the jagged line of their own trench. A silhouette of a helmet. A strand of wire. It was home. It was salvation.
+
+A new wave of strength, born of pure desperation, flooded him. He got to his knees. He pulled her up with him. They started the final shuffle. They were almost there. Almost.
+
+“Stoy!” The challenge came from their own line. A Russian voice. “Password!”
+
+Orlov’s mind was blank. Password? He could not remember his own name, let alone the password.
+
+“Don’t shoot!” he screamed, his voice cracking. “We are Russian!”
+
+“Password!” the voice insisted, nervous and high. A rifle bolt clicked.
+
+The woman stirred beside him. She lifted her head. “Volga,” she croaked. “The password is… Volga.”
+
+There was a pause. Then, a different voice. A sergeant. “Get them! Get them in here now!”
+
+Hands grabbed them. Rough, strong hands. They were being pulled, dragged over the parapet, and tumbling down into the blessed, familiar filth of their own trench. The world was a mess of concerned faces, of lanterns held high, of questions he could not answer.
+
+He was on his back, looking up at the night sky, now just a star-dusted black. The fire was a distant glow. He had made it. A medic was already kneeling beside him, cutting away his trouser leg. The pain was immense, but it was distant, as if happening to someone else.
+
+He saw them carrying her away on a stretcher. Her face was white as bone in the lantern light, but her eyes were open. Her gaze found his across the chaos of the trench. It held for a long moment. There was no gratitude. There was no pity. There was only that same, terrible recognition. A shared knowledge. They were survivors. They were monsters. They were the same.
+
+Then they carried her around a traverse and she was gone.
+
+A medic pressed a flask to Orlov’s lips. The cheap vodka burned like fire, but it washed away the taste of ash and cordite. He lay back, his head resting against a sandbag. His hand, the bandaged one, found the stock of the German rifle lying beside him. He curled his fingers around it. The wood was still warm. Or perhaps it was just the heat from his own skin. He did not know. He only knew that he had followed a madwoman into hell. And he had come back. But the man who had crawled out into the darkness was not the man who had come back. That man was dead, his ghost left somewhere out in the mud, next to a German with open eyes. This new man, this survivor, was someone else entirely. A force of nature. A storm. He closed his eyes, and for the first time that night, he felt a strange and terrifying sense of peace. He had found his place.
+
+The vodka was a fire, then a warmth, then nothing. Orlov’s world dissolved into a series of jolting fragments. The rough texture of a stretcher canvas against his cheek. The rhythmic grunt of the men carrying him. The sky, a churning sea of grey as dawn approached. Each step they took sent a fresh explosion of pain up his leg, but it was a distant signal. A bell ringing in a flooded city. He was aware of the pain, but not truly connected to it. His mind was elsewhere. It was in the mud, with the German. It was in the fire, with the woman.
+
+He was in a tent. The smell hit him first. A thick, cloying cocktail of carbolic acid, unwashed bodies, and something sweet and rotten that he knew was gangrene. It was the smell of the rear. The smell of processing. Men were sorted here. The living to be patched. The dying to be stacked. Rows of cots lined the vast canvas space, each one occupied by a broken man. A symphony of groans and quiet whimpers was the only music.
+
+A doctor, a man with a tired face and spectacles perched on his nose, examined his leg. He did not speak to Orlov. He spoke to a nurse about him. “Shrapnel. Deep. Lodged against the bone. Clean it out. If it festers, we take the leg.” The words were clinical. Devoid of emotion. Orlov was not a person. He was a piece of meat with a problem to be solved. He felt a strange sense of respect for the man’s detachment. It was a different kind of survival. A different kind of monster.
+
+They held him down. The pain was no longer distant. It was a white hot sun inside his flesh. He bit down on a leather strap they shoved in his mouth and tasted his own blood mixed with the sweat of a hundred other men. He did not scream. He stared at the canvas ceiling of the tent, at the way the weak morning light made it glow a sickly yellow. He focused on the image of the woman’s face in the lantern light. That terrible, shared knowledge. He had found his tribe. A tribe of two.
+
+When it was over, his leg was bound in clean, white bandages. A stark contrast to the filth that covered the rest of him. They had cut off his uniform, leaving him in his underclothes, and covered him with a coarse wool blanket. They tried to take the German rifle. Orlov’s hand, the one that was not bandaged, shot out and gripped the weapon’s barrel.
+
+“No,” he said. His voice was a dry rasp.
+
+The orderly, a boy no older than seventeen, looked startled. “It is not standard issue, comrade. It must be turned in.”
+
+Orlov’s grip tightened. He pulled the rifle closer, its wooden stock pressing against his side. “It is mine.” His eyes were flat. Dead. The boy saw something in them that made him take a step back. He looked at the doctor, who merely shrugged.
+
+“Let him keep his toy,” the doctor said without looking up from his next patient. “It is the least of his problems.”
+
+So the rifle stayed. It was an anchor in this sea of misery. A tangible piece of the man he had become. The rest of the day was a blur of sleep and waking. Of thin, watery soup and the constant, droning noise of suffering. Through it all, one thought burned in his mind. Her. The woman. Where was she?
+
+The next morning, the fire in his leg had subsided to a throbbing ache. He sat up, his head spinning. He ignored it. He needed to move. He needed to find her. He swung his good leg over the side of the cot. The floor was cold dirt. He looked around. His boots were gone. His uniform was gone. He was a patient. A number. He saw his greatcoat folded at the foot of the bed. It was caked in mud but it was his. He pulled it on over his underclothes. He grabbed the rifle. Using it as a crutch, he stood.
+
+The world tilted. He leaned against the rifle, breathing heavily. Every face in the tent was a pale, suffering mask. He started to move, a slow, painful shuffle between the cots. He ignored the stares. He ignored the nurse who called out to him to get back in bed. He had a purpose. It was the only thing that mattered.
+
+He left the men’s ward. The air outside was cold and damp, a relief from the stale air of the tent. He saw another large tent, this one with a red cross crudely painted on its side. Women. Wounded partisans. Nurses. He shuffled towards it.
+
+A stern looking nurse with a square jaw blocked his path. “This ward is for women, soldier. Go back to your cot.”
+
+“I am looking for someone,” Orlov said. His voice was stronger now. “She was brought in two nights ago. With me. From the front. A head wound. Burns.”
+
+The nurse’s expression did not soften. “There are many women here with wounds. We are at war.”
+
+“Her name…” Orlov paused. He did not know her name. He felt a fool. “She is… she gave the password. Volga.”
+
+The nurse’s eyes flickered with a hint of recognition. She studied him. She saw the filthy greatcoat, the bare feet, the German rifle he used as a cane. She saw the raw, unsettling stillness in his eyes. She sighed. A sound of profound weariness. “Third row. On the left. Her name is Anna.”
+
+He nodded, a single, sharp jerk of his head. He did not thank her. Gratitude was a currency they no longer traded in. He entered the tent. It was quieter here. The sounds of pain were more subdued. The smell was the same. He shuffled down the aisle, his eyes scanning the cots.
+
+And then he saw her. She was sitting up, a thick white bandage wrapped around her head, covering one eye. Her face was pale, her lips chapped and dry. The skin on her forearms was red and blistered from the fire, but she held a metal cup in her hands with a steadiness that surprised him. She was watching him approach. Her one visible eye, a chip of dark ice, followed his every pained step.
+
+He stopped at the foot of her cot. He leaned on the rifle. They looked at each other for a long time. The silence was not awkward. It was a continuation of the understanding that had passed between them in the trench.
+
+“Anna,” he said. It was a statement, not a question.
+
+“Orlov,” she replied. Her voice was hoarse, but it held the same hard edge he remembered.
+
+“Your head,” he said, nodding towards her bandage.
+
+“Your leg,” she countered, her gaze dropping to where his bandaged limb stuck out from beneath his greatcoat.
+
+He pulled over a small wooden stool and sat down, carefully, placing the rifle across his knees. “They said they might take it.”
+
+“They will not,” she said with absolute certainty. “You will not let them.”
+
+It was true. He knew it was true. He would sooner crawl back out into No Man’s Land than let them take his leg. It was part of him. The pain was part of him now.
+
+“The German officer,” he said, his voice low. “The papers.” He had seen her take them from the man’s coat.
+
+“I gave them to the sergeant,” she said. “They are with the commissar now.”
+
+A commissar. That meant politics. That meant trouble. Orlov felt a flicker of the old fear, the fear of authority, of being punished for breaking the rules. But it was a faint echo. The new man, the storm, did not fear commissars.
+
+“They will want to know why we went,” he said.
+
+Anna took a slow sip from her cup. “I told them I was following orders. That you were my escort.”
+
+Orlov stared at her. It was a lie. A bold, simple lie. “They will not believe you.”
+
+“They will,” she said. “Because the alternative is that two soldiers, on their own, did what a whole platoon could not. They do not like that story. It is untidy.”
+
+He understood. The army was a machine. It needed tidy stories. Orders given, orders followed. Success or failure. Madness had no place in the reports.
+
+“Why?” he asked. The question had been burning in him. “Why did you go?”
+
+She looked away from him, her good eye staring at the canvas wall. “The man you killed. The officer. He was at my village. In the west. Before we were pushed back.” She said it flatly. It was not a plea for sympathy. It was a statement of fact. A reason. An engine. “He gave the orders. I was there. I saw him.”
+
+Orlov said nothing. There was nothing to say. He had not killed an enemy soldier. He had delivered a sentence. He had been a tool of her vengeance. And in doing so, he had discovered his own nature.
+
+“And you,” she said, her eye fixing on him again. “Why did you follow?”
+
+He thought for a moment. He remembered the blankness in his own mind. The animal terror. The feeling of being a ghost already. “I did not want to die in that trench,” he said. It was the simplest truth. “Dying out there… seemed better.”
+
+She nodded, as if this was the most logical answer in the world. They were the same. She was driven by a memory of fire. He was driven by a fear of filth. Both paths had led them to the same dark place, a place of terrible clarity.
+
+They sat in silence for a while longer. The sounds of the hospital washed over them. A man screaming for his mother. A nurse’s tired, sharp command. The clatter of metal instruments. For Orlov, it was all background noise. The only thing that was real was the woman on the cot and the German rifle on his lap.
+
+Their quiet was interrupted by the arrival of two men. One was the sergeant from the trench, a stout man with a weary face. The other was a man Orlov did not recognize. He was tall and lean, dressed in a spotless uniform that seemed out of place in the grime of the hospital. He wore the red-banded cap of a commissar. His face was sharp and intelligent, his eyes a pale, piercing blue. He stopped before them, his gaze sweeping over Orlov’s bare feet, the German rifle, and then to Anna’s bandaged head.
+
+“This is them, Comrade Commissar,” the sergeant said. “The two from the raid.”
+
+The commissar dismissed the sergeant with a curt nod. The sergeant, looking relieved, disappeared. The commissar, Baranov, pulled up another stool. He did not sit. He loomed over them.
+
+“Anna Mikhailova,” he said, his voice smooth and educated. “Formerly a schoolteacher in the Smolensk Oblast. Now, a decorated partisan. And you.” His eyes fell on Orlov. “Private Dimitri Orlov. Transferred from the Moscow garrison two months ago. No commendations. No disciplinary actions. A perfectly average soldier.” He paused. “Until two nights ago.”
+
+Orlov felt a cold knot tighten in his stomach. This was it. The reckoning.
+
+“The official report,” Baranov continued, “is that Private Orlov was providing escort for partisan scout Mikhailova on a sanctioned, high risk reconnaissance mission. The mission was a success. We have the German deployment plans for this entire sector. A significant victory.” He smiled, a thin, humourless expression. “The report is, of course, a work of fiction.”
+
+Neither Orlov nor Anna responded.
+
+“The truth,” Baranov said, his voice dropping, “is far more interesting. The truth is that a half mad woman and a terrified boy crawled into hell on a private errand. And they succeeded. Tell me, Private Orlov, what did you feel out there?”
+
+Orlov looked at the man’s polished boots. He thought of the mud. The fire. The weight of the German soldier. The final, quiet click of the rifle bolt. “Nothing,” he said.
+
+Baranov’s smile widened slightly. “Excellent. And you, Comrade Mikhailova? What did you feel when you saw the German officer die?”
+
+Anna’s visible eye was like black glass. “Closure.”
+
+“No,” the commissar said softly. “Not closure. A beginning. You see, the war has changed. The old ways of fighting, of lines and trenches and massed assaults, they are… inefficient. They produce too many bodies and not enough results. The future of this war, our Great Patriotic War, will be decided by a new kind of soldier.”
+
+He looked from Anna to Orlov, and back again. “It will be decided by people who can feel nothing when they kill. By people who are not afraid of the dark between the trenches. People who carry their own reasons, their own fire. People who are not soldiers, but weapons. Monsters, if you will. The state has a use for monsters.”
+
+Orlov lifted his head. He met the commissar’s piercing gaze. The knot in his stomach was gone. In its place was a cold, hard certainty. This was the answer. This was the place he had been looking for.
+
+“I have been authorized to form a special operations group,” Baranov said. “A storm group. We will not be part of the regular army structure. We will answer only to me. And I answer to Stavka. Your task will be to go where others cannot. To kill who others cannot. To do what must be done, without question and without hesitation. The survival rate for such a group is expected to be… low.”
+
+He let the words hang in the air. It was not a threat. It was a promise.
+
+“You, Anna Mikhailova, have already proven your aptitude. Your actions, while unsanctioned, were ruthlessly effective. You have a place in this group, if you want it.”
+
+Anna did not hesitate. “I do.”
+
+Baranov nodded. His eyes shifted to Orlov. “And you, Private Orlov. You are a surprise. A blank slate. But out there, in the mud, you found something. A purpose. You followed her into the fire once. The question is, are you willing to do it again? For the Motherland this time, not for a ghost.”
+
+Orlov looked at Anna. Her one good eye was on him. It was not a plea. It was not a challenge. It was recognition. They were the same. They were a tribe. He looked down at the German rifle in his hands. He thought of the man he used to be, the boy who was afraid of the dark. That boy was dead. His ghost was still out in No Man’s Land. He, this new man, was not afraid of anything.
+
+He tightened his grip on the warm wood of the rifle stock. He had found his place. It was not in a trench, waiting to die. It was not in a hospital, waiting to heal. It was here. It was with her. It was in the storm that was coming.
+
+He looked up at the commissar.
+
+“I am,” he said.
+
+Commissar Baranov’s smile was no longer thin. It was a predator’s grin. He had found his weapons. “Good,” he said. “Very good. Rest. Heal. Your war is just beginning.”
+
+The commissar turned and walked away, his polished boots leaving no mark on the dirt floor. Orlov was alone with Anna again. The distant sounds of the hospital faded away once more. He looked at her. She looked at him. For the first time, he saw something else in her eye. Not just recognition. Not just shared monstrosity. He saw a flicker of something like grim satisfaction. A partnership forged.
+
+He laid his hand, the bandaged one, flat on the stock of the German rifle. The throbbing in his leg seemed to fade. The fear was a distant memory. The peace he had felt in the trench, the terrifying peace, was no longer terrifying. It was just peace. Cold, simple, and absolute. He was a storm. And he was about to be unleashed.

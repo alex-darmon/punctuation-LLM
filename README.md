@@ -6,11 +6,17 @@ distances follow Darmon et al., *Pull out all the stops: Textual analysis via
 punctuation sequences* (arXiv:1901.00519), whose figures this pipeline
 reproduces as a validity check.
 
-## The pipeline is frozen
+## Supported evidence layers
 
-Every reported number comes from a single run of `run_frozen_grid.py`, recorded
-in `results/frozen/`. Analyses on any other code path are not reportable; the
-retired scripts are in `attic/` with an explanation of why.
+The repository deliberately retains two reportable layers:
+
+1. `results/frozen/` is the immutable ten-author discovery/replication analysis.
+2. `results/author_panel_20/inference_v2/` is the primary manuscript-facing
+   analysis, with author-cluster inference and out-of-author calibration.
+
+The full-corpus D/C extension has its own checksum-verified provenance.
+Superseded pilot scripts and the old four-author manuscript are retained in
+`attic/`; they are historical evidence, not supported entry points.
 
 The reason for freezing is a leakage bug that survived several rounds of
 analysis. Author reference profiles were pooled inline at each point of use, so
@@ -45,39 +51,229 @@ down, and it shows up as such in the audit log. Alongside that:
 ## Reproducing the frozen run
 
 ```bash
-python tools/build_punct_cache.py \
-    --run-dir generated_texts_campaign_phaseA_two_samples \
-    --run-dir generated_texts_campaign_phaseB_two_samples
-
-python tests/test_reference_builder.py
-
-python run_frozen_grid.py \
-    --authors-config campaigns/generation_campaign_phaseA_two_samples.json \
-    --condition flash=generated_texts_campaign_phaseA_two_samples \
-    --condition pro=generated_texts_campaign_phaseB_two_samples \
-    --chunk-sizes 1000 2000 4000 --out results/frozen
+make install
+make cache-frozen
+make test
 ```
 
 The parse cache is gitignored but byte-for-byte reproducible; its SHA-256 is
 pinned in `results/frozen/manifest.json`, along with the commit, the author list
-and the chunk sizes. Two independent runs of the grid produce identical CSVs.
+and the chunk sizes. `make reproduce-no-api` reruns this grid in
+`results/repro_check/frozen/` and byte-compares every CSV with the frozen
+outputs; it never overwrites the golden files.
+
+## Full Gutenberg D/C extension
+
+The exact 651-author, 14,947-document corpus used by Darmon et al. is archived
+at [Zenodo](https://doi.org/10.5281/zenodo.3605100). It is a 3.23 GB pickle and
+is not checked into this repository. Download it into the ignored cache:
+
+```bash
+mkdir -p cache/original_paper
+curl -L \
+  -o cache/original_paper/punctuation_stylometry.p \
+  https://zenodo.org/api/records/3605100/files/punctuation_stylometry.p/content
+```
+
+Then compute the diagnostic for every author using all of their books:
+
+```bash
+python tools/analyze_original_gutenberg_dc.py
+```
+
+Here, `C` is the mean directed KL divergence over all ordered pairs of books by
+the same author. `D` is the directed KL divergence from that author's pooled
+all-book profile to its nearest other author's pooled profile. The script
+verifies the archive checksum, reports both the archived rows and an
+exact-sequence-deduplicated sensitivity variant, and writes
+`results/original_gutenberg_dc/`.
+
+On the exact archive, 10 of 651 author labels have `D/C > 1` for `f1`, and 24
+of 651 do so for `f3`. The median ratios are 0.111 and 0.215, respectively.
+Removing the two exact within-author duplicate sequences does not change those
+counts or medians.
+
+## Balanced 20-author extension
+
+`campaigns/author_panel_20.json` defines the primary extension: the
+original ten authors plus ten prose authors screened by the full-corpus `f3`
+diagnostic. Every author has exactly three content-distinct books. Holding out
+one whole book therefore always leaves a two-book reference.
+
+Prepare and validate the human panel with:
+
+```bash
+python tools/prepare_gutenberg_panel.py \
+    --config campaigns/author_panel_20.json
+
+python tools/build_punct_cache.py \
+    --authors-config campaigns/author_panel_20.json \
+    --out cache/author_panel_20_sequences.json
+
+python run_frozen_grid.py \
+    --authors-config campaigns/author_panel_20.json \
+    --cache cache/author_panel_20_sequences.json \
+    --chunk-sizes 1000 2000 4000 \
+    --out results/author_panel_20/preflight
+
+python tools/summarize_author_panel_preflight.py
+python tests/test_author_panel_20.py
+```
+
+The preflight has 20 authors and 60 books. Whole-book leave-one-book-out `f3`
+attribution is 80.0% against 5% chance. At 2,000 marks, micro accuracy is 76.7%
+and macro-author accuracy is 73.1%. All ten new authors pass the declared
+whole-book gate of at least two correct books
+out of three. Nine score 3/3 and Robert Sidney Bowen scores 2/3. Luis Senarens
+is the weakest short-window case (33.3% at 2,000 marks) despite scoring 3/3 on
+whole books, so window-level claims about that author need care.
+
+The generation plans add 200 Flash and 100 Pro runs, using the effective
+5,000-mark target recorded by the original campaign outputs:
+
+```bash
+python generate_llm_texts_campaign.py \
+    --campaign-config campaigns/generation_campaign_new10_flash.json \
+    --dry-run
+
+python generate_llm_texts_campaign.py \
+    --campaign-config campaigns/generation_campaign_new10_pro.json \
+    --dry-run
+```
+
+Remove `--dry-run` only when the paid generation should begin. Analysed outputs
+retain the old dash-to-comma transformation for comparability, while exact raw
+responses are also saved under each author's `raw/` directory.
+The resulting new-10 corpora are versioned because model sampling is not
+deterministically reproducible. A clean clone therefore needs no credentials
+and incurs no API cost. If generation is intentionally repeated, copy
+`.env.example` to `.env` and supply an API key, or select ADC. With every run
+already present, `--skip-existing` re-analyses and normalises metadata without
+initialising a generation backend.
+
+After generation, combine the immutable old runs with the new runs, then build
+a separate cache and result grid:
+
+```bash
+python tools/assemble_generation_condition.py \
+    --input generated_texts_campaign_phaseA_two_samples \
+    --input generated_texts_campaign_author20_flash_new10 \
+    --out generated_texts_campaign_author20_flash
+
+python tools/assemble_generation_condition.py \
+    --input generated_texts_campaign_phaseB_two_samples \
+    --input generated_texts_campaign_author20_pro_new10 \
+    --out generated_texts_campaign_author20_pro
+
+python tools/build_punct_cache.py \
+    --authors-config campaigns/author_panel_20.json \
+    --run-dir generated_texts_campaign_author20_flash \
+    --run-dir generated_texts_campaign_author20_pro \
+    --out cache/author_panel_20_with_runs.json
+
+python run_frozen_grid.py \
+    --authors-config campaigns/author_panel_20.json \
+    --cache cache/author_panel_20_with_runs.json \
+    --condition flash=generated_texts_campaign_author20_flash \
+    --condition pro=generated_texts_campaign_author20_pro \
+    --chunk-sizes 1000 2000 4000 \
+    --out results/author_panel_20/full_grid
+```
+
+Reusing the old runs makes this an incremental extension, not a contemporaneous
+20-author generation experiment. Any comparison between the old and new author
+cohorts may also contain a run-date/provider effect. Regenerate all twenty
+authors together if that cohort comparison is itself a target result.
+
+## Evaluation-instrument inference (v2)
+
+`campaigns/inference_v2.json` freezes the primary estimands and sensitivity
+analyses for the 20-author study. It declares f3, 2,000 marks, the full panel,
+leave-one-book-out references, a 5% detection operating point, author clusters,
+five author-stratified folds, and the reproducible bootstrap seed.
+
+Run the additive inference package after the full grid:
+
+```bash
+make assemble20
+make cache20
+make inference-v2
+make verify
+```
+
+Outputs are written to `results/author_panel_20/inference_v2/`; no file in
+`results/frozen/` is changed. The v2 analysis reports author-equal attribution,
+paired model contrasts, prompt-source aggregates, five-fold out-of-author
+detection calibration, three-book cross-fitted D/C validation, smoothing and
+cohort sensitivity, raw dash accounting, and author-blocked positional drift.
+`inference_manifest.json` pins the config, cache, generated-text trees, upstream
+grid inputs, active source code, complete numerical environment, fold
+assignment, bootstrap settings, cluster units, and every analytical output.
+For an end-to-end check that does not overwrite committed results or call a
+model API, run:
+
+```bash
+make reproduce-no-api
+```
+
+The manuscript-facing point estimates under the primary specification are
+73.1% author-equal human attribution, 8.75% Flash attribution, and 8.0% Pro
+attribution, against 5% chance. The Flash--Pro paired difference is not
+resolved. Cross-fitted D/C is positively associated with held-out human
+accuracy, and the 20-author positional analysis shows target-KL increases for
+both models, superseding the frozen 10-author statement that Flash drift was
+not detected.
 
 ## Layout
 
 | Path | Role |
 | --- | --- |
 | `punctlib/` | frozen library: corpus, features, the reference builder, statistics |
-| `run_frozen_grid.py` | the only analysis entry point; runs all nine experiments |
+| `run_frozen_grid.py` | the frozen LLM analysis entry point; runs all nine experiments |
+| `run_inference_v2.py` | additive cluster-aware and cross-fitted 20-author inference |
+| `campaigns/inference_v2.json` | declared primary estimands, sensitivities, folds and seeds |
 | `tools/build_punct_cache.py` | parses texts to punctuation sequences (the one input step) |
+| `tools/plot_inference_v2.py` | generates the five principal chapter figures |
+| `tools/render_inference_tables.py` | renders manuscript tables from pinned CSVs |
+| `tools/verify_reproducibility.py` | verifies source, generation, cache, manifest and golden-output hashes |
+| `tools/analyze_original_gutenberg_dc.py` | standalone D/C analysis of the archived full corpus |
+| `tools/prepare_gutenberg_panel.py` | downloads, validates and checksum-pins panel books |
+| `tools/summarize_author_panel_preflight.py` | enforces the new-author gate and reports balanced accuracy |
+| `tools/assemble_generation_condition.py` | combines old and new generations without modifying either |
 | `generate_llm_texts_campaign.py` | config-driven generation |
 | `campaigns/` | generation configs, which also define the author list |
 | `results/frozen/` | the frozen outputs; these are the numbers |
+| `results/author_panel_20/` | preflight and later outputs for the 20-author extension |
 | `tests/` | guardrails for the leakage invariants |
 | `attic/` | superseded code, kept for history, not to be run |
+| `Makefile` | supported no-API rebuild, test, verification and paper commands |
 
-## Headline results
+## Primary 20-author headline results
 
-From `results/frozen/`, f3 features, 2000-mark chunks, 10 authors, 22 books,
+The primary specification is fixed in `campaigns/inference_v2.json`: f3,
+2,000 punctuation marks, leave-one-book-out target profiles, author-equal
+summaries, five out-of-author detection folds, and author-block bootstrap
+intervals.
+
+| Result | Estimate |
+| --- | --- |
+| Human attribution | 73.1% macro (372/485 micro), 5% chance |
+| Flash target-author attribution | 8.75% (35/400), 5% chance |
+| Pro target-author attribution | 8.0% (16/200), 5% chance |
+| Paired Flash minus Pro attribution | +0.75 percentage points, 95% CI −11.8 to +11.3 |
+| Flash detection | OOF AUC 0.952; TPR 75.5% at empirical FPR 5.36% |
+| Pro detection | OOF AUC 0.931; TPR 71.5% at empirical FPR 5.36% |
+| Prospective D/C versus human attribution | Spearman rho 0.534, 95% bootstrap CI 0.021 to 0.895 |
+| Flash positional target-KL change, window 1 to 5 | +0.092, 95% CI +0.046 to +0.144 |
+| Pro positional target-KL change, window 1 to 5 | +0.168, 95% CI +0.125 to +0.214 |
+
+These are conditional results for this screened panel, these two Gemini models,
+and this prompt/generation protocol. Detection here is a punctuation-only
+distance instrument, not a universal human-versus-AI classifier.
+
+## Frozen 10-author discovery results
+
+From `results/frozen/`: f3 features, 2,000-mark chunks, 10 authors, 22 books,
 200 Gemini 2.5 Flash runs and 100 Gemini 2.5 Pro runs.
 
 | Result | Value |
@@ -128,7 +324,7 @@ sign depends on which human comparison is the right analogue for two independent
 generations, so the finding brackets 1.0 rather than pointing one way. The folk
 claim is also about sentence length, which these features do not measure.
 
-**Pro shows positional drift; Flash does not show robust drift.** Every
+**The frozen 10-author run finds Pro drift but not robust Flash drift.** Every
 generation has at least 5,000 punctuation marks, so `context_drift.csv` compares
 five consecutive 1,000-mark windows under the matched leave-one-book-out
 reference policy. For Flash, first-to-last changes in target KL, target margin,
@@ -145,10 +341,11 @@ needed for that causal claim.
 
 ## Known issues
 
-- Em-dashes are converted to commas during cleaning, and Flash's comma share is
-  56.5% against 42.9% for humans, so part of that gap is self-inflicted. Results
-  on commas are not currently interpretable; the semicolon results are unaffected.
-  Fix by saving raw generations and recording dash counts.
+- Em-dashes are converted to commas during cleaning. Raw extension-cohort files
+  are now retained and `dash_sensitivity.csv` verifies exact dash-to-comma
+  accounting; the measured comma-share change is below 0.01 percentage points
+  for both models. The older frozen runs lack raw outputs, so this sensitivity
+  is limited to the extension cohort.
 - Wilde's two texts include a short-story collection, so his very low
   self-consistency may reflect document type rather than the author.
 - Wells has only 14,975 marks across two books, which is thin for a reference.

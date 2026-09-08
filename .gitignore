@@ -9,6 +9,26 @@ __pycache__/
 *.pyz
 *.pywz
 *.pyzw
-.env.example
 .env
-paper/
+
+# The 20-author conditions are reproducibly assembled from the tracked frozen
+# 10-author runs and tracked new-10 runs.
+generated_texts_campaign_author20_flash/
+generated_texts_campaign_author20_pro/
+
+# Reproduction checks must never overwrite or enter the canonical results.
+results/repro_check/
+results/**/*_repro/
+
+# Keep the manuscript source and generated chapter assets, but not TeX debris.
+paper/build/
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.pdf
+paper/*.synctex.gz
+paper/*.toc

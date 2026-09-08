@@ -8,6 +8,12 @@
 # Analysis pipeline (punctlib, run_frozen_grid.py, tools/build_punct_cache.py).
 numpy==2.2.6
 scipy==1.15.3
+spacy==3.8.11
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+
+# Full-corpus Gutenberg D/C extension and its diagnostic plots.
+pandas==2.3.0
+matplotlib==3.10.7
 
 # Text generation only (generate_llm_texts_campaign.py).
 google-genai==1.62.0

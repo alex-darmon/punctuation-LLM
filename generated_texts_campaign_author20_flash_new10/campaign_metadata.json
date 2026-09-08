@@ -1,0 +1,227 @@
+{
+  "generated_utc": "2026-09-04T16:53:21.747570+00:00",
+  "campaign_name": "author20_extension_new10_flash",
+  "campaign_config_path": "campaigns/generation_campaign_new10_flash.json",
+  "campaign_config_sha256": "694e09f23265844017895e307a95f6a320123d3061388c7c1221d04838ef737a",
+  "generator_script_sha256": "0c57f26d6c1df3243521cf2184abadedcf2a74812beca6794129d33c4e374fa9",
+  "prompt_protocol_sha256": "25af2b7111ace93cd9976b3d30145f76620e3e2008e8689f68ab44ca2217e794",
+  "python": "3.10.16",
+  "numpy": "2.2.6",
+  "model": "gemini-2.5-flash",
+  "auth_mode_requested": "adc",
+  "auth_mode_used": "adc(project=project-a1ea5f06-866e-498b-9e6, location=us-central1)",
+  "target_marks": 5000,
+  "runs_per_author": 20,
+  "excerpt_words": 1500,
+  "max_rounds": 30,
+  "temperature": 1.0,
+  "max_output_tokens": 8192,
+  "source_rotation": "(run_id - 1) modulo source-book count",
+  "dash_policy": "replace_with_comma",
+  "save_raw_outputs": true,
+  "source_books": [
+    {
+      "author_key": "mildred_wirt",
+      "path": "gutenberg_texts/34592.txt",
+      "sha256": "6a41e7bedb809260b9599feebd3ef27d5e7e3cc952c2a67bbf3a621348de1c84"
+    },
+    {
+      "author_key": "mildred_wirt",
+      "path": "gutenberg_texts/34832.txt",
+      "sha256": "1a5446a25f8dd25d9886c6dae6d2571180bce98002830efc2e00b692f54c27b5"
+    },
+    {
+      "author_key": "robert_sidney_bowen",
+      "path": "gutenberg_texts/32440.txt",
+      "sha256": "b3ccd4d67fb14e94f4a5537d38a37dce98aaf25c604e756aacddb312311bbf6f"
+    },
+    {
+      "author_key": "robert_sidney_bowen",
+      "path": "gutenberg_texts/32331.txt",
+      "sha256": "d88c5508d7e522edd8efe44bcb6b60859ca09a758511d484574f7e483828f028"
+    },
+    {
+      "author_key": "luis_senarens",
+      "path": "gutenberg_texts/54629.txt",
+      "sha256": "0670b4250d9b9888e9c25c72cce1ae0fcc2c33711634a5622e55bb82300bea36"
+    },
+    {
+      "author_key": "luis_senarens",
+      "path": "gutenberg_texts/54648.txt",
+      "sha256": "087c1d757d525a768f4186a643811b1936f855ed08c78e6cd044d18834092bdb"
+    },
+    {
+      "author_key": "john_c_hutcheson",
+      "path": "gutenberg_texts/21107.txt",
+      "sha256": "49ff31538612f0f39c11de6474bb356fee986f15ad8863ec2ead79a2b115d4e0"
+    },
+    {
+      "author_key": "john_c_hutcheson",
+      "path": "gutenberg_texts/24267.txt",
+      "sha256": "14461f35fa3e8ebb9d3f70bbb43075b1e52ad35ad68764ef0c40776579c0e184"
+    },
+    {
+      "author_key": "harold_l_goodwin",
+      "path": "gutenberg_texts/31581.txt",
+      "sha256": "24061c4802ab6f1a11bd9c4b4e60195ff868a5cb83e7d9b39c10d569d18ab0d1"
+    },
+    {
+      "author_key": "harold_l_goodwin",
+      "path": "gutenberg_texts/31589.txt",
+      "sha256": "e326d901dc0bb82943279995328221807adbd7408e9302b1b47f89849308b4a9"
+    },
+    {
+      "author_key": "kathleen_thompson_norris",
+      "path": "gutenberg_texts/3635.txt",
+      "sha256": "68c71275e39ba0c6281d4ad3747281f54b976d59171e0b27b5d78f70619d3a24"
+    },
+    {
+      "author_key": "kathleen_thompson_norris",
+      "path": "gutenberg_texts/4787.txt",
+      "sha256": "cb3852a32eac59207923699282e18315ba4af5cac29523c822863038b038e8a1"
+    },
+    {
+      "author_key": "arthur_scott_bailey",
+      "path": "gutenberg_texts/9462.txt",
+      "sha256": "f2f8eb96cf0616ba0e3394ff2324544e7fb52c4c1c9b2fb87c3fc34b6452fd1a"
+    },
+    {
+      "author_key": "arthur_scott_bailey",
+      "path": "gutenberg_texts/18656.txt",
+      "sha256": "a870d1f6240d1b1d213e4c85db4494d90aab9c1feb6f636c02d70ccf055ba34a"
+    },
+    {
+      "author_key": "louis_joseph_vance",
+      "path": "gutenberg_texts/8741.txt",
+      "sha256": "cc9b79cc253defb35a62259441a42242233658b839692132850928448873d08c"
+    },
+    {
+      "author_key": "louis_joseph_vance",
+      "path": "gutenberg_texts/9378.txt",
+      "sha256": "a2a86a04c6ad0623a7a30cd47233368ba458320516c391c536ede9f8ca2b281a"
+    },
+    {
+      "author_key": "susan_warner",
+      "path": "gutenberg_texts/16918.txt",
+      "sha256": "a8a56f22756858a029a60efe81536b909e163e19238a71416db7711fb4a9c8e0"
+    },
+    {
+      "author_key": "susan_warner",
+      "path": "gutenberg_texts/8874.txt",
+      "sha256": "608589fb6cd818a5a06e503abcd7c71ea18358850bdcb146a656455fbd894dba"
+    },
+    {
+      "author_key": "ethel_m_dell",
+      "path": "gutenberg_texts/12360.txt",
+      "sha256": "57971664e33f3c2a0adfba7240948565645687c0af042131fee73874ea36d619"
+    },
+    {
+      "author_key": "ethel_m_dell",
+      "path": "gutenberg_texts/13960.txt",
+      "sha256": "883fea5d7ee42ebd03bd93d122ef1725eced2e77bb101abc94eecaf78a6282e5"
+    }
+  ],
+  "authors": [
+    {
+      "key": "mildred_wirt",
+      "name": "Mildred A. Wirt",
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/34592.txt",
+        "gutenberg_texts/34832.txt"
+      ]
+    },
+    {
+      "key": "robert_sidney_bowen",
+      "name": "Robert Sidney Bowen",
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/32440.txt",
+        "gutenberg_texts/32331.txt"
+      ]
+    },
+    {
+      "key": "luis_senarens",
+      "name": "Luis Senarens",
+      "form": "prose",
+      "period": "turn_20c",
+      "book_paths": [
+        "gutenberg_texts/54629.txt",
+        "gutenberg_texts/54648.txt"
+      ]
+    },
+    {
+      "key": "john_c_hutcheson",
+      "name": "John C. Hutcheson",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/21107.txt",
+        "gutenberg_texts/24267.txt"
+      ]
+    },
+    {
+      "key": "harold_l_goodwin",
+      "name": "Harold L. Goodwin",
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/31581.txt",
+        "gutenberg_texts/31589.txt"
+      ]
+    },
+    {
+      "key": "kathleen_thompson_norris",
+      "name": "Kathleen Thompson Norris",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/3635.txt",
+        "gutenberg_texts/4787.txt"
+      ]
+    },
+    {
+      "key": "arthur_scott_bailey",
+      "name": "Arthur Scott Bailey",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/9462.txt",
+        "gutenberg_texts/18656.txt"
+      ]
+    },
+    {
+      "key": "louis_joseph_vance",
+      "name": "Louis Joseph Vance",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/8741.txt",
+        "gutenberg_texts/9378.txt"
+      ]
+    },
+    {
+      "key": "susan_warner",
+      "name": "Susan Warner",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/16918.txt",
+        "gutenberg_texts/8874.txt"
+      ]
+    },
+    {
+      "key": "ethel_m_dell",
+      "name": "Ethel M. Dell",
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/12360.txt",
+        "gutenberg_texts/13960.txt"
+      ]
+    }
+  ],
+  "metadata_normalised_by_sha256": "3ed255d990147c83bbbe8a7b820e7fe00b3327fa70dba9f32a7e6975edb823b9"
+}

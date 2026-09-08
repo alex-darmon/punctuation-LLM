@@ -1,0 +1,42 @@
+{
+  "groups": [
+    "old_a",
+    "old_b",
+    "old_c",
+    "old_d",
+    "new_a",
+    "new_b",
+    "new_c",
+    "new_d"
+  ],
+  "strata": {
+    "old_a": "existing",
+    "old_b": "existing",
+    "old_c": "existing",
+    "old_d": "existing",
+    "new_a": "new",
+    "new_b": "new",
+    "new_c": "new",
+    "new_d": "new"
+  },
+  "human_scores": {
+    "old_a": [1.0, 1.5],
+    "old_b": [2.0, 2.5],
+    "old_c": [3.0, 3.5],
+    "old_d": [4.0, 4.5],
+    "new_a": [1.2, 1.7],
+    "new_b": [2.2, 2.7],
+    "new_c": [3.2, 3.7],
+    "new_d": [4.2, 4.7]
+  },
+  "llm_scores": {
+    "old_a": [8.0, 9.0],
+    "old_b": [8.0, 9.0],
+    "old_c": [8.0, 9.0],
+    "old_d": [8.0, 9.0],
+    "new_a": [8.0, 9.0],
+    "new_b": [8.0, 9.0],
+    "new_c": [8.0, 9.0],
+    "new_d": [8.0, 9.0]
+  }
+}

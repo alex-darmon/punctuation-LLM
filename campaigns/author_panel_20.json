@@ -1,0 +1,667 @@
+{
+  "campaign_name": "balanced_20_author_human_panel",
+  "description": "Pre-generation human baseline: the existing 10 authors plus 10 prose authors screened by full-Gutenberg f3 D/C, with exactly 3 content-distinct books per author.",
+  "source_manifest": "results/author_panel_20/source_manifest.json",
+  "panel_design": {
+    "existing_authors": 10,
+    "new_authors": 10,
+    "books_per_author": 3,
+    "selection_rule": "Three independently published English prose works per author, fixed from bibliographic metadata before matched-panel attribution. Existing campaign source books are retained; exact-content aliases do not count as additional books.",
+    "validation_policy": "Leave one whole book out; the remaining two books form the target reference.",
+    "primary_feature": "f3",
+    "primary_chunk_size": 2000,
+    "chance_accuracy": 0.05,
+    "admission_gate": {
+      "unit": "document",
+      "minimum_correct": 2,
+      "out_of": 3,
+      "required_new_authors_passing": 10,
+      "description": "Each proposed new author must be attributed correctly for at least 2 of 3 held-out whole books in the 20-author f3 comparison."
+    }
+  },
+  "authors": [
+    {
+      "key": "jane_austen",
+      "name": "Jane Austen",
+      "archive_author": "Austen, Jane",
+      "author_fragment": "Jane Austen",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "early_19c",
+      "book_paths": [
+        "full_books/jane_austen_full.txt",
+        "gutenberg_texts/158.txt",
+        "gutenberg_texts/161.txt",
+        "gutenberg_texts/1342.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 158,
+          "title": "Emma",
+          "path": "gutenberg_texts/158.txt"
+        },
+        {
+          "gutenberg_id": 161,
+          "title": "Sense and Sensibility",
+          "path": "gutenberg_texts/161.txt"
+        },
+        {
+          "gutenberg_id": 1342,
+          "title": "Pride and Prejudice",
+          "path": "gutenberg_texts/1342.txt"
+        }
+      ]
+    },
+    {
+      "key": "herbert_george_wells",
+      "name": "H.G. Wells",
+      "archive_author": "Wells, H. G. (Herbert George)",
+      "author_fragment": "H. G. Wells",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "full_books/herbert_george_wells_full.txt",
+        "gutenberg_texts/35.txt",
+        "gutenberg_texts/36.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": null,
+          "title": "The Invisible Man",
+          "path": "full_books/herbert_george_wells_full.txt"
+        },
+        {
+          "gutenberg_id": 35,
+          "title": "The Time Machine",
+          "path": "gutenberg_texts/35.txt"
+        },
+        {
+          "gutenberg_id": 36,
+          "title": "The War of the Worlds",
+          "path": "gutenberg_texts/36.txt"
+        }
+      ]
+    },
+    {
+      "key": "agnes_may_fleming",
+      "name": "Agnes May Fleming",
+      "archive_author": "Fleming, May Agnes",
+      "author_fragment": "May Agnes Fleming",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "full_books/agnes_may_fleming_full.txt",
+        "gutenberg_texts/7063.txt",
+        "gutenberg_texts/15317.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": null,
+          "title": "The Midnight Queen",
+          "path": "full_books/agnes_may_fleming_full.txt"
+        },
+        {
+          "gutenberg_id": 7063,
+          "title": "A Terrible Secret",
+          "path": "gutenberg_texts/7063.txt"
+        },
+        {
+          "gutenberg_id": 15317,
+          "title": "The Baronet's Bride",
+          "path": "gutenberg_texts/15317.txt"
+        }
+      ]
+    },
+    {
+      "key": "charles_dickens",
+      "name": "Charles Dickens",
+      "archive_author": "Dickens, Charles",
+      "author_fragment": "Charles Dickens",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/46.txt",
+        "gutenberg_texts/98.txt",
+        "gutenberg_texts/1400.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 46,
+          "title": "A Christmas Carol",
+          "path": "gutenberg_texts/46.txt"
+        },
+        {
+          "gutenberg_id": 98,
+          "title": "A Tale of Two Cities",
+          "path": "gutenberg_texts/98.txt"
+        },
+        {
+          "gutenberg_id": 1400,
+          "title": "Great Expectations",
+          "path": "gutenberg_texts/1400.txt"
+        }
+      ]
+    },
+    {
+      "key": "mark_twain",
+      "name": "Mark Twain",
+      "archive_author": "Twain, Mark",
+      "author_fragment": "Mark Twain",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/74.txt",
+        "gutenberg_texts/76.txt",
+        "gutenberg_texts/86.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 74,
+          "title": "The Adventures of Tom Sawyer",
+          "title_fragment": "Tom Sawyer",
+          "path": "gutenberg_texts/74.txt"
+        },
+        {
+          "gutenberg_id": 76,
+          "title": "Adventures of Huckleberry Finn",
+          "title_fragment": "Huckleberry Finn",
+          "path": "gutenberg_texts/76.txt"
+        },
+        {
+          "gutenberg_id": 86,
+          "title": "A Connecticut Yankee in King Arthur's Court",
+          "title_fragment": "Connecticut Yankee",
+          "path": "gutenberg_texts/86.txt"
+        }
+      ]
+    },
+    {
+      "key": "arthur_conan_doyle",
+      "name": "Arthur Conan Doyle",
+      "archive_author": "Doyle, Arthur Conan",
+      "author_fragment": "Conan Doyle",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/1661.txt",
+        "gutenberg_texts/244.txt",
+        "gutenberg_texts/2852.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 1661,
+          "title": "The Adventures of Sherlock Holmes",
+          "title_fragment": "Adventures of Sherlock Holmes",
+          "path": "gutenberg_texts/1661.txt"
+        },
+        {
+          "gutenberg_id": 244,
+          "title": "A Study in Scarlet",
+          "path": "gutenberg_texts/244.txt"
+        },
+        {
+          "gutenberg_id": 2852,
+          "title": "The Hound of the Baskervilles",
+          "title_fragment": "Hound of the Baskervilles",
+          "path": "gutenberg_texts/2852.txt"
+        }
+      ]
+    },
+    {
+      "key": "mary_shelley",
+      "name": "Mary Shelley",
+      "archive_author": "Shelley, Mary Wollstonecraft",
+      "author_fragment": "Mary Wollstonecraft",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "early_19c",
+      "book_paths": [
+        "gutenberg_texts/84.txt",
+        "gutenberg_texts/18247.txt",
+        "gutenberg_texts/15238.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 84,
+          "title": "Frankenstein",
+          "path": "gutenberg_texts/84.txt"
+        },
+        {
+          "gutenberg_id": 18247,
+          "title": "The Last Man",
+          "path": "gutenberg_texts/18247.txt"
+        },
+        {
+          "gutenberg_id": 15238,
+          "title": "Mathilda",
+          "path": "gutenberg_texts/15238.txt"
+        }
+      ]
+    },
+    {
+      "key": "charlotte_bronte",
+      "name": "Charlotte Bronte",
+      "archive_author": "Brontë, Charlotte",
+      "author_fragment": "Charlotte Bront",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/1260.txt",
+        "gutenberg_texts/30486.txt",
+        "gutenberg_texts/9182.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 1260,
+          "title": "Jane Eyre",
+          "path": "gutenberg_texts/1260.txt"
+        },
+        {
+          "gutenberg_id": 30486,
+          "title": "Shirley",
+          "path": "gutenberg_texts/30486.txt"
+        },
+        {
+          "gutenberg_id": 9182,
+          "title": "Villette",
+          "path": "gutenberg_texts/9182.txt"
+        }
+      ]
+    },
+    {
+      "key": "oscar_wilde",
+      "name": "Oscar Wilde",
+      "archive_author": "Wilde, Oscar",
+      "author_fragment": "Oscar Wilde",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/174.txt",
+        "gutenberg_texts/773.txt",
+        "gutenberg_texts/14522.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 174,
+          "title": "The Picture of Dorian Gray",
+          "title_fragment": "Dorian Gray",
+          "path": "gutenberg_texts/174.txt"
+        },
+        {
+          "gutenberg_id": 773,
+          "title": "Lord Arthur Savile's Crime and Other Stories",
+          "title_fragment": "Lord Arthur Savile",
+          "path": "gutenberg_texts/773.txt"
+        },
+        {
+          "gutenberg_id": 14522,
+          "title": "The Canterville Ghost",
+          "path": "gutenberg_texts/14522.txt"
+        }
+      ]
+    },
+    {
+      "key": "joseph_conrad",
+      "name": "Joseph Conrad",
+      "archive_author": "Conrad, Joseph",
+      "author_fragment": "Joseph Conrad",
+      "cohort": "existing",
+      "form": "prose",
+      "period": "turn_20c",
+      "book_paths": [
+        "gutenberg_texts/219.txt",
+        "gutenberg_texts/5658.txt",
+        "gutenberg_texts/2021.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 219,
+          "title": "Heart of Darkness",
+          "path": "gutenberg_texts/219.txt"
+        },
+        {
+          "gutenberg_id": 5658,
+          "title": "Lord Jim",
+          "path": "gutenberg_texts/5658.txt"
+        },
+        {
+          "gutenberg_id": 2021,
+          "title": "Nostromo",
+          "path": "gutenberg_texts/2021.txt"
+        }
+      ]
+    },
+    {
+      "key": "mildred_wirt",
+      "name": "Mildred A. Wirt",
+      "archive_author": "Wirt, Mildred A. (Mildred Augustine)",
+      "author_fragment": "Mildred A. Wirt",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.9698249353970991,
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/34592.txt",
+        "gutenberg_texts/34832.txt",
+        "gutenberg_texts/35082.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 34592,
+          "title": "Behind the Green Door",
+          "path": "gutenberg_texts/34592.txt"
+        },
+        {
+          "gutenberg_id": 34832,
+          "title": "Voice from the Cave",
+          "path": "gutenberg_texts/34832.txt"
+        },
+        {
+          "gutenberg_id": 35082,
+          "title": "Saboteurs on the River",
+          "path": "gutenberg_texts/35082.txt"
+        }
+      ]
+    },
+    {
+      "key": "robert_sidney_bowen",
+      "name": "Robert Sidney Bowen",
+      "archive_author": "Bowen, Robert Sidney",
+      "author_fragment": "Bowen",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.5825865121067957,
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/32440.txt",
+        "gutenberg_texts/32331.txt",
+        "gutenberg_texts/32542.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 32440,
+          "title": "Dave Dawson at Dunkirk",
+          "path": "gutenberg_texts/32440.txt"
+        },
+        {
+          "gutenberg_id": 32331,
+          "title": "Dave Dawson at Casablanca",
+          "path": "gutenberg_texts/32331.txt"
+        },
+        {
+          "gutenberg_id": 32542,
+          "title": "Dave Dawson on Guadalcanal",
+          "path": "gutenberg_texts/32542.txt"
+        }
+      ]
+    },
+    {
+      "key": "luis_senarens",
+      "name": "Luis Senarens",
+      "archive_author": "Senarens, Luis",
+      "author_fragment": "Luis Senarens",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.3902186737206723,
+      "form": "prose",
+      "period": "turn_20c",
+      "book_paths": [
+        "gutenberg_texts/54629.txt",
+        "gutenberg_texts/54648.txt",
+        "gutenberg_texts/55562.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 54629,
+          "title": "Frank Reade, Jr., and His Electric Ice Ship",
+          "title_fragment": "Electric Ice Ship",
+          "path": "gutenberg_texts/54629.txt"
+        },
+        {
+          "gutenberg_id": 54648,
+          "title": "Frank Reade Jr. and His Engine of the Clouds",
+          "title_fragment": "Engine of the Clouds",
+          "path": "gutenberg_texts/54648.txt"
+        },
+        {
+          "gutenberg_id": 55562,
+          "title": "Frank Reade, Jr.'s Search for the Silver Whale",
+          "title_fragment": "Search for the Silver Whale",
+          "path": "gutenberg_texts/55562.txt"
+        }
+      ]
+    },
+    {
+      "key": "john_c_hutcheson",
+      "name": "John C. Hutcheson",
+      "archive_author": "Hutcheson, John C. (John Conroy)",
+      "author_fragment": "John C. Hutcheson",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.284866059063979,
+      "form": "prose",
+      "period": "late_19c",
+      "book_paths": [
+        "gutenberg_texts/21107.txt",
+        "gutenberg_texts/24267.txt",
+        "gutenberg_texts/21108.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 21107,
+          "title": "On Board the Esmeralda",
+          "path": "gutenberg_texts/21107.txt"
+        },
+        {
+          "gutenberg_id": 24267,
+          "title": "Picked up at Sea",
+          "path": "gutenberg_texts/24267.txt"
+        },
+        {
+          "gutenberg_id": 21108,
+          "title": "Fritz and Eric",
+          "path": "gutenberg_texts/21108.txt"
+        }
+      ]
+    },
+    {
+      "key": "harold_l_goodwin",
+      "name": "Harold L. Goodwin",
+      "archive_author": "Goodwin, Harold L. (Harold Leland)",
+      "author_fragment": "Harold L. Goodwin",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.1826385792680176,
+      "form": "prose",
+      "period": "mid_20c",
+      "book_paths": [
+        "gutenberg_texts/31581.txt",
+        "gutenberg_texts/31589.txt",
+        "gutenberg_texts/32059.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 31581,
+          "title": "The Scarlet Lake Mystery",
+          "path": "gutenberg_texts/31581.txt"
+        },
+        {
+          "gutenberg_id": 31589,
+          "title": "The Blue Ghost Mystery",
+          "path": "gutenberg_texts/31589.txt"
+        },
+        {
+          "gutenberg_id": 32059,
+          "title": "The Pirates of Shan",
+          "path": "gutenberg_texts/32059.txt"
+        }
+      ]
+    },
+    {
+      "key": "kathleen_thompson_norris",
+      "name": "Kathleen Thompson Norris",
+      "archive_author": "Norris, Kathleen Thompson",
+      "author_fragment": "Kathleen Thompson Norris",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.1077023373113777,
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/3635.txt",
+        "gutenberg_texts/4787.txt",
+        "gutenberg_texts/28301.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 3635,
+          "title": "Mother: A Story",
+          "path": "gutenberg_texts/3635.txt"
+        },
+        {
+          "gutenberg_id": 4787,
+          "title": "The Story of Julia Page",
+          "path": "gutenberg_texts/4787.txt"
+        },
+        {
+          "gutenberg_id": 28301,
+          "title": "The Beloved Woman",
+          "path": "gutenberg_texts/28301.txt"
+        }
+      ]
+    },
+    {
+      "key": "arthur_scott_bailey",
+      "name": "Arthur Scott Bailey",
+      "archive_author": "Bailey, Arthur Scott",
+      "author_fragment": "Arthur Scott Bailey",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.0467319343856587,
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/9462.txt",
+        "gutenberg_texts/18656.txt",
+        "gutenberg_texts/24589.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 9462,
+          "title": "The Tale of Sandy Chipmunk",
+          "path": "gutenberg_texts/9462.txt"
+        },
+        {
+          "gutenberg_id": 18656,
+          "title": "The Tale of Pony Twinkleheels",
+          "path": "gutenberg_texts/18656.txt"
+        },
+        {
+          "gutenberg_id": 24589,
+          "title": "The Tale of Benny Badger",
+          "path": "gutenberg_texts/24589.txt"
+        }
+      ]
+    },
+    {
+      "key": "louis_joseph_vance",
+      "name": "Louis Joseph Vance",
+      "archive_author": "Vance, Louis Joseph",
+      "author_fragment": "Louis Joseph Vance",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.0464711670452613,
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/8741.txt",
+        "gutenberg_texts/9378.txt",
+        "gutenberg_texts/9779.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 8741,
+          "title": "The Brass Bowl",
+          "path": "gutenberg_texts/8741.txt"
+        },
+        {
+          "gutenberg_id": 9378,
+          "title": "The Lone Wolf",
+          "path": "gutenberg_texts/9378.txt"
+        },
+        {
+          "gutenberg_id": 9779,
+          "title": "The Black Bag",
+          "path": "gutenberg_texts/9779.txt"
+        }
+      ]
+    },
+    {
+      "key": "susan_warner",
+      "name": "Susan Warner",
+      "archive_author": "Warner, Susan",
+      "author_fragment": "Susan Warner",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.0400405023263313,
+      "form": "prose",
+      "period": "mid_19c",
+      "book_paths": [
+        "gutenberg_texts/16918.txt",
+        "gutenberg_texts/8874.txt",
+        "gutenberg_texts/29824.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 16918,
+          "title": "The Hills of the Shatemuc",
+          "title_fragment": "Hills of the Shatemuc",
+          "path": "gutenberg_texts/16918.txt"
+        },
+        {
+          "gutenberg_id": 8874,
+          "title": "Queechy",
+          "path": "gutenberg_texts/8874.txt"
+        },
+        {
+          "gutenberg_id": 29824,
+          "title": "Diana",
+          "path": "gutenberg_texts/29824.txt"
+        }
+      ]
+    },
+    {
+      "key": "ethel_m_dell",
+      "name": "Ethel M. Dell",
+      "archive_author": "Dell, Ethel M. (Ethel May)",
+      "author_fragment": "Ethel M. Dell",
+      "cohort": "new",
+      "full_corpus_f3_dc": 1.0304331116667234,
+      "form": "prose",
+      "period": "early_20c",
+      "book_paths": [
+        "gutenberg_texts/12360.txt",
+        "gutenberg_texts/13960.txt",
+        "gutenberg_texts/13547.txt"
+      ],
+      "panel_books": [
+        {
+          "gutenberg_id": 12360,
+          "title": "The Top of the World",
+          "path": "gutenberg_texts/12360.txt"
+        },
+        {
+          "gutenberg_id": 13960,
+          "title": "Charles Rex",
+          "path": "gutenberg_texts/13960.txt"
+        },
+        {
+          "gutenberg_id": 13547,
+          "title": "The Rocks of Valpre",
+          "title_fragment": "Rocks of Valpr",
+          "path": "gutenberg_texts/13547.txt"
+        }
+      ]
+    }
+  ]
+}

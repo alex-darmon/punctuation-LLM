@@ -112,7 +112,9 @@ class Corpus:
         summary_path = ROOT / directory / "all_runs_summary.json"
         source_by_run: dict[tuple[str, int], str] = {}
         if summary_path.exists():
-            for row in json.load(open(summary_path)):
+            with summary_path.open(encoding="utf-8") as handle:
+                summary = json.load(handle)
+            for row in summary:
                 source_by_run[(row["author_key"], int(row["run_id"]))] = row[
                     "source_book_path"
                 ]
@@ -156,7 +158,13 @@ def load_corpus(
     cache_path = ROOT / cache if not Path(cache).is_absolute() else Path(cache)
     raw = cache_path.read_bytes()
     sequences = json.loads(raw)["sequences"]
-    cfg = json.load(open(ROOT / authors_config if not Path(authors_config).is_absolute() else authors_config))
+    config_path = (
+        ROOT / authors_config
+        if not Path(authors_config).is_absolute()
+        else Path(authors_config)
+    )
+    with config_path.open(encoding="utf-8") as handle:
+        cfg = json.load(handle)
 
     drop = set(exclude_authors or [])
     books: dict[str, Book] = {}
