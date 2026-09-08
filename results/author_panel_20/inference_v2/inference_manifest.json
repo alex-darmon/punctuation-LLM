@@ -1,0 +1,120 @@
+{
+  "generated_utc": "2026-09-08T12:57:52.308526+00:00",
+  "analysis_config": "campaigns/inference_v2.json",
+  "analysis_config_sha256": "5eeb33080d51c4805b99688ccb2f1eb5db455b15b16c3f5ca4ef27779083dd69",
+  "authors_config": "campaigns/author_panel_20.json",
+  "authors_config_sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+  "cache": "cache/author_panel_20_with_runs.json",
+  "cache_sha256": "b5f9d8192d77848c141e2b62b8254b4b45a460f7900cf8ef4e2f5536af87cf86",
+  "conditions": {
+    "flash": "generated_texts_campaign_author20_flash",
+    "pro": "generated_texts_campaign_author20_pro"
+  },
+  "condition_summary_sha256": {
+    "flash": "b3ca8743a9969c7a6c5a5d6c0fb7a6fd2a58d6256bef25a433200c200e5f76c8",
+    "pro": "2f0ac06d9f64a43686a1895fa6d1a5790c8ac1c722b61e0f34cbebbcba9702f2"
+  },
+  "condition_manifest_sha256": {
+    "flash": "dbd940efb5ec012d7d66ef24b667b19d1151e2cadd5909cb4e1c164a7fcd52f9",
+    "pro": "a70d2b13d98a04a141edab7c4d7fdf44b9fc9cf1e2fc8f7dbe0cd0acc58de383"
+  },
+  "condition_text_tree_sha256": {
+    "flash": "aacd717762327ebcf7803dc59181dcbc6b4a2f96adf754afb0e5322ff947152b",
+    "pro": "bd33d5385b6ab5104d1a0e825d49eb4aa58ec1b45565732108e3e4080c5ae94e"
+  },
+  "upstream_result_sha256": {
+    "results/author_panel_20/full_grid/context_drift.csv": "5bf75644026669e03890f053c6b7d0d3d3b2aa45c1eb8f17cfbeebcd0e7339a8",
+    "results/author_panel_20/full_grid/attribution.csv": "cd96e36cd906fca49105a9000ddf85ff160bc6432e4bc32842ada53d1cb0a180",
+    "results/author_panel_20/full_grid/detection.csv": "25c412c9934b7f5dbf681004b84491ba168e1bdb26ff29999e5dace345502fea"
+  },
+  "source_code_sha256": {
+    "run_inference_v2.py": "927c55c9f46240e19e47920fcce2532629a6ff9fb5473796c2f5bd3849fab474",
+    "punctlib/__init__.py": "43857178b7bdb51f51aae2dd69ac72e409ae6a49cd02f1efcc3133aff42620a9",
+    "punctlib/corpus.py": "4cf5fc1a523e4e90e27c08e620bd516ddf304549c18fff4a1b321ed1ad5773ee",
+    "punctlib/features.py": "464ca1286a6b56d09b9451f896b8eb15850540a6b7845c6485da33f1e98829ff",
+    "punctlib/inference.py": "0e3ac5db1065e808980f7099693b576afa551d8d4d67684a9087e20ff9dea65a",
+    "punctlib/reference.py": "74778f23794f5b4c31cb3820ad3d81f1f4b339f9616f2e977760552fab50421e",
+    "punctlib/splits.py": "d11a9fe2b747e47ffa4f76d555b44b2da4e7d46de240370ed968ea29d359f508",
+    "punctlib/stats.py": "8a7c6b9f4f2f7c46dcea422898e402967908357a58c6ff0c4fdc281ff0ff3e40",
+    "punctlib/vendored.py": "63ef6eb4c65d6edbbb6c4976fe339c002ad7d135ccd33dafdedce11e082f1384"
+  },
+  "git": {
+    "commit": "85681454057e9b4a50c9f5096058a1b7f293cbb8",
+    "branch": "main",
+    "dirty_outside_declared_outputs": false
+  },
+  "environment": {
+    "python": "3.10.16",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "pandas": "2.3.0",
+      "matplotlib": "3.10.7",
+      "spacy": "3.8.11",
+      "en-core-web-sm": "3.8.0"
+    }
+  },
+  "bootstrap_iterations": 2000,
+  "confidence_level": 0.95,
+  "fold_by_author": {
+    "herbert_george_wells": 0,
+    "agnes_may_fleming": 1,
+    "mark_twain": 2,
+    "charles_dickens": 3,
+    "mary_shelley": 4,
+    "joseph_conrad": 0,
+    "arthur_conan_doyle": 1,
+    "jane_austen": 2,
+    "oscar_wilde": 3,
+    "charlotte_bronte": 4,
+    "mildred_wirt": 0,
+    "robert_sidney_bowen": 1,
+    "louis_joseph_vance": 2,
+    "john_c_hutcheson": 3,
+    "arthur_scott_bailey": 4,
+    "kathleen_thompson_norris": 0,
+    "luis_senarens": 1,
+    "harold_l_goodwin": 2,
+    "susan_warner": 3,
+    "ethel_m_dell": 4
+  },
+  "cluster_units": {
+    "primary": "author",
+    "secondary_llm": "prompt_source_book"
+  },
+  "output_files": [
+    "attribution_clustered.csv",
+    "attribution_observations.csv",
+    "dash_sensitivity.csv",
+    "detection_crossfit.csv",
+    "detection_folds.csv",
+    "detection_observations.csv",
+    "drift_clustered.csv",
+    "headline_summary.json",
+    "model_contrasts.csv",
+    "pooled_leakage_contrasts.csv",
+    "prompt_cluster_attribution.csv",
+    "reference_audit.csv",
+    "separability_crossfit.csv",
+    "separability_crossfit_summary.csv",
+    "split_assignments.csv",
+    "inference_manifest.json"
+  ],
+  "output_sha256": {
+    "attribution_clustered.csv": "b78c5bb66ceb4b9a8412e0b78f27f2936b044bd0d3c958c228307ba59bd8b99c",
+    "attribution_observations.csv": "f15dbf2224f96c5170ec99bc32d13136f62fe7f38c3af204d6ed0e45bef75cb7",
+    "dash_sensitivity.csv": "778a2e2c21832cb82f894d570cdd37a0507e64006d55ba98070c2219e0d86653",
+    "detection_crossfit.csv": "dea2a426ea5b7a88aa087f10199ec93ce9dd3e48a09a8e2ee31ede30168e2478",
+    "detection_folds.csv": "c3e4acecd9b93f1600141926c0babb4234e454b1d5f2f26f771e32b79f889cef",
+    "detection_observations.csv": "834b1b26619c93d76cd19af79a6e74f218dc932c0da18b6e3ab757347924b720",
+    "drift_clustered.csv": "fa6b79315de32ef1baa5b7d12518676235c0b0538939e002932bb4530fad6a3a",
+    "headline_summary.json": "ca130c99533102220d69661f95666a3eeb9c8ea651633d3c178cce152a38aefd",
+    "model_contrasts.csv": "e8232169e6b8d961ef55e87fb7a6fea3401575cb020fe553473616078a3e8790",
+    "pooled_leakage_contrasts.csv": "f52b390a36712eb1f0543a7c70080c6ea94a2ac17d93fba4f5e947855afbe559",
+    "prompt_cluster_attribution.csv": "848d62248c9c0e3dc89ac8f320f43075cee1e3856a8c6e47c842ff2e6f98beb5",
+    "reference_audit.csv": "c0f6d5576de9f3411099c38f310c60b676fd4c8e4c787141e43d1dadc25b8d40",
+    "separability_crossfit.csv": "c9987ff411d3b68d9b658aa461215da2bc5493f82731e6765c362588d5e85732",
+    "separability_crossfit_summary.csv": "442200a48b1154c9dec65083ad7c4c7ea3ec00faf95526fd274907b494c1ae72",
+    "split_assignments.csv": "91907e65f33bddef49ddb8e40d070475316a6f5e0f8770da15e470a142e92e2e"
+  }
+}

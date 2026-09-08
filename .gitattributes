@@ -1,9 +1,10 @@
 * text=auto eol=lf
 *.py text eol=lf
 *.json text eol=lf
-*.csv text eol=lf
 # Corpus bytes are checksum-pinned, so Git must not rewrite their line endings.
-*.txt -text
+*.txt -text -eol
+# Python's CSV writer emits CRLF records, and golden outputs are byte-hashed.
+*.csv -text -eol
 *.md text eol=lf
 *.tex text eol=lf
 *.ini text eol=lf

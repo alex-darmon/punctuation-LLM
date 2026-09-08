@@ -1,0 +1,495 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[margin=1in]{geometry}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{fvextra} % for wrapped verbatim prompts in appendix
+\usepackage{placeins} % provides \FloatBarrier to keep tables near headings
+\usepackage{float} % provides [H] to disable floating for appendix tables
+
+% -----------------------------------------------------------------------------
+% Plot placeholders (so the paper compiles without image files present)
+% -----------------------------------------------------------------------------
+\newcommand{\plotplaceholder}[1]{%
+    \begin{center}
+        \fbox{%
+            \parbox[c][0.28\textheight][c]{0.92\textwidth}{%
+                \centering \textbf{Placeholder for plot:}\\[4pt]
+                \texttt{#1}%
+            }%
+        }%
+    \end{center}%
+}
+
+\title{Title}
+\date{February 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Throughout this paper we focus on four authors: Jane Austen, William Shakespeare, H.G. Wells, and Agnes
+May Fleming, and only a single document for each author. We only consider more authors (though still a single document per author) when computing baselines in Section 3.  
+
+Some of our main comments and observations are as follows:
+
+\paragraph{Section 2}
+
+In the analysis in \cite{punctuation_2021}, documents were compared in their entirety and little consideration was given to length of document as a book’s length is well-defined. In contrast, in our preliminary experiments below, the length of an LLM generated text is a parameter one needs to set. This led us to empirically identify a punctuation sequence length for which the KL distance stabilises for a \emph{given} feature vector across different excerpts of a \emph{given} document in our sample. The intuition in doing that being that stochasticity observed once LLMs are introduced into the experiment, is more likely a result of LLMs than excerpt-dependence in the original text.  
+
+Some notes: 
+\begin{itemize}
+\item The analysis was done for one document for each of the four author, introducing a potential bias (e.g., potentially the upward trend in Shakespeare panel of Figure 2).
+\item We did not consider feature stability as a function punctuation sequence length in LLM generated text, only in original texts. 
+\item With experimental limitations in mind, we find that at around $2000$ punctuation marks, excerpt dependence in the original texts seems mitigated.
+\end{itemize}
+
+\paragraph{Section 3}
+
+
+Once we control for feature variance within the original documents, we proceed to comparisons with LLM generated text.
+A question that arises at this stage is what is a ``meaningful'' value of KL between LLM generated text and original text. 
+
+As a preliminary step, we propose two “null model” experiments:
+\begin{itemize}
+\item Is the original author more similar to the LLM generated text, than it is to some random baseline
+\item Is LLM generated text more similar to the original author, than it is to some random baseline
+\end{itemize}
+
+
+We broadly find that the level of similarity for both exceeds that of a random baseline. Note that we did not ask whether LLM generated text mimicking Shakespeare is more similar to Shakespeare than to Austen say. This relates to a later comment on whether LLMs capture truly idiosyncratic punctuation usage. 
+
+
+The level of signal in our null model experiments depends significantly on the choice of LLM and the choice of prompt, in a seemingly non trivial or not immediately expected way. E.g., using a better model improves results for three authors but not the fourth. It could be interesting to carry out some further analysis to understand where Gemini Pro misses the mark for Fleming in Table 3 (e.g., is a particular punctuation mark over represented, or is the overall signal more diffuse?). 
+
+In particular, it is plausible that later LLM releases and/or LLMs with ``higher reasoning'' are better able to emulate punctuation styles, suggesting that punctuation might be an interesting dimension against which to “benchmark” LLMs (e.g., for creative writing skills, in the same way that there are scientific, coding, etc benchmarks). 
+
+
+\paragraph{Section 4}
+
+We experiment with the effect of prompts and different LLMs more deeply in this section. 
+
+\begin{itemize}
+\item Are LLMs similar on more mainstream/common uses of punctuation marks rather than truly idiosyncratic, less frequent uses (e.g., see first bullet in Section 4.3.4). (Do LLMs mimick documents in their training set notably better than genuinely new, unseen authors?) 
+\item As the context window increases, LLM generated text becomes more ”generic” (e.g., see fifth bullet in Section 4.3.4). One could plausibly mitigate this with better context structuring and better performing models. 
+\end{itemize}
+
+\paragraph{Next steps and potential contribution}
+
+
+\emph{Machine learning pipeline} One next step could be to apply the ML classification pipeline in \cite{punctuation_2021} on cases where KL(LLM, target) is smallest relative to KL(target,random) and KL(target, target) (and on a more representative sample dataset etc). We could fix 2-3 sensible prompts, and report accuracy across Opus 4.6 and other state of the art LLMs. Specifically, this would result in adding a rows to table 2 and table 3 \cite{punctuation_2021}. These experiments may offer more definite conclusions about whether an LLM mimicking Austen is not only more similar to Austen than it is to some random baseline, but also more similar to Austen than it is to Shakespeare (and other authors). 
+\newline
+\emph{Punctuation benchmark} While there are many parameters one can vary, and the surface area is somewhat unbounded (e.g., prompt variation), it would appear from these preliminary experiments that it may not be trivial for current LLMs to replicate the punctuation style of an author. I.e, it isn’t as immediate as “make the prompt more explicit and use a better LLM”. A few thoughts to maybe discuss on the back of this
+\begin{itemize}
+\item It might be valuable to release a punctuation benchmark that can be used to compare LLM's abilities in creative writing say, in the same way that there are benchmarks for mathematics, coding, etc. 
+\item Tied to the concept of benchmark: could punctuation (currently) be an effective way to distinguish ``human” vs ``LLM” on written work (going beyond dashes)
+\item What does punctuation fundamentally represent, and is there a meaningful/rigorous reason why LLMs aren’t immediately able to produce good results? This will require a better understanding of current LLM architecture. Related question - what other data is ``similar'' to punctuation and might pose similar struggles for LLMs? (Words/sound \& rhythm in music though sound is continuous, categorical time series interjected in words, ...)
+\item Consider different LLMs as individual authors, with each of their potential ``style'', and give more consideration to LLM punctuation idiosyncracies (e.g., em dash), do they exhibit a ``consistent'' style within themselves
+\end{itemize}
+\newline
+
+\emph{Literature review} This is clearly missing at this stage, e.g., MAP shared various papers we should consider. We should also investigate further depending on the direction(s) we want to go down. Eg potentially related work from a quick search include 
+\begin{itemize}
+\item https://academic.oup.com/dsh/article/40/2/587/8118784, ``Beyond the surface: stylometric analysis of GPT-4o’s capacity for literary style imitation''
+\item https://www.sciencedirect.com/science/article/pii/S0957417425026181, ``Stylometry recognizes human and LLM-generated texts in short samples''
+\item https://www.pnas.org/doi/10.1073/pnas.2422455122, ``Do LLMs write like humans? Variation in grammatical and rhetorical styles''
+\item https://arxiv.org/abs/2509.10179, ``Benchmark of stylistic variation in LLM-generated texts''
+\end{itemize}
+
+
+
+%Throughout this paper we focus on four authors: Jane Austen, William %Shakespeare, H.G.\ Wells, and Agnes May Fleming.
+%Some of our main observations include: 
+%\begin{itemize}
+%\item We have identified a punctuation length that seems relatively %robust in the sense that findings aren't overly excerpt dependent.
+%\item Initial results that suggest that LLM generated text is more %similar to a target author than a couple of baselines. TBD on similarity 5relative to target author with themselves. 
+%\item The similarity is highly dependent on the choice of LLM and prompt %(more on this later). 
+%\item Next step: ML classification result on cases where KL(LLM, target) %smallest relative to KL(target,random) and KL(target, target). Fix 2-3 sensible prompts, and report accuracy across Opus 4.6 and xxxx. 
+%\item As the contex window increases, LLM generated text becomes more "generic" and accounts less and less for any specific author or instructions. Eg Column 4 of Fig 4: the heatmaps look similar across 3/4 authors. Next step: get a plot. 
+%\item New benchmark: punctuation! Something on em dash 
+%\item (what does punctuation represent? if punctuation, what else is?) 
+%\item LLMs as individual authors 
+%\item Could punctuation be a strong mechanism to distinguish "human" vs "LLM" on written work
+%\end{itemize}
+
+%==============================================================================
+\section{Experiment 1: Chunk size analysis}
+%==============================================================================
+
+The purpose of this experiment is to empirically identify a minimum number of consecutive punctuation marks, or chunk size, at which our analysis results become stable and reliable. We perform this analysis on four authors: Jane Austen, William Shakespeare, H.G. Wells, and Agnes May Fleming.
+
+
+Note that one could also perform this analysis in terms of minimum text length and include words in the definition of chunk size. We call chunk the full text, including words, and the chunk size is the length of its sequence of punctuation marks.
+
+
+
+\subsection{Motivation}
+
+We first ask how much text is sufficient to display a somewhat ``consistent'' style in an author's punctuation, i.e., the feature vectors are independent of which excerpt we happen to draw. we look for a chunk size $l$ such that for any two non-overlapping chunks of $\geq l$ consecutive punctuation marks drawn from the same book,
+% This can be interpreted in several ways, e.g.,
+
+\[
+D_{KL}\!\bigl(f_{ik} \;\|\; f_{ik'}\bigr) \;\leq\; \delta,
+\]
+where $f_{ik}$ and $f_{ik'}$ are the feature vectors (e.g.\ $f_1$ or $f_3$) of the two chunks\\
+
+Knowing this minimum chunk size will help set a sensible text length when generating text with Large Language Models (LLMs): if the length is too small, the extracted features are unstable across excerpts and any downstream comparison becomes unreliable.
+
+%In order to to generate meaningful texts from LLMs we need to know how much text do we need for reliable analysis? If it is too small  %we have unstable statistics. In this experiment we want study the relationship between chunk size and  stability.
+
+\subsection{Experiment}
+
+For each author's full book, we do the following. Note that we use $f_1$ and $f_3$ because these were the most informative in \cite{punctuation_2021}. 
+All features in this experiment are computed at the \emph{chunk} level: for a given chunk of text, of given chunk size~$s$, we extract a subsequence of $s$~punctuation marks from the full sequence and compute $f_1$ and $f_3$ directly on that subsequence (we focus on $f_1$ and $f_3$ because these were the most informative features in~\cite{punctuation_2021}).
+This differs from the document-level analysis (\cite{punctuation_2021}, where a single feature vector summarises an entire book; here each chunk yields its own feature vector, and KL divergences are computed between pairs of chunks.
+
+%\textbf{Clarify how documents are being dealt with, because features are computed at the level of documents.}
+Note that we use only one document per author; one could average results across multiple documents to mitigate selection bias.
+
+
+\begin{enumerate}
+    \item \textbf{Extract punctuation sequences}: Parse the text to obtain a sequence of punctuation marks: PUNCTUATION\_VECTOR = ['!', '"', '(', ')', ',', '.', ':', ';', '?', '\^{}']
+
+    
+    \item \textbf{Sample chunk pairs}: For each chunk size $s \in \{500, 1000, 1500, 2000, 3000\}$ of punctuation marks:
+
+    \begin{itemize}
+    \item \textbf{Heatmap Visualisation:} For each chunk size, 
+    %extract (following the approach in [X])
+    \begin{itemize}
+        \item Chunk A: From the midpoint of the \emph{first half} of the book
+        \item Chunk B: From the midpoint of the \emph{second half} of the book
+    \end{itemize}
+    This choice of separation of chunks ensures that each chunk is representative of the whole content without selection bias from end or beginning of the book, and that they are not overlapping.
+    
+    % These positions ensure the chunks are well-separated (avoiding overlap) while representing typical content (avoiding beginning/end effects).
+    \end{itemize}
+    
+    \begin{itemize}
+    \item \textbf{KL Divergence Stability}: For each chunk size,
+    \begin{itemize}
+        \item Sample $n = 30$ pairs of non-overlapping chunks within the same book
+        \item Compute the KL divergence between each pair for both $f_1^k$ and $f_3^k$
+        \item Record the mean and standard deviation: $\mu \pm \sigma$ of the distance.
+    \end{itemize}
+    \end{itemize}
+
+\end{enumerate}
+Note that we ran the experiment for four authors: Jane Austen, William Shakespeare, H.G. Wells, and Agnes May Fleming.
+
+\subsection{Results}
+We observe both visually on the heatmaps and quantitatively using KL divergence that punctuation signatures start to stabilise for sequences of punctuation marks of 2000 marks. In the remainder of the analysis, we use a chunk size of 2000 to populate text with Large Language Models.
+\subsubsection{Heatmap Visualisation}
+
+
+Figure~\ref{fig:heatmaps} shows one sample across each $s$ for each author, for illustrative purposes. It shows the punctuation sequences as coloured strips, where each colour represents a different punctuation mark. Each row shows one author; each column pair shows chunks from the first and second half of the book at a given chunk size.
+
+\textbf{Key observations}:
+\begin{itemize}
+    \item At 500 marks, patterns are difficult to discern visually
+    \item At 2000+ marks, stylistic patterns become apparent (e.g., comma-period dominance)
+\end{itemize}
+
+\begin{figure}[htbp!]
+    \centering
+    \includegraphics[width=\textwidth]{plot1_heatmaps_comparison.png}
+    \caption{Punctuation sequence heatmaps at different chunk sizes. Each pair shows chunks from the midpoint of the first half vs.\ the midpoint of the second half of the same book. Visual consistency within author (across columns) indicates  stability.}
+    \label{fig:heatmaps}
+\end{figure}
+
+\subsubsection{KL Divergence Stability}
+
+Figure~\ref{fig:kl_variance} shows how the within-book KL divergence varies with chunk size for each author. The shaded regions represent $\pm 1$ standard deviation.
+
+\textbf{Key observations}:
+\begin{itemize}
+    \item \textbf{Variance decreases} as chunk size increases --- larger samples give more stable estimates.
+    \item \textbf{Mean KL stabilises} around 1500--2000 marks for our set of four authors.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{plot2_kl_variance.png}
+    \caption{KL divergence (mean $\pm$ std.\ dev.) for within-book chunk comparisons. Blue: f1 (frequency); Red: f3 (joint probability). Lower values indicate more consistent punctuation patterns. (It is likely that the curve for Shakespeare is due to the document that was chosen, and will be flatter when averaged.)}
+    \label{fig:kl_variance}
+\end{figure}
+
+%==============================================================================
+\section{Experiment 2: Baseline Comparison}\label{llm_baseline}
+%==============================================================================
+
+\subsection{Motivation}
+\label{subsec:baseline_motivation}
+
+The experiments in Section~3 compare a target author's punctuation fingerprint to LLM-generated text. To interpret any observed KL divergence, we need a null model: \emph{how close would we expect an arbitrary (non-target) author to be to the target, under the same feature extraction and chunking protocol?}
+
+\subsection{Experiment}
+\subsubsection{Baseline corpus (random authors)}
+\label{subsec:baseline_corpus}
+
+We use an empirical baseline consisting of $N=47$ unrelated authors sampled from Project Gutenberg (plain-text files in \texttt{gutenberg\_texts/}). For each Gutenberg text we extract a sequence of punctuation marks from the same 10-symbol alphabet as elsewhere, and take a 2000-mark chunk from the middle of the text (Section~2 establishes that 2000 marks yields stable estimates).
+
+For each author, we choose one document at random, we compute the $f_1^k$ and $f_3^k$ for that document, and we then average over the 47 authors. 
+
+We only sample one $2000-mark$ chunk per random document for each author. We only consider chunks of $2000$ as the LLM generated text is of that chunk size. 
+
+Note that one could average over documents as well as chunks, to mitigate some of the sample biases. The assumption here is that considering $47$ authors will mitigate the bias.
+
+\subsubsection{Baseline definitions}
+\label{subsec:baseline_definitions}
+
+For each target author and each of the $10$ LLM runs (using the first 2000 marks from the generated text), we compute two complementary baselines. Distances are measured using Kullback--Leibler divergence $d_{KL}$ on:
+
+
+
+\begin{itemize}
+    \item $f_1$: punctuation frequency distribution,
+    \item $f_3$: normalised punctuation transition matrix.
+\end{itemize}
+
+For each author, the average is taken over $47$ vectors. For the LLM, the average is taken over $10$ samples. 
+
+\paragraph{Baseline 1 (LLM-to-target vs.\ LLM-to-random).}
+For each run, we compute $d_{KL}(\text{LLM}, \text{Target})$ and compare it to $d_{KL}(\text{LLM}, \text{Random}_i)$ for all $i \in \{1,\dots,N\}$. If the prompt meaningfully steers the LLM toward the target, we expect:
+\[
+d_{KL}(\text{LLM}, \text{Target}) \;<\; d_{KL}(\text{LLM}, \text{Random}_i)
+\quad \text{on average.}
+\]
+
+\paragraph{Baseline 2 (LLM-to-target vs.\ Random-to-target).}
+We also compare $d_{KL}(\text{LLM}, \text{Target})$ to the baseline dispersion of real authors around the target, $d_{KL}(\text{Random}_i, \text{Target})$. This asks whether the LLM is closer to the target than a typical non-target author:
+\[
+d_{KL}(\text{LLM}, \text{Target}) \;<\; d_{KL}(\text{Random}_i, \text{Target})
+\quad \text{on average.}
+\]
+
+In Section~3 we report means and standard deviations across LLM runs, with the random-author comparisons aggregated across the $N$ Gutenberg authors.
+
+\subsubsection{Text generation procedure}
+\label{subsec:text_gen_procedure}
+
+The following pipeline is shared by all experiments that use LLM-generated text.  For each target author we select a single book from the Project Gutenberg corpus and extract a 1500-word excerpt from its midpoint (avoiding title pages, preambles, and end-matter).  This excerpt is included in the prompt as a style reference. The prompt instructs the model to write an original piece of fiction (or a play scene, for Shakespeare) in the same writing style, explicitly forbidding em-dashes and en-dashes (which LLMs overuse and which fall outside our 10-symbol punctuation alphabet).  In this experiment, we use only the simplest prompt variant, which we call \textit{v1} (excerpt-only), with no explicit punctuation statistics; Section~\ref{llm_prompt} explores additional prompt designs.
+Because a single LLM call rarely produces 2000 punctuation marks, we generate text in a loop. After each call we parse the accumulated output and count its punctuation marks.  If the count is below the 2000-mark target, we issue a \emph{continuation prompt} that supplies the last ${\sim}500$ words of the running text as context and asks the model to continue the story; this repeats until the chunk size target is reached.  The punctuation sequence is then extracted from the full accumulated text using the same parser and 10-symbol alphabet as for real texts, and we retain the first 2000 marks for analysis.\\
+
+Each author--prompt configuration is run 10 times independently, a new story is populated each time, yielding 10 generated texts per condition.  All calls use \texttt{temperature}=1.0 and \texttt{max\_output\_tokens}=8192.  In this experiment we compare \texttt{gemini-2.5-flash} and \texttt{gemini-2.5-pro}.  Full prompt templates are provided in Appendix~\ref{app:controls}, Section~\ref{subsec:controls_prompt_specs}.
+
+
+\subsection{Results}
+We observe that:
+\begin{itemize}
+    \item \textbf{Baseline 1:} The LLM-to-author distance is consistently lower than LLM-to-random for our initial 10 LLM runs with both $f_1$ and $f_3$ features, showing that the LLM is imitating the author punctuation style.
+    \item \textbf{Baseline 2:}  Similarly, the LLM-to-author distance is also lower than random-to-target when using KL divergence on both $f_1$ and $f_3$ features
+    \item we also compare gemini-2.5-flash and gemini-2.5-pro models and show that the gemini-2.5-pro version has lower $d_{KL}(LLM, Target)$ than gemini-2.5-flash for all but one author (Agnes May Fleming), which is expected considering that gemini-2.5-pro is meant to have better overall performance. More results about comparing model performance can be found in Experiment 3, Section~\ref{llm_prompt}.
+\end{itemize}
+
+Note that the full result tables can be found in the appendix.
+
+%==============================================================================
+\section{Experiment 3: LLM Prompt comparison}\label{llm_prompt}
+%==============================================================================
+
+\subsection{Motivation}
+In this section, we carry the same computations as the prior experiment in Section ~\ref{llm_baseline}, except on TWO llm models and MULTIPLE prompts. We also ask if there would be a difference in quality when populating texts once with 2000 marks or multiple times 10 tines 200 marks.
+
+\subsection{Experiment}
+
+For each of the four authors we generate ten times a 2000 mark piece of text. We compare to the size of the real text lengths in Table \ref{tab:setup}.
+%( for robustness checks)
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lccc}
+\toprule
+Author & Real marks & Generated marks (range) & Chunk size \\
+\midrule
+Jane Austen & 25,935 & 2,108 -- 2,853 & 2,000 \\
+William Shakespeare & 6,253 & 2,006 -- 2,807 & 2,000 \\
+H.G. Wells & 10,099 & 2,073 -- 2,432 & 2,000 \\
+Agnes May Fleming & 18,922 & 2,000 -- 2,578 & 2,000 \\
+\bottomrule
+\end{tabular}
+\caption{Overview of real and generated text lengths for each author.}
+\label{tab:setup}
+\end{table}
+
+\subsubsection{Prompt variants (v1--v4)}
+\label{subsec:prompt_variants}
+
+We evaluate four variants of prompts designed to isolate the effect of different prompt components on punctuation imitation:
+\begin{itemize}
+    \item \textbf{v1 (excerpt-only; Flash)}: the prompt includes a style excerpt from the target author, but provides no explicit punctuation statistics. Generation uses \texttt{gemini-2.5-flash}.
+    \item \textbf{v2 (excerpt + explicit punctuation statistics)}: the prompt includes the same excerpt plus numerical punctuation targets estimated from the real author: punctuation frequency percentages, transition patterns (which mark typically follows which), sentence-length distribution, and punctuation density (average words between consecutive marks). The complete guideline template is provided in Appendix~\ref{app:controls}, Section~\ref{subsec:controls_prompt_specs}.
+    \item \textbf{v3 (author name only)}: no excerpt is provided; the model is instructed to write in the style of the named author (testing parametric knowledge).
+    \item \textbf{v4 (excerpt + qualitative punctuation nudge)}: the prompt includes the excerpt plus a qualitative reminder to pay close attention to punctuation (no numerical targets).
+\end{itemize}
+Full prompt templates and generation details, including the multi-round continuation procedure used to reach 2000 punctuation marks, are provided in Appendix~\ref{app:controls}, Section~\ref{subsec:controls_prompt_specs}.
+
+All variants use the same multi-round generation pipeline described in Section~\ref{subsec:text_gen_procedure} (10 independent runs per condition, 2000-mark target). Full prompt templates are provided in Appendix~\ref{app:controls}, Section~\ref{subsec:controls_prompt_specs}.
+
+\subsubsection{Model Generation}
+In addition, we consider a model swap condition, v1 + Pro, which keeps the v1 prompt but uses \texttt{gemini-2.5-pro} in place of \texttt{gemini-2.5-flash}. The Pro version is meant to be better than Flash.
+
+\subsubsection{Chunk Size}
+Though real text is always drawn from a 2000-mark chunk in the middle of the book; LLM text is drawn from the first 2000 marks of generated output. The output can vary from concatenating 10 times 200 sequences (Figures~\ref{fig:llm_heatmaps} first 3 columns), or populating 2000 marks at once (fourth column).
+
+\subsection{Results}
+\subsubsection{Baseline results}
+\label{subsec:baseline_aggregated}
+
+We report the average across authors of the Baseline~1 target distance \(d_{KL}(\text{LLM}, \text{Target})\). The mean and standard deviation are computed over the four author-level aggregated means. The baseline tables for each author for v1 + Flash and v1 + Pro are reported in the Appendix~\ref{app:baseline_details}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Condition & Macro avg.\ \(d_{KL}(\text{LLM},\text{Target})\) f1 & Macro avg.\ \(d_{KL}(\text{LLM},\text{Target})\) f3 \\
+\midrule
+v1 (Flash), all authors & $0.1250 \pm 0.0204$ & $0.2564 \pm 0.0328$ \\
+v1 + Pro, all authors & $0.1402 \pm 0.0827$ & $0.3261 \pm 0.2258$ \\
+\end{tabular}
+\caption{Aggregated Baseline~1 target distances (macro-average across authors) for v1 (Flash) and the model-swap condition v1 + Pro. }
+\label{tab:baseline_aggregated_q1}
+\end{table}
+
+Surprisingly, we observe that the Flash model performs better, on average, than the Pro model for both features $f_1$ and $f_3$. However, this is driven by a single outlier: Pro substantially outperforms Flash on three of four authors (Austen, Shakespeare, Wells), but fails markedly on Fleming, where large KL distance inflates the Pro average. Table~\ref{tab:baseline_cross_version_q1} makes this pattern clear. Note that the Fleming result may partly reflect a sample-selection effect: because we compare against a single document per author (Section~2), the target features are sensitive to which book is chosen. Comparing LLM output against multiple documents per author and averaging the resulting distances would help disentangle genuine model failure from document-level noise.
+
+\subsubsection{Control prompt variants (v2--v4)}
+\label{subsec:other_versions_results}
+
+We also ran several control prompt variants to isolate which prompt ingredients drive punctuation imitation:
+\begin{itemize}
+    \item \textbf{v2}: excerpt + explicit punctuation statistics (numeric targets),
+    \item \textbf{v3}: author name only (no excerpt; tests parametric knowledge),
+    \item \textbf{v4}: excerpt + qualitative punctuation reminder (no numbers).
+\end{itemize}
+
+These control variants mostly underperform the main configurations and are therefore reported in full in Appendix~\ref{app:controls}. For completeness, the cross-version summary in Table~\ref{tab:baseline_cross_version_q1} includes their Baseline~1 target distances where available.
+
+\subsubsection{Cross-version baseline comparison (summary)}
+\label{subsec:baseline_cross_version}
+
+Table~\ref{tab:baseline_cross_version_q1} summarises Baseline~1 target distances across multiple versions using the saved baseline result files (\texttt{baseline\_results\_*}). Each entry reports \textbf{f3 / f1} for KL(LLM, Target) (lower is better).
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lccccc}
+\toprule
+Author & v1 + Flash & v4 & v2 & v3 & v1 + Pro \\
+\midrule
+Jane Austen & $0.263/0.120$ & $0.315/0.140$ & $0.272/0.115$ & $0.314/0.149$ & $0.194/0.087$ \\
+Shakespeare & $0.201/0.094$ & --- & $0.768/0.396$ & $0.297/0.122$ & $0.182/0.092$ \\
+H.G. Wells & $0.283/0.139$ & --- & $0.654/0.287$ & $0.826/0.409$ & $0.212/0.098$ \\
+A.M. Fleming & $0.279/0.147$ & --- & $0.289/0.161$ & $0.340/0.203$ & $0.717/0.283$ \\
+\bottomrule
+\end{tabular}
+\caption{Cross-version comparison of Baseline~1 target distances: KL(LLM, Target) reported as \textbf{f3 / f1}. ``v1 Flash'' uses \texttt{gemini-2.5-flash}; ``v1 + Pro'' uses \texttt{gemini-2.5-pro}. Entries marked ``---'' indicate missing runs for that version.}
+\label{tab:baseline_cross_version_q1}
+\end{table}
+
+Overall, the reasoning model (v1 + Pro) yields substantially lower KL(LLM, Target) for Austen, Shakespeare, and Wells compared to v1 Flash (and compared to v2 and v3), but it performs markedly worse on Fleming (consistent with failing both baseline tests for that author in Tables~\ref{tab:baseline1_f1_pro}--\ref{tab:baseline2_f3_pro}). \textit{v2} improves Fleming relative to v1 Flash but performs poorly on Shakespeare and Wells; v3 performs competitively on Austen/Shakespeare but degrades on Wells.
+
+\subsubsection{Heatmaps visualisation}
+\label{subsec:heatmaps}
+
+Figures~\ref{fig:llm_heatmaps} and~\ref{fig:v1_flash_vs_pro_heatmaps} visualise punctuation sequences as colour-coded strips, where each cell corresponds to one punctuation mark from the fixed punctuation alphabet. Each row is an author; columns compare real text with various LLM-generated conditions. Real text is always drawn from a 2000-mark chunk in the middle of the book; LLM text is drawn from the first 2000 marks of generated output (construction details vary by figure and are described below).
+
+Figure~\ref{fig:llm_heatmaps} compares real text against three prompt versions: v1 (excerpt only), v2 (excerpt + explicit punctuation targets), and v3 (author name only), each showing 2000 marks from a single generation run.
+
+\textbf{Key observations from prompt-version comparison:}
+\begin{itemize}
+    \item \textbf{A strong generic LLM punctuation prior.} Across all prompt versions and authors, LLM outputs concentrate on comma (light blue) and period (yellow), producing more uniform textures than real texts. Real texts, while still comma- and period-heavy, show substantially higher proportions of minority marks, quotation marks, semicolons, exclamation marks, and colons  that are largely absent from the LLM outputs.
+
+    \item \textbf{v2 exhibits near-degenerate behaviour.} The v2 panels (excerpt + explicit punctuation-frequency targets) are the most striking: for Shakespeare, Wells, and Fleming, the heatmaps are almost entirely yellow (period-dominated), with only sparse coloured cells. Rather than improving fidelity, giving explicit targets appears to have collapsed the punctuation distribution to a single dominant mark. This suggests that injecting numerical frequency targets into the prompt may interact poorly with the model's generation dynamics, possibly by conflicting with the stylistic conditioning provided by the excerpt (makes sense as LLMs don't seem very good with counting).
+
+    \item \textbf{v1 and v3 are qualitatively similar.} Both produce comma/period-dominated outputs with reduced diversity relative to real text, though v1 (which receives an excerpt) tends to show marginally more varied colour patterns than v3 (name only) for authors with distinctive punctuation, such as Austen and Fleming. This suggests that, potentially, the LLM's punctuation imitation is driven primarily by knowledge acquired during training (i.e.\ what the model ``knows'' about the author).
+
+    \item \textbf{Relative signal vs.\ absolute fidelity.} The KL baselines (Section~\ref{llm_baseline}) can indicate that LLM text is \emph{relatively} closer to the target author than to random authors, yet the heatmaps reveal that the imitation remains qualitatively shallow in absolute terms: the overall colour palette is impoverished even when relative attribution succeeds.
+
+    \item \textbf{Context window degeneration}: As the context window increases, LLM generated text becomes more ”generic” and accounts less and less for any specific author or instructions. This phenomenon has also been experienced with LLM under the name of \textit{context rot}, capturing the fact that LLM tend to \textit{forget} context when the conversation is becoming too large.
+\end{itemize}
+
+\begin{figure}[!htbp]
+    \centering
+    \includegraphics[width=0.9\textwidth]{all_versions_heatmaps.png}
+    \caption{Punctuation heatmaps: Real author text (2000 marks, mid-book) vs three prompt versions---v1 (excerpt), v2 (excerpt + punctuation-frequency targets), v3 (author name only)---each showing 2000 marks from a single LLM run. Real texts exhibit rich, varied colour patterns, while all LLM conditions are comma/period-dominated. The v2 condition is notably degenerate for Shakespeare, Wells, and Fleming, collapsing to an almost entirely period-dominated output.}
+    \label{fig:llm_heatmaps}
+\end{figure}
+
+As a concrete example of the generic LLM skew visible in the heatmaps, Table~\ref{tab:austen_comparison} compares punctuation frequencies for Austen.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Punctuation mark & Real Austen & LLM-Austen \\
+\midrule
+Comma & 38.3\% & $\sim$58\% \\
+Period & 27.6\% & $\sim$27\% \\
+Quote marks & 19.3\% & $\sim$10\% \\
+Semicolon & 8.6\% & $\sim$0.3\% \\
+Exclamation & 3.3\% & $\sim$0.5\% \\
+Colon & 0.5\% & $\sim$0\% \\
+\bottomrule
+\end{tabular}
+\caption{Comparison of punctuation frequencies: Real Austen vs LLM-generated Austen (v1, Flash). The LLM dramatically overuses commas while largely eliminating semicolons, exclamation marks, and colons---a pattern consistent with the heatmap visualisations.}
+\label{tab:austen_comparison}
+\end{table}
+
+% ──────────────────────────────────────────────────
+%  Figure 2: Flash vs Pro, concat vs single-run
+% ──────────────────────────────────────────────────
+
+Figure~\ref{fig:v1_flash_vs_pro_heatmaps} compares v1~Flash with v1~+~Pro (Gemini~2.5~Pro, reasoning) using two different 2000-mark constructions: (i)~\emph{concatenated prefixes} (200 marks from the start of each of 10 independent runs; total 2000 marks), and (ii)~a \emph{single long sample} (first 2000 marks from run~1). Both contain equal numbers of punctuation marks, but they differ in effective context: concatenated prefixes repeatedly sample the early, strongly prompt-conditioned regime, whereas a single long run includes later continuation where the model increasingly conditions on its own generated text.
+
+For Austen, Shakespeare, and Wells, the v1+Pro concatenated prefixes show noticeably richer structure than v1~Flash more dark blue (quotes), red (exclamation), and pink (parentheses) consistent with stronger early style conditioning by the more capable model. Context-length degradation: concatenated prefixes substantially outperform single long runs\textbf{.} This is the most important qualitative finding from this comparison.  Since both panels contain exactly 2000 marks, the difference can attributed to where in the generation those marks originate. The concatenated prefixes capture the first $\sim$200 marks of each run, where the prompt excerpt still dominates the context window. In the single long run, later marks are generated with a context window increasingly filled by the model's own output, which gradually washes out the prompt's stylistic signal. This is consistent with a style-drift or self-conditioning effect: as the ratio of model-generated tokens to prompt tokens in the context window grows, the model reverts toward its generic punctuation prior. The implication for authorial-style imitation is that stylistic fidelity is highest at the start of generation and degrades with continuation length.
+
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{v1_flash_vs_pro_heatmaps.png}
+    \caption{Punctuation heatmaps: Real (2000 marks, mid-book) vs v1~Flash vs v1+Pro (Gemini~2.5~Pro). For each LLM condition we show both concatenated prefixes (200 marks $\times$ 10 runs) and a single long sample (first 2000 marks from run~1). The concatenated prefixes---which repeatedly sample the early, prompt-conditioned regime---produce substantially richer punctuation diversity than the single long run, providing qualitative evidence of context-length degradation: as generated context grows and self-conditioning dominates, the model reverts toward its generic comma/period-heavy prior.}
+    \label{fig:v1_flash_vs_pro_heatmaps}
+\end{figure}
+
+
+
+%\subsection{Conclusion}
+\clearpage
+
+\begin{thebibliography}{10}
+
+\bibitem{punctuation_2021}
+{\sc DARMON ANM, BAZZI M, HOWISON SD, PORTER MA.}, {\em Pull out all the stops: Textual analysis via punctuation sequences.} European Journal of Applied Mathematics. 2021;32(6):1069-1105. doi:10.1017/S0956792520000157
+
+
+\end{thebibliography}
+
+
+\clearpage
+
+
+%==============================================================================
+\appendix
+\section{Per-author baseline tables (v1 and v1 + Pro)}
+\label{app:baseline_details}
+
+\input{appendix_baseline_per_author.tex}
+
+\section{Control prompt variants (v1--v4)}
+\label{app:controls}
+
+Full baseline tables for the control prompt variants (v2--v4) are reported in Appendix~\ref{app:controls}. We include them for completeness, but focus on v1 (Flash) and v1 + Pro in the main text.
+
+\input{appendix_controls_fragment.tex}
+
+
+%==============================================================================
+
+\end{document}

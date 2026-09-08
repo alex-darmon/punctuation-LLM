@@ -1,0 +1,155 @@
+{
+  "panel_config": "campaigns/author_panel_20.json",
+  "results_dir": "results/author_panel_20/preflight",
+  "input_sha256": {
+    "panel_config": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+    "source_manifest": "b1aa19ac6e9e145afd70d3fced4952553fb4b87487b4cb121f87c89d959a0b57",
+    "analysis_manifest": "f84f3f94f59ee433f8ac3488e7422c9099d012e0069d1938e995a2c3e25b1fa4",
+    "attribution": "87d1a6aa0f330b160033e5ee7385df504a60615ea00186eb0fac92bf3b199b1b",
+    "separability": "2f7f9add372d03d9ca3b5b0768fa74f0212b8c43346f2ec47ae7efb41621496d"
+  },
+  "authors": 20,
+  "books": 60,
+  "feature": "f3",
+  "chance_accuracy_pct": 5.0,
+  "whole_book": {
+    "correct": 48,
+    "n": 60,
+    "accuracy_pct": 80.0
+  },
+  "chunk": {
+    "size": 2000,
+    "correct": 372,
+    "n": 485,
+    "micro_accuracy_pct": 76.70103092783505,
+    "macro_author_accuracy_pct": 73.14641369067365
+  },
+  "gate": {
+    "minimum_correct_per_new_author": 2,
+    "required_new_authors_passing": 10,
+    "new_authors_passing": 10,
+    "passed": true
+  },
+  "new_authors": [
+    {
+      "author": "mildred_wirt",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 14,
+      "chunk_n": 14,
+      "chunk_accuracy_pct": 100.0,
+      "matched_panel_D_over_C": 3.496439814725611,
+      "passes_gate": true
+    },
+    {
+      "author": "robert_sidney_bowen",
+      "document_correct": 2,
+      "document_n": 3,
+      "document_accuracy_pct": 66.66666666666667,
+      "chunk_size": 2000,
+      "chunk_correct": 8,
+      "chunk_n": 12,
+      "chunk_accuracy_pct": 66.66666666666667,
+      "matched_panel_D_over_C": 1.4323488824119466,
+      "passes_gate": true
+    },
+    {
+      "author": "luis_senarens",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 3,
+      "chunk_n": 9,
+      "chunk_accuracy_pct": 33.333333333333336,
+      "matched_panel_D_over_C": 5.372622424073337,
+      "passes_gate": true
+    },
+    {
+      "author": "john_c_hutcheson",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 23,
+      "chunk_n": 23,
+      "chunk_accuracy_pct": 100.0,
+      "matched_panel_D_over_C": 3.1769636078505417,
+      "passes_gate": true
+    },
+    {
+      "author": "harold_l_goodwin",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 12,
+      "chunk_n": 12,
+      "chunk_accuracy_pct": 100.0,
+      "matched_panel_D_over_C": 3.334482601507307,
+      "passes_gate": true
+    },
+    {
+      "author": "kathleen_thompson_norris",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 22,
+      "chunk_n": 26,
+      "chunk_accuracy_pct": 84.61538461538461,
+      "matched_panel_D_over_C": 2.126087592865348,
+      "passes_gate": true
+    },
+    {
+      "author": "arthur_scott_bailey",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 3,
+      "chunk_n": 3,
+      "chunk_accuracy_pct": 100.0,
+      "matched_panel_D_over_C": 2.2650826427231823,
+      "passes_gate": true
+    },
+    {
+      "author": "louis_joseph_vance",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 16,
+      "chunk_n": 21,
+      "chunk_accuracy_pct": 76.19047619047619,
+      "matched_panel_D_over_C": 1.443674330686461,
+      "passes_gate": true
+    },
+    {
+      "author": "susan_warner",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 59,
+      "chunk_n": 62,
+      "chunk_accuracy_pct": 95.16129032258064,
+      "matched_panel_D_over_C": 3.1569872335653337,
+      "passes_gate": true
+    },
+    {
+      "author": "ethel_m_dell",
+      "document_correct": 3,
+      "document_n": 3,
+      "document_accuracy_pct": 100.0,
+      "chunk_size": 2000,
+      "chunk_correct": 37,
+      "chunk_n": 39,
+      "chunk_accuracy_pct": 94.87179487179488,
+      "matched_panel_D_over_C": 2.5767829628638865,
+      "passes_gate": true
+    }
+  ]
+}

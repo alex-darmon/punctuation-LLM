@@ -1,0 +1,72 @@
+{
+  "generated_utc": "2026-09-04T16:36:13.254466+00:00",
+  "git": {
+    "commit": "c676af36355caacc76c3dda783e133d964efca34",
+    "branch": "main",
+    "dirty": true
+  },
+  "python": "3.10.16",
+  "numpy": "2.2.6",
+  "authors_config": "campaigns/author_panel_20.json",
+  "cache_path": "cache/author_panel_20_sequences.json",
+  "cache_sha256": "a6b461b66d55aa0cd7eb033bf7160df573d0259d2d462f8ada99c634b5e39fc1",
+  "conditions": {},
+  "chunk_sizes": [
+    1000,
+    2000,
+    4000
+  ],
+  "headline_chunk_size": 2000,
+  "drift_window_size": 1000,
+  "drift_windows": 5,
+  "authors": [
+    "jane_austen",
+    "herbert_george_wells",
+    "agnes_may_fleming",
+    "charles_dickens",
+    "mark_twain",
+    "arthur_conan_doyle",
+    "mary_shelley",
+    "charlotte_bronte",
+    "oscar_wilde",
+    "joseph_conrad",
+    "mildred_wirt",
+    "robert_sidney_bowen",
+    "luis_senarens",
+    "john_c_hutcheson",
+    "harold_l_goodwin",
+    "kathleen_thompson_norris",
+    "arthur_scott_bailey",
+    "louis_joseph_vance",
+    "susan_warner",
+    "ethel_m_dell"
+  ],
+  "margin_gt_1_subset": [
+    "arthur_conan_doyle",
+    "arthur_scott_bailey",
+    "ethel_m_dell",
+    "harold_l_goodwin",
+    "jane_austen",
+    "john_c_hutcheson",
+    "kathleen_thompson_norris",
+    "louis_joseph_vance",
+    "luis_senarens",
+    "mark_twain",
+    "mildred_wirt",
+    "robert_sidney_bowen",
+    "susan_warner"
+  ],
+  "n_reference_profiles_built": 20876,
+  "punctuation_vector": [
+    "!",
+    "\"",
+    "(",
+    ")",
+    ",",
+    ".",
+    ":",
+    ";",
+    "?",
+    "^"
+  ]
+}

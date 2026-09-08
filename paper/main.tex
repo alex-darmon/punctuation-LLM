@@ -1,0 +1,595 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{placeins}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\fOne}{\(f_1\)}
+\newcommand{\fThree}{\(f_3\)}
+\newcommand{\KL}{D_{\mathrm{KL}}}
+\newcommand{\resultgraphic}[1]{%
+  \IfFileExists{#1}{%
+    \includegraphics[width=\linewidth]{#1}%
+  }{%
+    \fbox{\parbox[c][0.18\textheight][c]{0.92\linewidth}{%
+      \centering Missing generated figure: \texttt{#1}}}%
+  }%
+}
+\newcommand{\resulttable}[1]{%
+  \InputIfFileExists{#1}{}{%
+    \textit{Missing generated table: \texttt{#1}}%
+  }%
+}
+
+\title{Leakage-Controlled Punctuation Stylometry for Human Authorship,\\
+LLM Imitation, and Detection}
+\author{Authors omitted for review}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We evaluate punctuation as a deliberately narrow instrument for measuring
+human author identifiability, prompted literary-style imitation, and
+human--LLM separation.  The primary analysis uses 20 authors with three
+content-distinct books each, 400 Gemini~2.5 Flash generations, and 200
+Gemini~2.5 Pro generations.  It fixes adjacent-punctuation features
+(\fThree), 2,000 punctuation marks, leave-one-book-out references, author-equal
+estimands, and author-blocked uncertainty before inference.  Human passages
+are attributed to the correct author with 73.1\% macro accuracy (95\%
+author-bootstrap interval 59.3--85.0\%) against 5\% chance.  Prompted
+generations are attributed to their requested author only 8.75\% for Flash and
+8.0\% for Pro; their paired difference is unresolved.  Nevertheless,
+out-of-author detection separates generated from human passages well
+(AUC 0.952 for Flash and 0.931 for Pro), with true-positive rates of 75.5\%
+and 71.5\% at an empirical human false-positive rate of 5.36\%.  A
+three-book cross-fit also links a human-only separability diagnostic to
+held-out attribution (\(\rho=0.53\)).  Finally, target divergence increases
+from the first to the fifth 1,000-mark window for both Flash and Pro.  These
+results show that detectable non-human punctuation and successful imitation
+of a requested author's punctuation are distinct properties.  The
+contribution is the integrated, leakage-controlled evaluation instrument;
+neither KL divergence, the punctuation features, nor the language models are
+new.
+\end{abstract}
+
+\section{Introduction}
+
+Punctuation is a low-dimensional trace of writing style.  It carries
+information about rhythm, clause structure, dialogue, and formatting while
+discarding almost all lexical content.  Earlier work showed that sequences of
+punctuation marks support human authorship analysis
+\cite{darmon2021,stamatatos2009}.  Large language models create a related but
+different test: a generated passage can be recognisably non-human without
+matching the punctuation habits of the author named in its prompt.
+
+We study three questions.  First, can held-out human passages be assigned to
+their authors using punctuation alone?  Second, when a model receives an
+author excerpt as a style reference, does its output enter the target author's
+punctuation region?  Third, can deviation from a target-specific human
+reference distinguish generated from genuine passages for authors that did
+not calibrate the detector?  We also ask whether a human-only separability
+score predicts prospective attribution and whether imitation changes with
+position in a generation.
+
+The analysis was motivated by a frozen ten-author campaign.  That campaign is
+retained as discovery and replication evidence, not pooled into the present
+headline estimands.  Its Flash drift estimate was unresolved, whereas the
+balanced 20-author analysis detects increasing target KL for both Flash and
+Pro.  The primary claims below come from the declared 20-author, cross-fitted
+inference package.
+
+The main findings are:
+\begin{itemize}
+  \item Human punctuation is strongly author-specific in this screened panel:
+  author-equal 20-way attribution is 73.1\% at 2,000 marks.
+  \item Prompted imitation is weak in absolute target-attribution terms:
+  Flash and Pro score 8.75\% and 8.0\%, respectively, against 5\% chance, with
+  wide author-level intervals and no resolved model contrast.
+  \item Weak target imitation coexists with strong human--LLM detection.  At a
+  threshold calibrated on other authors, AUC exceeds 0.93 for both models.
+  \item Cross-fitted \(D/C\) is positively associated with held-out human
+  attribution, while target KL rises across generation position for both
+  models.
+\end{itemize}
+
+\paragraph{Novelty boundary.}
+We do not introduce the punctuation representation, KL divergence,
+likelihood-ratio testing, resampling, or the evaluated models.  Our
+contribution is their combination into a declared evaluation instrument that
+keeps source books out of their own references, calibrates detection on other
+authors, makes authors the population unit, validates screening prospectively,
+and separates exploratory ten-author evidence from primary 20-author
+estimands.  This boundary matters because leakage control and the choice of
+population unit change the substantive conclusions.
+
+\section{Related work}
+
+Authorship attribution commonly combines lexical, character, syntactic, and
+structural cues; Stamatatos surveys the broader field
+\cite{stamatatos2009}.  Darmon et al.\ isolate punctuation sequences and define
+the frequency and transition-derived features used here
+\cite{darmon2021}.  Our nearest-reference attribution is intentionally simpler
+than modern high-dimensional authorship systems: its purpose is to audit a
+specific stylistic channel.
+
+Generated-text detection is sensitive to the generator, domain, decoding
+scheme, and access assumptions.  Prior work has examined human judgements and
+automatic features \cite{ippolito2020}, generator attribution
+\cite{uchendu2021}, perturbation-based zero-shot detection
+\cite{mitchell2023}, and fundamental limits under distribution shift and
+paraphrase \cite{sadasivan2024}.  We therefore report a conditional detector,
+not a universal one.  Its threshold is learned empirically from genuine human
+texts and tested on held-out authors; no asymptotic punctuation null is assumed.
+
+\section{Study design}
+\label{sec:design}
+
+\subsection{Discovery analysis and primary population}
+
+The frozen discovery campaign contained ten authors and an unbalanced
+22-book corpus.  It exposed the importance of leave-one-book-out references
+and motivated chunk-size, feature, and drift analyses.  Those outputs remain a
+historical benchmark.  They do not define the current headline population and
+are not used to select among the primary results.
+
+The primary panel contains 20 English-language prose authors and exactly three
+content-distinct books per author.  It combines the ten discovery authors with
+ten additional authors screened using a full-corpus human-only \fThree\
+\(D/C\) diagnostic.  Before LLM evaluation, each proposed author had to
+achieve at least two correct whole-book attributions out of three under a
+20-way leave-one-book-out check; all ten passed.  This yields 60 books and
+5\% attribution chance.  The screen creates a conditional evaluation
+population enriched for punctuation separability.  It is useful for testing
+the instrument but is not a random sample of authors.
+
+\subsection{Generated texts}
+
+Each generation is conditioned on a 1,500-word excerpt from one of the target
+author's source books and asks for an original continuation in that style.
+The campaign uses temperature 1.0 and continues generation until at least
+5,000 analysed punctuation marks are available.  There are 20 Flash runs and
+10 Pro runs per author, for 400 and 200 runs in total.  The first ten authors'
+runs are reused from the frozen campaign and the ten extension authors were
+generated later.  Thus model-level results use all 20 authors, but
+old-versus-new cohort comparisons would mix author composition with run date
+or provider state and are not causal.
+
+For continuity with the discovery campaign, analysed text replaces em and en
+dashes with commas.  Exact raw responses were retained only for the extension
+cohort.  There, the transformation changes comma share by 0.0083 percentage
+points for Flash and 0.0013 percentage points for Pro, so it is too small to
+explain the reported extension-cohort results.  The absence of raw historical
+responses prevents a full-panel audit of this policy.
+
+\subsection{Declared primary and sensitivity specifications}
+
+The declared primary specification is the full 20-author panel, \fThree,
+2,000 punctuation marks, leave-one-book-out references, add-0.5 smoothing for
+detection, and a 5\% human false-positive target.  Accuracy estimands weight
+authors equally.  Sensitivities vary feature (\fOne\ versus \fThree), chunk
+size (1,000, 2,000, and 4,000), author cohort, and smoothing (0.1, 0.5, and
+1.0).  Pooled-reference calculations are retained only as leakage contrasts.
+Run-level binomial tests are descriptive and are not treated as
+population-level inference.
+
+\section{Methods}
+\label{sec:methods}
+
+\subsection{Punctuation representation and references}
+
+Text is reduced to the ten-mark alphabet
+\[
+  \{!,\,"\, ,(\,),\, ,\,.\, ,:\, ;\, ,?\, ,\hat{\ }\},
+\]
+where the caret is the parser's end marker.  The \fOne\ vector contains
+single-mark frequencies.  The primary \fThree\ vector is the flattened joint
+distribution of adjacent marks, obtained by scaling each row of the
+first-order transition matrix by the marginal frequency of its initial mark
+\cite{darmon2021}.  Attribution assigns an observation \(x\) to the reference
+author \(a\) minimizing directed divergence,
+\[
+  \widehat a(x)=\arg\min_a \KL\!\left(f_3(x)\,\|\,f_3(R_a)\right).
+\]
+
+For a human passage, the complete source book is excluded from its target
+author's reference, leaving the other two books.  For an LLM run, the book
+that supplied the prompt excerpt is excluded from the requested author's
+reference.  Exclusion is resolved by content identity, and each scored
+observation is checked against the reference audit.  This prevents a source
+book from helping to recognise itself through its remaining text.
+
+\subsection{Attribution estimands and uncertainty}
+
+Human books are divided into non-overlapping chunks; incomplete tails are
+dropped.  Generated-text attribution uses the first \(m\) marks of each run
+for chunk size \(m\).  Within each source type and model we first calculate an
+accuracy for every author and then average those rates, so prolific books and
+the larger Flash run count do not change author weights.  The primary
+confidence intervals are central 95\% percentile intervals from 2,000
+author-block bootstrap draws.  Resampling an author carries all of that
+author's books, chunks, prompt-source groups, and runs together.  Per-author
+diagnostic intervals additionally resample books for human text and prompt
+source books for LLM text.
+
+The Flash--Pro contrast is paired by author.  We report the author-equal mean
+of Flash minus Pro target-attribution accuracy, a paired author bootstrap
+interval, and a two-sided Wilcoxon signed-rank test.  This contrast does not
+mistake 600 repeated generations for 600 independent population units.
+
+\subsection{Out-of-author detection}
+
+Detection uses a target-specific likelihood-ratio \(G\) score.  For \fThree,
+observed transition counts are compared row by row with an add-\(\epsilon\)
+smoothed reference transition profile.  Larger scores indicate greater
+departure from the requested author's human reference.  The nominal
+\(\chi^2\) approximation is a diagnostic only because adjacent punctuation
+transitions and longer-range prose structure violate independent-trial
+assumptions.
+
+Authors are allocated to five folds, stratified by original versus extension
+cohort.  For each fold, the operating threshold is the 95th percentile of
+human \(G\) scores from the other four folds.  That threshold is then applied
+only to human and generated passages from held-out authors.  Fold-specific
+scores are divided by their calibration thresholds before pooling the
+out-of-fold ROC curve.  The bootstrap resamples authors and re-estimates every
+fold threshold on each valid draw.  We report out-of-fold AUC, empirical human
+false-positive rate, and LLM true-positive rate.
+
+\subsection{Prospective separability}
+
+The three books per author support a separate three-way cross-fit.  On each
+fold, two books define the author profile and within-author inconsistency
+\[
+  C_a=\tfrac12\{\KL(f_{a1}\|f_{a2})+\KL(f_{a2}\|f_{a1})\}.
+\]
+The distance \(D_a\) is the directed KL from that two-book profile to its
+nearest competing author profile.  Neither \(D_a\), \(C_a\), nor the
+references use the held-out third book.  We geometrically average \(D_a/C_a\)
+over the three held-out-book rotations, attribute the excluded books and their
+2,000-mark chunks, and calculate the across-author Spearman association
+between the ratio and chunk accuracy.  A 2,000-draw author bootstrap supplies
+the interval for \(\rho\).  This is a prospective validation of a screening
+diagnostic, although the panel itself remains selected.
+
+\subsection{Positional drift}
+
+Every run contributes five consecutive, non-overlapping 1,000-mark windows.
+For each model, feature, author, and run we subtract the first-window metric
+from the fifth-window metric and then average runs within author.  Author-equal
+means and author-block bootstrap intervals summarize the change.  Directional
+Wilcoxon signed-rank tests evaluate increasing target KL and rank and
+decreasing target margin and hit rate; Benjamini--Hochberg adjustment is
+applied jointly to the 16 model--feature--metric tests
+\cite{benjamini1995}.  Position is not randomized, so ``drift'' denotes an
+association with generation position rather than a causal context-length
+effect.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Primary attribution}
+
+\begin{table}[htbp]
+  \centering
+  \resizebox{\textwidth}{!}{%
+    \resulttable{tables/inference_v2/primary_attribution.tex}}
+  \caption{Primary 20-author, \fThree, 2,000-mark attribution.  Accuracy is
+  author-equal; intervals resample authors.  Human units are held-out chunks,
+  while LLM units are independent runs.  Chance is 5\%.}
+  \label{tab:primary-attribution}
+\end{table}
+
+Table~\ref{tab:primary-attribution} establishes a large gap between human
+identifiability and successful prompted imitation.  Human macro accuracy is
+73.1\% (95\% CI 59.3--85.0\%), whereas Flash reaches 8.75\%
+(3.25--15.75\%) and Pro 8.0\% (1.0--19.5\%).  The latter intervals include
+chance and should not be converted into claims that either model reliably
+imitates the population of requested authors.  The paired Flash-minus-Pro
+difference is 0.75 percentage points (95\% CI \(-11.76\) to 11.25; signed-rank
+\(p=0.395\)), which resolves neither superiority nor equivalence.
+
+\begin{figure}[htbp]
+  \centering
+  \resultgraphic{figures/inference_v2/attribution_by_author.pdf}
+  \caption{Per-author target-attribution accuracy for human passages, Flash,
+  and Pro under the primary specification.  The dashed line is 20-way chance.
+  Heterogeneity across authors motivates author-level uncertainty and cautions
+  against interpreting the pooled run count as the inferential sample size.}
+  \label{fig:attribution}
+\end{figure}
+
+Figure~\ref{fig:attribution} shows that the macro averages conceal substantial
+heterogeneity.  Generated passages also collapse toward a few predicted
+authors: in the primary analysis, Wells is the nearest reference for 148 of
+400 Flash runs and 115 of 200 Pro runs.  This concentration is evidence of a
+shared model-side geometry, not successful imitation of those predicted
+authors.
+
+\subsection{Chunk-size sensitivity}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{lrrr}
+    \toprule
+    Source & 1,000 marks & 2,000 marks (primary) & 4,000 marks \\
+    \midrule
+    Human & 65.8 & 73.1 & 73.6\(^\dagger\) \\
+    Flash & 12.5 & 8.75 & 8.5 \\
+    Pro & 11.5 & 8.0 & 7.0 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Author-equal \fThree\ attribution accuracy (\%) by chunk size.
+  \(^\dagger\)Only 19 authors supply complete 4,000-mark human chunks, so this
+  endpoint is not a perfectly matched full-panel comparison.}
+  \label{tab:length-attribution}
+\end{table}
+
+Human attribution rises from 65.8\% at 1,000 marks to 73.1\% at 2,000 and is
+similar at 4,000 marks, subject to the missing short-corpus author.  LLM target
+attribution does not improve with length: Flash changes from 12.5\% to 8.75\%
+to 8.5\%, and Pro from 11.5\% to 8.0\% to 7.0\%.  Thus 2,000 marks is the
+declared primary compromise rather than a post hoc optimum.
+
+\subsection{Detection and empirical calibration}
+
+\begin{table}[htbp]
+  \centering
+  \resizebox{\textwidth}{!}{%
+    \resulttable{tables/inference_v2/detection.tex}}
+  \caption{Five-fold out-of-author detection for the primary \fThree,
+  2,000-mark specification.  Each held-out author is scored at a threshold
+  calibrated only on other authors.  Intervals use an author-block bootstrap
+  that re-estimates fold thresholds.}
+  \label{tab:detection}
+\end{table}
+
+The detector distinguishes generated from human punctuation even though
+target-author imitation is near chance.  Flash has AUC 0.952 (95\% CI
+0.891--0.984) and Pro 0.931 (0.857--0.974).  At the declared 5\% operating
+point, the held-out human FPR is 5.36\% for both conditions, while TPR is
+75.5\% for Flash and 71.5\% for Pro.  The author-bootstrap TPR intervals are
+wide (30.0--95.8\% and 27.0--93.5\%), indicating that detector performance is
+not uniform across authors.
+
+\begin{figure}[htbp]
+  \centering
+  \resultgraphic{figures/inference_v2/detection_oof_roc.pdf}
+  \caption{Out-of-author ROC curves.  Scores from each held-out fold are
+  normalized by the human threshold learned from the other folds; dots mark
+  the declared 5\% operating point.}
+  \label{fig:roc}
+\end{figure}
+
+Length sensitivity is directionally consistent.  For Flash, AUC/TPR is
+0.903/52.8\% at 1,000 marks and 0.970/87.5\% at 4,000 marks; for Pro it is
+0.852/39.0\% and 0.962/87.5\%.  The corresponding empirical human FPRs are
+4.99\% and 7.11\%, respectively.  The 4,000-mark improvement is therefore
+accompanied by less precise tail calibration and fewer human chunks.  At
+2,000 marks, changing the smoothing constant from 0.1 to 1.0 changes Flash
+AUC only from 0.951 to 0.953 and Pro AUC from 0.929 to 0.932.
+
+\begin{figure}[htbp]
+  \centering
+  \resultgraphic{figures/inference_v2/g_calibration.pdf}
+  \caption{Failure of nominal \(\chi^2\) calibration for the \(G\) statistic
+  versus empirical out-of-author calibration at 2,000 marks.  Under
+  leave-one-book-out human references, nominal 5\% rejection is 95.3\% for
+  \fOne\ and 71.1\% for \fThree; the cross-fitted empirical procedure returns
+  the held-out rate to approximately 5\%.}
+  \label{fig:g-calibration}
+\end{figure}
+
+Figure~\ref{fig:g-calibration} explains why cross-fitting is essential.
+Dependent punctuation and book-to-book heterogeneity make the nominal
+likelihood-ratio reference severely anti-conservative.  A detector calibrated
+against that reference would report impressive but invalid rejection rates.
+
+\subsection{Cross-fitted human separability}
+
+\begin{table}[htbp]
+  \centering
+  \resizebox{\textwidth}{!}{%
+    \resulttable{tables/inference_v2/separability.tex}}
+  \caption{Three-book cross-fitted separability.  The primary row is \fThree;
+  \fOne\ is a declared feature sensitivity.  Accuracy is author-equal.}
+  \label{tab:separability}
+\end{table}
+
+For \fThree, the geometric-mean \(D/C\) score has Spearman
+\(\rho=0.534\) with held-out chunk attribution (95\% author-bootstrap CI
+0.021--0.895; ordinary Spearman \(p=0.015\)).  Held-out whole-book macro
+accuracy is 80.0\% and chunk macro accuracy is 72.0\%.  The \fOne\ sensitivity
+is similar (\(\rho=0.576\), interval 0.082--0.936).  These results support
+\(D/C\) as a useful ranking diagnostic, not as a universal threshold or an
+unbiased estimate of performance on unscreened authors.
+
+\begin{figure}[htbp]
+  \centering
+  \resultgraphic{figures/inference_v2/crossfit_separability.pdf}
+  \caption{Human-only cross-fitted \(D/C\) against held-out 2,000-mark
+  attribution.  Each point is one author; the excluded book contributes to
+  neither coordinate's reference construction.}
+  \label{fig:separability}
+\end{figure}
+
+\subsection{Positional drift in both models}
+
+\begin{table}[htbp]
+  \centering
+  \resizebox{\textwidth}{!}{%
+    \resulttable{tables/inference_v2/drift.tex}}
+  \caption{Author-equal change from the first to fifth 1,000-mark window.
+  Intervals resample authors; \(p\)-values are directional signed-rank tests
+  adjusted across the declared drift family.}
+  \label{tab:drift}
+\end{table}
+
+Target KL increases by 0.092 for Flash (95\% CI 0.046--0.144,
+BH-adjusted \(p=0.00143\)) and by 0.168 for Pro (0.125--0.214,
+adjusted \(p=3.05\times10^{-5}\)).  The corresponding target-hit changes,
+\(-4.5\) and \(-7.5\) percentage points, have intervals that include zero and
+adjusted \(p\)-values of 0.111 and 0.0725.  The continuous divergence endpoint
+therefore detects positional movement more clearly than the coarse 20-way hit
+indicator.  Crucially, the current result is drift in \emph{both} Flash and
+Pro; the unresolved discovery estimate does not describe this panel.
+
+\begin{figure}[htbp]
+  \centering
+  \resultgraphic{figures/inference_v2/positional_drift.pdf}
+  \caption{Author-equal target KL across five consecutive 1,000-mark windows.
+  Ribbons are author-block bootstrap intervals.  Both models move away from
+  requested-author punctuation profiles with generation position.}
+  \label{fig:drift}
+\end{figure}
+
+\FloatBarrier
+\section{Discussion}
+
+\subsection{Imitation and detection are different estimands}
+
+The apparent tension between near-chance target attribution and high detection
+AUC is informative.  Attribution asks whether a generated passage is closer
+to its requested author than to 19 competitors.  Detection asks whether the
+passage has an unusually large target-relative \(G\) score compared with
+genuine held-out human writing.  A model can fail to reproduce the requested
+punctuation geometry while remaining systematically outside the human
+target-reference distribution.  Indeed, concentration of generated
+predictions on a few authors and increasing target KL are consistent with a
+model-side punctuation tendency overwhelming author-specific conditioning.
+
+More marks improve human attribution and especially detection, but do not
+improve requested-author attribution.  That pattern argues against describing
+the issue as simple sampling noise.  It is instead consistent with weak or
+decaying author-specific control in this feature space.  The positional design
+cannot isolate the mechanism: later windows also occur later in the narrative,
+after more self-generated context, and nearer a possible ending.
+
+\subsection{What the evaluation instrument adds}
+
+Four design choices prevent common overstatements.  First, source books are
+excluded from their own target references by content identity.  Second,
+detection thresholds are trained on other authors and evaluated out of fold.
+Third, authors rather than chunks or runs determine population uncertainty.
+Fourth, the full panel, feature, length, smoothing, and operating point are
+declared, while pooled-reference and alternate-grid outputs are labelled as
+sensitivities or leakage contrasts.  Together these choices turn a collection
+of descriptive distances into estimands with explicit target populations and
+uncertainty.
+
+\section{Limitations}
+
+\begin{enumerate}
+  \item \textbf{Selected population.}  Half of the panel was screened for high
+  full-corpus \fThree\ \(D/C\) and all new authors passed an attribution gate.
+  Headline estimates are conditional on this 20-author panel and likely
+  overstate performance for a broad, unscreened author population.
+
+  \item \textbf{Corpus scope.}  The corpus contains public-domain English prose
+  with only three books per author.  Period, genre, editorial practice,
+  dialogue share, and transcription conventions may be confounded with
+  authorship.  Chunk counts vary sharply by author even though macro
+  estimands restore equal author weight.
+
+  \item \textbf{Few population clusters.}  Twenty authors support cluster-aware
+  inference, but the wide intervals correctly reflect limited information at
+  the population level.  At 4,000 marks one author has no complete human
+  chunk, so that sensitivity is not a matched 20-author endpoint.
+
+  \item \textbf{Generator and prompt scope.}  The results cover Gemini~2.5
+  Flash and Pro under one excerpt-conditioned generation protocol and one
+  temperature.  They do not establish behavior for other models, prompts,
+  languages, or decoding settings.  The ten-author and extension generations
+  were not contemporaneous.
+
+  \item \textbf{Preprocessing.}  Dash-to-comma accounting is exact only for the
+  extension cohort because raw frozen responses are unavailable.  Although
+  the observed perturbation is tiny, a complete full-panel sensitivity cannot
+  be reconstructed.
+
+  \item \textbf{Internal rather than external validation.}  Author folds block
+  direct calibration leakage, but all folds come from the same constructed
+  corpus and campaign.  A genuinely prospective study should freeze the
+  instrument and evaluate new authors, books, providers, and generation dates.
+
+  \item \textbf{Non-causal drift.}  Window position jointly changes generated
+  context, narrative phase, and proximity to termination.  Randomized stopping
+  lengths or controlled continuation experiments are needed to identify a
+  causal context-length effect.
+
+  \item \textbf{Narrow stylistic channel.}  Punctuation cannot establish
+  authorship, literary quality, memorization, or ``human-ness'' in general.
+  The detector may be evaded by editing or paraphrase
+  \cite{sadasivan2024}, and its operating characteristics should not be
+  exported beyond the evaluated domain.
+\end{enumerate}
+
+\section{Conclusion}
+
+In a declared 20-author evaluation, punctuation alone identifies held-out
+human authors well, but Gemini~2.5 Flash and Pro rarely reproduce the requested
+author's punctuation closely enough for 20-way attribution.  Those same
+outputs are readily separated from genuine target-author writing when
+thresholds are calibrated on other authors.  Cross-fitted \(D/C\) predicts
+where human attribution will work, and target divergence increases with
+generation position for both models.  The central methodological lesson is
+that source exclusion, out-of-author calibration, author-level resampling, and
+a fixed claim hierarchy are not implementation details: they determine what
+the experiment can validly say.
+
+\begin{thebibliography}{99}
+
+\bibitem{benjamini1995}
+Y.~Benjamini and Y.~Hochberg.
+\newblock Controlling the false discovery rate: a practical and powerful
+approach to multiple testing.
+\newblock \emph{Journal of the Royal Statistical Society: Series B},
+57(1):289--300, 1995.
+
+\bibitem{darmon2021}
+A.~Darmon, M.~Bazzi, S.~D. Howison, and M.~A. Porter.
+\newblock Pull out all the stops: textual analysis via punctuation sequences.
+\newblock \emph{European Journal of Applied Mathematics}, 32(6):1069--1105,
+2021.
+
+\bibitem{ippolito2020}
+D.~Ippolito, D.~Duckworth, C.~Callison-Burch, and D.~Eck.
+\newblock Automatic detection of generated text is easiest when humans are
+fooled.
+\newblock In \emph{Proceedings of the 58th Annual Meeting of the Association
+for Computational Linguistics}, pages 1808--1822, 2020.
+
+\bibitem{mitchell2023}
+E.~Mitchell, Y.~Lee, A.~Khadilkar, C.~D. Manning, and C.~Finn.
+\newblock DetectGPT: zero-shot machine-generated text detection using
+probability curvature.
+\newblock In \emph{Proceedings of the 40th International Conference on Machine
+Learning}, pages 24950--24962, 2023.
+
+\bibitem{sadasivan2024}
+V.~S. Sadasivan, A.~Kumar, S.~Balasubramanian, W.~Wang, and S.~Feizi.
+\newblock Can AI-generated text be reliably detected?
+\newblock \emph{Transactions on Machine Learning Research}, 2024.
+
+\bibitem{stamatatos2009}
+E.~Stamatatos.
+\newblock A survey of modern authorship attribution methods.
+\newblock \emph{Journal of the American Society for Information Science and
+Technology}, 60(3):538--556, 2009.
+
+\bibitem{uchendu2021}
+A.~Uchendu, Z.~Ma, T.~Le, R.~Zhang, and D.~Lee.
+\newblock Authorship attribution for neural text generation.
+\newblock In \emph{Proceedings of the 2021 Conference on Empirical Methods in
+Natural Language Processing}, pages 8384--8395, 2021.
+
+\end{thebibliography}
+
+\end{document}
