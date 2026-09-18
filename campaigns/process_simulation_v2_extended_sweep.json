@@ -1,0 +1,148 @@
+{
+  "analysis_name": "punctuation_process_simulation_v2_extended_dwell_sweep",
+  "description": "Extends the frozen v1 two-state sweep along the run-length axis at the measured dialogue/narration contrast, to locate the run length at which a two-mode process reproduces the observed f3 rho, and to test whether any single run length reproduces the observed phi(n) shape. Reuses the v1 fitted parameter artifact unchanged; no refit, no new segmentation, no generated text.",
+  "authors_config": "campaigns/author_panel_20.json",
+  "cache": "cache/author_panel_20_with_runs.json",
+  "parent_config": "campaigns/process_simulation_v1.json",
+  "parent_config_sha256": "bce4ac6f364c527e70d83596ad3aa530476045568d3b96373d8097d68549e4e6",
+  "parameter_artifact": {
+    "path": "results/author_panel_20/process_simulation_v1/frozen_parameters.json",
+    "sha256": "d3ec77055035f0b21678acd626a575357dcae97e842dd60c526f9dd5274009e7",
+    "rule": "identical to v1; the runner must refuse to run if the hash differs"
+  },
+  "output_dir": "results/author_panel_20/process_simulation_v2_extended",
+  "pre_registration": {
+    "status": "frozen_before_simulation",
+    "freeze_instruction": "Review, set status to frozen_before_simulation, record this file's sha256 in the manifest and commit before the inferential run. The exploratory run of 17 Sep 2026 (claude/extended-dwell-sweep-2026-09-17.md) informed these predictions and is superseded by this run.",
+    "claim": "Level versus shape: a two-mode contrast of dialogue size persisting for a few hundred marks can reproduce the observed level of f3 overdispersion; no single run length reproduces its growth across chunk sizes.",
+    "primary_feature": "f3",
+    "observed_targets": {
+      "phi": {
+        "1000": 1.5118478780851468,
+        "2000": 2.2402522241351823,
+        "4000": 3.5552584205001576
+      },
+      "phi_ci": {
+        "1000": [
+          1.206243,
+          1.886006
+        ],
+        "2000": [
+          1.711894,
+          2.898069
+        ],
+        "4000": [
+          2.649656,
+          4.718124
+        ]
+      },
+      "fixed_intercept_rho": 0.0006292088575407687,
+      "growth_ratio_4000_over_2000": 1.5869
+    },
+    "predictions": {
+      "P1_cap": {
+        "statement": "The pure-mode cap on excess divergence, computed analytically from the fitted parameters (mode share-weighted sum over rows of pi_s(i) KL(T_s(i,.) || T_pool(i,.))), exceeds the observed delta of 0.028 nats in every fold.",
+        "decision": "holds if min over folds > 0.028",
+        "exploratory_value": "0.140-0.155 by fold, mean 0.149"
+      },
+      "P2_level": {
+        "statement": "The fixed-intercept rho of the simulated two-state process at contrast 1.0 crosses the observed 0.000629 at a mean run length between 150 and 400 marks (dwell multiplier between 20 and 52).",
+        "decision": "holds if the seed-averaged rho curve, linearly interpolated in dwell_scale, crosses 0.000629 within [20, 52]; the crossing multiplier and its seed range are the reported scale estimate",
+        "exploratory_value": "crossing near multiplier 32 (mean run ~244 marks; rho 0.00065)"
+      },
+      "P3_shape": {
+        "statement": "At the crossing multiplier, the simulated phi(n) curve is flatter than observed: phi(1000) exceeds the observed 1.51 and phi(4000) falls short of the observed 3.56, and the growth ratio phi(4000)/phi(2000) is below the observed 1.59.",
+        "decision": "holds if, at the crossing cell, simulated phi(1000) > 1.51, simulated phi(4000) < 3.56, and growth ratio < 1.59 with all three seed-level values on the same side",
+        "reading_if_holds": "variation at more than one scale (scene plus a slower book-scale component), consistent with the same-book/different-book divergence split",
+        "reading_if_fails": "a single scene-scale two-mode process is sufficient for both level and shape; the book-scale component is not needed"
+      },
+      "P4_no_single_match": {
+        "statement": "No dwell multiplier in the grid places all three simulated phi(n) inside the observed author-bootstrap intervals simultaneously.",
+        "decision": "holds if for every multiplier at least one of the three seed-averaged phi values lies outside its observed interval"
+      }
+    },
+    "unexcluded_alternatives": [
+      "a distribution of run lengths (mixture of scales) rather than a single multiplier",
+      "a slowly varying outer state at book scale",
+      "reference-profile estimation error interacting with long runs",
+      "genre, chapter structure, editorial house style"
+    ]
+  },
+  "simulation": {
+    "phase_name": "extended_sweep",
+    "model": "two_state_hsmm",
+    "reference": "estimated",
+    "contrast": 1.0,
+    "dwell_scales": [
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      48,
+      64,
+      96
+    ],
+    "seeds": [
+      20260918,
+      20260919,
+      20260920
+    ],
+    "chunk_sizes": [
+      1000,
+      2000,
+      4000
+    ],
+    "smoothing_eps": 0.5,
+    "replicates_per_cell_per_seed": 250,
+    "sampling_frame": "identical to v1: each simulated observation samples one entry uniformly from the pooled human book-by-chunk frame at that chunk size, generates through the selected chunk position, and scores that chunk against a two-synthetic-book estimated reference",
+    "folds": "the five v1 author folds with the v1 fitted parameters; every cell is run in every fold and pooled exactly as v1 pools",
+    "reference_length_cap": null
+  },
+  "estimands": {
+    "phi_n": "pooled-chunk mean G divided by 90, per (dwell_scale, seed, chunk_size); seed-averaged with seed range",
+    "fixed_intercept_rho": "least-squares slope of phi(n)-1 on n with intercept fixed at one, per (dwell_scale, seed); seed-averaged",
+    "crossing_multiplier": "dwell_scale at which the seed-averaged rho equals the observed 0.000629, by linear interpolation between adjacent grid points; reported with the range across seeds",
+    "crossing_run_length": "crossing_multiplier times the v1 fitted mean dwell length pooled over both states (7.58 marks, fold range 7.32-7.87)",
+    "phi_at_crossing": "the 'crossing cell' of P3 is the seed-averaged crossing_multiplier, which generally falls between grid points: phi(n) there is linearly interpolated in dwell_scale between the adjacent grid points, exactly as rho is, for the seed-averaged curve and for each seed's curve evaluated at that same multiplier (the three 'seed-level values'); the growth ratio is formed from the interpolated phi",
+    "growth_ratio": "phi(4000)/phi(2000) per (dwell_scale, seed); seed-averaged rows use the seed-averaged phi",
+    "phi_rmse": "root mean squared difference between simulated and observed phi over the three chunk sizes, per (dwell_scale, seed)",
+    "cap": "per fold, sum over states of (state mark share) times sum over rows of pi_s(i) KL(T_s(i,.) || T_pool(i,.)), for f3; and share-weighted KL(pi_s || pi_pool) for f1; computed from the frozen parameter artifact, no simulation"
+  },
+  "outputs": {
+    "extended_sweep_observations.csv": "one row per simulated chunk: dwell_scale, seed, fold, author, target_book, chunk_size, chunk_index, G, excess_delta",
+    "extended_sweep_summary.csv": "one row per (dwell_scale, seed, chunk_size): n_observations, mean_G, phi, phi_ci_low, phi_ci_high (chunk-level percentile bootstrap, 2000 draws)",
+    "extended_sweep_rho.csv": "one row per (dwell_scale, seed): fixed_intercept_rho, growth_ratio, phi_rmse; plus seed-averaged rows",
+    "extended_sweep_crossing.csv": "crossing_multiplier and crossing_run_length per seed and seed-averaged",
+    "cap.csv": "per fold and mean: cap_f1, cap_f3, ratio to observed delta",
+    "predictions_check.json": "verdict on P1-P4 with the numbers that decided each",
+    "manifest.json": "config sha256, parent config sha256, parameter artifact sha256, cache sha256, seeds, environment packages, git commit and dirty flag, output sha256 for every file above"
+  },
+  "figures": {
+    "dir": "paper/figures/process_simulation_v2_extended",
+    "extended_phi_curves.pdf": "phi(n) for each dwell_scale (seed-averaged, seed range as band) with the observed curve and its intervals",
+    "extended_rho_vs_dwell.pdf": "seed-averaged rho against mean run length in marks, observed rho as a horizontal line, crossing marked",
+    "figure_manifest.json": "as in reference_design: results-manifest sha256, plotter sha256, figure sha256s"
+  },
+  "tests": {
+    "file": "tests/test_process_simulation_v2_extended.py",
+    "required": [
+      "runner refuses to start if parameter_artifact sha256 differs from the frozen artifact",
+      "runner refuses to start unless pre_registration.status == frozen_before_simulation, unless an explicit --engineering-smoke flag is given, in which case the manifest records engineering_smoke=true",
+      "at dwell_scale 1.0 (add temporarily in a smoke run) phi reproduces the v1 fitted point 0.756/0.880/1.016 within simulation noise",
+      "crossing interpolation returns the exact grid point when rho equals the target there, and None when the curve never crosses",
+      "cap computation on a synthetic two-state parameter set with identical modes returns 0, and with disjoint modes returns the analytic value",
+      "every output listed in the config is written and hashed into the manifest"
+    ]
+  },
+  "verifier": "add verify_process_simulation_v2_extended to tools/verify_reproducibility.py mirroring verify_reference_design: config hash, parent config hash, parameter artifact hash, cache hash, output hashes, figure manifest linkage, plotter hash, PDF hashes, paper inclusion of extended_rho_vs_dwell",
+  "paper": {
+    "replaces": "the exploratory paragraph and its placeholder in the subsection 'Where the heterogeneity must live' (sec:simulation)",
+    "adds": "one table (dwell multiplier, mean run length, phi(1000/2000/4000), rho, growth ratio) at the grid points around the crossing, and the crossing estimate with its seed range as a number of record",
+    "analysis_plan_note": "one clause in the Analysis plan acknowledging this as a test pre-specified outside the declared grid, alongside the reference-design test"
+  }
+}

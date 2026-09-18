@@ -28,6 +28,13 @@ INFERENCE_RESULTS = ROOT / "results" / "author_panel_20" / "inference_v2"
 PROCESS_CONFIG = ROOT / "campaigns" / "process_simulation_v1.json"
 PROCESS_RESULTS = ROOT / "results" / "author_panel_20" / "process_simulation_v1"
 FULL_GRID_RESULTS = ROOT / "results" / "author_panel_20" / "full_grid"
+PROCESS_V2_CONFIG = ROOT / "campaigns" / "process_simulation_v2_extended_sweep.json"
+PROCESS_V2_RESULTS = (
+    ROOT / "results" / "author_panel_20" / "process_simulation_v2_extended"
+)
+PROCESS_V2_FIGURES = ROOT / "paper" / "figures" / "process_simulation_v2_extended"
+PROCESS_V2_PLOTTER = ROOT / "tools" / "plot_process_simulation_v2_extended.py"
+PROCESS_V2_RUNNER = ROOT / "run_process_simulation_v2_extended.py"
 FROZEN_RESULTS = ROOT / "results" / "frozen"
 GENERATION_CONFIGS = (
     ROOT / "campaigns" / "generation_campaign_new10_flash.json",
@@ -411,6 +418,112 @@ def compare_csv_directories(checks: Checks, canonical: Path, candidate: Path) ->
         checks.same_hash(other, sha256(source), f"rerun comparison {source.name}")
 
 
+def verify_process_simulation_v2_extended(checks: Checks) -> list[Path]:
+    """Verify the extended dwell sweep once its canonical run exists.
+
+    Like the reference-design test it lives outside the declared grid: the
+    predictions were frozen in the config before the run, the v1 parameter
+    artifact is reused by hash, and the manifest ties config, parent config,
+    artifact, cache, outputs and figures together.
+    """
+    manifest_path = PROCESS_V2_RESULTS / "manifest.json"
+    if not manifest_path.exists():
+        return []
+
+    config = read_json(PROCESS_V2_CONFIG)
+    manifest = read_json(manifest_path)
+    checks.same_hash(
+        PROCESS_V2_CONFIG,
+        manifest["analysis_config_sha256"],
+        "extended-sweep config",
+    )
+    checks.require(
+        config["pre_registration"]["status"] == "frozen_before_simulation"
+        and manifest["pre_registration_status"] == "frozen_before_simulation",
+        "extended-sweep config does not declare frozen predictions",
+    )
+    checks.require(
+        manifest["engineering_smoke"] is False,
+        "canonical extended-sweep outputs come from an engineering-smoke run",
+    )
+    checks.require(
+        manifest["parent_config_sha256"] == config["parent_config_sha256"],
+        "extended-sweep manifest and config disagree on the parent config",
+    )
+    checks.same_hash(
+        resolve(config["parent_config"]),
+        config["parent_config_sha256"],
+        "extended-sweep parent (v1) config",
+    )
+    checks.require(
+        manifest["parameter_artifact"]
+        == {key: config["parameter_artifact"][key] for key in ("path", "sha256")},
+        "extended-sweep manifest and config disagree on the parameter artifact",
+    )
+    checks.same_hash(
+        resolve(config["parameter_artifact"]["path"]),
+        config["parameter_artifact"]["sha256"],
+        "extended-sweep parameter artifact",
+    )
+    checks.same_hash(
+        resolve(manifest["cache"]), manifest["cache_sha256"], "extended-sweep cache"
+    )
+    for relative, expected in manifest["source_sha256"].items():
+        checks.same_hash(ROOT / relative, expected, f"extended-sweep source {relative}")
+    checks.require(
+        set(manifest["output_sha256"]) | {"manifest.json"} == set(config["outputs"]),
+        "extended-sweep manifest does not cover the declared outputs",
+    )
+    for filename, expected in manifest["output_sha256"].items():
+        checks.same_hash(
+            PROCESS_V2_RESULTS / filename,
+            expected,
+            f"extended-sweep output {filename}",
+        )
+    predictions_path = PROCESS_V2_RESULTS / "predictions_check.json"
+    if predictions_path.is_file():
+        checks.require(
+            set(config["pre_registration"]["predictions"])
+            <= set(read_json(predictions_path)),
+            "extended-sweep predictions_check.json lacks a pre-declared verdict",
+        )
+
+    figure_manifest_path = PROCESS_V2_FIGURES / "figure_manifest.json"
+    tracked: list[Path] = [
+        PROCESS_V2_CONFIG,
+        PROCESS_V2_RUNNER,
+        PROCESS_V2_PLOTTER,
+        manifest_path,
+        *(PROCESS_V2_RESULTS / name for name in manifest["output_sha256"]),
+    ]
+    checks.require(
+        figure_manifest_path.is_file(),
+        "extended-sweep figures have not been plotted from the canonical run",
+    )
+    if figure_manifest_path.is_file():
+        figure_manifest = read_json(figure_manifest_path)
+        checks.same_hash(
+            manifest_path,
+            figure_manifest["results_manifest_sha256"],
+            "extended-sweep figures were plotted from the canonical manifest",
+        )
+        checks.same_hash(
+            PROCESS_V2_PLOTTER,
+            figure_manifest["plotter_sha256"],
+            "extended-sweep plotter",
+        )
+        for filename, expected in figure_manifest["figures_sha256"].items():
+            path = PROCESS_V2_FIGURES / filename
+            if path.suffix == ".pdf":
+                checks.same_hash(path, expected, f"extended-sweep figure {filename}")
+            else:
+                checks.require(path.is_file(), f"extended-sweep preview missing: {filename}")
+        tracked.extend(
+            [figure_manifest_path, *(PROCESS_V2_FIGURES / n for n in figure_manifest["figures_sha256"])]
+        )
+    return tracked
+
+
 def verify_paper(checks: Checks) -> list[Path]:
     main = ROOT / "paper" / "main.tex"
     checks.require(main.is_file(), "tracked v2 paper/main.tex is missing")
@@ -437,6 +550,11 @@ def verify_paper(checks: Checks) -> list[Path]:
         checks.require(
             f"figures/inference_v2/{filename}" in content,
             f"paper does not include v2 figure {filename}",
+        )
+    if (PROCESS_V2_RESULTS / "manifest.json").exists():
+        checks.require(
+            "figures/process_simulation_v2_extended/extended_rho_vs_dwell" in content,
+            "paper does not include the extended-sweep rho figure",
         )
     return [main]
 
@@ -466,6 +584,7 @@ def main() -> None:
         resolve(args.candidate_inference) if args.candidate_inference else None,
     )
     tracked.extend(verify_process_simulation(checks))
+    tracked.extend(verify_process_simulation_v2_extended(checks))
     tracked.extend(verify_paper(checks))
     tracked.extend(
         [

@@ -8,6 +8,7 @@ REPRO := results/repro_check
 
 .PHONY: help install check-environment assemble20 cache-frozen cache20 \
 	full-grid inference-v2 process-validation process-fit process-simulation process-figures \
+	process-extended-smoke process-extended process-extended-figures \
 	test verify-assets figures tables paper verify reproduce-no-api
 
 help:
@@ -21,6 +22,9 @@ help:
 	@echo "  process-fit         Fit the lockable process-parameter artifact"
 	@echo "  process-simulation  Run the pre-registered process sweep"
 	@echo "  process-figures     Plot completed process-simulation outputs"
+	@echo "  process-extended-smoke  Multiplier 1.0 must reproduce the v1 fitted point (0.756/0.880/1.016)"
+	@echo "  process-extended        Run the frozen extended dwell sweep (v1 parameters, no refit)"
+	@echo "  process-extended-figures Plot completed extended-sweep outputs"
 	@echo "  test              Run every discovered unit/integration test"
 	@echo "  verify            Check canonical artifacts and build manuscript"
 	@echo "  reproduce-no-api  Rerun frozen/grid/inference into ignored paths"
@@ -86,6 +90,21 @@ process-simulation:
 
 process-figures:
 	$(PYTHON) tools/plot_process_simulation.py
+
+WORKERS ?= 4
+
+process-extended-smoke:
+	test -f $(PANEL_CACHE)
+	$(PYTHON) run_process_simulation_v2_extended.py --engineering-smoke \
+		--dwell-scales 1 --replicates 400 --workers 3 \
+		--output-dir $(REPRO)/process_simulation_v2_smoke
+
+process-extended:
+	test -f $(PANEL_CACHE)
+	$(PYTHON) run_process_simulation_v2_extended.py --workers $(WORKERS)
+
+process-extended-figures:
+	$(PYTHON) tools/plot_process_simulation_v2_extended.py
 
 test:
 	$(PYTHON) -m unittest discover -s tests -p 'test_*.py' -v
