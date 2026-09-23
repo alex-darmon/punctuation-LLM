@@ -1,0 +1,296 @@
+{
+  "generated_utc": "2026-09-19T07:25:10.987641+00:00",
+  "stage": "full",
+  "campaign_status": "frozen_before_generation",
+  "analysis_config": "campaigns/positional_mechanism_v1.json",
+  "analysis_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+  "inference_config": "campaigns/inference_v2.json",
+  "inference_config_sha256": "5eeb33080d51c4805b99688ccb2f1eb5db455b15b16c3f5ca4ef27779083dd69",
+  "authors_config": "campaigns/author_panel_20.json",
+  "authors_config_sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+  "pinned_cache": "cache/author_panel_20_with_runs.json",
+  "pinned_cache_sha256": "b5f9d8192d77848c141e2b62b8254b4b45a460f7900cf8ef4e2f5536af87cf86",
+  "pinned_context_drift_sha256": "5bf75644026669e03890f053c6b7d0d3d3b2aa45c1eb8f17cfbeebcd0e7339a8",
+  "pinned_split_assignments_sha256": "91907e65f33bddef49ddb8e40d070475316a6f5e0f8770da15e470a142e92e2e",
+  "new_cache": "cache/positional_mechanism_v1.json",
+  "new_cache_sha256": "565869c0c06accffadca57d3039f328c6c8faffdb5aeeeaf3c7264f1f1904a1c",
+  "generation_dir": "generated_texts_positional_mechanism_v1",
+  "generation_metadata": {
+    "generated_utc": "2026-09-17T17:02:05.991918+00:00",
+    "campaign_name": "positional_mechanism_v1",
+    "campaign_status": "frozen_before_generation",
+    "smoke": false,
+    "campaign_config_path": "campaigns/positional_mechanism_v1.json",
+    "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+    "generator_script_sha256": "1a0c7181f428260eccfa4040c9fc508fef959275d301bebb60115e4bfa816450",
+    "legacy_prompt_protocol_sha256": "25af2b7111ace93cd9976b3d30145f76620e3e2008e8689f68ab44ca2217e794",
+    "prompt_protocol_sha256": "e9bd116923eb6b3dd883e93f6e61d60dfe2fae29585893a4488533a9f5d86055",
+    "plan_sha256": "0c58c8f2353c6d80f2b6ade0a932a288ecc031daef45f6405506b1bf282329ea",
+    "python": "3.10.16",
+    "git_commit": "d027ec0ab3ded232904e7f28222ee2d7c0d79719",
+    "auth_mode": "adc",
+    "auth_label": "adc(project=project-a1ea5f06-866e-498b-9e6, location=us-central1)",
+    "models": {
+      "flash": "gemini-2.5-flash",
+      "pro": "gemini-2.5-pro"
+    },
+    "conditions": {
+      "c1": {
+        "label": "replicate",
+        "prompt_policy": "first_call_only",
+        "runs_per_author": 0,
+        "purpose": "not run (decision of 17 Sep 2026: the existing 600 runs are the C1 arm and are not regenerated); kept at zero runs so the batch check can be switched on by editing this number"
+      },
+      "c2": {
+        "label": "prompt_repeated",
+        "prompt_policy": "every_call",
+        "runs_per_author": {
+          "flash": 20,
+          "pro": 10
+        },
+        "purpose": "the excerpt, author name and style instruction are repeated in every continuation call ahead of the same 500-word tail; 10 runs per author and model, matching the existing Pro arm"
+      }
+    },
+    "temperature": 1.0,
+    "max_output_tokens": 8192,
+    "max_rounds": 40,
+    "context_tail_words": 500,
+    "excerpt_words": 1500,
+    "dash_policy": "replace_with_comma",
+    "parallel": 8,
+    "n_jobs": 600,
+    "invocations": [
+      {
+        "generated_utc": "2026-09-18T06:03:33.914331+00:00",
+        "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+        "auth_label": "adc(project=project-a1ea5f06-866e-498b-9e6, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-18T06:35:48.013280+00:00",
+        "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-18T06:36:39.666394+00:00",
+        "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-18T06:50:23.099562+00:00",
+        "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-18T07:28:29.018090+00:00",
+        "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+        "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-18T21:04:40.630257+00:00",
+        "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+        "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-18T21:24:02.303516+00:00",
+        "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+        "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-18T21:25:33.205621+00:00",
+        "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+        "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      },
+      {
+        "generated_utc": "2026-09-19T06:00:03.752545+00:00",
+        "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+        "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+        "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+        "parallel": 8
+      }
+    ],
+    "resume": true,
+    "superseded_campaign_config_sha256": [
+      "f4f845ca57a975bf55035ca4e4e2f2ab115b35aae03cd8b8e510e25dc9329d00"
+    ]
+  },
+  "generation_metadata_sha256": "7d4ca80fb46f214a2c2cf6f08c96aad27d7bd82b43d3410ea5574f6d1b98ef5a",
+  "bootstrap_iterations": 2000,
+  "confidence_level": 0.95,
+  "seed": 20260917,
+  "deviations": {
+    "declared_runs": {
+      "flash_c1": 0,
+      "flash_c2": 400,
+      "pro_c1": 0,
+      "pro_c2": 200
+    },
+    "realised_runs": {
+      "flash_c2": 400,
+      "pro_c2": 200
+    },
+    "truncated_batch": false,
+    "batch_note": {
+      "recorded_utc": "2026-09-18T04:56:09.540588+00:00",
+      "event": "batch truncated by billing",
+      "detail": "Vertex AI billing on the project was disabled (403 BILLING_DISABLED) after 275 of the declared 400 C2 runs had finished; the eight runs in flight were lost. No further budget was available, so the batch was closed at 275 runs. The decision was taken before any C2 window, contrast or detection result had been computed or inspected; the pregeneration stage (human control and old-arm checks) was the only analysis run before this note.",
+      "declared_runs_per_author_per_model": 10,
+      "realised_runs": {
+        "flash": 131,
+        "pro": 144
+      },
+      "realised_runs_per_author": {
+        "flash": {
+          "agnes_may_fleming": 6,
+          "arthur_conan_doyle": 5,
+          "arthur_scott_bailey": 7,
+          "charles_dickens": 8,
+          "charlotte_bronte": 6,
+          "ethel_m_dell": 4,
+          "harold_l_goodwin": 6,
+          "herbert_george_wells": 5,
+          "jane_austen": 7,
+          "john_c_hutcheson": 5,
+          "joseph_conrad": 8,
+          "kathleen_thompson_norris": 6,
+          "louis_joseph_vance": 9,
+          "luis_senarens": 5,
+          "mark_twain": 8,
+          "mary_shelley": 6,
+          "mildred_wirt": 5,
+          "oscar_wilde": 8,
+          "robert_sidney_bowen": 8,
+          "susan_warner": 9
+        },
+        "pro": {
+          "agnes_may_fleming": 8,
+          "arthur_conan_doyle": 4,
+          "arthur_scott_bailey": 9,
+          "charles_dickens": 7,
+          "charlotte_bronte": 7,
+          "ethel_m_dell": 8,
+          "harold_l_goodwin": 5,
+          "herbert_george_wells": 8,
+          "jane_austen": 8,
+          "john_c_hutcheson": 7,
+          "joseph_conrad": 8,
+          "kathleen_thompson_norris": 9,
+          "louis_joseph_vance": 7,
+          "luis_senarens": 9,
+          "mark_twain": 8,
+          "mary_shelley": 8,
+          "mildred_wirt": 9,
+          "oscar_wilde": 2,
+          "robert_sidney_bowen": 7,
+          "susan_warner": 6
+        }
+      },
+      "consequence": "author-equal estimators weight every author equally regardless of its run count; per-author means for authors with few runs are noisier; the realised arm is close to the 7-runs-per-author C2 arm of the original design",
+      "later_events": [
+        {
+          "recorded_utc": "2026-09-19T06:38:44.369376+00:00",
+          "event": "billing restored; batch completed and extended under the declared amendment",
+          "detail": "Billing was restored on 2026-09-18, after the 'full' analysis stage on the 275-run truncated batch had been computed and seen. The batch was resumed: the declared 10 runs per author and model were completed, and Flash C2 was extended to 20 runs per author under the amendment recorded in campaigns/positional_mechanism_v1.json, so the C2 arm has the run counts of the existing campaigns (Flash 400, Pro 200). Finished runs were never regenerated; interrupted runs continued from their saved call records. The closure described above is superseded: the analysis is rerun on all 600 runs and overwrites the 275-run outputs.",
+          "superseded_campaign_config_sha256": [
+            "f4f845ca57a975bf55035ca4e4e2f2ab115b35aae03cd8b8e510e25dc9329d00"
+          ],
+          "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+          "realised_runs": {
+            "flash": 400,
+            "pro": 200
+          },
+          "runs_per_author": {
+            "flash": 20,
+            "pro": 10
+          },
+          "incomplete_runs": 0,
+          "calls_by_model_version_and_day": {
+            "gemini-2.5-pro": {
+              "2026-09-17": 1210,
+              "2026-09-18": 909
+            },
+            "gemini-2.5-flash": {
+              "2026-09-17": 1644,
+              "2026-09-18": 4992,
+              "2026-09-19": 29
+            }
+          },
+          "model_version_note": "one version string per model across all sittings; the API exposes no finer build identifier in these records",
+          "n_generator_invocations": 9
+        }
+      ]
+    },
+    "batch_note_sha256": "0c9e8ed1c277c5379bcb5250a25143bc75789cc16f219128506bfd2cf96fc067"
+  },
+  "n_rows": {
+    "observations.csv": 13070,
+    "window_summary.csv": 384,
+    "contrasts.csv": 32,
+    "human_control_eligibility.csv": 60,
+    "mark_shares.csv": 108,
+    "mark_share_contrasts.csv": 36,
+    "detection_position.csv": 12,
+    "detection_contrasts.csv": 8,
+    "boundaries.csv": 8784,
+    "boundary_regression.csv": 6,
+    "entropy.csv": 12
+  },
+  "git": {
+    "commit": "65fcb7013a2b1f2343923bd4f4b1d7be0f1a3f97",
+    "branch": "main",
+    "dirty_outside_declared_outputs": true
+  },
+  "environment": {
+    "python": "3.10.16",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "pandas": "2.3.3",
+      "matplotlib": "3.10.8",
+      "spacy": "3.8.11",
+      "en-core-web-sm": "3.8.0"
+    }
+  },
+  "output_files": [
+    "observations.csv",
+    "window_summary.csv",
+    "contrasts.csv",
+    "human_control_eligibility.csv",
+    "mark_shares.csv",
+    "mark_share_contrasts.csv",
+    "detection_position.csv",
+    "detection_contrasts.csv",
+    "boundaries.csv",
+    "boundary_regression.csv",
+    "entropy.csv",
+    "regression_check.json",
+    "predictions_check.json",
+    "manifest.json"
+  ],
+  "output_sha256": {
+    "observations.csv": "59b24f535805aff5dea89c0f5e8adab1ee756c075b8c0e6e6b4121cf26b4f145",
+    "window_summary.csv": "99b3abe24a3cb14add2ace7053bc20cb6287eae2514eadfc264b3d49e1a7fb8b",
+    "contrasts.csv": "c6fee1414547900f2cafc717dcf17f1ccbc4ee9dd30f772bca1ffa4dc39c1d37",
+    "human_control_eligibility.csv": "a6e4fb4f10e96a74d5f4b14143539884285fbb9a690efee75b60a5796b5a4a25",
+    "mark_shares.csv": "503e689f557d678d2336a222eba65d81fb2a05144be9df43f981d70262a3277c",
+    "mark_share_contrasts.csv": "7ed60c130c5d295082bb91869e5727ae61842011ebddacf0ae70d12420401d5a",
+    "detection_position.csv": "2be90f5692f0e1df2368f40f1a6637e4aab50ad2123a48d3d4568f120de586d7",
+    "detection_contrasts.csv": "7b972033e740264fc463cee64c327efb6d0d0a1a1d3e0b6d2bfaf23496ffb12a",
+    "boundaries.csv": "1f176bc4c7f8dd2e62c877a254be4eea3bd8806dadb62b94484e45105d0f8364",
+    "boundary_regression.csv": "df59cd53b18892f46d979eec0ef6763c221123488ed0f389974cd1fd35761959",
+    "entropy.csv": "6b4567832152af8d267213d5b1af85f6ecd3fba9847945eeae52e0a53b577e24",
+    "regression_check.json": "9561ee0c1260c96412f272cae67f73523ba0843793ee1834450cbce8425809c8",
+    "predictions_check.json": "9cc80ed76bac480da97d4325fc4db320268eb7222ca4b7ce3d1a984d7e9f4c01"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-09-09T08:55:20.801903+00:00",
+  "analysis_config": "campaigns/position_matched_detection.json",
+  "analysis_config_sha256": "c7c1240e19532b3b04ebe08053311514554dfdf9d8cfcd417800a6ec730d3eb0",
+  "inference_config": "campaigns/inference_v2.json",
+  "inference_config_sha256": "5eeb33080d51c4805b99688ccb2f1eb5db455b15b16c3f5ca4ef27779083dd69",
+  "authors_config": "campaigns/author_panel_20.json",
+  "authors_config_sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+  "cache": "cache/author_panel_20_with_runs.json",
+  "cache_sha256": "b5f9d8192d77848c141e2b62b8254b4b45a460f7900cf8ef4e2f5536af87cf86",
+  "bootstrap_iterations": 2000,
+  "confidence_level": 0.95,
+  "git": {
+    "commit": "d027ec0ab3ded232904e7f28222ee2d7c0d79719",
+    "branch": "main",
+    "dirty_outside_declared_outputs": true
+  },
+  "environment": {
+    "python": "3.10.16",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "pandas": "2.3.3",
+      "matplotlib": "3.10.8",
+      "spacy": "3.8.11",
+      "en-core-web-sm": "3.8.0"
+    }
+  },
+  "output_files": [
+    "detection_position.csv",
+    "detection_position_folds.csv",
+    "detection_position_contrasts.csv",
+    "attribution_position.csv",
+    "attribution_position_summary.csv",
+    "manifest.json"
+  ],
+  "output_sha256": {
+    "detection_position.csv": "904b64a6b9bf0bf957d44729a2e4f6f0bc5b2e04665b7a641da684444841665b",
+    "detection_position_folds.csv": "ea2552593cc9ebefb42a648aac2a426e7b8bc9f115ebe89a90a432f8f0aedf2a",
+    "detection_position_contrasts.csv": "b2a98e8c93e6cc574fe3f3c6213a214d9dbfcfd118f423945848c3985e3f25f3",
+    "attribution_position.csv": "72deaba9e183b71b9e508110bee76847d026fec06f1c55f245c91587f1a53053",
+    "attribution_position_summary.csv": "663bc0991b8a06e98c70a9d4bcaeb83d906b9db82e5f5f0c8a42a836f7ea3a53"
+  },
+  "design": {
+    "human_chunks": "non-overlapping tiles; observation counts fall with length",
+    "llm_length_grid": "nested prefixes of each 5,000-mark run",
+    "equal_length_contrast": "marks 2001-4000 versus marks 1-2000",
+    "five_window": "consecutive 1,000-mark windows already used for drift"
+  }
+}

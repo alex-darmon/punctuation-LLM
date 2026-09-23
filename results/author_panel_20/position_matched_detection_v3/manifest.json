@@ -1,0 +1,50 @@
+{
+  "generated_utc": "2026-09-21T08:09:11.718075+00:00",
+  "analysis_config": "campaigns/position_matched_detection_v3.json",
+  "analysis_config_sha256": "77a5ee4e85f2397964551817f994314fcc1350ae7f72916c675c966b55f5ddef",
+  "inference_config": "campaigns/inference_v3_repeated_prompt_primary.json",
+  "inference_config_sha256": "66d7c9830313650389f9e0744e6fb42a64aef5cf0d551cf5e706193b2ae33638",
+  "authors_config": "campaigns/author_panel_20.json",
+  "authors_config_sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+  "cache": "cache/author_panel_20_with_runs_v3.json",
+  "cache_sha256": "29c4142fc4e6f9cd6b2e4461f629a4f8ad24af694747e5878e9dbcb83aafaaf2",
+  "bootstrap_iterations": 2000,
+  "confidence_level": 0.95,
+  "git": {
+    "commit": "65fcb7013a2b1f2343923bd4f4b1d7be0f1a3f97",
+    "branch": "main",
+    "dirty_outside_declared_outputs": true
+  },
+  "environment": {
+    "python": "3.10.16",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "pandas": "2.3.3",
+      "matplotlib": "3.10.8",
+      "spacy": "3.8.11",
+      "en-core-web-sm": "3.8.0"
+    }
+  },
+  "output_files": [
+    "detection_position.csv",
+    "detection_position_folds.csv",
+    "detection_position_contrasts.csv",
+    "attribution_position.csv",
+    "attribution_position_summary.csv",
+    "manifest.json"
+  ],
+  "output_sha256": {
+    "detection_position.csv": "e1e7a5c8d98eb2efbf170ed1d70b6a73be1bc948d3f51d27cf8c308d5a83d7dc",
+    "detection_position_folds.csv": "27b41583e99835a16ddf3b827b45790b6d9c351053e24bcad6a42b8991d659eb",
+    "detection_position_contrasts.csv": "56cc81232a68481638648bd01d2f81981f7d9a58459eca1e6f3d0dd06f14d84f",
+    "attribution_position.csv": "e02db41ca72be1ffd65f80c9edda43ebbca35cffd1995dae65b0fd8783a5a9c5",
+    "attribution_position_summary.csv": "dc431481f6228dd71a4458c1dca15adad2ff84366c40020d615096d263922331"
+  },
+  "design": {
+    "human_chunks": "non-overlapping tiles; observation counts fall with length",
+    "llm_length_grid": "nested prefixes of each 5,000-mark run",
+    "equal_length_contrast": "marks 2001-4000 versus marks 1-2000",
+    "five_window": "consecutive 1,000-mark windows already used for drift"
+  }
+}

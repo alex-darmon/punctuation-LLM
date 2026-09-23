@@ -1,0 +1,79 @@
+{
+  "generated_utc": "2026-09-18T05:52:51.951242+00:00",
+  "analysis_config": "campaigns/process_simulation_v2_extended_sweep.json",
+  "analysis_config_sha256": "f96855bbfb8788e26c50804dd27b34deb024986d431dfdbe1fb01f3a7ef591c3",
+  "parent_config": "campaigns/process_simulation_v1.json",
+  "parent_config_sha256": "bce4ac6f364c527e70d83596ad3aa530476045568d3b96373d8097d68549e4e6",
+  "parameter_artifact": {
+    "path": "results/author_panel_20/process_simulation_v1/frozen_parameters.json",
+    "sha256": "d3ec77055035f0b21678acd626a575357dcae97e842dd60c526f9dd5274009e7"
+  },
+  "authors_config": "campaigns/author_panel_20.json",
+  "authors_config_sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+  "cache": "cache/author_panel_20_with_runs.json",
+  "cache_sha256": "b5f9d8192d77848c141e2b62b8254b4b45a460f7900cf8ef4e2f5536af87cf86",
+  "git": {
+    "commit": "65fcb7013a2b1f2343923bd4f4b1d7be0f1a3f97",
+    "branch": "main",
+    "dirty": true
+  },
+  "environment": {
+    "python": "3.10.16",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "spacy": "3.8.11"
+    }
+  },
+  "engineering_smoke": false,
+  "pre_registration_status": "frozen_before_simulation",
+  "effective_settings": {
+    "phase": "extended_sweep",
+    "contrast": 1.0,
+    "dwell_scales": [
+      8.0,
+      12.0,
+      16.0,
+      20.0,
+      24.0,
+      28.0,
+      32.0,
+      36.0,
+      40.0,
+      48.0,
+      64.0,
+      96.0
+    ],
+    "seeds": [
+      20260918,
+      20260919,
+      20260920
+    ],
+    "replicates_per_cell_per_seed": 250,
+    "reference_length_cap": null,
+    "chunk_bootstrap_draws": 2000,
+    "pooled_mean_dwell_marks": {
+      "mean": 7.582306381094628,
+      "fold_min": 7.319738833398192,
+      "fold_max": 7.871757850770897
+    }
+  },
+  "source_sha256": {
+    "run_process_simulation.py": "7d5461e998019c078b10227e79134989480dd14d5e540d02d590d49d275dace8",
+    "punctlib/corpus.py": "4cf5fc1a523e4e90e27c08e620bd516ddf304549c18fff4a1b321ed1ad5773ee",
+    "punctlib/features.py": "464ca1286a6b56d09b9451f896b8eb15850540a6b7845c6485da33f1e98829ff",
+    "punctlib/simulation.py": "fdeaf870dbb2b3e8f17511071b39afa3270c6834146429914a46086946e7e68e",
+    "punctlib/stats.py": "8a7c6b9f4f2f7c46dcea422898e402967908357a58c6ff0c4fdc281ff0ff3e40",
+    "punctlib/text.py": "27bcc5ff8a6ff85c2cc5826c737d729d33266a2629d8a314c7e672cc4c6f936d",
+    "punctlib/vendored.py": "63ef6eb4c65d6edbbb6c4976fe339c002ad7d135ccd33dafdedce11e082f1384",
+    "run_process_simulation_v2_extended.py": "9f01c50ad7ef51b40f455cf4b3aa33285e9486e5320b659aedbab6a57bceb191"
+  },
+  "output_sha256": {
+    "extended_sweep_observations.csv": "f12d776aa3a8ec09ddd303490c680950bbe57861dbee193e1abfec70db6771de",
+    "extended_sweep_summary.csv": "9c78672fd976f4c7e7ebc6ada801affd140e1fd96369f72b60603b4b04bd47df",
+    "extended_sweep_rho.csv": "46a28a837ae1ddb36ffa6670157d1afbfaec332b4f9498aacb5071344ffb6171",
+    "extended_sweep_crossing.csv": "6d46c1bd5c0690788d27edc7dbdd5062f88be10165b7fa588697a4bc0e4b8a27",
+    "cap.csv": "d21cbca054fd725e960aad5c3e744728eba2d00d5b18ed280ee8c3e800ce7038",
+    "predictions_check.json": "32c263e8ce624ecfaf0f8c41b14c28262b22dce8a4be97efba6acc91f82897b7"
+  }
+}

@@ -1,0 +1,13 @@
+model,arm,feature,prefix_length,n_runs,entropy_nats,most_predicted_author,most_predicted_share
+flash,old,f3,1000,400,2.0910163075112034,herbert_george_wells,0.24
+flash,old,f3,2000,400,1.756663978749485,herbert_george_wells,0.37
+flash,old,f3,4000,400,1.3696384549883924,herbert_george_wells,0.4775
+pro,old,f3,1000,200,1.8103337285723493,herbert_george_wells,0.425
+pro,old,f3,2000,200,1.2698259538441878,herbert_george_wells,0.575
+pro,old,f3,4000,200,1.1481330029496453,herbert_george_wells,0.58
+flash,c2,f3,1000,400,2.103723133165101,charles_dickens,0.28
+flash,c2,f3,2000,400,2.0187758362622783,charles_dickens,0.26
+flash,c2,f3,4000,400,1.92046298223065,charles_dickens,0.2375
+pro,c2,f3,1000,200,2.360536071082278,herbert_george_wells,0.22
+pro,c2,f3,2000,200,2.2229917374236154,herbert_george_wells,0.22
+pro,c2,f3,4000,200,2.005338798071147,herbert_george_wells,0.325

@@ -1,0 +1,46 @@
+{
+  "generated_utc": "2026-09-17T13:50:36.643498+00:00",
+  "analysis_config": "campaigns/reference_design_test.json",
+  "analysis_config_sha256": "c0ab5983d8f7e348a1074e494c65c04afb286bde795e8c8f49ed57534f24ac6a",
+  "authors_config": "campaigns/author_panel_20.json",
+  "authors_config_sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+  "cache": "cache/author_panel_20_sequences.json",
+  "cache_sha256": "a6b461b66d55aa0cd7eb033bf7160df573d0259d2d462f8ada99c634b5e39fc1",
+  "bootstrap_iterations": 2000,
+  "random_window_draws": 20,
+  "confidence_level": 0.95,
+  "seed": 20260917,
+  "primary_only": false,
+  "git": {
+    "commit": null,
+    "branch": null,
+    "dirty_outside_declared_outputs": null
+  },
+  "environment": {
+    "packages": {
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.2",
+      "matplotlib": "3.10.9",
+      "spacy": null,
+      "en-core-web-sm": null
+    }
+  },
+  "output_files": [
+    "design_observations.csv",
+    "design_summary.csv",
+    "design_contrasts.csv",
+    "design_cross_contrasts.csv",
+    "reference_audit.csv",
+    "predictions_check.json",
+    "manifest.json"
+  ],
+  "output_sha256": {
+    "design_observations.csv": "36191db9161b7d6504a1c711f3d1edecee213b47e801db65449d221aba94a2a5",
+    "design_summary.csv": "4c6dd6c2e336ecdd319ab2bd7dd3c31363c241c21c14f7bf972c6c6ec3a07b4b",
+    "design_contrasts.csv": "12c3c5a893c9950538d99208890a43ceebfc41ac937133a05a7f4813f697888e",
+    "design_cross_contrasts.csv": "592842f500130f7ea41219ccd07937b66ec19da2248a0a743780838059415234",
+    "reference_audit.csv": "b038110079a901534b4c28ae536ab9d6a6d40314553d7e33e3314a4b877ba883",
+    "predictions_check.json": "817e227cdd5db8f1b63114c64f734f5d1d401e59804056277e0b88985772325c"
+  }
+}

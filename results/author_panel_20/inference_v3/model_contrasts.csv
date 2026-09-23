@@ -1,0 +1,2 @@
+left_condition,right_condition,feature,chunk_size,n_authors,mean_difference,ci_low,ci_high,paired_wilcoxon_p
+flash,pro,f3,2000,20,-0.025000000000000005,-0.1650624999999999,0.125,0.6098450595591846

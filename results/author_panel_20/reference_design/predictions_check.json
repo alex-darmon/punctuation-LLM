@@ -1,0 +1,130 @@
+{
+  "P1_direction": {
+    "holds": true,
+    "accuracy_difference": 0.08150139597833682,
+    "ci": [
+      0.053827234580581036,
+      0.11205050481355036
+    ],
+    "wilcoxon_p": 3.814697265625e-05,
+    "kl_true_difference": -0.01581671691368713,
+    "margin_difference": 0.011836734327419513,
+    "n_authors": 18
+  },
+  "P2_ceiling_signature": {
+    "holds": false,
+    "gap_by_budget": {
+      "500": 0.054925301172623994,
+      "1000": 0.07875168307713012,
+      "2000": 0.08150139597833682,
+      "4000": 0.048127353163756305
+    },
+    "growth": {
+      "contrast": "gap growth",
+      "left": "gap N=2000",
+      "right": "gap N=500",
+      "rival_mode": "symmetric",
+      "window_policy": "random",
+      "feature": "f3",
+      "test_chunk_size": 2000,
+      "n_authors": 18,
+      "gap_low": 0.061645396364643945,
+      "gap_high": 0.08150139597833682,
+      "accuracy_difference": 0.01985599961369288,
+      "accuracy_ci_low": -0.015611990134497301,
+      "accuracy_ci_high": 0.05587404605176784,
+      "accuracy_wilcoxon_p": 0.34654998779296875
+    }
+  },
+  "P3_magnitude": {
+    "a_two_books_1000_vs_one_book_2000": {
+      "holds": true,
+      "accuracy_difference": 0.019125721697802172,
+      "ci": [
+        -0.021346369587600066,
+        0.0582555685109391
+      ],
+      "n_authors": 18
+    },
+    "b_two_books_2000_vs_one_book_4000": {
+      "holds": false,
+      "accuracy_difference": 0.032873771595341966,
+      "ci": [
+        -0.02637051712798761,
+        0.0871981147273604
+      ],
+      "n_authors": 17
+    },
+    "c_rank_agreement": {
+      "holds": true,
+      "spearman": 0.9761904761904763,
+      "n_cells": 8,
+      "cells": [
+        {
+          "design": "one_book",
+          "budget_n": 500,
+          "predicted_n_eff": 613.8,
+          "macro_accuracy": 0.4621,
+          "macro_kl_true": 0.1366,
+          "n_authors": 20
+        },
+        {
+          "design": "two_books",
+          "budget_n": 500,
+          "predicted_n_eff": 760.7,
+          "macro_accuracy": 0.517,
+          "macro_kl_true": 0.1187,
+          "n_authors": 20
+        },
+        {
+          "design": "one_book",
+          "budget_n": 1000,
+          "predicted_n_eff": 885.6,
+          "macro_accuracy": 0.5304,
+          "macro_kl_true": 0.126,
+          "n_authors": 20
+        },
+        {
+          "design": "one_book",
+          "budget_n": 2000,
+          "predicted_n_eff": 1137.4,
+          "macro_accuracy": 0.6093,
+          "macro_kl_true": 0.1008,
+          "n_authors": 18
+        },
+        {
+          "design": "two_books",
+          "budget_n": 1000,
+          "predicted_n_eff": 1227.6,
+          "macro_accuracy": 0.6092,
+          "macro_kl_true": 0.104,
+          "n_authors": 20
+        },
+        {
+          "design": "one_book",
+          "budget_n": 4000,
+          "predicted_n_eff": 1325.9,
+          "macro_accuracy": 0.6685,
+          "macro_kl_true": 0.0802,
+          "n_authors": 17
+        },
+        {
+          "design": "two_books",
+          "budget_n": 2000,
+          "predicted_n_eff": 1771.2,
+          "macro_accuracy": 0.6908,
+          "macro_kl_true": 0.085,
+          "n_authors": 18
+        },
+        {
+          "design": "two_books",
+          "budget_n": 4000,
+          "predicted_n_eff": 2274.8,
+          "macro_accuracy": 0.7166,
+          "macro_kl_true": 0.0689,
+          "n_authors": 17
+        }
+      ]
+    }
+  }
+}

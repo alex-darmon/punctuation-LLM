@@ -1,0 +1,167 @@
+{
+  "generated_utc": "2026-09-08T20:02:29.649121+00:00",
+  "analysis_config": "campaigns/process_simulation_v1.json",
+  "analysis_config_sha256": "bce4ac6f364c527e70d83596ad3aa530476045568d3b96373d8097d68549e4e6",
+  "git": {
+    "commit": "d027ec0ab3ded232904e7f28222ee2d7c0d79719",
+    "branch": "main",
+    "dirty": true
+  },
+  "inputs": {
+    "authors_config": {
+      "path": "campaigns/author_panel_20.json",
+      "sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58"
+    },
+    "cache": {
+      "path": "cache/author_panel_20_with_runs.json",
+      "sha256": "b5f9d8192d77848c141e2b62b8254b4b45a460f7900cf8ef4e2f5536af87cf86"
+    },
+    "human_text_sha256": {
+      "full_books/jane_austen_full.txt": "6ad61895ee72128838f0305e5e8636a94ca61275687c2f34c2cc2ae25f61afb3",
+      "gutenberg_texts/161.txt": "174ba3f3e2f2a1a291cf8161c55ddbfadb6cc1c62ab29007b64436f7ae9a5036",
+      "gutenberg_texts/1342.txt": "a76e72e3976df9638aff4a6d1a9a213ca599111a359d288e1265a6d6d4ab435d",
+      "full_books/herbert_george_wells_full.txt": "6e55240449e17e60dd20d47c9039ed5ae6d3bc0277fa0c5ab99e5dbcd19a3b64",
+      "gutenberg_texts/35.txt": "507f5cca3fa0b2bac1d7e6daac24852564639d62a8b9247a7f714511a0b8e032",
+      "gutenberg_texts/36.txt": "8417469e3ab664749f7b36ebb85799075818207b0380b54c27d07d592a44117d",
+      "full_books/agnes_may_fleming_full.txt": "2c77c72d1f0674dd060e664e3f0dc206da7306a9e615801ad92ef7bda0f891e2",
+      "gutenberg_texts/7063.txt": "d3c02713fbf559aee966d5cb6bae842f5da2f75613aec5800c46bcf18be245b0",
+      "gutenberg_texts/15317.txt": "d00fa363eb26cf7dad9800cbc0fec07d0177bc69d32a1db8b342b947b7e5b469",
+      "gutenberg_texts/46.txt": "b9aa66fdb6819d47e90322f7aff01e4da31cf935a1bb3e6804a82d84400a575d",
+      "gutenberg_texts/98.txt": "232652bd7cd0d32bad0b6d18000087133bfb8f8252d02094b9baa07b95106370",
+      "gutenberg_texts/1400.txt": "421683845fa9797f8d33b7f5d7fbc6fff588311803914d26264a7250ae14ad6f",
+      "gutenberg_texts/74.txt": "02cf604599664a5fb5853d144b3488ff8df4953bf66f63b1aa8bf948ad07528a",
+      "gutenberg_texts/76.txt": "81264bff9d771e865834252dea48ada86d5d9dfad95786c4a400929c1e1a5186",
+      "gutenberg_texts/86.txt": "6ce0781165b70257a4530f46856057ec689b0ec0980946fede2cd25ec5dca917",
+      "gutenberg_texts/1661.txt": "73147078ee6232c9946b28956d69ac66077a70290cca894f4f750dac32449dc8",
+      "gutenberg_texts/244.txt": "de7d5396e3732f9867f4c9150f64928ee23aad8b69af6f532b67cc29fff2aed5",
+      "gutenberg_texts/2852.txt": "9e3bdffe0cb09b0ea4fe38a1a4903a0b5179ff3b6d7d645cf2a1f8cb01cb077f",
+      "gutenberg_texts/84.txt": "3839fa35c116713f811903545470041a86079268307ae9fd3ed4d04c88788bc0",
+      "gutenberg_texts/18247.txt": "98e938f9b7f16e9e7aa82e0325eabe6cf777436f3a96ef570e6cb53a02ef40e0",
+      "gutenberg_texts/15238.txt": "fdea755804c510120d5896bd464905231bd571288eb365379f5b7ae22014dff9",
+      "gutenberg_texts/1260.txt": "67453a6d7b7ebe4c3f4525bea71e5564ca1562eb4c62c01e8e086d65370627e1",
+      "gutenberg_texts/30486.txt": "99c9ac9a6d9608d8a9bf2c4a3b5f47cb7bd864679fc6d0fe34542496221d1e45",
+      "gutenberg_texts/9182.txt": "a89ca6c4ccdeb01263da50f96f68f28d68663b064f0eae325ea7c4398aa198c8",
+      "gutenberg_texts/174.txt": "cff1585005b24cf871b1aadec2b4413ecc742c8f926c6a39ab76322c2fcf19c0",
+      "gutenberg_texts/773.txt": "5711c777941a5eea3f321dbc07baeec04fd368baf0a84baff3af05efebead7e6",
+      "gutenberg_texts/14522.txt": "e5e1e64fce9bb1c3b089314900d5e51753462154d23c268ce52b670190b07175",
+      "gutenberg_texts/219.txt": "98deb349aafc5d158ea4ea69266834f5744e458231b27bc5c87b6f4fb2e220f0",
+      "gutenberg_texts/5658.txt": "554e1ce7cf66515240b89b389f1b534e38437dffac7d9e2bd9c578a384a6e27f",
+      "gutenberg_texts/2021.txt": "6296e90f4e283ebd3b9559ae2a07adfeb86972aed714176fcf519e0e52e5bb7f",
+      "gutenberg_texts/34592.txt": "6a41e7bedb809260b9599feebd3ef27d5e7e3cc952c2a67bbf3a621348de1c84",
+      "gutenberg_texts/34832.txt": "1a5446a25f8dd25d9886c6dae6d2571180bce98002830efc2e00b692f54c27b5",
+      "gutenberg_texts/35082.txt": "5ceb693534c91519a5c20edcbe77356bea5c07345d72977080eb940717814620",
+      "gutenberg_texts/32440.txt": "b3ccd4d67fb14e94f4a5537d38a37dce98aaf25c604e756aacddb312311bbf6f",
+      "gutenberg_texts/32331.txt": "d88c5508d7e522edd8efe44bcb6b60859ca09a758511d484574f7e483828f028",
+      "gutenberg_texts/32542.txt": "82c50aa47a2c4c9ea958169ca37ec25cb6d446de54adf2cb97ac0c59b5910537",
+      "gutenberg_texts/54629.txt": "0670b4250d9b9888e9c25c72cce1ae0fcc2c33711634a5622e55bb82300bea36",
+      "gutenberg_texts/54648.txt": "087c1d757d525a768f4186a643811b1936f855ed08c78e6cd044d18834092bdb",
+      "gutenberg_texts/55562.txt": "52365d4558ae31e5b892e5d35a3828c38f1284da0c51381cc23c00e050a74089",
+      "gutenberg_texts/21107.txt": "49ff31538612f0f39c11de6474bb356fee986f15ad8863ec2ead79a2b115d4e0",
+      "gutenberg_texts/24267.txt": "14461f35fa3e8ebb9d3f70bbb43075b1e52ad35ad68764ef0c40776579c0e184",
+      "gutenberg_texts/21108.txt": "b0f04e7779fe59accf924ab78a2f34227c4c8b90997280545c19cd89e05fa8c0",
+      "gutenberg_texts/31581.txt": "24061c4802ab6f1a11bd9c4b4e60195ff868a5cb83e7d9b39c10d569d18ab0d1",
+      "gutenberg_texts/31589.txt": "e326d901dc0bb82943279995328221807adbd7408e9302b1b47f89849308b4a9",
+      "gutenberg_texts/32059.txt": "784e0b86df2642fd749e740bf13b1e0dfe42b43eef430582f9ac7df2145a46b5",
+      "gutenberg_texts/3635.txt": "68c71275e39ba0c6281d4ad3747281f54b976d59171e0b27b5d78f70619d3a24",
+      "gutenberg_texts/4787.txt": "cb3852a32eac59207923699282e18315ba4af5cac29523c822863038b038e8a1",
+      "gutenberg_texts/28301.txt": "5136f37fe847603550a6bf03eb0ac91318790dd5b72dea11f364e93a0f0cedda",
+      "gutenberg_texts/9462.txt": "f2f8eb96cf0616ba0e3394ff2324544e7fb52c4c1c9b2fb87c3fc34b6452fd1a",
+      "gutenberg_texts/18656.txt": "a870d1f6240d1b1d213e4c85db4494d90aab9c1feb6f636c02d70ccf055ba34a",
+      "gutenberg_texts/24589.txt": "aec33efc030489594004a18360cc903d92e233a20bb4711ce3a1bcf1534a28df",
+      "gutenberg_texts/8741.txt": "cc9b79cc253defb35a62259441a42242233658b839692132850928448873d08c",
+      "gutenberg_texts/9378.txt": "a2a86a04c6ad0623a7a30cd47233368ba458320516c391c536ede9f8ca2b281a",
+      "gutenberg_texts/9779.txt": "4c7f2dbd76199ef79ee5fa1b09eeb2238b7baf7b881bb93d39a8ae7123f39955",
+      "gutenberg_texts/16918.txt": "a8a56f22756858a029a60efe81536b909e163e19238a71416db7711fb4a9c8e0",
+      "gutenberg_texts/8874.txt": "608589fb6cd818a5a06e503abcd7c71ea18358850bdcb146a656455fbd894dba",
+      "gutenberg_texts/29824.txt": "eb10a777d71175c245504212135d7c978d9bdb2f8b8c55ad87ee5076bd222198",
+      "gutenberg_texts/12360.txt": "57971664e33f3c2a0adfba7240948565645687c0af042131fee73874ea36d619",
+      "gutenberg_texts/13960.txt": "883fea5d7ee42ebd03bd93d122ef1725eced2e77bb101abc94eecaf78a6282e5",
+      "gutenberg_texts/13547.txt": "2191856c024224308ec601d95bbf9d3c721211c186b2969d6b84df9e3c7b70a4"
+    }
+  },
+  "parameter_artifact": {
+    "path": "results/author_panel_20/process_simulation_v1/frozen_parameters.json",
+    "sha256": "d3ec77055035f0b21678acd626a575357dcae97e842dd60c526f9dd5274009e7"
+  },
+  "environment": {
+    "python": "3.10.16",
+    "packages": {
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "spacy": "3.8.11"
+    }
+  },
+  "manual_validation": {
+    "status": "complete",
+    "path": "annotations/dialogue_segmentation_sample_v1.csv",
+    "sha256": "d8086784aaf107f8d22e1b137f303893790cef0bfdcb9503ef209194fcb6a589",
+    "n_sampled": 200,
+    "n_labelled": 200,
+    "n_errors": 6,
+    "balanced_sample_error_rate": 0.03,
+    "state_error_rates": {
+      "narration": 0.03,
+      "dialogue": 0.03
+    },
+    "population_weighted_error_rate": 0.03,
+    "max_balanced_error_rate": 0.1,
+    "max_per_state_error_rate": 0.15,
+    "thresholds_pass": true
+  },
+  "engineering_smoke": false,
+  "pre_registration_status": "frozen_before_simulation",
+  "effective_settings": {
+    "replicates_per_cell": 250,
+    "tail_replicates": 2000,
+    "human_author_bootstrap_iterations": 2000,
+    "reference_length_cap": null,
+    "sampling_frame": "one uniformly sampled entry from the complete pooled human chunk frame, independently at each chunk size",
+    "sampling_frame_counts": {
+      "1000": {
+        "n_chunks": 1003,
+        "n_books": 60
+      },
+      "2000": {
+        "n_chunks": 485,
+        "n_books": 59
+      },
+      "4000": {
+        "n_chunks": 225,
+        "n_books": 56
+      }
+    }
+  },
+  "n_authors": 20,
+  "n_books": 60,
+  "punctuation_vector": [
+    "!",
+    "\"",
+    "(",
+    ")",
+    ",",
+    ".",
+    ":",
+    ";",
+    "?",
+    "^"
+  ],
+  "source_sha256": {
+    "run_process_simulation.py": "7d5461e998019c078b10227e79134989480dd14d5e540d02d590d49d275dace8",
+    "punctlib/corpus.py": "4cf5fc1a523e4e90e27c08e620bd516ddf304549c18fff4a1b321ed1ad5773ee",
+    "punctlib/features.py": "464ca1286a6b56d09b9451f896b8eb15850540a6b7845c6485da33f1e98829ff",
+    "punctlib/simulation.py": "fdeaf870dbb2b3e8f17511071b39afa3270c6834146429914a46086946e7e68e",
+    "punctlib/stats.py": "8a7c6b9f4f2f7c46dcea422898e402967908357a58c6ff0c4fdc281ff0ff3e40",
+    "punctlib/text.py": "27bcc5ff8a6ff85c2cc5826c737d729d33266a2629d8a314c7e672cc4c6f936d",
+    "punctlib/vendored.py": "63ef6eb4c65d6edbbb6c4976fe339c002ad7d135ccd33dafdedce11e082f1384"
+  },
+  "output_sha256": {
+    "segmentation_summary.csv": "b21f170598adb33fb88a441362b81557c460f7dce00a5b568a7f01ecd6c89b69",
+    "fitted_parameter_summary.csv": "d40a06493d003aaf30b3986425d46ea8f93a5845cb7e2b7faf98050c146b80ca",
+    "observations.csv": "a8539cb0faa09c1ba8a74bb21a3996917e397c804ad559291e51d1efe8df6458",
+    "summaries.csv": "9fa7d6383910adbb010344cb9c8952afe35cf126a56857875b67b28f5c2c10c5",
+    "slopes.csv": "8f89f15febc61174dfb6dc610ad2b5c8ab6a8c1be71e19f5b251794949621ad5",
+    "sweep.csv": "60b2473be2f5854397a58b86082cfcb2266beb6539e1b86c2f56857bec012489",
+    "tail_comparison.csv": "bae5783b8569e9c41e80c8b6355495358fa7a86fcf5533c746fe57e3e9d51d0a",
+    "rho_drift.csv": "8a0cd2b130c5016c3311316c2c9d498560f603bcd1c373fc8baaeea332dc70af"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "pinned_rows": 6000,
+  "recomputed_rows": 6000,
+  "compared": 6000,
+  "missing_from_pinned": 0,
+  "mismatches": 0,
+  "max_abs_difference": 0.0,
+  "tolerance": 1e-09,
+  "passed": true,
+  "reused_pinned": false
+}
