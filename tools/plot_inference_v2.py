@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""Generate the five principal displays for the 20-author chapter."""
+"""Generate the principal displays for the 20-author chapter."""
 
 from __future__ import annotations
 
+import argparse
 import csv
+import hashlib
+import importlib.metadata
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 import matplotlib
@@ -17,7 +21,19 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 RESULTS = ROOT / "results" / "author_panel_20" / "inference_v2"
 FIGURES = ROOT / "paper" / "figures" / "inference_v2"
+POSITION_MATCHED = ROOT / "results" / "author_panel_20" / "position_matched_detection"
 COLORS = {"human": "#334155", "flash": "#2563eb", "pro": "#ea580c"}
+# Set by --protocol; the v2 defaults keep the committed v2 figures reproducible.
+PROTOCOL = "standard"
+LABELS = {"human": "Human", "flash": "Flash", "pro": "Pro"}
+DRIFT_TITLE = {
+    "standard": "Both models drift away from target punctuation profiles",
+    "repeated_prompt": "Target divergence under the repeated prompt",
+}
+
+
+def protocol_suffix() -> str:
+    return " (repeated prompt)" if PROTOCOL == "repeated_prompt" else ""
 
 
 def read_csv(name: str) -> list[dict[str, str]]:
@@ -121,7 +137,7 @@ def attribution_figure(names: dict[str, str]) -> None:
             markersize=4,
             capsize=2,
             color=COLORS[condition],
-            label=condition.capitalize(),
+            label=LABELS[condition] + (protocol_suffix() if condition != "human" else ""),
         )
     ax.axvline(5.0, color="#94a3b8", linestyle="--", linewidth=1, label="20-way chance")
     ax.set_yticks(y, [names[author] for author in authors], fontsize=8)
@@ -174,7 +190,7 @@ def detection_figure() -> None:
             tpr,
             color=COLORS[condition],
             linewidth=2,
-            label=f"{condition.capitalize()} (AUC {float(estimate['auc']):.2f})",
+            label=f"{LABELS[condition]}{protocol_suffix()} (AUC {float(estimate['auc']):.2f})",
         )
         ax.scatter(
             [float(estimate["empirical_fpr"])],
@@ -257,19 +273,146 @@ def drift_figure() -> None:
     ax.set_xticks(range(1, 6), [f"{start}–{start + 1000}" for start in range(0, 5000, 1000)])
     ax.set_xlabel("Consecutive punctuation-mark window")
     ax.set_ylabel("Author-equal mean target KL")
-    ax.set_title("Both models drift away from target punctuation profiles")
+    ax.set_title(DRIFT_TITLE[PROTOCOL])
     ax.legend()
     ax.grid(alpha=0.18)
     save(fig, "positional_drift")
 
 
+def position_matched_figure() -> None:
+    path = POSITION_MATCHED / "detection_position.csv"
+    if not path.is_file():
+        return
+    with path.open(newline="", encoding="utf-8") as handle:
+        rows = list(csv.DictReader(handle))
+    fig, axes = plt.subplots(1, 2, figsize=(10.4, 4.4))
+
+    equal = [
+        row
+        for row in rows
+        if row["chunk_size"] == "2000" and row["window_name"] in {"prefix", "late"}
+    ]
+    ax = axes[0]
+    x = np.arange(2)
+    width = 0.32
+    for offset, window in ((-width / 2, "prefix"), (width / 2, "late")):
+        values = []
+        for condition in ("flash", "pro"):
+            row = next(
+                item
+                for item in equal
+                if item["condition"] == condition and item["window_name"] == window
+            )
+            values.append(100 * float(row["tpr"]))
+        ax.bar(
+            x + offset,
+            values,
+            width,
+            color="#1e293b" if window == "prefix" else "#7c3aed",
+            label="Marks 1–2,000" if window == "prefix" else "Marks 2,001–4,000",
+        )
+    ax.set_xticks(x, ["Flash", "Pro"])
+    ax.set_ylabel("Out-of-author TPR (%)")
+    ax.set_ylim(0, 100)
+    ax.set_title("Equal length, different position" + protocol_suffix())
+    ax.legend(fontsize=8)
+    ax.grid(axis="y", alpha=0.18)
+
+    ax = axes[1]
+    for condition in ("flash", "pro"):
+        selected = sorted(
+            (
+                row
+                for row in rows
+                if row["condition"] == condition and row["chunk_size"] == "1000"
+            ),
+            key=lambda row: int(row["start_mark"]),
+        )
+        x_vals = np.asarray([int(row["start_mark"]) + 500 for row in selected])
+        y_vals = np.asarray([100 * float(row["tpr"]) for row in selected])
+        low = np.asarray([100 * float(row["tpr_ci_low"]) for row in selected])
+        high = np.asarray([100 * float(row["tpr_ci_high"]) for row in selected])
+        ax.plot(
+            x_vals,
+            y_vals,
+            marker="o",
+            color=COLORS[condition],
+            label=condition.capitalize(),
+        )
+        ax.fill_between(x_vals, low, high, color=COLORS[condition], alpha=0.15)
+    ax.set_xticks(range(500, 5000, 1000), [f"{start}–{start + 1000}" for start in range(0, 5000, 1000)])
+    ax.set_xlabel("1,000-mark window")
+    ax.set_ylabel("Out-of-author TPR (%)")
+    ax.set_ylim(0, 100)
+    ax.set_title("Five-window trajectory at fixed length")
+    ax.legend()
+    ax.grid(alpha=0.18)
+    fig.tight_layout()
+    save(fig, "position_matched_detection")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--results", default=str(RESULTS.relative_to(ROOT)))
+    parser.add_argument("--figures", default=str(FIGURES.relative_to(ROOT)))
+    parser.add_argument("--position-matched", default=str(POSITION_MATCHED.relative_to(ROOT)))
+    parser.add_argument(
+        "--protocol",
+        choices=sorted(DRIFT_TITLE),
+        default="standard",
+        help="Generation protocol of the plotted runs; labels the generated-text series.",
+    )
+    return parser.parse_args()
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_figure_manifest() -> None:
+    """Tie the figures to the results they were drawn from."""
+    sources = {
+        "inference_manifest": RESULTS / "inference_manifest.json",
+        "position_matched_manifest": POSITION_MATCHED / "manifest.json",
+    }
+    figure_files = sorted(p for p in FIGURES.iterdir() if p.suffix in {".pdf", ".png"})
+    (FIGURES / "figure_manifest.json").write_text(
+        json.dumps(
+            {
+                "generated_utc": datetime.now(timezone.utc).isoformat(),
+                "protocol": PROTOCOL,
+                "results": {
+                    name: {"path": str(path.relative_to(ROOT)), "sha256": sha256(path)}
+                    for name, path in sources.items()
+                    if path.is_file()
+                },
+                "plotter_sha256": sha256(Path(__file__)),
+                "matplotlib": importlib.metadata.version("matplotlib"),
+                "figures_sha256": {p.name: sha256(p) for p in figure_files},
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+
+
 def main() -> None:
+    global RESULTS, FIGURES, POSITION_MATCHED, PROTOCOL
+    args = parse_args()
+    RESULTS = ROOT / args.results
+    FIGURES = ROOT / args.figures
+    POSITION_MATCHED = ROOT / args.position_matched
+    PROTOCOL = args.protocol
     names = author_names()
     separability_figure(names)
     attribution_figure(names)
     detection_figure()
     calibration_figure()
     drift_figure()
+    position_matched_figure()
+    if PROTOCOL != "standard":
+        write_figure_manifest()
 
 
 if __name__ == "__main__":

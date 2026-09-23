@@ -22,8 +22,20 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--input", action="append", required=True, help="Source run dir.")
-    parser.add_argument("--out", required=True, help="New assembled condition directory.")
+    parser.add_argument("--input", action="append", help="Source run dir.")
+    parser.add_argument("--out", help="New assembled condition directory.")
+    parser.add_argument(
+        "--in-place",
+        action="append",
+        help=(
+            "Write condition_manifest.json into a run directory that one campaign "
+            "generated whole (nothing is linked, copied or rewritten). Repeatable."
+        ),
+    )
+    parser.add_argument(
+        "--campaign-metadata",
+        help="With --in-place: the generating campaign's metadata file, pinned by hash.",
+    )
     parser.add_argument(
         "--panel-config",
         default="campaigns/author_panel_20.json",
@@ -84,8 +96,62 @@ def link_or_copy(source: Path, destination: Path) -> str:
         return "copy"
 
 
+def write_in_place_manifest(directory: Path, panel_path: Path, metadata_path: Path) -> None:
+    """Pin a directory that already is a whole condition, in the assembled schema."""
+    summary_path = directory / "all_runs_summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    panel = json.loads(panel_path.read_text(encoding="utf-8"))
+    expected = sorted(author["key"] for author in panel["authors"])
+    observed = sorted({row["author_key"] for row in summary})
+    if observed != expected:
+        raise ValueError(f"{directory}: authors do not match the panel exactly")
+    run_files = sorted(directory.glob("*/run_*.txt"))
+    raw_files = sorted(directory.glob("*/raw/run_*.txt"))
+    if len(run_files) != len(summary):
+        raise ValueError(f"{directory}: {len(run_files)} run files, {len(summary)} summary rows")
+    for row in summary:
+        path = resolve(row["processed_output_path"])
+        if sha256(path) != row["processed_sha256"]:
+            raise ValueError(f"{path}: text differs from its recorded hash")
+    manifest = {
+        "schema_version": 1,
+        "panel_config": str(panel_path.relative_to(ROOT)),
+        "panel_config_sha256": sha256(panel_path),
+        "sources": [
+            {
+                "path": str(directory.relative_to(ROOT)),
+                "summary_sha256": sha256(summary_path),
+                "generated_in_place": True,
+                "campaign_metadata": str(metadata_path.relative_to(ROOT)),
+                "campaign_metadata_sha256": sha256(metadata_path),
+            }
+        ],
+        "authors": observed,
+        "processed_runs": len(run_files),
+        "raw_runs": len(raw_files),
+        "all_runs_summary_sha256": sha256(summary_path),
+        "processed_text_tree_sha256": tree_sha256([(f, f) for f in run_files], directory),
+        "raw_text_tree_sha256": tree_sha256([(f, f) for f in raw_files], directory),
+    }
+    (directory / "condition_manifest.json").write_text(
+        json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+    )
+    print(f"[wrote] {(directory / 'condition_manifest.json').relative_to(ROOT)}: "
+          f"{len(run_files)} runs, {len(raw_files)} raw")
+
+
 def main() -> None:
     args = parse_args()
+    if args.in_place:
+        if args.input or args.out or not args.campaign_metadata:
+            raise SystemExit("--in-place takes --campaign-metadata and neither --input nor --out")
+        for directory in args.in_place:
+            write_in_place_manifest(
+                resolve(directory), resolve(args.panel_config), resolve(args.campaign_metadata)
+            )
+        return
+    if not args.input or not args.out:
+        raise SystemExit("--input and --out are required")
     sources = [resolve(path) for path in args.input]
     output = resolve(args.out)
     panel_path = resolve(args.panel_config)

@@ -27,7 +27,12 @@ INFERENCE_CONFIG = ROOT / "campaigns" / "inference_v2.json"
 INFERENCE_RESULTS = ROOT / "results" / "author_panel_20" / "inference_v2"
 PROCESS_CONFIG = ROOT / "campaigns" / "process_simulation_v1.json"
 PROCESS_RESULTS = ROOT / "results" / "author_panel_20" / "process_simulation_v1"
+NUMBERS_OF_RECORD = PROCESS_RESULTS / "numbers_of_record.csv"
 FULL_GRID_RESULTS = ROOT / "results" / "author_panel_20" / "full_grid"
+REFERENCE_DESIGN_CONFIG = ROOT / "campaigns" / "reference_design_test.json"
+REFERENCE_DESIGN_RESULTS = ROOT / "results" / "author_panel_20" / "reference_design"
+REFERENCE_DESIGN_FIGURES = ROOT / "paper" / "figures" / "reference_design"
+REFERENCE_DESIGN_PLOTTER = ROOT / "tools" / "plot_reference_design.py"
 PROCESS_V2_CONFIG = ROOT / "campaigns" / "process_simulation_v2_extended_sweep.json"
 PROCESS_V2_RESULTS = (
     ROOT / "results" / "author_panel_20" / "process_simulation_v2_extended"
@@ -35,6 +40,10 @@ PROCESS_V2_RESULTS = (
 PROCESS_V2_FIGURES = ROOT / "paper" / "figures" / "process_simulation_v2_extended"
 PROCESS_V2_PLOTTER = ROOT / "tools" / "plot_process_simulation_v2_extended.py"
 PROCESS_V2_RUNNER = ROOT / "run_process_simulation_v2_extended.py"
+POSITIONAL_CONFIG = ROOT / "campaigns" / "positional_mechanism_v1.json"
+POSITIONAL_RESULTS = ROOT / "results" / "author_panel_20" / "positional_mechanism_v1"
+POSITIONAL_FIGURES = ROOT / "paper" / "figures" / "positional_mechanism_v1"
+POSITIONAL_PLOTTER = ROOT / "tools" / "plot_positional_mechanism.py"
 FROZEN_RESULTS = ROOT / "results" / "frozen"
 GENERATION_CONFIGS = (
     ROOT / "campaigns" / "generation_campaign_new10_flash.json",
@@ -392,6 +401,62 @@ def verify_process_simulation(checks: Checks) -> list[Path]:
         abs(delta - float(targets["implied_delta_df90"])) <= 1e-12,
         f"process observed delta target changed: {delta}",
     )
+
+    checks.require(
+        NUMBERS_OF_RECORD.is_file(),
+        f"numbers-of-record artifact is missing: {NUMBERS_OF_RECORD}",
+    )
+    if NUMBERS_OF_RECORD.is_file():
+        with NUMBERS_OF_RECORD.open(newline="", encoding="utf-8") as handle:
+            records = {
+                row["feature"]: row for row in csv.DictReader(handle)
+            }
+        observed_by_feature = {
+            feature: {
+                int(row["chunk_size"]): float(row["phi"])
+                for row in summaries
+                if row["phase"] == "observed" and row["feature"] == feature
+            }
+            for feature in ("f1", "f3")
+        }
+        checks.require(
+            set(records) == {"f1", "f3"},
+            f"numbers-of-record features changed: {set(records)}",
+        )
+        for feature, feature_phi in observed_by_feature.items():
+            feature_sizes = sorted(feature_phi)
+            feature_rho = sum(
+                size * (feature_phi[size] - 1.0) for size in feature_sizes
+            ) / sum(size * size for size in feature_sizes)
+            feature_ceiling = 1.0 / feature_rho
+            record = records.get(feature, {})
+            checks.require(
+                record.get("chunk_sizes")
+                == ";".join(str(size) for size in feature_sizes),
+                f"numbers-of-record chunk sizes changed for {feature}",
+            )
+            checks.require(
+                record.get("aggregation_rule")
+                == "least-squares slope of phi(n)-1 on n with zero intercept",
+                f"numbers-of-record aggregation changed for {feature}",
+            )
+            checks.require(
+                abs(float(record.get("fixed_intercept_rho", "nan")) - feature_rho)
+                <= 1e-15,
+                f"numbers-of-record rho changed for {feature}: {feature_rho}",
+            )
+            checks.require(
+                abs(
+                    float(record.get("effective_mark_ceiling", "nan"))
+                    - feature_ceiling
+                )
+                <= 1e-9,
+                f"numbers-of-record ceiling changed for {feature}: {feature_ceiling}",
+            )
+            checks.require(
+                int(record.get("rounded_ceiling", "-1")) == round(feature_ceiling),
+                f"numbers-of-record rounded ceiling changed for {feature}",
+            )
     checks.require(
         manifest["effective_settings"]["sampling_frame_counts"]
         == {
@@ -406,6 +471,7 @@ def verify_process_simulation(checks: Checks) -> list[Path]:
         manifest_path,
         parameter_path,
         resolve(validation["path"]),
+        NUMBERS_OF_RECORD,
         *(PROCESS_RESULTS / name for name in manifest["output_sha256"]),
     ]
 
@@ -416,6 +482,84 @@ def compare_csv_directories(checks: Checks, canonical: Path, candidate: Path) ->
     for source in canonical_files:
         other = candidate / source.name
         checks.same_hash(other, sha256(source), f"rerun comparison {source.name}")
+
+
+def verify_reference_design(checks: Checks) -> list[Path]:
+    """Verify the pre-specified reference-design test once its canonical run exists.
+
+    The test lives outside the declared inference grid: its predictions were
+    recorded in ``campaigns/reference_design_test.json`` before the run, and
+    the results directory carries its own manifest with input and output
+    hashes.  This check ties config, inputs, outputs and figures together.
+    """
+    manifest_path = REFERENCE_DESIGN_RESULTS / "manifest.json"
+    if not manifest_path.exists():
+        return []
+
+    config = read_json(REFERENCE_DESIGN_CONFIG)
+    manifest = read_json(manifest_path)
+    checks.same_hash(
+        REFERENCE_DESIGN_CONFIG,
+        manifest["analysis_config_sha256"],
+        "reference-design config",
+    )
+    checks.require(
+        str(config.get("status", "")).endswith("predictions_frozen_before_run"),
+        "reference-design config does not declare frozen predictions",
+    )
+    checks.same_hash(
+        resolve(manifest["authors_config"]),
+        manifest["authors_config_sha256"],
+        "reference-design author config",
+    )
+    checks.same_hash(
+        resolve(manifest["cache"]),
+        manifest["cache_sha256"],
+        "reference-design cache",
+    )
+    for filename, expected in manifest["output_sha256"].items():
+        checks.same_hash(
+            REFERENCE_DESIGN_RESULTS / filename,
+            expected,
+            f"reference-design output {filename}",
+        )
+    predictions_path = REFERENCE_DESIGN_RESULTS / "predictions_check.json"
+    if predictions_path.is_file():
+        predictions = read_json(predictions_path)
+        checks.require(
+            {"P1_direction", "P2_ceiling_signature", "P3_magnitude"} <= set(predictions),
+            "reference-design predictions_check.json lacks the three pre-declared verdicts",
+        )
+
+    figure_manifest_path = REFERENCE_DESIGN_FIGURES / "figure_manifest.json"
+    tracked: list[Path] = [
+        REFERENCE_DESIGN_CONFIG,
+        manifest_path,
+        *(REFERENCE_DESIGN_RESULTS / name for name in manifest["output_sha256"]),
+    ]
+    if figure_manifest_path.is_file():
+        figure_manifest = read_json(figure_manifest_path)
+        checks.same_hash(
+            manifest_path,
+            figure_manifest["results_manifest_sha256"],
+            "reference-design figures were plotted from the canonical manifest",
+        )
+        checks.same_hash(
+            REFERENCE_DESIGN_PLOTTER,
+            figure_manifest["plotter_sha256"],
+            "reference-design plotter",
+        )
+        for filename, expected in figure_manifest["figures_sha256"].items():
+            path = REFERENCE_DESIGN_FIGURES / filename
+            if path.suffix == ".pdf":
+                # The PDFs are what the manuscript includes; PNGs are previews.
+                checks.same_hash(path, expected, f"reference-design figure {filename}")
+            else:
+                checks.require(path.is_file(), f"reference-design preview missing: {filename}")
+        tracked.extend(
+            [figure_manifest_path, *(REFERENCE_DESIGN_FIGURES / n for n in figure_manifest["figures_sha256"])]
+        )
+    return tracked
 
 
 def verify_process_simulation_v2_extended(checks: Checks) -> list[Path]:
@@ -524,21 +668,114 @@ def verify_process_simulation_v2_extended(checks: Checks) -> list[Path]:
     return tracked
 
 
+def verify_positional_mechanism(checks: Checks) -> list[Path]:
+    """Verify the positional-mechanism campaign once its canonical run exists.
+
+    The campaign file carries the arms, templates policy and predictions and
+    must be frozen before generation; the results manifest ties it to the
+    pinned inputs, the generation metadata and every output.  In the
+    pregeneration stage only the human control and the old-arm regression
+    check exist, and the predictions file must say so.
+    """
+    manifest_path = POSITIONAL_RESULTS / "manifest.json"
+    if not manifest_path.exists():
+        return []
+
+    config = read_json(POSITIONAL_CONFIG)
+    manifest = read_json(manifest_path)
+    checks.same_hash(POSITIONAL_CONFIG, manifest["analysis_config_sha256"], "positional-mechanism config")
+    checks.same_hash(resolve(manifest["authors_config"]), manifest["authors_config_sha256"], "positional-mechanism author config")
+    checks.same_hash(resolve(manifest["inference_config"]), manifest["inference_config_sha256"], "positional-mechanism inference config")
+    checks.same_hash(
+        resolve(config["pinned_inputs"]["context_drift"]),
+        manifest["pinned_context_drift_sha256"],
+        "positional-mechanism pinned context_drift.csv",
+    )
+    checks.same_hash(
+        resolve(config["pinned_inputs"]["split_assignments"]),
+        manifest["pinned_split_assignments_sha256"],
+        "positional-mechanism pinned split_assignments.csv",
+    )
+    for filename, expected in manifest["output_sha256"].items():
+        checks.same_hash(POSITIONAL_RESULTS / filename, expected, f"positional-mechanism output {filename}")
+    regression_path = POSITIONAL_RESULTS / "regression_check.json"
+    if regression_path.is_file():
+        regression = read_json(regression_path)
+        checks.require(
+            bool(regression.get("passed")),
+            "positional-mechanism old arm does not reproduce the pinned drift rows",
+        )
+        checks.require(
+            not regression.get("reused_pinned"),
+            "positional-mechanism canonical run must recompute the old arm (--reuse-pinned is for reruns only)",
+        )
+    predictions_path = POSITIONAL_RESULTS / "predictions_check.json"
+    if predictions_path.is_file():
+        predictions = read_json(predictions_path)
+        checks.require(
+            predictions.get("stage") == manifest.get("stage"),
+            "positional-mechanism predictions_check.json stage disagrees with the manifest",
+        )
+        checks.require(
+            {"P1_batch_check", "P2_prompt_fading", "P3_detection", "P4_attractor_with_prompt", "P5_boundaries", "human_control"} <= set(predictions),
+            "positional-mechanism predictions_check.json lacks the pre-declared verdicts",
+        )
+    if manifest.get("stage") == "full":
+        checks.require(
+            config.get("status") == "frozen_before_generation",
+            "positional-mechanism full run without a frozen campaign file",
+        )
+        generation = manifest.get("generation_metadata") or {}
+        checks.require(
+            generation.get("campaign_config_sha256") == manifest["analysis_config_sha256"],
+            "positional-mechanism generation metadata was written from a different campaign file",
+        )
+        checks.require(
+            generation.get("smoke") is False,
+            "positional-mechanism full run points at a smoke generation",
+        )
+        generation_metadata_path = resolve(manifest["generation_dir"]) / "campaign_metadata.json"
+        checks.same_hash(generation_metadata_path, manifest["generation_metadata_sha256"], "positional-mechanism generation metadata")
+
+    figure_manifest_path = POSITIONAL_FIGURES / "figure_manifest.json"
+    tracked: list[Path] = [
+        POSITIONAL_CONFIG,
+        manifest_path,
+        *(POSITIONAL_RESULTS / name for name in manifest["output_sha256"]),
+    ]
+    if figure_manifest_path.is_file():
+        figure_manifest = read_json(figure_manifest_path)
+        checks.same_hash(manifest_path, figure_manifest["results_manifest_sha256"], "positional-mechanism figures were plotted from the canonical manifest")
+        checks.same_hash(POSITIONAL_PLOTTER, figure_manifest["plotter_sha256"], "positional-mechanism plotter")
+        for filename, expected in figure_manifest["figures_sha256"].items():
+            path = POSITIONAL_FIGURES / filename
+            if path.suffix == ".pdf":
+                checks.same_hash(path, expected, f"positional-mechanism figure {filename}")
+            else:
+                checks.require(path.is_file(), f"positional-mechanism preview missing: {filename}")
+        tracked.extend([figure_manifest_path, *(POSITIONAL_FIGURES / n for n in figure_manifest["figures_sha256"])])
+    return tracked
+
+
 def verify_paper(checks: Checks) -> list[Path]:
     main = ROOT / "paper" / "main.tex"
     checks.require(main.is_file(), "tracked v2 paper/main.tex is missing")
     if not main.is_file():
         return []
     content = main.read_text(encoding="utf-8")
-    for filename in (
-        "primary_attribution",
-        "detection",
-        "separability",
-        "drift",
+    # Every display comes from inference_v3 (repeated-prompt runs are primary);
+    # the single-prompt v2 tables and figures are no longer kept under paper/.
+    for version, filename in (
+        ("v3", "primary_attribution"),
+        ("v3", "detection"),
+        ("v3", "separability"),
+        ("v3", "drift"),
+        ("v3", "position_matched"),
+        ("v3", "leakage_grid"),
     ):
         checks.require(
-            f"tables/inference_v2/{filename}" in content,
-            f"paper does not include v2 table {filename}",
+            f"tables/inference_{version}/{filename}" in content,
+            f"paper does not include {version} table {filename}",
         )
     for filename in (
         "crossfit_separability",
@@ -546,10 +783,80 @@ def verify_paper(checks: Checks) -> list[Path]:
         "detection_oof_roc",
         "g_calibration",
         "positional_drift",
+        "position_matched_detection",
     ):
         checks.require(
-            f"figures/inference_v2/{filename}" in content,
-            f"paper does not include v2 figure {filename}",
+            f"figures/inference_v3/{filename}" in content,
+            f"paper does not include v3 figure {filename}",
+        )
+    checks.require(
+        "inference_v2/" not in content,
+        "paper still includes a single-prompt (v2) table or figure",
+    )
+    for stale in ("figures/inference_v2", "tables/inference_v2"):
+        checks.require(
+            not (ROOT / "paper" / stale).exists(),
+            f"stale single-prompt assets remain under paper/{stale}",
+        )
+    # run_inference_v2.py copies leakage rows and derives drift from the upstream
+    # grid its config names; a v3 run pointed at the single-prompt grid carries
+    # single-prompt numbers in a v3 directory.
+    v3_manifest_path = ROOT / "results" / "author_panel_20" / "inference_v3" / "inference_manifest.json"
+    if v3_manifest_path.is_file():
+        v3_manifest = read_json(v3_manifest_path)
+        v3_conditions = set(v3_manifest["conditions"].values())
+        for relative in v3_manifest["upstream_result_sha256"]:
+            grid_manifest = resolve(relative).parent / "manifest.json"
+            grid_conditions = (
+                set(read_json(grid_manifest).get("conditions", {}).values())
+                if grid_manifest.is_file()
+                else set()
+            )
+            checks.require(
+                grid_conditions == v3_conditions,
+                f"inference_v3 upstream {relative} was not computed on the v3 conditions",
+            )
+    table_manifest_path = ROOT / "paper" / "tables" / "inference_v3" / "table_manifest.json"
+    checks.require(table_manifest_path.is_file(), "inference_v3 table manifest is missing")
+    if table_manifest_path.is_file():
+        table_manifest = read_json(table_manifest_path)
+        for label, source in table_manifest["results"].items():
+            checks.same_hash(
+                resolve(source["path"]), source["sha256"], f"inference_v3 tables source {label}"
+            )
+        checks.same_hash(
+            ROOT / "tools" / "render_inference_tables.py",
+            table_manifest["renderer_sha256"],
+            "inference_v3 table renderer",
+        )
+        for filename, expected in table_manifest["tables_sha256"].items():
+            checks.same_hash(
+                table_manifest_path.parent / filename, expected, f"inference_v3 table {filename}"
+            )
+    figure_manifest_path = ROOT / "paper" / "figures" / "inference_v3" / "figure_manifest.json"
+    checks.require(figure_manifest_path.is_file(), "inference_v3 figure manifest is missing")
+    if figure_manifest_path.is_file():
+        figure_manifest = read_json(figure_manifest_path)
+        for label, source in figure_manifest["results"].items():
+            checks.same_hash(
+                resolve(source["path"]), source["sha256"], f"inference_v3 figures source {label}"
+            )
+        checks.same_hash(
+            ROOT / "tools" / "plot_inference_v2.py",
+            figure_manifest["plotter_sha256"],
+            "inference_v3 plotter",
+        )
+        for filename, expected in figure_manifest["figures_sha256"].items():
+            if filename.endswith(".pdf"):
+                checks.same_hash(
+                    figure_manifest_path.parent / filename,
+                    expected,
+                    f"inference_v3 figure {filename}",
+                )
+    if (REFERENCE_DESIGN_RESULTS / "manifest.json").exists():
+        checks.require(
+            "figures/reference_design/design_test" in content,
+            "paper does not include the reference-design figure",
         )
     if (PROCESS_V2_RESULTS / "manifest.json").exists():
         checks.require(
@@ -584,7 +891,9 @@ def main() -> None:
         resolve(args.candidate_inference) if args.candidate_inference else None,
     )
     tracked.extend(verify_process_simulation(checks))
+    tracked.extend(verify_reference_design(checks))
     tracked.extend(verify_process_simulation_v2_extended(checks))
+    tracked.extend(verify_positional_mechanism(checks))
     tracked.extend(verify_paper(checks))
     tracked.extend(
         [
