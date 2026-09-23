@@ -1,0 +1,33 @@
+{
+  "author_key": "louis_joseph_vance",
+  "author_name": "Louis Joseph Vance",
+  "run_id": 15,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5013,
+  "completed": true,
+  "n_calls": 15,
+  "resumed_after_call": 0,
+  "source_book_index": 0,
+  "source_book_path": "gutenberg_texts/8741.txt",
+  "excerpt_sha256": "e3747c470639de1dce89381857a8b81d54292ed1d5c8f6c784d931148c1347ec",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/louis_joseph_vance/run_15.txt",
+  "processed_sha256": "ac708344658eef3c6fcbc317800c5b730e0627b04dc817070ddb56844b371e48",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/louis_joseph_vance/raw/run_15.txt",
+  "raw_sha256": "fee9f819364c7e380f0c255bf8cc0bfc8178e43566e195b342400a82d325ebcd",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/louis_joseph_vance/calls/run_15.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 3,
+  "raw_en_dash_count": 4,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 33299,
+  "thinking_tokens": 82948,
+  "prompt_tokens": 39632
+}

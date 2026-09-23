@@ -1,0 +1,32 @@
+{
+  "author_key": "mark_twain",
+  "author_name": "Mark Twain",
+  "run_id": 3,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 7153,
+  "completed": true,
+  "n_calls": 26,
+  "source_book_index": 0,
+  "source_book_path": "gutenberg_texts/74.txt",
+  "excerpt_sha256": "a8c3bb1e249922923c5fa07d8cffa6fcd3d6865868d10ae615db8c7caca19a97",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/mark_twain/run_03.txt",
+  "processed_sha256": "09d6ee04c04c52c6f088e813d33ec2c5ab423ce1d65dc1f2f7e9fcf15e880f83",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/mark_twain/raw/run_03.txt",
+  "raw_sha256": "88f7729a4603250d08193da1335411c5ce58967208641a106dde3fba80e8c6e9",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/mark_twain/calls/run_03.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 3,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 43943,
+  "thinking_tokens": 159928,
+  "prompt_tokens": 71977
+}

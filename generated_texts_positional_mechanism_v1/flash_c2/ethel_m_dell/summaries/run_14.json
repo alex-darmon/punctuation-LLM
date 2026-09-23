@@ -1,0 +1,33 @@
+{
+  "author_key": "ethel_m_dell",
+  "author_name": "Ethel M. Dell",
+  "run_id": 14,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5785,
+  "completed": true,
+  "n_calls": 9,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/13960.txt",
+  "excerpt_sha256": "364f64d9cba26a1c2d3f790b322e98442bedef4cb71d6ad02f3bb5429f91ca7b",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/ethel_m_dell/run_14.txt",
+  "processed_sha256": "b961b0dc301547404ce64527606c76146e7044cbdb380dad3bc3b394355eeacc",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/ethel_m_dell/raw/run_14.txt",
+  "raw_sha256": "1e1f43c5c21f1f749e1e9e708fe8b5a7399057f1ff896cacf5a1e616648c2f29",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/ethel_m_dell/calls/run_14.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 2,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 31646,
+  "thinking_tokens": 34579,
+  "prompt_tokens": 23847
+}

@@ -1,0 +1,32 @@
+{
+  "author_key": "jane_austen",
+  "author_name": "Jane Austen",
+  "run_id": 6,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6647,
+  "completed": true,
+  "n_calls": 21,
+  "source_book_index": 2,
+  "source_book_path": "gutenberg_texts/161.txt",
+  "excerpt_sha256": "213220717009026875dea5ae88295431ea18fa881940c68c4e116ad8a64573dc",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/jane_austen/run_06.txt",
+  "processed_sha256": "7d01057513120251f88301824f04357d9e53a574994f285972a0dd087a74a664",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/jane_austen/raw/run_06.txt",
+  "raw_sha256": "ce964e8c5e44bd915fc50516aa0a4e92e48cf423e72d67ced26011907a727e8b",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/jane_austen/calls/run_06.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 4,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 41415,
+  "thinking_tokens": 122608,
+  "prompt_tokens": 55192
+}

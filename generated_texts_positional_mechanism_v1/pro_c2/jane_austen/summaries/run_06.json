@@ -1,0 +1,32 @@
+{
+  "author_key": "jane_austen",
+  "author_name": "Jane Austen",
+  "run_id": 6,
+  "model_key": "pro",
+  "model": "gemini-2.5-pro",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6211,
+  "completed": true,
+  "n_calls": 11,
+  "source_book_index": 2,
+  "source_book_path": "gutenberg_texts/161.txt",
+  "excerpt_sha256": "213220717009026875dea5ae88295431ea18fa881940c68c4e116ad8a64573dc",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/pro_c2/jane_austen/run_06.txt",
+  "processed_sha256": "fb44ed7108ff026016ccc138915f9b63e4e58fed7b49aca984233d506f051221",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/pro_c2/jane_austen/raw/run_06.txt",
+  "raw_sha256": "464a8c458b059233c73e5794f2df8e40f17b71f824d34fe85cf2add48a78b5ac",
+  "calls_path": "generated_texts_positional_mechanism_v1/pro_c2/jane_austen/calls/run_06.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 20,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-pro"
+  ],
+  "output_tokens": 38179,
+  "thinking_tokens": 24594,
+  "prompt_tokens": 28498
+}

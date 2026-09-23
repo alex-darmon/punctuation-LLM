@@ -1,0 +1,32 @@
+{
+  "author_key": "herbert_george_wells",
+  "author_name": "H.G. Wells",
+  "run_id": 7,
+  "model_key": "pro",
+  "model": "gemini-2.5-pro",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6079,
+  "completed": true,
+  "n_calls": 9,
+  "source_book_index": 0,
+  "source_book_path": "full_books/herbert_george_wells_full.txt",
+  "excerpt_sha256": "38a6fb109fbbe7a1decba6da0339551a71c6d95d1534b63a6c90336cba5e0024",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/pro_c2/herbert_george_wells/run_07.txt",
+  "processed_sha256": "15dd397ab86e99ed82482003bd481643eda23c44333cecd2799bde4903335b52",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/pro_c2/herbert_george_wells/raw/run_07.txt",
+  "raw_sha256": "860f3b3d44f69842bb531d2893625eace38338eb66cf074b3fa253d0ab9fba02",
+  "calls_path": "generated_texts_positional_mechanism_v1/pro_c2/herbert_george_wells/calls/run_07.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 16,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-pro"
+  ],
+  "output_tokens": 31273,
+  "thinking_tokens": 22033,
+  "prompt_tokens": 25568
+}

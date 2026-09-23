@@ -1,0 +1,32 @@
+{
+  "author_key": "luis_senarens",
+  "author_name": "Luis Senarens",
+  "run_id": 10,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5258,
+  "completed": true,
+  "n_calls": 25,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/54648.txt",
+  "excerpt_sha256": "9c5facd2b6d4e03f2904d9e79da356a742b0744116e40e663512df8fab042cb6",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/luis_senarens/run_10.txt",
+  "processed_sha256": "1f61aec00ac2e8716fddc5b1519a5c42af9dc98be21ce0f3a1fe17fb6088fe40",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/luis_senarens/raw/run_10.txt",
+  "raw_sha256": "9655707e7fc670dbce72403181b5764f7aea99adfc705fb2b3783a846c1fdb4a",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/luis_senarens/calls/run_10.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 2,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 31125,
+  "thinking_tokens": 167856,
+  "prompt_tokens": 66006
+}

@@ -1,0 +1,33 @@
+{
+  "author_key": "arthur_conan_doyle",
+  "author_name": "Arthur Conan Doyle",
+  "run_id": 6,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6135,
+  "completed": true,
+  "n_calls": 23,
+  "resumed_after_call": 0,
+  "source_book_index": 2,
+  "source_book_path": "gutenberg_texts/2852.txt",
+  "excerpt_sha256": "4e72aa3b2b1bfb1a30f9766234f7b6aaddebd01c683cd9e6d2a25b80a619781d",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/arthur_conan_doyle/run_06.txt",
+  "processed_sha256": "77df513deed4306a478c832fb037b0ee66600cc34d9502ac53ee7c0fe4d192f7",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/arthur_conan_doyle/raw/run_06.txt",
+  "raw_sha256": "26fe3adae4f3cf3dcf27ff40800bd6852810bc12fe47caeb395deb65d8872518",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/arthur_conan_doyle/calls/run_06.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 7,
+  "raw_en_dash_count": 9,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 44031,
+  "thinking_tokens": 140025,
+  "prompt_tokens": 57357
+}

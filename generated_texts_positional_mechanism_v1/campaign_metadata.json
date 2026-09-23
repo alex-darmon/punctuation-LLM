@@ -1,0 +1,110 @@
+{
+  "generated_utc": "2026-09-17T17:02:05.991918+00:00",
+  "campaign_name": "positional_mechanism_v1",
+  "campaign_status": "frozen_before_generation",
+  "smoke": false,
+  "campaign_config_path": "campaigns/positional_mechanism_v1.json",
+  "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+  "generator_script_sha256": "1a0c7181f428260eccfa4040c9fc508fef959275d301bebb60115e4bfa816450",
+  "legacy_prompt_protocol_sha256": "25af2b7111ace93cd9976b3d30145f76620e3e2008e8689f68ab44ca2217e794",
+  "prompt_protocol_sha256": "e9bd116923eb6b3dd883e93f6e61d60dfe2fae29585893a4488533a9f5d86055",
+  "plan_sha256": "0c58c8f2353c6d80f2b6ade0a932a288ecc031daef45f6405506b1bf282329ea",
+  "python": "3.10.16",
+  "git_commit": "d027ec0ab3ded232904e7f28222ee2d7c0d79719",
+  "auth_mode": "adc",
+  "auth_label": "adc(project=project-a1ea5f06-866e-498b-9e6, location=us-central1)",
+  "models": {
+    "flash": "gemini-2.5-flash",
+    "pro": "gemini-2.5-pro"
+  },
+  "conditions": {
+    "c1": {
+      "label": "replicate",
+      "prompt_policy": "first_call_only",
+      "runs_per_author": 0,
+      "purpose": "not run (decision of 17 Sep 2026: the existing 600 runs are the C1 arm and are not regenerated); kept at zero runs so the batch check can be switched on by editing this number"
+    },
+    "c2": {
+      "label": "prompt_repeated",
+      "prompt_policy": "every_call",
+      "runs_per_author": {
+        "flash": 20,
+        "pro": 10
+      },
+      "purpose": "the excerpt, author name and style instruction are repeated in every continuation call ahead of the same 500-word tail; 10 runs per author and model, matching the existing Pro arm"
+    }
+  },
+  "temperature": 1.0,
+  "max_output_tokens": 8192,
+  "max_rounds": 40,
+  "context_tail_words": 500,
+  "excerpt_words": 1500,
+  "dash_policy": "replace_with_comma",
+  "parallel": 8,
+  "n_jobs": 600,
+  "invocations": [
+    {
+      "generated_utc": "2026-09-18T06:03:33.914331+00:00",
+      "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+      "auth_label": "adc(project=project-a1ea5f06-866e-498b-9e6, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-18T06:35:48.013280+00:00",
+      "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-18T06:36:39.666394+00:00",
+      "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-18T06:50:23.099562+00:00",
+      "generator_script_sha256": "7ca0f3a963ea98cbdc7507f129b632a7a2303a3deda1cc38f56ffdbe61f827f8",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-18T07:28:29.018090+00:00",
+      "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+      "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-18T21:04:40.630257+00:00",
+      "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+      "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-18T21:24:02.303516+00:00",
+      "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+      "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-18T21:25:33.205621+00:00",
+      "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+      "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    },
+    {
+      "generated_utc": "2026-09-19T06:00:03.752545+00:00",
+      "campaign_config_sha256": "324d7a72e8cba39682fb242aeac819c31dbbf69db1a7850782ecfc65c058db52",
+      "generator_script_sha256": "21f4fca64ca14622b674fac25f3e0bebf1507a7b88875bdf138262be0804ec19",
+      "auth_label": "adc(project=project-9a5590e0-54bc-4d14-902, location=us-central1)",
+      "parallel": 8
+    }
+  ],
+  "resume": true,
+  "superseded_campaign_config_sha256": [
+    "f4f845ca57a975bf55035ca4e4e2f2ab115b35aae03cd8b8e510e25dc9329d00"
+  ]
+}

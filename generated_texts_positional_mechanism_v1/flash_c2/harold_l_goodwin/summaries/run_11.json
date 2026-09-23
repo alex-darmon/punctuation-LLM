@@ -1,0 +1,33 @@
+{
+  "author_key": "harold_l_goodwin",
+  "author_name": "Harold L. Goodwin",
+  "run_id": 11,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5128,
+  "completed": true,
+  "n_calls": 14,
+  "resumed_after_call": 0,
+  "source_book_index": 0,
+  "source_book_path": "gutenberg_texts/31581.txt",
+  "excerpt_sha256": "bcddf79d0d0126eefa6e863cb572faa3b80972ad1ebb41dbc3ad9b517aaf54ef",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/harold_l_goodwin/run_11.txt",
+  "processed_sha256": "1f8acdce8fa915c7b0d2525266be6c65c9f4d2a654e88ae12dabf012a41890b2",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/harold_l_goodwin/raw/run_11.txt",
+  "raw_sha256": "31dab9c66f8c2f1ae5af32e4abc5fecc6c5947bbd6043423138df34c16f63bc1",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/harold_l_goodwin/calls/run_11.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 7,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 26860,
+  "thinking_tokens": 81286,
+  "prompt_tokens": 37261
+}

@@ -1,0 +1,33 @@
+{
+  "author_key": "mary_shelley",
+  "author_name": "Mary Shelley",
+  "run_id": 4,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6158,
+  "completed": true,
+  "n_calls": 14,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/18247.txt",
+  "excerpt_sha256": "a6fd3987cda97411d6dfa9259b628969f9ed60f2954f7477bfdba7d21adc4772",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/mary_shelley/run_04.txt",
+  "processed_sha256": "46ee82e6876cf8516a1bd17898ca3737b1edc6c42d9dd9017deb2b7d5c51e5f2",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/mary_shelley/raw/run_04.txt",
+  "raw_sha256": "34d1e8ca786e56b350d198e1823429408c2e0c15e2a1411ef0a594712c1c9af0",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/mary_shelley/calls/run_04.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 18,
+  "raw_en_dash_count": 4,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 38497,
+  "thinking_tokens": 69028,
+  "prompt_tokens": 37059
+}

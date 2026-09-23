@@ -1,0 +1,33 @@
+{
+  "author_key": "charles_dickens",
+  "author_name": "Charles Dickens",
+  "run_id": 11,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6507,
+  "completed": true,
+  "n_calls": 14,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/98.txt",
+  "excerpt_sha256": "ad8fc319633328b7190906743f2733a4d15a147405779d8d97590988995ab34e",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/charles_dickens/run_11.txt",
+  "processed_sha256": "e7997e522a1ece0c441882749fa2266af82455066e01fb0c769232b94384476a",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/charles_dickens/raw/run_11.txt",
+  "raw_sha256": "e7997e522a1ece0c441882749fa2266af82455066e01fb0c769232b94384476a",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/charles_dickens/calls/run_11.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 42846,
+  "thinking_tokens": 53248,
+  "prompt_tokens": 36847
+}

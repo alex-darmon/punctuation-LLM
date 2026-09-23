@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "panel_config": "campaigns/author_panel_20.json",
+  "panel_config_sha256": "90058172571b15beab915243db42c01856a2cefa80c6eb86ce8a90803fc84d58",
+  "sources": [
+    {
+      "path": "generated_texts_positional_mechanism_v1/pro_c2",
+      "summary_sha256": "83f507c3ef6c86b7be578d3f222559d21fb8ba7d86faba7610dfa40459a1b99e",
+      "generated_in_place": true,
+      "campaign_metadata": "generated_texts_positional_mechanism_v1/campaign_metadata.json",
+      "campaign_metadata_sha256": "7d4ca80fb46f214a2c2cf6f08c96aad27d7bd82b43d3410ea5574f6d1b98ef5a"
+    }
+  ],
+  "authors": [
+    "agnes_may_fleming",
+    "arthur_conan_doyle",
+    "arthur_scott_bailey",
+    "charles_dickens",
+    "charlotte_bronte",
+    "ethel_m_dell",
+    "harold_l_goodwin",
+    "herbert_george_wells",
+    "jane_austen",
+    "john_c_hutcheson",
+    "joseph_conrad",
+    "kathleen_thompson_norris",
+    "louis_joseph_vance",
+    "luis_senarens",
+    "mark_twain",
+    "mary_shelley",
+    "mildred_wirt",
+    "oscar_wilde",
+    "robert_sidney_bowen",
+    "susan_warner"
+  ],
+  "processed_runs": 200,
+  "raw_runs": 200,
+  "all_runs_summary_sha256": "83f507c3ef6c86b7be578d3f222559d21fb8ba7d86faba7610dfa40459a1b99e",
+  "processed_text_tree_sha256": "1af184678ac424c31ba8a851ae47617ca7417f29b5dfdc96f1fb13771e958ccc",
+  "raw_text_tree_sha256": "df1b645872ad61846a129e6b6f95ff871a0761309fe4d20d253bf6f6a62bf392"
+}

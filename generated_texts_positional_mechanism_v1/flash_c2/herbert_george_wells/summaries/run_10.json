@@ -1,0 +1,33 @@
+{
+  "author_key": "herbert_george_wells",
+  "author_name": "H.G. Wells",
+  "run_id": 10,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6099,
+  "completed": true,
+  "n_calls": 14,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/35.txt",
+  "excerpt_sha256": "e03f2c10e007cca30ed7536cd409746359febeb95db8c272e1b96ef5cc90b76f",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/herbert_george_wells/run_10.txt",
+  "processed_sha256": "3ac822663c9874c6247601275ea6ccb7b7e184e5002d27038355715d6af4f865",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/herbert_george_wells/raw/run_10.txt",
+  "raw_sha256": "ba3c5155b9e2d0042c1fb66e29e63d86bec1e0f78a1f6f2810fc3e10e85c172e",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/herbert_george_wells/calls/run_10.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 1,
+  "raw_en_dash_count": 8,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 41121,
+  "thinking_tokens": 61658,
+  "prompt_tokens": 35179
+}

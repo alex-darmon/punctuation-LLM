@@ -1,0 +1,890 @@
+"You win!" Colonel Vance's voice was crisp, cutting through the heavy silence of the command room. He gestured to the scattered cards on the table. "Another round for the house, gentlemen."
+
+CHAPTER SIXTEEN _Ghost Signal_
+
+"What?" Lieutenant Harding asked, looking up from the table, his brow furrowed. He glanced at Sergeant Miller, then back at the colonel. "Is something wrong, sir?"
+
+"Miller, sir," Harding explained. "We had just finished checking the comms grid for anomalies, thinking our shift was finally over. Now this."
+
+"Nobody saw you checking those grid anomalies, did they?" the colonel asked, his eyes narrowing slightly as he fixed them on the young lieutenant.
+
+"No, sir!" the lieutenant replied. "Absolutely nobody."
+
+"He's right, sir," Miller chimed in quickly. "I made sure no one was even in the corridor when we ran the diagnostics. In case you're wondering, Colonel, it wasn't until we secured the console that the call came through. So it's certain no one overheard us."
+
+"Yes, of course you're right," the colonel said, and a faint smile touched his lips. "So don't feel bad. It just gave me a start that you were so thorough. You were partly wrong, though. Your shift is definitely not over yet."
+
+"And the message, sir?" Harding asked when the colonel fell silent, staring out the reinforced window at the simulated twilight of the underground bunker. "Was it important? Is it about the new intercept protocol?"
+
+The senior officer turned from the window and looked straight at him. "You can ask, and I'll tell you," he said. "Each message contained a unique cipher key, a precise time window, and the coordinates for a drop point in case the convoy ran into trouble, or was compromised, and all that sort of thing. In short, as I told you last week, the enemy would give almost anything to intercept just one of those coded transmissions. With that information in their possession, they could have delivered a terrible blow to our forces. Think of it! The loss of an entire supply convoy and its escorts! It would be like setting our advance back to the day of the initial push!"
+
+The horrible thought made Harding shiver in spite of himself, and he thanked God that Miller and he had double-encrypted their last outgoing reports before the anomaly detection. The convoy's loss would have been bad enough, but to have added the loss of the new experimental cargo would have been world shattering indeed.
+
+"And now, sir?" Miller asked after several moments of silence. "Now another plan is to be carried out?"
+
+Colonel Vance didn't answer for a moment. He stared down at his two hands folded on the edge of the metal table, and the expression on his thin face seemed to show a reluctance to answer that question. Presently, though, he lifted his head and looked straight at the two youthful comms specialists. "We are now headed for Sector Seven," he began quietly. "With the extended range of our current signal array, we can make it easily. If we reach Sector Seven without any trouble, I will be as sure as a man can be that the enemy has not learned anything of our decoy operation there. If we don't" The Chief of all Communications Intelligence let the rest trail off into thin air and made a little gesture with one hand. Harding frowned and looked at him earnestly. "I don't think I get what you mean, sir," he said slowly. "And neither do I, sir," Sergeant Miller spoke up.
+
+For a moment the colonel held his lips pressed together in a thin, grim line, and a hard light glittered in his eyes. "In a thing like this," he said presently, "you can't afford to take _any_ chances. You've got to be dead sure, as dead sure of everything as it is humanly possible to be, from start to finish. I had utmost confidence in your maintaining the integrity of our comms during the last push. And the way you two did handle yourselves, when the odds were actually all against you, proves that the confidence I had in you was justified. But in everything there is ever present the little item of fate. A tiny little something that is beyond man's power to see in advance, or even to counteract when it happens. For example, that technical oversight at Outpost Gamma. I would have staked my life on that system. But, as things turned out, I was completely mistaken. And so with you two, or with each of our operatives at the relay stations you were to monitor. Because of something you couldn't guard against, or prevent before compromise came to you, the contents of one of those encrypted signals might have fallen into enemy hands. What I mean is, one of the signals might have been intercepted, its contents decrypted, and then the re-encoded signal broadcast back out."
+
+"But, Colonel," Harding protested, "one of us would"
+
+"I know, I know," the colonel said, stopping him with a gesture of his hand. "But look at it this way. Suppose their jammers had knocked you both out while you were transmitting? Suppose they had intercepted a live signal, read its contents, and then re-broadcast it so that you'd never have guessed? What then? When you came to and found the console still green, you'd never dream that it had been touched."
+
+"But I'd be plenty suspicious, sir!" Harding interrupted. "I'd"
+
+"Would you?" the colonel's quiet but firm voice stopped him again. "But their counter-intelligence was no fool! What if they had planted a false alarm elsewhere, too? What then?"
+
+"I see what you mean, sir," Harding said, and grinned sheepishly. "We would have thought we'd been victims of some network glitch."
+
+"Exactly," the colonel agreed. "A crazy little twist of fate over which you had no control whatever. Yet the damage would have been done. So I had to do what I could to find out if there had been any crazy twist of fate. In other words, each of those encrypted signals contained the information, in code of course, that the _next_ data burst to follow would contain the orders for the main advance, and its target coordinates."
+
+Harding blinked, and suddenly the truth hit him between the eyes. "What, sir?" he gasped. "You, you mean this Sector Seven decoy is _supposed_ to appear as the main advance?"
+
+"I mean just that!" the colonel confirmed grimly. "_If_ enemy agents have learned what was in those signals, they will believe that this decoy operation is the real thing. Our main force has already begun its secret movement, and it wouldn't take much checking by enemy agents to find out that our usual comms chatter is suspiciously quiet. Naturally they'd believe the decoy was the main thrust."
+
+"Anything funny happen on your last shift, sir?" Sergeant Miller asked, as the senior officer paused for breath.
+
+"Nothing that I noticed," Colonel Vance replied with a shake of his head. "But just because things don't happen doesn't mean that they _won't_, in time. So, as I said, we won't know for sure until we verify the decoy's effectiveness at Sector Seven."
+
+"And maybe not even then," Harding mumbled to himself.
+
+Colonel Vance gave the young lieutenant a sharp look, and then nodded his head. "That's right," he agreed. "And maybe not even then. Just another reason why an Intelligence man gets gray hair so early in life. You never can tell about a job until it's all finished and you're working on another. Then it's the same thing all over again."
+
+The trio lapsed into silence, but not for long, because the question that had been plaguing Harding just had to come out. "Supposing we make it to Sector Seven okay," he said, "and you feel sure that the enemy hasn't learned a thing about the main advance, what then? The original decoy signals Miller and I were to have transmitted are no longer relevant, and you say you collected the preliminary reports from Outpost Zeta and Station Delta. How will they know about the true advance when it does move through?"
+
+"A good question, but I've got the answer, Harding." The colonel smiled and pointed to a secure data pad on his metal table. "In there are duplicates of the actual orders, _without_ the part about the Sector Seven decoy being the main force. If we reach Sector Seven safely, we'll turn around and head east for the staging area, cross the fortified zone to the main objective, and deliver one of those secure data files to each of the forward command posts as we clear the way. I've allowed sufficient time for us to do that, in case that's the way it works out."
+
+"Well," Harding remarked, and shifted to a more comfortable position on his chair, "there's nothing like a double-bluff operation across" But he never finished his sentence, because at that moment the warning klaxon blared through the bunker.
+
+The sound was like a raw, metallic shriek, cutting through the tense quiet of the underground compartment and rattling the very bones of the structure. It was an urgent, piercing wail that left no doubt as to its meaning, a stark contrast to the quiet hum of the bunker's life support systems. Harding, startled, actually jumped in his chair, his half-formed words about double-bluffs dying on his lips. Miller, too, flinched, his eyes wide and fixed on Colonel Vance, who alone seemed unperturbed.
+
+"What in the--?" Harding began, his voice a strained whisper against the ceaseless blare.
+
+Colonel Vance, however, did not react with any visible surprise or alarm. His gaze, which had been fixed on Harding's face a moment before, now shifted upwards, toward the reinforced ceiling as if he could see through the layers of durasteel and rock to whatever was happening above. His expression remained grim, but it was a grimness that suggested expectation rather than shock. He simply raised a hand, a silent command for patience amidst the din.
+
+Then, a voice, synthesized and amplified, cut through the klaxon's wail, emanating from hidden speakers throughout the bunker. "Intruder Alert. Sector Seven perimeter breach. Main entrance compromised. All personnel to battle stations. Repeat, Intruder Alert. Sector Seven perimeter breach. Main entrance compromised. All personnel to battle stations." The voice was calm, almost devoid of emotion, a chilling counterpoint to the raw alarm of the klaxon.
+
+"Perimeter breach," Miller breathed, his hand instinctively going to the blaster strapped to his thigh. His youthful face, usually marked by a certain easy confidence, was now tight with concern. "They've found us, sir."
+
+Colonel Vance finally lowered his gaze, settling it first on Miller, then on Harding. A faint, almost imperceptible nod was his only acknowledgement of the developing situation. "They have found _something_," he corrected, his voice surprisingly calm despite the chaos. The klaxon, as if having delivered its message, suddenly ceased, plunging the bunker into an unnatural silence, broken only by the distant thud of heavy footsteps and the sharp, urgent shouts of unseen personnel. The sudden quiet was almost more unnerving than the noise itself.
+
+"What's the difference, sir?" Harding asked, pushing himself to his feet, his mind racing. He was reaching for his own sidearm now, a standard-issue energy pistol, checking its charge with a practiced flick of his thumb. "A perimeter breach means the enemy is inside our defenses. It means they know where we are."
+
+"Indeed," Vance replied, his gaze sharp and unwavering. "But it does not necessarily mean they know _why_ we are here. Or, more importantly, what we are truly doing here." He stood up from the metal table, his movements deliberate, unhurried, a stark contrast to the hurried scurry they could now hear outside their compartment door. He walked over to a wall console, his fingers moving with practiced ease across its holographic interface. A schematic of the bunker sprang to life, displaying various sectors, highlighted in green. A single, pulsing red dot appeared near the main entrance, moving slowly inwards.
+
+"That's them," Miller stated, his voice tight. "Right at the entrance corridor. Moving cautiously."
+
+"Precisely," Vance said, without looking away from the display. "Our decoy worked, it seems. They believed the signals, and now they believe this bunker is the command center for the main advance. They believe it is the source of the 'next data burst' we fed them." A faint, almost bitter smile touched his lips. "They've taken the bait, hook, line, and sinker."
+
+"But, sir, if they're coming in here, they'll realize it's a decoy sooner or later," Harding pointed out, his brow furrowed with apprehension. "And when they do, our actual main advance could be compromised. They'll know we're playing games."
+
+"That is where the timing comes in, Lieutenant," Vance explained, finally turning from the console to face them, his hands clasped behind his back. "And that is why we are here, at Sector Seven. To ensure the deception holds for as long as absolutely necessary. And to extract ourselves, and the true orders, before the enemy realizes they have been chasing a ghost." He paused, his eyes, dark and knowing, sweeping over them both. "This bunker, as you know, is well-fortified, but
+
+But he never finished his sentence, because at that moment the pilot of the B-25 called out, his voice sharp with urgency. "Sir, I'm picking up anomalous energy signatures directly ahead. They're not on our flight plan. And they're moving fast, closing our position."
+
+Colonel Welsh's smile vanished. His face, which only moments before had held a faint, easy expression, now hardened into a mask of grim concern. "Anomalous energy signatures? What kind of signatures, Lieutenant?"
+
+"Heavy weapon systems, sir," the pilot replied, his tone tight with professional alarm. "Definitely not friendly. And they're locking onto us. I'm getting multiple targeting pings."
+
+Dawson and Farmer exchanged a startled glance. The comfortable atmosphere that had settled over them in the wake of the colonel's explanations shattered instantly, replaced by a sudden, icy dread. This was the "crazy little twist of fate" Colonel Welsh had spoken of, manifesting itself in the worst possible way.
+
+"Take evasive action, Lieutenant!" Welsh barked, his voice cutting through the sudden tension in the compartment. "Immediately! Dive! Climb! Anything to break their lock!" He then turned to Dawson and Farmer, his eyes burning with a fierce intensity. "This is it, gentlemen. They know. Somehow, they know. And they're here to intercept the 'President's plane'." He clutched the briefcase containing the duplicate orders tighter. "Dawson, Farmer, strap yourselves in! It's going to be a rough ride!"
+
+Even as he spoke, the B-25 lurched violently, throwing Dawson against the padded wall of the compartment. He grunted, quickly fumbling for his safety harness, his mind racing. This was not supposed to happen. Colonel Welsh had been so certain that if they reached Casablanca without incident, it would mean the enemy was still in the dark. But here they were, in the middle of the night sky, under attack.
+
+"They're coming in fast, sir!" the pilot's voice crackled again, overlaid now with the shrill whine of approaching enemy craft. "Looks like two Messerchmitts, maybe three! And they've launched missiles!"
+
+A new, terrifying sound permeated the cabin: a high-pitched, metallic scream that grew louder with every second.
+
+The high-pitched, metallic scream reached a crescendo that tore at their eardrums, a sound like pure malevolence given form, and then it was drowned out by a deafening, concussion-inducing roar. The B-25 shuddered violently, not just a lurch, but a bone-jarring, structure-stressing convulsion that ripped through the very fabric of the aircraft. Dawson felt a sharp, burning pain as his head smacked against the hard edge of the compartment wall, despite his quick action in fumbling for his harness. He saw stars, a dizzying explosion of light behind his eyes, even as the world around him became a blur of motion and terrifying noise. The plane was falling.
+
+"We're hit!" the pilot's voice, now a strained shout, crackled over the intercom, fighting to be heard above the grinding, tearing sounds that seemed to emanate from every rivet and seam of the B-25. "Starboard engine out! Fire in the nacelle! Controls are sluggish!"
+
+Colonel Welsh, braced against a stanchion, his face pale but resolute, bellowed back, "Damage report! Can we maintain altitude, Lieutenant?"
+
+"Losing it fast, sir! We're diving! I'm fighting the stick, but it's like trying to wrestle a runaway train!" There was a grunt, a sound of immense physical effort. "Another pass, sir! They're coming around again!"
+
+Dawson, his vision clearing slightly, saw Freddy Farmer next to him, his youthful face stark white
+
+The B-25 tilted crazily, its dive steepening with an alarming rapidity that pressed Dawson hard into his seat. He could feel the blood draining from his face, and a cold knot of dread tightened in his stomach. The world outside the small windows was a dizzying, ink-black blur, relieved only by the intermittent flicker of angry red light from the starboard engine nacelle, a baleful beacon of their crippling injury. He could hear the shriek of the wind tearing at the damaged airframe, a high-pitched, relentless whine that overlaid the desperate groans and protests of tortured metal.
+
+"Freddy, you alright?" Dawson shouted, his voice barely audible above the terrifying symphony of destruction. He turned his head with effort, straining against the G-forces pulling them down.
+
+Farmer, his eyes wide and fixed on nothing in particular, nodded jerkily. His hands were clasped so tightly on his knees that his knuckles were white. "Yeah, I think so, Dave," he managed, his voice thin. "Just a bit rattled."
+
+Colonel Welsh, still braced, seemed a figure carved from granite amidst the chaos. His eyes swept across the compartment, assessing them, assessing the situation. "Lieutenant," he barked into the intercom again, his voice possessing an almost unnatural calm despite the circumstances. "Report! What's our altitude? Can you get us out of this dive?"
+
+"Altitude dropping through five thousand, sir!" the pilot yelled back, his voice ragged with strain. "Fighting it, sir! Trying to feather the propeller on number two! Can't get enough rudder authority to pull out cleanly! We're in a spiral! They blew a chunk right out of the wing, sir!"
+
+As if to underscore his words, the plane gave another violent, sickening lurch. Dawson felt his stomach rise into his throat. He clenched his jaw, fighting the urge to retch. This wasn't just a dive, it was an uncontrolled spin, a corkscrew descent towards the black, unforgiving expanse of the Atlantic. The roar of the wind became a deafening shriek, the metal groans intensified, and the flickering fire from the engine now seemed to paint the interior of the compartment in gruesome, dancing shadows.
+
+"They're coming back around, sir!" the co-pilot's voice cut in, sharp with alarm. "Closing in! From our six o'clock!"
+
+"Brace yourselves!" Colonel Welsh roared, his hand moving instinctively towards his sidearm, though it was useless against fighter planes. "Lieutenant, evasive action! Anything!"
+
+A new sound joined the cacophony, a chattering, ripping noise that tore through the airframe, followed by the terrifying splintering of metal nearby. Tracer rounds, like angry red bees, stitched glowing lines across the darkness just outside the window, briefly illuminating the sleek, predatory outline of a Messerschmitt Bf 109 as it flashed past. The entire B-25 shuddered again, less from impact and more from the sheer concussive force of the cannon fire.
+
+"They're chewing us up, sir!" the pilot cried. "We're losing hydraulic pressure! Ailerons are stiff!"
+
+Dawson instinctively ducked, pressing his head against the padded backrest. He could hear the sharp whine of bullets ricocheting inside the fuselage, a deadly, buzzing symphony of destruction. This was it, he thought, a cold, hard certainty settling in his mind. This was the end. They had flown too many missions, dodged too many bullets, only to end up as a fiery wreck in the middle of nowhere, a decoy for a President who was not even on board. The bitter irony of it all struck him with a sickening force.
+
+"Forward turret, sir!" Freddy Farmer suddenly shouted, his voice surprisingly strong despite the fear etched on his face. "Doesn't this thing have a forward gunner? Or waist guns?"
+
+Colonel Welsh turned sharply, his eyes flashing. "This B-25 was modified for long-range transport, Farmer! Defensive armaments were stripped to make room for fuel tanks and personnel! We have only the tail gunner, and he's likely busy trying to fend off those devils from behind!"
+
+Another series of impacts rattled the fuselage, closer this time, and a shower of sparks erupted from the ceiling panels. The dim interior lights flickered wildly, threatening to give out completely. The B-25 groaned like a dying beast, its descent seemingly accelerating.
+
+"Lieutenant, can you make any course correction?" Welsh demanded, his voice strained. "Are we over land? Over water?"
+
+"Water, sir!" the pilot gasped, his breath coming in ragged pants. "I can just make out whitecaps! We're losing too much speed to pull out! We're going in!"
+
+Dawson felt a surge of adrenaline, cold and sharp. Going in. The words echoed in his mind, bringing with them visions of a violent, fiery crash into the unforgiving ocean. He looked at Freddy, whose face was a mask of grim determination now, his youthful bravado replaced by a stark understanding of their predicament.
+
+"Sir, the briefcase!" Dawson shouted, pointing to the leather case still clutched in Colonel Welsh's hand. "The duplicates! If we go down, they can't fall into enemy hands!"
+
+Welsh looked at the briefcase as if seeing it for the first time, then his eyes hardened. "You're right, Dawson!" he bellowed. "Can you get to the escape hatch? Or a window?"
+
+"No time, sir!" the pilot screamed. "Impact in thirty seconds! We're too low! Too fast!"
+
+The B-25 bucked and slewed violently, its descent now a near-vertical plunge. The air inside the compartment filled with the smell of smoke and burning insulation. The roar of the wind was a banshee wail. Dawson braced himself, his hands gripping the edges of his seat, his muscles tensed for the inevitable. He thought of home, of the quiet English countryside, of the last letter he'd received from his mother.
+
+"Wait!" Colonel Welsh suddenly yelled, his voice cutting through the din with an unexpected ferocity. "Lieutenant, any chance of a controlled ditching? A flat approach?"
+
+"Negative, sir!" the pilot shouted back, despair lacing his tone. "We're too far gone! We're tumbling! I've lost control!"
+
+"Then do it manually!" Welsh roared. "Cut the engines! Feather the good one! Try to pancake it!"
+
+There was a moment of silence from the cockpit, then a new sound joined the symphony of destruction: the dying gasp of the remaining engine as its power was cut. The sudden relative quiet was eerie, a stark contrast to the previous roar, broken only by the shriek of the wind as the crippled bomber plummeted. The fire in the starboard nacelle, deprived of fuel, began to diminish, flickering like a dying candle.
+
+"Brace! Brace for impact!" the pilot screamed, his voice cracking.
+
+Dawson squeezed his eyes shut, his entire body rigid. He heard Freddy whimper something beside him, a small, scared sound. He felt the increasing G-forces push him down, then a sudden, violent deceleration, a jarring slam that ripped through every bone in his body. The world exploded into a chaos of noise and sensation. There was the deafening roar of tearing metal, the splintering of wood, the rush of cold water, and a violent, sickening spin. He was thrown forward, then backward, his head snapping against something hard, then he was underwater, a blinding, choking darkness consuming him.
+
+He struggled, disoriented, the safety harness a death trap. Water rushed into the compartment, frigid and unforgiving. He could feel sharp edges, twisted metal, and the sickening sensation of being trapped in a sinking coffin. Panic, cold and raw, clawed at his throat. He thrashed, blindly reaching for the release mechanism on his harness, his lungs burning, screaming for air. His fingers, numb and clumsy, fumbled at the buckle. It seemed stuck, jammed by the impact.
+
+Then, a sudden, powerful shove against his shoulder. He felt a hand, strong and insistent, push him towards something. He opened his eyes, though it was useless in the black water. He could vaguely make out a faint, silvery light above him, a desperate promise of the surface. He kicked, using the last reserves of his strength, pushing off whatever obstacle was holding him. The harness, miraculously, gave way. He shot upwards, propelled by the last vestiges of the plane's sinking momentum and his own desperate will to live.
+
+He burst through the surface of the water, gasping, choking, sucking in great, painful gulps of frigid night air. The shock of the cold was immense, a physical blow that stole his breath and numbed his limbs. He thrashed, trying to stay afloat, spitting out salt water. Around him, the ocean was a churning, oily mess, dotted with debris. The last visible pieces of the B-25, twisted and broken, were rapidly sinking beneath the waves, leaving only a widening slick of fuel on the water's surface.
+
+"Freddy! Colonel Welsh!" he yelled, his voice hoarse, his words swallowed by the vast emptiness of the ocean. He squinted into the darkness, straining his eyes. The moon, a sliver of silver, was obscured by shifting clouds, offering little light.
+
+"Dawson! Over here!" a voice, weak but recognizable, called out from nearby.
+
+He kicked towards the sound, his teeth chattering uncontrollably. He found Freddy Farmer clinging to a piece of wreckage, a larger section of fuselage perhaps, his face pale and streaked with oil, his eyes wide with shock.
+
+"Are you hurt?" Dawson asked, grasping the same piece of debris, trying to find purchase.
+
+"My leg," Freddy gasped, wincing. "Hit it on something. Think it's just a gash, but it stings like hell. Are you okay?"
+
+"Yeah, just banged up," Dawson replied, shivering violently. He scanned the dark water again. "Where's the colonel?"
+
+"I don't know," Freddy said, his voice trembling. "I saw him right before we hit. He was trying to get the briefcase out of the compartment. He pushed me towards the hatch. He saved me, Dave."
+
+A chilling thought struck Dawson
+
+The thought of Colonel Welsh, trapped in the sinking plane, desperately trying to save the crucial briefcase. That briefcase held the duplicate orders, the very heart of their mission, without which the President's real plane would be flying into uncharted peril. It also held the keys to their alibi, their proof that this B-25 was merely a decoy.
+
+"We have to find him," Dawson said, the words coming out in chattering bursts. "And that briefcase."
+
+Freddy nodded, his eyes wide and fixed on the dark water. "I know, but… it went down so fast, Dave. The whole tail section tore off, I think. And the main body, it just plunged." He pointed a trembling hand towards where the last ripple of the plane's descent had disappeared. "Right there."
+
+Dawson looked at the spot, a sickening vortex of fuel and foam, then back at Freddy. "Can you hold onto this?" he asked, indicating the piece of wreckage they shared. It was a section of fuselage, surprisingly buoyant, probably reinforced structural material.
+
+"I think so," Freddy replied, his voice barely a whisper. "Just don't leave me alone too long. My leg's starting to cramp up with the cold."
+
+"I won't," Dawson promised, though he knew he might have to. He took a deep breath, the cold air burning his lungs, and pushed himself away from the wreckage. He ducked his head under the surface, peering into the murky depths, but saw nothing but the swirling darkness. The oil slick made
+
+nothing but the swirling darkness. The oil slick made visibility almost impossible. He forced himself deeper, fighting the natural buoyancy of his lungs and the sheer, numbing cold that pierced through his flight suit. His hands, already stiff, fumbled in the blackness, searching for anything solid, anything that wasn't just water or slick fuel. He could hear the faint, distorted creaks and groans of metal as the B-25 settled deeper into its watery grave. Pressure built in his ears, a dull ache that reminded him of the crushing depth. He swam downwards, guided by a sense of where the plane had gone, remembering the trajectory of its final plunge. He stretched out his arms, hoping to feel the fuselage, a wing, anything.
+
+Then, his outstretched hand brushed against something rough and metallic. He grasped it, his fingers closing around twisted aluminum. It was a section of the tail, larger than he had expected, jutting out at an odd angle. He pulled himself along it, his eyes straining, trying to discern shapes in the inky blackness, only faintly illuminated by the distant, diffuse moonlight filtering through the surface oil and water. He moved slowly, deliberately, his lungs screaming for air, his heart pounding against his ribs. He knew he didn't have much time. He had to find Welsh, had to find that briefcase. The thought of the President’s plane flying unprotected, exposed to enemy intelligence because of their failure, spurred him on.
+
+He saw him then. A dark, indistinct shape entangled in a web of wires and torn metal, suspended just below a larger, mangled section of the fuselage. Colonel Welsh. He was floating, face down, his uniform billowing slightly in the gentle currents of the deep. Dawson's stomach lurched. He pushed off the wreckage and swam towards the colonel, his every muscle burning. He reached Welsh, his hand finding the older man's shoulder. He felt for a pulse at the neck, his fingers numb, his mind a whirlwind of hope and despair. Nothing. Or was it just the cold? He couldn't tell. He tried to turn the colonel over, but the wires held him fast. He tugged, his breath almost gone, his vision blurring at the edges.
+
+Then he saw it. A dark, rectangular shape clutched in the colonel’s left hand, still gripped tightly even in unconsciousness or worse. The briefcase. His heart gave a desperate leap. He had to get it. He had to get them both. He fumbled with the wires, his fingers clumsy with cold and urgency. He pulled at the strands of copper and steel, cutting his hands on sharp edges he could not see. Finally, with a desperate wrench, he tore the last wire binding the colonel. He grabbed the briefcase, prying it from the colonel’s stiff grasp. It was heavy, strangely so, and felt intact. Then, with one arm under Colonel Welsh’s shoulders, Dawson began the arduous ascent.
+
+The journey back to the surface seemed to take an eternity. His lungs ached with a pain that threatened to incapacitate him, spots danced before his eyes, and the sheer effort of pulling a dead weight upwards through the water was almost beyond his strength. He kicked, he pulled, he fought with every fiber of his being. The oil slick on the surface seemed miles away, a distant, shimmering horror. He felt lightheaded, on the verge of blacking out. But the image of the President, the mission, the stakes, burned in his mind. He couldn't fail. Not now. Not after all this.
+
+He burst through the surface with a gasp, a primal, ragged cry for air that clawed at his throat. The cold night air hit him like another blow, but the oxygen, though burning, was a blessed relief. He coughed, spitting out bitter seawater and oil, his chest heaving. "Freddy!" he croaked, barely audible. "Freddy!"
+
+A splash nearby, and then Freddy's pale, oil-streaked face appeared beside him, his eyes wide with a mixture of terror and hope. "Dave! You got him! Is he…?"
+
+Dawson struggled to hold Colonel Welsh's head above the water, his arm trembling. "I don't know," he panted, every word an effort. "He's not responding. And I got the briefcase." He held up the heavy, water-logged briefcase for Freddy to see. It was still sealed, miraculously, a beacon of their dwindling hope.
+
+Freddy, despite his injured leg, managed to maneuver the large piece of fuselage they were using as a raft closer. "Help me get him on here," he urged, his voice tight with desperation.
+
+Together, with immense effort, they managed to haul Colonel Welsh’s inert form onto the makeshift raft. He lay there, motionless, his face pale and unseeing, the water dripping from his uniform. Dawson quickly checked for a pulse again, this time more thoroughly, pressing his fingers hard against the colonel’s neck. A faint, almost imperceptible throb. Hope surged through Dawson, a tiny, flickering flame in the crushing darkness. "He's alive," he whispered, a tremor in his voice. "Just barely, but he's alive!"
+
+Freddy let out a shaky breath, a sound that was half sob, half laugh. "Thank God," he murmured. "Thank God." He then looked at the briefcase, which Dawson had placed carefully beside Welsh. "Is it… okay?"
+
+Dawson nodded, running a hand over its slick, waterproof surface. "Sealed tight. But we're not out of the woods yet. Not by a long shot." He shivered, the cold beginning to set in with a vengeance now that the adrenaline was fading. He looked around them, at the vast, featureless expanse of the ocean, the darkness punctuated only by the distant, indifferent stars. The oil slick was spreading, a dark, iridescent stain on the water. Other debris, smaller pieces of the plane, floated aimlessly around them.
+
+"We need to find more wreckage," Dawson said, his mind already racing, trying to formulate a plan out of the chaos. "Something we can use for warmth, for signaling, for anything." He began to scan the water, his eyes piercing the gloom. Freddy, despite his painful leg, began to paddle weakly with his hands, moving them slowly through the debris field.
+
+They spent the next hour or so, a grueling, exhausting period of time, gathering what they could. They found a few empty fuel cans, their buoyancy a welcome addition to their precarious raft. A deflated life raft, useless for its intended purpose, but its thick canvas material might offer some protection from the elements. A section of a wing, large enough to provide additional floatation, though its sharp edges were a hazard. And most importantly, two emergency flares, still in their waterproof casings, plucked from a floating storage compartment. These finds, though meager, bolstered their spirits slightly.
+
+Colonel Welsh remained unconscious, his breathing shallow and ragged. Dawson had tried to remove his wet uniform, fearing hypothermia, but the colonel was too heavy, and Dawson himself was shivering uncontrollably. He decided to drape the deflated life raft canvas over him instead, hoping to trap some body heat. He placed the briefcase securely between Welsh and himself, a silent, grim reminder of their purpose.
+
+"What do we do now, Dave?" Freddy asked, his voice small in the vastness. He was clutching his injured leg, his face contorted in pain. "We're in the middle of nowhere."
+
+Dawson looked up at the sky. The moon was now a thin crescent, offering little comfort. "We wait," he said, his voice grim. "And we hope. Hope someone saw us go down. Hope they send a search party. Hope we don't drift too far." He paused, his gaze sweeping the horizon. "We're on the main shipping lanes, theoretically, but it's a big ocean. And we were supposed to be a decoy. If anyone knows we're out here, it means the decoy failed, and the President is in even more danger."
+
+The thought was a chilling one, adding another layer of despair to their already desperate situation. The very reason for their existence, their decoy mission, now militated against their rescue. If their plane was truly meant to draw attention away from the real presidential flight, then no one would be looking for survivors of this specific crash.
+
+"But the colonel said the President had already left Washington," Freddy reasoned, trying to find a silver lining. "So, he should be safe, for now. Unless… unless the enemy already knew."
+
+"That's the point of this whole charade, Freddy," Dawson explained, his voice low and weary. "To find out if they knew. If we don't show up in Casablanca, if this briefcase doesn't get where it needs to go, then the real flight might be compromised. We're part of the test. The canary in the coal mine, as it were." He shivered again, a deep, bone-rattling shake. "We have to make it. For him. For the mission."
+
+Silence descended upon them once more, broken only by the lapping of the waves against the wreckage and the occasional groan from Colonel Welsh. Dawson’s mind drifted, recalling the colonel's words in the B-25, his explanation of fate and unforeseen circumstances. That technical sergeant at Bolling Field, the potential for an envelope to be compromised without their knowledge. He saw now, with horrifying clarity, the complete, utter truth of those words. They were the unforeseen circumstance, the twist of fate beyond human control.
+
+Hours crawled by. The cold was relentless, seeping into their bones, making their teeth chatter uncontrollably. Freddy’s leg was throbbing, and he had to clench his jaw to keep from crying out. Dawson, for his part, felt a creeping numbness in his extremities. He rubbed his hands together, trying to generate some friction, some warmth, but it was a futile effort. He kept an eye on Colonel Welsh, whose breathing remained shallow, but at least consistent. He was still alive, and that was a miracle in itself.
+
+The water around them began to glow faintly with bioluminescence as the currents stirred, creating ghostly trails beneath the surface. It was a beautiful sight, but also eerie, a reminder of the vast, alien world beneath them. He couldn't shake the image of what lay below, of the sunken B-25, a tomb for the rest of their crew. The thought sent another shiver down his spine.
+
+As the pre-dawn hours stretched into infinity, Dawson found himself nodding off, his head lolling forward, only to be jolted awake by a particularly strong wave or a sudden spasm of cold. He knew he couldn’t afford to sleep. Not yet. He had to keep watch, had to keep them going.
+
+He looked over at Freddy, who was huddled on the wreckage, his head buried in his arms, shivering violently. "Freddy," he said, his voice raspy. "You awake?"
+
+Freddy stirred, lifting his head. His eyes were red-rimmed and distant. "Yeah, Dave. Just about. My leg's killing me."
+
+"I know, kid," Dawson replied, a surge of sympathy for the younger man. "But we can't give up. Not now." He pointed to the briefcase. "This is our lifeline. And the colonel needs us."
+
+Freddy nodded, pushing himself up a little straighter, his jaw set. "Right, Dave. We won't."
+
+They sat in silence again, waiting for the dawn. The waiting was the worst part, the uncertainty, the knowledge that they were completely at the mercy of the ocean and fate. The colonel's words echoed in Dawson's mind again. "You can't afford to take _any_ chances. You've got to be dead sure; as dead sure of everything as it is humanly possible to be, from start to finish." They had been so sure. And yet, here they were.
+
+A new sound reached Dawson's ears then, a faint, rhythmic slap against the water, distinct from the waves. He strained his ears, his senses heightened by the ordeal. It was getting closer. A shiver of fear, cold and sharp, ran down his spine. He had heard that sound before, in the documentaries, in the stories from other pilots who had ditched. It was the sound of a large marine predator moving through the water.
+
+"Freddy," he whispered, his voice barely audible, his eyes darting across the water. "Did you hear that?"
+
+Freddy stiffened, his head snapping up. "Hear what, Dave?"
+
+"A splash," Dawson hissed, pointing towards the dark, churning water about fifty yards away. "Something big."
+
+They both stared, their hearts pounding in unison. The sound came again, closer this time, a powerful, deliberate slap that sent ripples across the surface. Then, a dark, triangular fin cut through the water, gliding smoothly, purposefully. A shark. A large one.
+
+Freddy let out a choked gasp, his face going even paler than before. "Oh my God, Dave. A shark."
+
+Dawson gripped the edge of the fuselage, his knuckles white. "Stay calm, Freddy. Don't make any sudden movements." But even as he said it, his own muscles were tensing, ready for a fight he knew he couldn't win. He looked down at Colonel Welsh, still unconscious, still vulnerable. He instinctively moved to shield the older man with his body, placing himself between the shark and the colonel. The briefcase was still there, his top priority, but the survival of the colonel was now intertwined with it.
+
+The fin circled them slowly, deliberately, a silent, ominous sentinel in the pre-dawn gloom. They could hear the water displacement now, a soft, menacing hiss. The shark was curious, perhaps hungry. Dawson knew that bleeding from Freddy's leg, however minor, would only draw it closer. He felt a desperate urge to cover the wound, to staunch the flow, but he had nothing.
+
+"What do we do?" Freddy whispered, his voice trembling uncontrollably.
+
+"We make ourselves look big," Dawson said, trying to project a confidence he didn't feel. "And we make noise. We try to scare it off." He searched frantically among their meager collection of salvaged items. The empty fuel cans. He grabbed one. "When I say so, we start banging on these. Make as much racket as you can."
+
+The fin made another pass, closer still, and they could now discern the dark, torpedo-shaped body beneath the surface, a monstrous shadow moving with effortless grace. The sheer size of it was terrifying.
+
+"Now!" Dawson yelled, and began to beat the fuel can against the fuselage with all his might, a desperate, clanging rhythm that echoed strangely over the water. Freddy, despite his fear and pain, joined in, using his fists on the metal. The noise was deafening, jarring, a cacophony against the vast silence of the ocean.
+
+The shark hesitated, its movements becoming less fluid, more agitated. It circled wider, but did not retreat. It was evaluating them, sensing their fear, perhaps intrigued by the unfamiliar sounds. Dawson kept up the racket, his arms aching, his throat raw. He had to keep going. He had to.
+
+Just as despair threatened to overwhelm him, as his arms felt like lead and the noise seemed to be doing nothing, a faint, almost imperceptible lightening began to appear on the eastern horizon. The first hint of dawn. A pale, milky gray began to push back the oppressive black of night.
+
+The shark, perhaps sensing the approaching light, or simply losing interest in the noisy, unappetizing prey, dipped below the surface and, with a powerful flick of its tail, disappeared into the depths.
+
+Dawson and Freddy stopped banging, their arms falling limp, their breath coming in ragged gasps. Silence returned, heavy and profound, broken only by the sound of the waves and their own shuddering breaths.
+
+"It's gone," Freddy whispered, almost disbelievingly.
+
+"For now," Dawson corrected, his voice hoarse. He scanned the water nervously, but the fin was nowhere to be seen. The coming dawn was a double-edged sword. It meant visibility, a chance for rescue, but also a greater chance of being seen by any lurking dangers, or by enemy patrols.
+
+As the sun slowly began to paint the sky with streaks of orange and purple, casting a warm, deceptive glow over the endless ocean, Dawson felt a fresh wave of exhaustion wash over him. He was cold, hungry, thirsty, and bone-weary. But he was alive. Freddy was alive. And Colonel Welsh, though still unconscious, was breathing. And most importantly, the briefcase was safe.
+
+With the light came a sense of scale, a clearer, crueler realization of their predicament. They were a tiny speck on a vast, indifferent ocean. The wreckage they clung to was small, fragile. The horizon stretched endlessly in every direction, an unbroken line of blue.
+
+"We need to keep warm," Dawson said, his voice flat. "And we need water. And if we can, food." He looked at the deflated life raft canvas. "Can you help me try to make some kind of shelter with this? Even if it's just to shield us from the sun later."
+
+Freddy nodded, wincing as he shifted his leg. "I'll try, Dave."
+
+They worked slowly, methodically, their movements stiff and painful. They managed to prop up the canvas over a section of the fuselage, creating a small, flimsy lean-to that offered at least the illusion of shelter. It would shield them from the sun, preventing sunburn, and hopefully concentrate some body heat if they huddled together.
+
+Dawson checked on Colonel Welsh again. The colonel's eyelids fluttered, a faint, hopeful sign. Dawson leaned close. "Colonel? Can you hear me?"
+
+Welsh groaned, a low, guttural sound, and his eyes slowly, painfully, opened. They were unfocused, glazed with pain and exhaustion, but they were open. He tried to speak, his lips moving soundlessly.
+
+"Don't try to talk, sir," Dawson urged. "Just rest. You're safe. We're on some wreckage. Freddy's here. And the briefcase is safe." He patted the waterproof case reassuringly.
+
+A faint flicker of understanding, or perhaps just acknowledgement, passed through the colonel's eyes. He closed them again, his breathing remaining shallow but steady.
+
+"He heard you, Dave," Freddy said, a note of quiet triumph in his voice. "He knows."
+
+The sun climbed higher, warming the surface of the water, but doing little to penetrate the chill in their bones. Dehydration began to set in, a dryness in their throats, a desperate craving for fresh water. They had found no water supplies in their salvage operation, an oversight in the emergency equipment of a bomber, perhaps, or simply lost in the crash.
+
+"We have to signal," Dawson declared, pulling out one of the emergency flares. "We'll wait until we see something. Anything. A ship, a plane, a distant smoke plume." He looked at the flare, a slim, red cylinder that represented their last best hope. "We only have two. We can't waste them."
+
+They spent the morning scanning the horizon, their eyes aching from the glare, their bodies stiff and protesting every movement. The vastness of the ocean was both beautiful and terrifying, a constantly shifting expanse of blue that promised nothing but endless solitude.
+
+Mid-morning, a small, dark speck appeared on the horizon, moving from left to right. At first, Dawson dismissed it as a trick of the light, a figment of his sleep-deprived imagination. But it persisted, growing slowly, unmistakably, larger.
+
+"Freddy," Dawson croaked, pointing with a trembling hand. "Look."
+
+Freddy followed his gaze, his eyes widening. "Is that…? A ship?"
+
+It was. A merchant vessel, by the looks of it, a freighter, moving slowly but steadily across the distant horizon. It was still very far, almost at the edge of their visibility, but it was there. Hope, potent and overwhelming, surged through Dawson's weary body.
+
+"Okay," Dawson said, his voice gaining strength. "This is it. Get ready, Freddy. When I fire this, you yell, you wave, you do everything you can to get their attention." He opened the flare's casing, his fingers fumbling slightly with the mechanism.
+
+He waited, watching the ship, gauging its course. It was moving across their bow, a good distance away, but perhaps close enough. He had to time it perfectly. The flare's smoke, though bright, wouldn't last forever.
+
+"Now!" Dawson yelled, pressing the ignition. With a sharp hiss and a shower of sparks, the flare ignited, shooting a column of vivid, crimson smoke high into the air. The bright, unnatural color stood out starkly against the blue sky, a desperate beacon in the wilderness of the ocean.
+
+Freddy, true to his word, began to yell, a hoarse, ragged cry, waving his arms frantically, despite the pain in his leg. Dawson held the flare aloft, watching the ship, his heart hammering against his ribs. The red smoke plumed upwards, dissipating slowly in the gentle breeze. He watched the ship, hoping, praying, for some sign, any sign, that they had been seen.
+
+Seconds stretched into an agonizing eternity. The ship continued its slow, steady course, seemingly oblivious to their desperate plea. The smoke from the flare began to thin, to fade. Despair, cold and heavy, began to creep back into Dawson's chest.
+
+"They didn't see us, Dave," Freddy whispered, his voice broken. His arms fell to his sides, his shoulders slumping.
+
+Dawson's jaw tightened. "One more," he said, reaching for the second flare. "We have one more chance." He didn't want to use it yet, not if there was still a chance this ship might alter course, but the smoke was almost gone.
+
+Just then, a faint, almost imperceptible change in the ship's course. Its bow seemed to swing ever so slightly, a barely noticeable shift in direction. Dawson strained his eyes, hardly daring to breathe. Was it turning? Was it a trick of his tired eyes?
+
+Then, a flash of light from the ship's bridge, a distant, tiny flicker. A signal lamp. It was returning their call.
+
+"They saw us!" Dawson shouted, a raw, primal cry of relief. "They saw us, Freddy! We're saved!" He threw the spent flare casing into the water, and then, for the first time since the crash, Dawson allowed himself to collapse onto the wreckage, his body shaking uncontrollably, not from cold or fear, but from the sheer, overwhelming release of emotion. They had made it. They had survived. And the briefcase, the precious, vital briefcase, was still with them. The mission, against all odds, might yet be saved. The President, hopefully, was safe, unaware of the terrifying ordeal his decoy had just endured.
+
+But he never finished his sentence, because at that moment the pilot of the B-25 had abruptly pulled back on the stick, lifting the nose of the plane sharply. The sudden maneuver threw Dawson forward, his head snapping back against the seat. Freddy, caught equally by surprise, let out a startled yelp. "What was that, sir?" Dawson called out, twisting in his seat to look at Colonel Welsh. The Colonel, his face grim, was already reaching for the interphone. "Pilot, what in blazes was that for?" he barked into the mouthpiece.
+
+A moment later, the pilot's voice, tight with tension, crackled through the cabin speakers. "Surface contact, Colonel! Dead ahead! Looks like a U-boat, sir! On the surface, charging batteries! Had no choice but to pull up or we'd have hit it!"
+
+Dawson's blood ran cold. A U-boat. On the surface. In the middle of the Atlantic. The sheer audacity of it, combined with the extreme danger it presented, sent a jolt of fear through him. Freddy, pale, was already leaning forward, trying to peer through the cockpit windows. "A U-boat, Dave?" he whispered, his voice barely audible.
+
+"Aye, a U-boat, Farmer," Colonel Welsh confirmed, his eyes narrowed, scanning the blackness outside. "And a very unwelcome sight, to be sure. Pilot, what's our status? Did they see us?"
+
+"Can't be certain, sir," the pilot replied, his
+
+tight with tension. "I was too busy pulling back on the stick to look, sir. My co-pilot thinks he saw a faint light on the conning tower right before we cleared it, but it could have been our own reflection. Hard to say for sure."
+
+Colonel Welsh's jaw tightened. He turned from the interphone, his gaze sweeping over Dawson and Farmer, who were now sitting bolt upright, their faces etched with a mixture of fear and adrenaline. The compartment was dark save for the dim instrument lights and the faint glow from the cockpit. The roaring of the engines, which had moments before seemed a steady drone, now felt like a desperate throb.
+
+"Well, gentlemen," he said, his voice clipped, "it seems fate has decided to play another one of its little games with us. Pilot, maintain current heading for a minute. Then, execute a series of evasive maneuvers. Three hundred feet up, three hundred down. Hard turns, port and starboard. Let's see if anyone is following our tail."
+
+"Understood, Colonel," came the pilot's prompt reply.
+
+The B-25, which had leveled out after its sharp ascent, suddenly dipped again, then climbed, then banked sharply to the left. Dawson felt his stomach lurch, and he gripped the armrests of his seat. Freddy, too, was braced, his knuckles white. The compartment was thrown from side to side, and the brief-case Colonel Welsh had pointed to earlier slid a few inches across the small table, threatening to tumble to the floor. Welsh, with a surprising swiftness, reached out and steadied it with one hand, his other still resting lightly on the interphone.
+
+"What do you think, sir?" Dawson managed to ask during a momentary lull in the turbulence. "Could they have seen us?"
+
+Colonel Welsh stared intently into the blackness outside the compartment window. "It is difficult to say, Dawson. As the pilot observed, it would be difficult for them not to have seen us. On the other hand, the element of surprise was certainly ours. They were on the surface, charging batteries, which indicates a degree of complacency. They would not have expected an aircraft over them in this part of the Atlantic, especially at night." He paused, then added grimly, "However, if they did see us, and if they are on the lookout for President Roosevelt's decoy, then we have a very serious problem indeed."
+
+"But how would they know to look for us here?" Freddy blurted out, his eyes wide. "They wouldn't know the route, would they, sir? Not without those envelopes."
+
+"Precisely, Freddy," the Colonel said, his eyes now fixed on the young Englishman. "That is the question. The envelopes contained the routes for the actual President's plane. Our plane is meant to be the decoy. Unless, of course, the information they obtained from one of those 'opened and resealed' envelopes was specifically about this decoy operation. Or, more disturbingly, if they are simply sweeping the shipping lanes for any high-value targets, and we have simply stumbled upon a U-boat on patrol." He shook his head slowly. "Either way, it is an unfortunate encounter."
+
+The B-25 continued its erratic flight path for what felt like an eternity. Dawson's muscles ached from tensing, and a cold sweat trickled down his back. Every dip and climb, every sharp turn, was a reminder of the unseen enemy below, or perhaps, behind them. He strained his ears, listening for any change in the engine's drone, any distant explosion, any sound that would signify detection or attack. But there was nothing but the steady roar of the plane, and the occasional creak and groan of its stressed fuselage.
+
+Finally, Colonel Welsh again spoke into the interphone. "Pilot, cease evasive action. Resume original course and altitude. What's your assessment of pursuit?"
+
+After a short delay, the pilot's voice came back, sounding a little less strained. "Negative, Colonel. No visual contact. No radar contact. No signs of any craft following us. I think we gave them the slip, or they simply didn't react quickly enough to our initial flyover. They're probably still trying to figure out what hit them, if anything."
+
+A small measure of relief washed over Dawson, but it was quickly replaced by a lingering unease. Colonel Welsh, too, seemed far from reassured. He sat back in his seat, his gaze still distant, fixed on some unseen point beyond the compartment walls. The darkness outside remained absolute, offering no comfort, no clue.
+
+"Even so," he murmured, more to himself than to them, "the damage may already be done."
+
+Dawson exchanged a quick glance with Freddy. The old colonel was right. If the U-boat had seen them, even without knowing their specific mission, the sighting of an American B-25 in these waters could be reported. And a reported B-25, flying a particular course, might raise suspicions. Especially if the enemy already had some inkling of the decoy plan. The 'crazy little twist of fate' was indeed a potent and terrifying force, a silent, unseen adversary that could undo all their careful planning.
+
+"So, we continue to Casablanca, sir?" Dawson asked, needing to break the heavy silence that had fallen between them.
+
+Colonel Welsh nodded, a decisive tilt of his head. "We do. Our orders are explicit. We cannot deviate from the primary objective. Even if this encounter has put us at risk, turning back or altering course without cause would be an even greater risk, potentially confirming enemy suspicions if they are indeed watching. No, we proceed as planned. But we do so with increased vigilance." He looked at both of them, his expression serious. "You two are experienced airmen. Keep your eyes open. Report anything, no matter how insignificant it may seem. Every detail could be crucial now. We must assume they saw us and reported it, until proven otherwise."
+
+The rest of the night passed in a tense quiet. Dawson and Farmer took turns trying to catch some sleep, but it was restless and fitful. The image of the U-boat, lurking on the dark surface of the ocean, was burned into their minds. The thought that they were acting as a decoy, a tempting target for enemy agents, weighed heavily on them. They knew the value of the information they carried, even if it was false information, and the lengths to which the enemy would go to obtain it. Every creak of the plane, every sudden gust of wind, was amplified by their heightened senses, triggering a momentary surge of anxiety.
+
+As dawn approached, painting the eastern sky with pale grays and blues, a new sense of hope, however fragile, began to emerge. The first rays of sunlight, weak and hesitant, pierced the compartment windows, chasing away some of the oppressive darkness. Dawson stretched, trying to work out the kinks in his muscles. He looked at Freddy, who was staring out the window, his expression less strained
+
+The light grew stronger with each passing minute, chasing the last vestiges of the night from the sky and from their minds. Freddy turned from the window, a faint trace of a smile playing at the corners of his mouth.
+
+"Looks like we made it, Dawson," he said, his voice a low murmur, as if not to break the fragile peace of the morning.
+
+Dawson grunted, stretching again, trying to work the stiffness from his neck and shoulders. "Don't count your chickens yet, Freddy. The colonel hasn't said we're clear."
+
+Colonel Welsh, who had been observing their exchange with a watchful eye, cleared his throat. "Dawson is right. Dawn is a welcome sight, gentlemen, but it merely signals the opening of another act, not the close of the play. Our arrival at Casablanca is still some hours away, and those hours could prove to be the most critical." He picked up a map from his small table, unfolding it with precise, economical movements. "Our current position is good. We’re on course, and all systems report nominal. But I want both of you at peak readiness. We’re flying into a busy zone, even with our precautions. Military and civilian traffic, local patrol flights, there will be eyes and ears. We cannot assume that our previous encounter was without consequence."
+
+He looked at them, his gaze sharp and unwavering. "Every radio signal, every ground contact, every visual sighting is a potential thread that the enemy might follow. Until we are safely on the ground at Casablanca, and until I
+
+until I have personally verified that our communications have not been compromised, that is when I will breathe easy." He paused, letting his words hang in the air, a stark reminder of the ever-present danger that shadowed their every move. Dawson and Farmer exchanged glances, the colonel's grim assessment mirroring the anxieties that still churned within them despite the rising sun. The initial relief of daybreak had not entirely dispelled the lingering shadows of the night, nor the cold dread of their close call with the U-boat.
+
+"So, what's the procedure now, sir?" Dawson asked, his voice low, almost a murmur against the drone of the engines. He was trying to keep his mind focused, to push back the unsettling images of the submarine's dark silhouette from his memory.
+
+Colonel Welsh tapped the map with a finger. "We will maintain our current altitude and course. Our flight plan has us approaching the African coast south of Casablanca, making a wide sweep to the north before initiating our descent. This allows us to avoid the main shipping lanes and known patrol routes as much as possible. Our radio silence will continue for another hour. After that, we will attempt to make contact with Casablanca tower using a pre-arranged, secure frequency. We will be using the code sequence for a routine military transport, *not* for any VIP movement. Remember, gentlemen, the fewer people who know about the true nature of this flight, the safer we all are."
+
+Freddy Farmer shifted in his seat, his gaze still fixed on the horizon, where the sea and sky merged into a hazy blend of blue and gray. "What about radar, sir? Won't they be tracking us from the moment we hit their range?"
+
+"An excellent question, Farmer," the colonel acknowledged, a faint, almost imperceptible nod of approval. "Yes, they will. But our flight profile is designed to appear as routine as possible. A single B-25, flying at this altitude and speed, is not uncommon in this sector. It will be logged as such. The key is to ensure that no *unusual* attention is drawn to us. No sudden changes in course, no unscheduled communications, no deviations from the flight plan that might trigger an alert from any intelligence outpost, friend or foe." He looked at them both, his eyes conveying the gravity of his words. "Our greatest weapon right now is anonymity. We are a needle in a haystack, and we must remain so."
+
+The hours that followed were a testament to the strain of their mission. The monotony of the engine's roar, the vast expanse of the ocean stretching endlessly beneath them, the constant awareness of the potential for danger, all contributed to a suffocating tension. Dawson found himself checking his instruments with an almost obsessive frequency, double-checking readings, ensuring everything was perfectly aligned with the colonel's precise instructions. Beside him, Freddy maintained a quiet vigil, his young face etched with a seriousness that belied his usual youthful exuberance. The carefree spirit that often accompanied his daring aerial exploits was temporarily overshadowed by the weight of their current undertaking.
+
+Colonel Welsh, seated at his small table, occasionally glanced up from his maps and papers, his gaze sweeping over the compartment, assessing his two young charges, then settling on the panoramic view outside. He seemed to draw strength from the vastness of the sky, a quiet resolve hardening his features. He was a man accustomed to making impossible decisions, to carrying burdens that would crush lesser individuals. And he carried this one with the same stoicism, though Dawson could perceive the subtle lines of fatigue around the colonel's eyes, the slight tightening of his jaw.
+
+As the sun climbed higher, warming the compartment, the first faint outlines of land began to appear on the distant horizon, a smudge of darker blue against the lighter hues of the sky. "Landfall, gentlemen," Colonel Welsh announced, his voice devoid of any discernible emotion, yet the words themselves brought a small surge of relief to Dawson and Farmer. It was a tangible milestone, a sign that they were indeed making progress, that the endless ocean was finally giving way to the solidity of earth.
+
+"Looks like North Africa, sir," Freddy observed, pointing towards the emerging coastline. His voice had a touch more energy now, the prospect of solid ground a welcome change from the unending expanse of water.
+
+"Indeed," the colonel confirmed. "Approximately twenty minutes to the coast, then we begin
+
+...our descent and prepare for the rendezvous," Colonel Welsh finished, his finger tracing a line on the map spread before him. "The plan now is to fly low, hugging the coastline for a few miles, then turn inland towards the specified coordinates. We'll be making a low-altitude pass over a pre-arranged landing strip, where a ground team will be waiting. They'll confirm our identity via visual signals, and then we'll proceed to land. The utmost caution is to be observed during this phase. We are still well within enemy territory, or at least, territory where enemy sympathizers could be operating. Remember, gentlemen, the fewer eyes that see us, the better."
+
+Dawson nodded, his hand automatically checking the settings on his control panel. The landscape below was slowly gaining definition, the once-flat expanse of ocean now giving way to rolling dunes and a faint, rocky shore. He felt a familiar surge of adrenaline, the kind that always accompanied the shift from long, tedious transit to active mission. This was where the real danger lay, where every shadow might conceal an enemy, every distant flicker a hostile scout.
+
+"What sort of ground team, sir?" Farmer inquired, leaning forward slightly, his eyes still fixed on the approaching land. "Allied personnel, or local contacts?"
+
+"A mix, Farmer," the colonel replied, without looking up from his map. "Primarily Free French forces, with a small contingent of our own intelligence operatives. They are well-briefed and highly capable. They understand the critical nature of this mission. However, we cannot afford to rely
+
+upon them implicitly, was the unspoken conclusion hanging in the air. He paused, as if weighing each word before releasing it, his finger still tracing the imaginary line on the map.
+
+"We will follow their signals, naturally, but our vigilance must be absolute. Keep your eyes peeled, gentlemen. A slight irregularity, a shadow out of place, anything that doesn't fit the expected pattern, report it instantly. Our lives, and indeed the fate of this mission, could depend upon it."
+
+Dawson acknowledged with a curt nod, his hands instinctively tightening on the controls. The B-25, a marvel of engineering, felt like an extension of his own will, responding to the slightest pressure. He lowered the aircraft’s nose slightly, initiating a gradual descent, watching the altimeter wind down. Below, the gentle undulations of the sea began to give way to the rugged contours of the North African coast. The faint line of land now resolved itself into a mosaic of ochre cliffs, sandy beaches, and sparse, wind-stunted vegetation. It was a stark, almost primeval landscape, alien to their familiar European skies, and it held a certain wild beauty even in its austerity.
+
+Freddy Farmer, ever the keen observer, leaned closer to his window, his breath momentarily fogging the pane. "Looks a bit like the moon, sir, from this height," he commented, his voice hushed with a mixture of awe and apprehension. "Hardly a place for a secret rendezvous."
+
+Colonel Welsh finally looked up from his map, a flicker of a smile, almost imperceptible,
+
+He looked from Farmer to Dawson, then back to the younger man, his gaze softening for a fraction of a second. "Perhaps not," he conceded, his voice low, "but sometimes the most unlikely places are the safest, precisely because they are so uninviting. The enemy seeks comfort and established infrastructure. This desolation, Farmer, is our ally." He turned his attention back to the forward view, his thin lips pressed into a familiar line. "Dawson, bring her down another thousand feet. I want a closer look at that coastline. We'll parallel it for a few miles, just as planned, before turning inland."
+
+Dawson acknowledged the order with a slight dip of his head. The control column felt alive in his hands. He eased back on the throttles slightly, the roar of the engines deepening in pitch as the B-25 began its controlled descent. The altimeter's needle unwound steadily, and the ground rushed up to meet them, resolving into sharper detail. What had been abstract patterns of beige and brown now became distinct dunes, rocky outcrops, and thin, winding wadis, dry riverbeds snaking across the landscape. The sea, a shimmering sapphire from altitude, now revealed its white-capped waves crashing against the shore with a distant, muffled roar.
+
+"Keep a sharp lookout, both of you," Colonel Welsh instructed, his voice now devoid of any hint of amusement. "Farmer, scan those hills to starboard. Dawson, you keep your eyes peeled along the coast. Any sign of movement, anything at all, report it at once."
+
+Freddy Farmer's young face was etched with concentration. He pressed his forehead against the cool glass of the window, his eyes sweeping across the rugged terrain, searching for anything amiss. The sunlight, now lower in the sky, cast long, deceptive shadows that seemed to shift and writhe, playing tricks on the eyes. Every rock looked like it could conceal a figure, every clump of scrub a hidden vehicle. The silence in the cockpit, broken only by the steady drone of the engines, was taut with anticipation.
+
+"Nothing yet, sir," Farmer reported after a minute, his voice a little hoarse. "Just sand and rocks, as far as I can see."
+
+"And nothing on the coast here, Colonel," Dawson added, his gaze fixed intently on the ribbon of beach passing rapidly beneath them. "No boats, no tracks, nothing but the tide."
+
+Colonel Welsh nodded, seemingly satisfied for the moment, but his posture remained rigid, his eyes constantly moving, taking in every detail. He pulled a pair of binoculars from a case beside his seat and raised them, sweeping the landscape ahead of them. The bomber flew low now, its shadow a dark, fast-moving smudge across the sand. The air grew bumpier as they entered the turbulent zone near the ground, and Dawson made small, practiced adjustments to keep the wings level.
+
+"We're almost at the turn-in point," the colonel announced, lowering his binoculars. "About thirty seconds. Prepare for the inland leg."
+
+Dawson braced himself, his hands firm on the controls. The turn would take them deeper into the desolate interior, away from the relative safety of the coast. This was where the real test would begin, where the risk of being spotted by enemy patrols or local sympathizers would increase dramatically. He pushed the left rudder pedal and gently banked the aircraft, the horizon tilting as the B-25 swung inland. The ocean quickly receded behind them, replaced by an endless expanse of ochre and burnt sienna, broken only by the occasional dark cleft of a canyon or the stark silhouette of a plateau.
+
+"Coordinates match, sir," Farmer called out, checking his map against the terrain rushing past. "Landing strip should be coming up within the next five minutes, bearing zero-four-zero."
+
+"Good," Colonel Welsh said, his voice clipped. "Keep your eyes on that bearing, Farmer. Look for any clearing, any disturbance in the natural landscape that suggests human activity. Dawson, maintain this altitude and speed. We want to be visible enough for our signals, but not lingering."
+
+The minutes stretched, each one feeling like an hour. Dawson could feel the sweat prickling on his forehead despite the relatively cool air in the cockpit. His eyes darted from his instruments to the panoramic view ahead, searching, always searching. The sun was dipping lower, casting long, dramatic shadows that made identification difficult.
+
+"There!" Farmer suddenly exclaimed, his voice tight with excitement. "Eleven o'clock, low! See it, sir? A line, almost too straight to be natural!"
+
+Dawson squinted, straining his eyes. At first, he saw only the undulating terrain, but then, a faint, straight line appeared, almost imperceptible against the vastness of the desert. It was barely wider than a track, but it was there, a definite break in the wild patterns of nature.
+
+"I see it," Colonel Welsh confirmed, his binoculars already up. "Looks like a hastily cleared strip, but serviceable. Now, let's look for our ground team." He lowered the binoculars, his gaze sweeping the area surrounding the strip. "They should be signaling us now. Green light, continuous, then three quick flashes."
+
+Dawson held his breath, guiding the B-25 steadily towards the crude landing strip. His heart hammered against his ribs. This was the moment of truth. If the signals weren't right, if there was any doubt, they would have to pull up, abandon the rendezvous, and somehow find another way. The thought of flying blindly through enemy territory with the President's mission hanging in the balance was a cold one.
+
+Then, a small flicker of light appeared near the far end of the strip. It was green, steady for a moment, then pulsed three times rapidly.
+
+"There it is!" Farmer shouted, relief evident in his voice. "Confirmed, sir! Green, three flashes!"
+
+A wave of tension drained from Dawson, replaced by a surge of cautious optimism. "Roger that, Colonel," he said, his voice steadier than he expected. "They're there."
+
+"Good," Colonel Welsh said, a hint of satisfaction in his tone. "Dawson, prepare for a low pass. Follow the instructions I gave you. Make it smooth, make it quick. Farmer, keep watching that strip and the surrounding area. Any change in their signals, any suspicious movement, you tell me immediately. Our identity confirmed, we will then circle and prepare for landing."
+
+Dawson nodded, his hands already moving over the controls. He reduced speed, lowered the flaps a notch, and began a slow, deliberate descent towards the strip. The ground team, now visible as a small cluster of jeeps and figures, grew larger in the windscreen. He could see them clearly now, tiny figures waving, one holding the signal lamp. Their uniforms were a mix of French and what looked like local garb, just as the colonel had described.
+
+The B-25 roared over the strip at treetop height, the ground team scattering slightly from the prop wash. Dawson pulled up gently, feeling the aircraft respond. He circled wide, gaining a little altitude, preparing for his final approach. The sun was almost touching the horizon now, painting the sky in fiery oranges and purples, but also deepening the shadows on the ground.
+
+"All clear, sir," Farmer reported. "They're still signaling, giving us landing instructions now. Looks like they want us to approach from the north, against the wind."
+
+"Understood," Dawson affirmed. He banked the B-25 into a wide arc, aligning with the makeshift runway. He deployed full flaps, reduced power, and began his final descent. The landing strip, though cleared, was rough, uneven, and far shorter than what they were used to at established airbases. He would need to be precise, to touch down exactly where he intended, and brake hard.
+
+"Wind is light, crosswind from the west," Farmer informed him, checking his instruments. "Looks manageable."
+
+Dawson's eyes were glued to the rapidly approaching runway. He ignored everything else, focusing solely on the feel of the aircraft, the angle of descent, the precise moment to flare. The ground rushed up, the rough texture of the sand and gravel now clearly visible. He flared, the B-25's nose lifting slightly, and then, with a gentle bump, the wheels touched down. He held the nose wheel off as long as possible, then let it down smoothly, applying the brakes with practiced efficiency. The bomber lurched and rumbled, kicking up clouds of dust as it rapidly decelerated.
+
+"Good landing, Dawson," Colonel Welsh said, a note of approval in his voice. "Very good."
+
+Dawson brought the plane
+
+brought the plane to a halt near a small, dilapidated hangar, its corrugated iron roof rusted and bent in places. The dust, still swirling from their landing, momentarily obscured the cluster of jeeps and figures that had been waiting. As the engines coughed and died, the sudden silence was profound, broken only by the chirping of unseen insects and the distant murmur of the ocean. The air, hot and humid, immediately began to seep into the cabin. Dawson leaned back, his hands momentarily still on the controls, a sense of exhaustion washing over him. The tension had been immense, more than he had realized.
+
+"Well, we made it," he said, his voice a little hoarse. He wiped a bead of sweat from his forehead.
+
+"Indeed you did, son," Colonel Welsh affirmed, his voice now devoid of the earlier strain, though still firm. He unbuckled his seatbelt and stretched, a slight crack audible in his spine. "Excellent work, both of you. Farmer, open the hatch. Let's see what kind of reception committee we have."
+
+Freddy Farmer, still a little pale but with a spark of renewed energy, nodded briskly. He unlatched the heavy hatch and pushed it open, revealing the blinding glare of the setting sun and the eager faces of the ground crew. A wave of French and Arabic chatter drifted up to them.
+
+"Looks like they're ready for us, Colonel," Farmer said, leaning out slightly.
+
+"Good," Welsh replied, gathering his brief-case from the small table. "Dawson, secure the aircraft. Farmer, you're with me. Let's go meet our hosts."
+
+Dawson, meanwhile, began the routine shutdown procedures. He secured the instruments, checked the fuel gauges, and made sure everything was in order. He glanced out the window at the ground crew, a motley collection of French soldiers, some in uniform, others in local attire, and a few dark-skinned men who were probably local laborers. They were already moving towards the B-25 with refueling hoses and equipment. The major was now shaking hands with Colonel Welsh, a broad smile replacing his earlier stern expression. It seemed their identity had been successfully confirmed.
+
+A few minutes later, as Dawson was finishing up, Farmer reappeared at the hatch. "Colonel Welsh wants you out here, sir. He's speaking with the Major."
+
+"Be right there," Dawson replied. He grabbed his flight bag and descended, feeling the welcome firmness of the ground beneath his feet. The air was thick with the smell of dust, aviation fuel, and something vaguely floral, perhaps from distant desert vegetation.
+
+Colonel Welsh was standing with the French Major, a map spread out on the hood of a jeep. He looked up as Dawson approached, his expression serious. "Dawson, Major Jean-Pierre Dubois. Major, this is Captain Dawson, my pilot. The finest pilot in the service, I assure you."
+
+Major Dubois extended a hand. "Enchanté, Capitaine. Your landing was superb, considering the state of our... runway. We were quite impressed." His English was heavily accented but clear.
+
+"Thank you, Major," Dawson replied, shaking his hand firmly. "It's an honor to be here."
+
+"Colonel Welsh has been explaining the… delicacy of your mission," Major Dubois continued, glancing between Welsh and Dawson. "We are honored to assist in any way we can. Everything you require has been prepared. Fuel, provisions, and a secure place for you to rest, if you wish."
+
+"We appreciate your hospitality, Major," Colonel Welsh said. "However, time is of the essence. We must refuel and depart as quickly as possible. We will not be resting here."
+
+Major Dubois nodded, his smile fading slightly. "As you wish, Colonel. My men are already working on your aircraft. They are efficient. We anticipate you will be ready for departure within the hour, perhaps less."
+
+"Excellent," Welsh replied, turning to Dawson and Farmer. "Gentlemen, a moment of your time, if you please." He led them a short distance away from the Major and his men, towards the relative privacy of the hangar's shadow. The briefcase was clutched firmly in his hand.
+
+"Well, it seems we've cleared the first hurdle," Welsh began, his voice dropping to a low, conspiratorial tone. "Casablanca is secure. This means the enemy did not, as far as we can tell, learn the true nature of those decoy envelopes. Had they known, we would have been met with a rather different reception, I assure you."
+
+Dawson shivered inwardly, remembering the colonel's chilling words about the President's plane carrying a decoy. "So, the President is safe, sir?" he asked, the question escaping him almost before he could think.
+
+Colonel Welsh gave him a sharp, assessing look. "As far as we can ascertain at this moment, yes. His actual itinerary was, as I explained, a completely separate and far more secure operation. He left Washington hours before you two even took off, on a different type of aircraft, from a different field, and by a different route entirely. His true destination was never committed to paper in any widely distributed form. The information in your envelopes was designed solely to throw the enemy off the scent, to make them believe that _this_ aircraft, or rather, the *
+
+"But he never finished his sentence, because at that moment the intercom crackled to life, and the pilot's voice boomed through the small compartment.
+
+"Colonel Welsh, sir, we've got an unidentified aircraft, fast mover, closing on the field from the west!" The voice of their B-25's regular pilot, Lieutenant Harrison, was sharp and urgent, carrying a note of genuine alarm that immediately snapped the trio to attention. The easy camaraderie of a moment before vanished, replaced by the taut silence of men facing sudden peril.
+
+Colonel Welsh was on his feet in an instant, his earlier weariness completely forgotten. His eyes, though shadowed, were suddenly keen and alert. "Unidentified, Harrison? How close? Any lights? Markings?" he barked into the intercom, his voice betraying none of the surprise he might have felt. He was a man of action, and danger brought out the best, or worst, in him depending on one's perspective.
+
+"About three minutes out, sir, maybe less! No lights, nothing on their comms. Just a blip on the Major's radar, moving in fast. He says it looks like a Messerschmitt Bf 110, or something similar, a night fighter, not one of ours," Harrison relayed, his voice strained. "The ground crew is scattering, sir. They haven't even finished topping off the tanks!"
+
+A Messerschmitt Bf 110. A twin-engine heavy fighter, capable of wreaking havoc on the ground. The thought sent a j
+
+jolt of ice through Dawson's veins, but his training immediately kicked in, pushing the fear aside to make room for cold calculation. Farmer, beside him, had gone rigid, his youthful face now grim, his eyes darting towards the vast, open hangar door and the dark sky beyond.
+
+"Get to the plane, gentlemen!" Colonel Welsh roared, his voice cutting through the sudden clamor of distant shouts and the rising whine of aircraft engines. "Harrison, get that B-25 buttoned up! Major Dubois, get your men to their stations! Alert anti-aircraft defenses! Do we have any fighters ready to scramble?"
+
+"Negative, Colonel!" Major Dubois' voice came back, strained and breathless, over the intercom. "Our fighters are undergoing maintenance! All ground crews, take cover immediately! Repeat, all ground crews, take cover!"
+
+The situation deteriorated rapidly. The distant hum grew into a menacing roar, and a sudden, blinding flash illuminated the night sky to the west. It was followed almost immediately by a dull thud that vibrated through the very ground beneath their feet.
+
+"They're dropping flares, sir!" Harrison shouted, his voice now a frantic yelp. "They're lighting us up!"
+
+Indeed, the field was now bathed in an eerie, flickering orange glow as several parachute flares drifted slowly earthward, casting long, distorted shadows across the tarmac and the rows of parked aircraft. The B-25, partially fueled, stood starkly visible, a prime target.
+
+"Dawson, Farmer, with me!" Welsh commanded, shoving the briefcase into
+
+Welsh commanded, shoving the briefcase into Dawson’s hands. "Inside! Now! Farmer, get that door open! Harrison, we're coming!"
+
+The urgency in his voice was undeniable. Dawson, still reeling from the sudden revelation that _this_ bomber was supposed to be a decoy for the President, instinctively clutched the heavy briefcase. His mind raced, struggling to process the flood of information and the immediate, deadly peril. He looked at the colonel's grim face, then at the flickering, orange-lit airfield outside the compartment window. The Messerschmitt Bf 110, a sleek, twin-engined predator, was already a dark silhouette against the fiery glow of the flares, its presence growing larger and more terrifying with every second.
+
+Farmer, quicker to react, fumbled with the latch of the compartment door, his hands shaking slightly, but he pulled it open. The roar of engines, the shouts of men, and the whine of the approaching fighter immediately intensified, assaulting their ears. The air outside was cold and damp, carrying the smell of aviation fuel and fear.
+
+"Move!" Welsh barked again, giving Dawson a shove. "Don't just stand there gawking, man! Get in the plane! Farmer, follow him! I'll be right behind you!"
+
+Dawson stumbled through the narrow opening, the briefcase awkward in his grip. He heard the metallic clatter of Farmer scrambling in after him. The interior of the B-25, dimly lit by a single emergency lamp, felt both familiar and terrifyingly vulnerable. He could hear Harrison
+
+Harrison shouting commands from the cockpit, his voice strained but firm over the roar of the engines that were now winding up to a frantic pitch. The B-25 shuddered violently, the vibrations running through Dawson's very bones. He stumbled forward, trying to get his bearings in the cramped interior, the heavy briefcase still clutched like a lifeline. Farmer was right behind him, fumbling for the co-pilot's seatbelt even before he was fully seated.
+
+Colonel Welsh scrambled in, pulling the heavy hatch shut with a resounding clang that momentarily muffled the outside chaos. He didn't even bother with his seatbelt, instead leaning over Dawson's shoulder, his eyes scanning the instruments, then flicking to the compartment window. "Harrison, get us out of here! Now!" he bellowed.
+
+"Working on it, Colonel!" Harrison’s voice crackled back through the intercom. "Full power! Give me full power!"
+
+The twin engines screamed, a deafening crescendo that vibrated through every rivet of the plane. The B-25 lurched forward, bumping and bouncing over the uneven ground of the airfield. Outside, the orange glow of the flares illuminated a scene of frantic activity. Ground crew scattered like startled birds, some diving for cover, others trying to secure equipment. Dawson caught a glimpse of anti-aircraft guns, their muzzles already pointing skyward, but they were not firing. Not yet.
+
+He saw the Messerschmitt again, a dark, menacing shape now much closer, banking low, its twin engines snarling. It was a predator,
+
+ a predator, now clearly visible against the fiery backdrop, banking, its twin engines snarling.
+
+The B-25 shuddered and roared, its twin engines screaming a desperate tune as Harrison pushed them to their absolute limit. Dawson, still gripping the briefcase, braced himself against the bulkhead, his knuckles white. The plane bucked and swayed, a metallic beast awakening to a symphony of chaos. Outside, the orange glow intensified, painting the tarmac in stark, flickering shadows. The ground crew, a moment ago a frantic blur, had vanished into the night, seeking the scant shelter offered by distant hangers. The Messerschmitt, a black demon with glinting eyes, swept low across the field, its engine howl a chilling counterpoint to the B-25’s desperate ascent.
+
+Suddenly, a searing flash erupted from the Bf 110’s nose, followed by rapid, staccato hammering sounds. Tracer bullets, like angry red wasps, stitched a deadly line across the runway, kicking up plumes of dirt and debris just ahead of their path. Harrison, with a grunt of effort, wrenched the control stick, veering the B-25 sharply to the left. The G-forces slammed Dawson against the fuselage, and he heard Farmer gasp. "He's firing!" Farmer yelled, his voice thin with adrenaline.
+
+"I can see that, Farmer!" Harrison’s voice, though strained, held a surprising calm. "Hold on, everyone! We're almost there!"
+
+The B-25, its tail still firmly on the ground, felt impossibly heavy. It lumbered forward, each foot of acceleration a hard-won victory against the gravitational pull of the earth and the deadly pursuit from above. Colonel Welsh, unbelted, stumbled slightly but remained upright, his gaze fixed on the compartment window, tracking the Messerschmitt. "He's banking for another pass, Harrison!" he shouted, his voice cutting through the din. "Get us up, man, get us up!"
+
+Another burst of fire from the Bf 110. This time, the tracers arced closer, ripping through the air with a menacing shriek. Dawson felt a jarring impact, a sickening crunch that vibrated through the plane. A shower of sparks erupted near the rear of the cabin, and the stench of burning insulation filled the air. "Damage!" Dawson yelled, pointing to the rear.
+
+"Minor," Harrison grunted. "Just some sheet metal, I think! Nothing vital!"
+
+The B-25 was now bouncing violently, its nose lifting hesitantly. The runway lights, a blurry tunnel of white, rushed towards them. Then, with a final, heart-stopping lurch, the B-25 left the ground. The sudden absence of the rattling and bumping was almost as jarring as the impacts themselves. They were airborne, but far from safe
+
+lurched forward, bumping and bouncing over the uneven ground of the airfield. Outside, the orange glow of the flares illuminated a scene of frantic activity. Ground crew scattered like startled birds, some diving for cover, others trying to secure equipment. Dawson caught a glimpse of anti-aircraft guns, their muzzles already pointing skyward, but they were not firing. Not yet. He saw the Messerschmitt again, a dark, menacing shape now much closer, banking low, its twin engines snarling. It was a predator, a predator, now clearly visible against the fiery backdrop, banking, its twin engines snarling. The B-25 shuddered and roared, its twin engines screaming a desperate tune as Harrison pushed them to their absolute limit. Dawson, still gripping the briefcase, braced himself against the bulkhead, his knuckles white. The plane bucked and swayed, a metallic beast awakening to a symphony of chaos. Outside, the orange glow intensified, painting the tarmac in stark, flickering shadows. The ground crew, a moment ago a frantic blur, had vanished into the night, seeking the scant shelter offered by distant hangers. The Messerschmitt, a black demon with glinting eyes, swept low across the field, its engine howl a chilling counterpoint to the B-25’s desperate ascent. Suddenly, a searing flash erupted from the Bf 110’s nose, followed by rapid, staccato hammering sounds. Tracer bullets, like angry red wasps, stitched a deadly line across the runway, kicking up plumes of dirt and debris just ahead of their path. Harrison, with a grunt of effort, wrenched the control stick, veering the B-25 sharply to the left. The G-forces slammed Dawson against the fuselage, and he heard Farmer gasp. "He's firing!" Farmer yelled, his voice thin with adrenaline. "I can see that, Farmer!" Harrison’s voice, though strained, held a surprising calm. "Hold on, everyone! We're almost there!" The B-25, its tail still firmly on the ground, felt impossibly heavy. It lumbered forward, each foot of acceleration a hard-won victory against the gravitational pull of the earth and the deadly pursuit from above. Colonel Welsh, unbelted, stumbled slightly but remained upright, his gaze fixed on the compartment window, tracking the Messerschmitt. "He's banking for another pass, Harrison!" he shouted, his voice cutting through the din. "Get us up, man, get us up!" Another burst of fire from the Bf 110. This time, the tracers arced closer, ripping through the air with a menacing shriek. Dawson felt a jarring impact, a sickening crunch that vibrated through the plane. A shower of sparks erupted near the rear of the cabin, and the stench of burning insulation filled the air. "Damage!" Dawson yelled, pointing to the rear. "Minor," Harrison grunted. "Just some sheet metal, I think! Nothing vital!" The B-25 was now bouncing violently, its nose lifting hesitantly. The runway lights, a blurry tunnel of white, rushed towards them. Then, with a final, heart-stopping lurch, the B-25 left the ground. The sudden absence of the rattling and bumping was almost as jarring as the impacts themselves. They were airborne, but far from safe.
+
+The B-25 clawed for altitude, its engines screaming in protest as Harrison pushed them to their limit. Dawson felt the familiar lurch of the climbing plane, but this was no routine ascent. Every shudder, every strained groan from the airframe, was amplified by the knowledge that a German fighter was right on their tail, a deadly shadow in the moonless night. He looked back, craning his neck, but the small compartment window offered only a limited view of the chaos outside. He could, however, hear the menacing snarl of the Messerschmitt’s engines, a higher-pitched, more insistent growl than their own.
+
+"He's still with us!" Farmer shouted, his voice tight with tension, as he peered through his own window. "Coming around for another pass!"
+
+Colonel Welsh, now securely strapped into a seat opposite Dawson, leaned forward, his face grim. "Harrison, report!" he barked into his throat microphone.
+
+Harrison’s voice crackled back, strained but steady. "Still climbing, sir! He's faster than us in the climb. Trying to gain some speed for a dive."
+
+Just as he spoke, the B-25 was rocked by a sudden, violent buffet. Dawson’s head snapped back against the bulkhead. Outside, another stream of tracers, luminous red lines, zipped past the port wing, sickeningly close. The metallic hammering of the Bf 110’s cannons was now plainly audible, even over the roar of their own engines.
+
+"He's got us in his sights!" Farmer yelled, ducking instinctively.
+
+"Gunners, where are our gunners?" Colonel Welsh demanded, his eyes flashing from one compartment window to the other, searching for any sign of their own defensive fire.
+
+Harrison’s reply was quick. "Tail gunner's engaging, sir! Dorsal gunner's trying to get a bead but he's below us for now!"
+
+A distant, stuttering thrum of the B-25’s own .50 caliber machine guns finally joined the cacophony. It was a comforting sound, a sign that they weren't entirely helpless, but it felt terribly inadequate against the twin-engined beast that hunted them.
+
+Dawson stared out, his eyes trying to pierce the gloom. The airfield lights were rapidly disappearing below, shrinking to a scattering of distant pinpricks. Above them, the stars were beginning to appear, a stark contrast to the violence unfolding in the inky blackness. He caught another glimpse of the Messerschmitt, a menacing silhouette briefly illuminated by the exhaust flames from its own engines as it banked hard, preparing its next attack. It was a predator in its element, sleek and deadly.
+
+"He's diving!" Harrison’s voice warned, now with a note of urgency. "Hold on, everyone! evasive action!"
+
+The B-25 immediately lurched violently sideways, its wings banking almost vertically. Dawson felt his stomach lurch, and the briefcase he still clutched pressed painfully against his ribs. The world outside spun into a dizzying blur of dark sky and faint ground lights. The maneuver was designed to throw off the German pilot's aim, but it also made the bomber a difficult platform for its own gunners.
+
+Another fusillade erupted from the Bf 110. This time, the tracers seemed to streak directly at their own windows. Dawson flinched, instinctively throwing an arm up to shield his face. There was a shattering crash from somewhere near the rear of the plane, a sound of splintering metal and tearing fabric. The B-25 shuddered violently, losing a precious few feet of altitude. A cold draft immediately swept through the compartment, carrying with it the acrid smell of burnt propellant and something else, something metallic and raw.
+
+"Damage report!" Colonel Welsh roared, struggling to maintain his balance as the plane bucked.
+
+"Rear fuselage hit, sir!" Harrison reported, his voice grim. "Tail gunner reporting some shrapnel, but he's okay! Still firing!"
+
+"Keep firing!" Welsh ordered, though it was unclear if he was speaking to Harrison or to the distant gunner. His eyes, however, were on Dawson and Farmer, a silent message of grim determination passing between them.
+
+The Messerschmitt flashed past, a dark, swift shape, its engines roaring triumphantly. It had scored a hit. But Harrison wasn't giving up. He threw the B-25 into another series of violent maneuvers, corkscrewing and banking, trying to spoil the enemy’s aim, trying to present a moving target. The air in the compartment grew thick with tension, each second stretched to an eternity.
+
+Dawson found himself thinking of the envelopes, of the President, of the sheer audacity of this entire decoy plan. If this plane went down, if they were shot out of the sky, the whole elaborate scheme would be for nothing. The President would still be vulnerable, and the enemy would have gained a psychological victory of immense proportions. He glanced at Farmer, whose young face was pale but set, his eyes wide with a mixture of fear and fierce concentration. The English youth was gripping the edge of his seat, his knuckles white.
+
+"He's coming around again, sir!" Harrison’s voice cut through the thrumming tension. "He's persistent, this one!"
+
+"He knows what he's after, Harrison!" Colonel Welsh countered, his voice sharp. "He knows what this plane _represents_! Don't let him get another clean shot!"
+
+The B-25 was still climbing, but slowly now, its speed hampered by the evasive actions and possibly by the damage it had already sustained. The Messerschmitt, a faster, more agile fighter, had the distinct advantage. It was circling them like a hawk around its prey, biding its time, waiting for the perfect moment to strike again.
+
+Suddenly, the familiar chatter of the .50 calibers from the B-25’s tail turret intensified, a prolonged burst that seemed to go on and on. For a moment, the German fighter’s engine noise seemed to waver, to falter.
+
+"Got him!" yelled a voice, distorted by the intercom, presumably the tail gunner. "I think I got him!"
+
+Everyone in the compartment leaned forward, straining to see. There was no immediate sign of a hit, but the Messerschmitt, instead of diving directly for another attack, pulled up sharply, gaining altitude. It seemed to hesitate, almost as if surprised.
+
+"He's pulling away!" Farmer exclaimed, a flicker of hope in his voice.
+
+"Don't celebrate yet, Farmer," Colonel Welsh warned, his eyes still scanning the darkness. "He's probably assessing damage or reloading."
+
+Harrison, however, seemed to take advantage of the momentary lull. He pushed the throttles forward, trying to gain as much speed and altitude as possible.
+
+He pushed the throttles forward, trying to gain as much speed and altitude as possible. The B-25, though damaged, responded with a guttural roar, its engines straining against the heavy air. The dark, vast expanse outside the compartment window remained unbroken, giving no clue as to the Messerschmitt’s intentions. It was a terrifying waiting game, a silent duel of nerves played out thousands of feet above the churning ocean. Dawson leaned back, his eyes fixed on Colonel Welsh, whose face was a mask of granite. Farmer, next to him, was still rigid, his breath coming in shallow gasps. The lingering smell of burnt cordite seemed to cling to the air, a stark reminder of their brush with death.
+
+"Report!" Welsh barked into his intercom, his voice cutting through the engine noise.
+
+"Tail gunner says he put some lead into him, sir," Harrison’s voice crackled back. "He thinks he hit something vital, but he couldn't confirm a flame out. The Hun pulled up too fast."
+
+"And our damage?"
+
+"Rear fuselage compromised, some shrapnel inside. Tail gunner says he's got a few scrapes, but nothing serious. Rudder control seems a little stiff, but responsive. Engines are running strong, no warning lights yet. But we're bleeding a little fuel, sir, from the auxiliary tank in the aft section."
+
+A cold knot tightened in Dawson’s stomach. Fuel. The lifeline of any long-range flight. A leak, even a small one, could spell disaster. He exchanged
+
+Dawson exchanged a quick, worried glance with Farmer. The words "bleeding a little fuel" hung in the air like a death sentence, heavier than the very air they were flying through. It was one thing to outfight an enemy, another entirely to outrun the relentless arithmetic of a damaged fuel tank and the vast, unpitying ocean below.
+
+"How much, Harrison?" Colonel Welsh asked, his voice calm despite the fresh complication. His eyes remained fixed on the darkness outside, as if willing the Messerschmitt to reappear, or perhaps, to vanish forever.
+
+"The auxiliary tank aft, sir," Harrison replied, his voice a little strained. "It's not a torrent, but it's steady. Hard to tell how fast we're losing it without proper instrumentation, but it's enough to concern me. We were already cutting it close on range to Casablanca, even with the extra tanks."
+
+Silence descended upon the compartment again, broken only by the steady thrum of the B-25’s engines, which now seemed to carry a note of grim determination rather than reassuring power. Dawson felt a prickle of cold sweat on his forehead. The colonel's plan, so meticulously laid out, hinged on reaching Casablanca. And now, this.
+
+"Keep me informed, Harrison," Colonel Welsh finally ordered. "Every gallon counts. Do what you can to conserve, but don't compromise our speed or altitude if we're engaged again."
+
+"Understood, sir," came the pilot’s terse reply.
+
+The moments that followed stretched into an agonizing eternity. Every shadow seemed to hold the outline of a diving fighter. Every flicker of light outside seemed to be the glint of enemy wings. Dawson found himself tensing, bracing for the inevitable return of the Messerschmitt. Farmer, beside him, was equally rigid, his young face pale in the dim light of the compartment. The faint smell of ozone and expended gunpowder still hung in the air, a metallic tang that only sharpened their awareness of the danger they were in.
+
+Then, a sudden, alarming shudder ran through the aircraft. Not a hit, but something more systemic, deeper. The engines coughed, a violent, metallic spasm, and for a heart-stopping second, the B-25 seemed to hang suspended, losing power.
+
+"What was that, Harrison?" Colonel Welsh demanded, his calm exterior cracking for the briefest instant.
+
+"Starboard engine sputtered, sir!" Harrison shouted, his voice tight with alarm. "Trying to clear it! Fuel feed, I think! It's recovering, sir, it's recovering!"
+
+The engines roared back to full power, but the incident had been a stark reminder of their vulnerability. A sudden chill gripped Dawson. Was it the damaged fuselage affecting something else? Or was it just another cruel twist of fate, as the colonel had mentioned earlier?
+
+"Anything on radar, Harrison?" Welsh asked.
+
+"Negative, sir," the pilot replied, a note of frustrated urgency in his voice. "Still nothing. He's either gone, or he’s playing a very clever game."
+
+"He's playing a clever game," Welsh murmured, almost to himself. "He knows what he's looking for. He won't give up easily."
+
+As if on cue, a sudden, bright flash erupted far behind them, a momentary star in the inky blackness. It was followed by a faint, distant rumble, too faint to be a direct hit, but too distinct to be ignored.
+
+"What was that?" Farmer gasped, pointing a trembling finger.
+
+"Looks like an explosion, sir!" the tail gunner’s voice reported over the intercom, a new edge of excitement in his tone. "Far astern, very faint, but I think I saw a flash! Maybe the Hun bought it after all?"
+
+"Don't count your chickens, son," Colonel Welsh advised, though his eyes narrowed in thought. "He might have jettisoned something, or it could be debris from an earlier engagement. Keep scanning. Keep alert."
+
+The momentary surge of hope that had risen in Dawson’s chest deflated. It was true. Hope was a dangerous thing in this game. He forced himself to take a deep breath, trying to calm the frantic beating of his heart. The B-25 continued its relentless eastward flight, a lonely metal bird carving its way through the night, a silent prayer whispered in its wake.
+
+Minutes crawled by, each one laden with suspense. The B-25 held its course, maintaining altitude, its engines a steady drone that somehow managed to be both comforting and terrifying. The cold knot in Dawson's stomach persisted, a constant reminder of the fuel seeping away, droplet by droplet, into the vast emptiness below.
+
+"Colonel," Harrison's voice came through, calmer now, though still with an underlying tension. "I'm not picking up any more sputtering from the starboard engine. Looks like it cleared. But about that fuel leak. I've run some calculations. If this leak continues at the current rate, and we maintain this speed and altitude, we'll be very tight for Casablanca. We might even be short by a considerable margin."
+
+"How considerable, Harrison?" Welsh asked, his voice flat.
+
+"Fifty to seventy-five miles, sir," Harrison admitted, and the number hit Dawson like a physical blow. Seventy-five miles over open ocean was an eternity, a death sentence.
+
+"Options?"
+
+"We could try to reduce speed and altitude, sir, but that makes us an easier target if he's still out there. Or we could try to put down at some unscheduled point, but there's nothing out here for hundreds of miles, except the sea."
+
+"And the leak cannot be stopped or even slowed?"
+
+"Not from inside, sir. Not without someone going out onto the wing, and that's suicide at this speed and altitude, especially at night."
+
+Colonel Welsh was silent for a long moment, his gaze once again fixed on the impenetrable darkness beyond the compartment window. Dawson watched him, mesmerized by the man's unflappable demeanor. He was the Chief of all U. S. Intelligence, a man accustomed to making life and death decisions, but this felt different. This was not a chess game on a map. This was real.
+
+"No," Welsh finally said, his voice firm. "We maintain speed and altitude. We cannot give that Messerschmitt any advantage if it decides to return. And we cannot risk landing anywhere but Casablanca. That is the plan, and we stick to it as long as humanly possible."
+
+"But, sir," Dawson began, unable to hold back, "if we're short by seventy-five miles, what then?"
+
+Welsh turned his gaze upon Dawson, his eyes serious but not unkind. "Then, Dawson, we will have done our duty. But we are not there yet. We still have options, however slim they may be. And we will explore every single one of them. Harrison, push the engines for maximum efficiency, but do not sacrifice power. We need every ounce of thrust we can get, and every drop of fuel we can save."
+
+"Understood, sir," Harrison acknowledged.
+
+The next hour was a brutal test of nerves. The air in the compartment grew heavy with unspoken fears, with the lingering scent of combat, and with the faint, almost imperceptible smell of aviation fuel that now seemed to permeate everything. Dawson kept checking his watch, as if by willing the hands to move faster, he could somehow shorten the distance to Casablanca. Farmer, next to him, had closed his eyes, his breathing shallow, his face still pale. Even Colonel Welsh, though outwardly composed, seemed to have retreated into himself, his jaw set in a grim line.
+
+Then, just as the tension was becoming unbearable, a new voice broke the silence. "Radar contact, sir!" It was the radio operator, his voice sharp with renewed urgency. "Bearing one-eight-zero, closing fast! Looks like another fighter!"
+
+Dawson's heart leaped into his throat. Farmer’s eyes snapped open. Colonel Welsh leaned forward, his hands clenching into fists.
+
+"Confirmation, Harrison?" Welsh demanded.
+
+"Confirming, sir!" Harrison’s voice was grim. "He's coming up from below and behind, same approach as the last one! He must have been waiting, or he’s part of a two-pronged attack!"
+
+"Damn them," Welsh muttered, his voice barely audible. "They know. They absolutely know this plane is important."
+
+"Tail gunner, report!" Harrison barked into his intercom.
+
+"He's there, sir!" the tail gunner replied, his voice already strained. "Looks like a Messerschmitt! Coming in fast! He's not opening fire yet, just closing the gap!"
+
+"Prepare for evasive action, Harrison!" Welsh ordered. "Pilot, what's our current status?"
+
+"Engines running strong, sir, despite the earlier sputter. Rudder is still a bit stiff but responsive. But the fuel leak is definitely continuing. We're losing it at a steady rate."
+
+"Then we fight him off and conserve as much as we can!" Welsh commanded. "Tail gunner, give him everything you’ve got the moment he's in range! Harrison, keep him guessing. Don't let him get a lock!"
+
+The B-25 lurched violently as Harrison threw it into a sharp, banking turn. Dawson was thrown against the bulkhead, his head snapping back. Farmer cried out, clutching the edge of his seat with white knuckles. Outside, the world spun in a dizzying blur of blackness and fleeting stars.
+
+"He's on our six, sir!" the tail gunner yelled, his voice thick with exertion. "He's getting ready to fire!"
+
+Suddenly, the staccato bark of the .50 caliber machine guns erupted from the tail turret, a furious, desperate burst of lead into the darkness behind them. The Messerschmitt, a dark silhouette against the faint glow of the distant horizon, was illuminated for a brief, terrifying second by the tracer fire.
+
+"He's closing! He's too close!"
+
+Then, a series of sharp, metallic impacts ripped through the fuselage. The B-25 shuddered again, more violently this time. A shower of sparks flew from somewhere near the rear of the compartment. The smell of burning insulation and scorching metal joined the lingering scent of cordite.
+
+"We're hit again, sir!" Harrison reported, his voice tight. "Damage report coming in! Rudder control is sloppier now! I'm fighting it!"
+
+"Tail gunner, status!" Welsh bellowed.
+
+"He's breaking off, sir!" the gunner shouted back, his voice ragged with relief and exertion. "I got some hits on him, I think! He's pulling away, climbing hard!"
+
+"Good man!" Welsh said, a note of satisfaction in his voice. "Harrison, what's our damage?"
+
+"Rear fuselage took another beating, sir," Harrison replied. "The rudder cables might be partially severed, it's very mushy now. And the fuel leak, sir... it's worse. Much worse. The impact must have widened the rupture."
+
+A cold dread seeped into Dawson’s bones. "Worse?" he echoed, his voice barely a whisper.
+
+Colonel Welsh ignored him, his face a mask of grim determination. "Harrison, what are our chances now?"
+
+"With the rudder compromised and the increased fuel leak, sir, I don't see us making Casablanca. Not at this rate. We're losing fuel too fast. We'll be lucky to stay airborne for another hour, maybe ninety minutes at best."
+
+The words hung in the air, a death knell. Ninety minutes. Over the vast, indifferent ocean. Dawson felt a wave of nausea wash over him. Farmer had buried his face in his hands, his shoulders shaking.
+
+"Is there any way to reduce drag, Harrison?" Welsh asked, his voice still unnervingly calm. "Anything to conserve fuel, even marginally?"
+
+"We could jettison unnecessary equipment, sir," Harrison offered, "but we don't have much superfluous weight. We're already running fairly light for a bomber of this class on a long-range mission. And the rudder problem is the critical one. Without proper control, we're flying a crippled bird. Even if we had the fuel, landing would be extremely hazardous."
+
+"What about a dive, sir?" Dawson blurted out, a desperate thought sparking in his mind. "A sharp, rapid descent. Would that put out any fires, or perhaps reduce the leak temporarily due to pressure changes?"
+
+Colonel Welsh looked at him, a flicker of something unreadable in his eyes. "A risky maneuver, Dawson. It could tear us apart if the fuselage is too weak. And it might make the rudder problem worse. Harrison, your professional opinion?"
+
+"It's a gamble, sir," the pilot conceded. "But it might jar something, or at least change the pressure dynamics. It’s certainly not standard procedure for a damaged aircraft. It would put immense stress on the airframe. But it's an option. A last resort option."
+
+"And if we don't try something, Harrison, what then?" Welsh asked.
+
+"Then we run out of fuel, sir, and we ditch in the Atlantic," Harrison stated flatly. "And a B-25 doesn't float for long."
+
+The stark reality of their situation settled upon them like a shroud. Ditching in the freezing North Atlantic at night was a sentence of death, swift and unforgiving.
+
+"Alright, Harrison," Colonel Welsh said, his voice ringing with authority. "Prepare for a controlled dive. Make it as shallow as possible to start, gradually increasing the angle if the airframe holds. We're not trying to break records, we're trying to save this aircraft and this mission."
+
+"Understood, sir," Harrison responded, a hint of steel in his voice. "Strap in everyone! This is going to be rough!"
+
+Dawson fumbled with his safety straps, pulling them tight. Farmer, his face white as a sheet, did the same. The cabin lights flickered, a testament to the stresses already on the aircraft's systems. The B-25 leveled out for a moment, then Harrison pushed the nose down.
+
+The plane immediately pitched forward, the engines screaming as they fought against the increasing speed. The world outside became a terrifying blur, the blackness rushing up at them with alarming speed. The pressure on Dawson’s body increased, pushing him down into his seat. The smell of burning grew stronger, a acrid, metallic odor that stung his nostrils.
+
+"Rudder's still unresponsive, sir!" Harrison grunted, his voice strained. "And the leak... it seems to be getting worse with the G-forces!"
+
+A cold wave of despair washed over Dawson. It wasn’t working. They were only hastening their end. He glanced at Colonel Welsh, expecting to see defeat in his eyes, but found only grim resolve.
+
+Suddenly, a loud, wrenching metallic shriek ripped through the aircraft. It was followed by a series of bangs and grinding noises that made Dawson’s teeth ache. The B-25 bucked violently, throwing them all against their restraints.
+
+"What was that?" Farmer shrieked, his voice barely audible over the roar of the dive.
+
+"Something just ripped free from the tail section, sir!" the tail gunner reported, his voice filled with terror. "Part of the fuselage! Oh my God, we're tearing apart!"
+
+"Pull up, Harrison!" Welsh roared, his voice cutting through the chaos. "Pull up! Full power!"
+
+Harrison, despite the failing controls, wrestled with the yoke. The engines screamed anew, straining to claw the B-25 back from its uncontrolled descent. Slowly, agonizingly slowly, the nose began to come up. The G-forces decreased, and Dawson felt a momentary reprieve from the crushing pressure.
+
+The immediate danger of the dive was past, but they were still plummeting, though at a shallower angle now. The roar of the wind rushing through the torn fuselage was deafening. The compartment was now filled with a swirling mist of vaporized fuel and fine metal dust.
+
+"Damage report, Harrison!" Welsh demanded, his voice hoarse.
+
+"Rear fuselage is severely compromised, sir!" Harrison gasped, clearly fighting for control. "I’ve got almost no rudder authority left! We're wallowing! We’re losing altitude rapidly, and the fuel leak is now a torrent, sir! We're losing fuel by the gallon!"
+
+"What about the engines?"
+
+"They're still pushing, sir, but we're too heavy with the drag. I can’t maintain altitude for long!"
+
+Dawson felt a chilling certainty. This was it. The end of the line. All their efforts, all their courage, had come to this. He looked at Farmer, whose face was pale and streaked with dust, his eyes wide with fear.
+
+Colonel Welsh was looking out the window, his eyes scanning the horizon, not for an enemy, but for salvation. "Is there any land?" he asked, his voice low but steady. "Anywhere near?"
+
+"Negative, sir," Harrison replied, his voice barely a whisper now. "We're over open ocean. Nothing but water for hundreds of miles."
+
+A profound silence fell, broken only by the shriek of the wind through the damaged fuselage and the increasingly strained roar of the engines. They were falling, slowly but inexorably, towards the dark, hungry waves below.
+
+"Colonel," Dawson said, his voice surprisingly calm despite the turmoil within him. "What about the President? Did we... did we draw them away?"
+
+Welsh turned, a flicker of something akin to pride in his weary eyes. "We did our job, Dawson. This plane has drawn their attention. If they believed the President was aboard, then our mission has succeeded, whatever happens to us."
+
+"But if we don't make it," Farmer began, his voice trembling, "they'll know the President wasn't on board after all. They'll know it was a trick."
+
+"No," Welsh said, shaking his head. "They will simply believe we were shot down, that their efforts were successful. They will believe they destroyed the President's plane. And that belief will buy the real mission the time it needs. Our sacrifice, if it comes to that, will not be in vain."
+
+Dawson looked at the stern, unyielding face of the Intelligence Chief, and a strange sense of peace settled over him. They were going to die, but they would die having completed their mission. It was a grim comfort, but a comfort nonetheless.
+
+"Colonel," Harrison's voice broke through, sharper now, more urgent. "I'm detecting something on the radar. Very faint. Bearing zero-nine-zero. It's... it's a ship, sir! And it's big!"
+
+Everyone in the compartment stiffened. A ship? Out here?
+
+"Confirmation, Harrison!" Welsh ordered, his voice suddenly infused with new energy.
+
+"Affirmative, sir!" Harrison almost shouted. "It's moving. A large vessel, definitely! And we're going to pass right over it if we continue our current trajectory and descent rate!"
+
+"What kind of ship?"
+
+"Can't tell from radar alone, sir. But it's large. Possibly a freighter, or... or even a carrier."
+
+A carrier. The word held a glimmer of hope so fragile it felt dangerous to even acknowledge.
+
+"Harrison," Welsh commanded, "can you nurse us to that ship? Can you get us low enough to signal them, or even attempt a ditching near them?"
+
+"I can try, sir," Harrison said, his voice filled with renewed determination. "It's a long shot, with the rudder control almost gone and the fuel vanishing, but we've got a chance. A very small chance."
+
+"Then take it, Harrison!" Welsh roared. "Give it everything you've got! Dawson, Farmer, prepare for an emergency landing. Brace yourselves. This is going to be a rough one, even if we make it."
+
+Dawson looked at Farmer. The young Englishman met his gaze, and for the first time since the attack had begun, a faint flicker of hope, desperate and fragile, shone in his eyes. They were not dead yet. Not quite. The B-25, a crippled bird with a torn wing and bleeding heart, began to alter its desperate trajectory, coaxed by Harrison's skill, towards the faint, distant blip on the radar screen, a tiny beacon of salvation in the endless, unforgiving night. The engines coughed, a terrible sound, then roared again, as if in defiance of their impending doom. Every second was a battle, every mile a prayer. The fight was not over.
+
+The crippled B-25 groaned and shuddered, a dying beast fighting its last fight against the unyielding forces of gravity and the vast, dark ocean below. Harrison, hunched over the controls, wrestled with the unresponsive rudder, his face a mask of intense concentration, illuminated faintly by the instrument lights. The roar of the straining engines, punctuated by an intermittent cough and sputter, filled the compartment, making conversation almost impossible without shouting. Every vibration that racked the airframe seemed to rattle the very bones of Dawson and Farmer, who braced themselves, strapped tightly into their seats, their eyes fixed on the determined back of the pilot. Colonel Welsh, though equally tense, maintained an outward composure that was both admirable and chilling. He gripped the edge of the little table before him, his knuckles white, his gaze sweeping from Harrison to the dark window, as if trying to pierce the blackness and discern the fate that awaited them. The descent rate, though slowed by Harrison’s valiant efforts, was still inexorable, dragging them closer and closer to the churning waves that were now visible, a frothing, ominous expanse hinted at by the faint reflection of the moon through the patchy clouds above.
+
+"Altitude two thousand feet!" Harrison yelled over the din, his voice strained. "Holding what I can, sir! That ship's directly ahead, bearing steady. Looks like it's making good speed!"
+"Can you see anything, Dawson?" Welsh called out, leaning forward.
+Dawson squinted through the side window, pressing his face against the cold glass. The dark mass of the ship was now undeniable, a
+
+dark, hulking shape against the starlit ocean, its mast lights barely discernible amidst the vastness. It was larger than Dawson had first imagined, a leviathan of steel and shadow, cleaving through the waves with a purposeful, unhurried pace that seemed almost mocking in its contrast to their own desperate plight. He could not make out any identifying marks, no flag, no name, nothing to indicate its allegiance. It was simply *there*, a massive, silent promise of either salvation or something far worse.
+
+"Can you make it, Harrison?" Welsh's voice was tight, barely audible above the engine's ragged protest.
+"I'm trying, sir! Another few hundred feet, maybe a quarter mile to go!" Harrison grunted, wrestling the stick. The B-25, its left wing shredded, its right engine screaming a death rattle, fought every inch of the way. The cabin tilted precariously, and Dawson felt his stomach lurch. Salt spray, cold and sharp, began to streak the windows as they dropped lower, the ocean now a menacing, shimmering expanse rushing up to meet them.
+
+"Brace! Brace for impact!" Welsh roared, his voice cutting through the mechanical shriek.
+Dawson instinctively grabbed the arms of his seat, his knuckles aching with the force of his grip. Farmer, beside him, had his eyes squeezed shut, a silent prayer on his lips. The aircraft shuddered violently, a final, catastrophic shudder as the fuselage groaned under the strain. There was a terrible, tearing sound, a sickening screech of metal against water, followed by a bone-jarring impact that threw them forward against their restraints. The world became a deafening cacophony of twisting metal, rushing water, and the screams of dying engines.
+
+Water, icy cold and black, surged into the compartment with astonishing speed. The B-25 had hit hard, nose first, and was now wallowing, half-submerged, its tail high in the air, slowly being swallowed by the insatiable sea. Dawson felt a sharp pain in his head as he was flung against the bulkhead, but the adrenaline coursing through him dulling the worst of it. He fought against the sudden weight of the water, fumbling frantically with his safety harness.
+"Everyone out! Out! Get out!" Welsh was shouting, his voice strained but clear. He had already unbuckled and was struggling towards the emergency exit.
+
+Dawson finally freed himself, his hands numb. Farmer, a pale ghost in the gloom, was already grappling with his own buckle. The cold was immediate, shocking, stealing his breath. He could feel the water rising rapidly around his chest. He pushed past the seats, moving as quickly as the rapidly sinking plane and the increasing resistance of the water would allow. He saw Harrison, slumped over the controls, but then he straightened, pushing himself up, coughing violently.
+"Harrison, are you alright?" Dawson yelled.
+"Aye, just a bit stunned," the pilot gasped, shaking his head. "Got to get out!"
+
+They reached the exit, a gaping maw that revealed the churning, dark ocean beyond. Colonel Welsh was already pushing himself through, his head disappearing into the night. Farmer followed, scrambling with surprising agility. Dawson took a deep breath, the last breath he would take of the stale, metal-scented air inside the B-25, and plunged into the frigid depths.
+
+The shock of the cold was brutal, a physical blow that stole his breath and tightened his chest. He kicked hard, surfacing beside Farmer, both of them gasping, spitting out salt water. The B-25, groaning its last, was settling fast, its tail a dark, mournful silhouette against the pale band of moonlight.
+"Colonel!" Farmer shouted, his voice cracking.
+"Here!" Welsh's reply

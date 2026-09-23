@@ -1,0 +1,32 @@
+{
+  "author_key": "arthur_scott_bailey",
+  "author_name": "Arthur Scott Bailey",
+  "run_id": 6,
+  "model_key": "pro",
+  "model": "gemini-2.5-pro",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5500,
+  "completed": true,
+  "n_calls": 8,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/18656.txt",
+  "excerpt_sha256": "6a16a81a8b7a103d022dabc3c143ca3a03ec0498048be374f446ce9702d7e5cd",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/pro_c2/arthur_scott_bailey/run_06.txt",
+  "processed_sha256": "e906b4fbeb5ff2f52f82721bb2a02ac2d9a25618acc38f682d492a270eab4253",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/pro_c2/arthur_scott_bailey/raw/run_06.txt",
+  "raw_sha256": "e906b4fbeb5ff2f52f82721bb2a02ac2d9a25618acc38f682d492a270eab4253",
+  "calls_path": "generated_texts_positional_mechanism_v1/pro_c2/arthur_scott_bailey/calls/run_06.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-pro"
+  ],
+  "output_tokens": 33697,
+  "thinking_tokens": 19993,
+  "prompt_tokens": 22913
+}

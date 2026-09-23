@@ -1,0 +1,33 @@
+{
+  "author_key": "kathleen_thompson_norris",
+  "author_name": "Kathleen Thompson Norris",
+  "run_id": 16,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5199,
+  "completed": true,
+  "n_calls": 10,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/4787.txt",
+  "excerpt_sha256": "a202ae644a31cd935ec88e232848c07baef914d8c4871509e4bce9499087f7e3",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/kathleen_thompson_norris/run_16.txt",
+  "processed_sha256": "27cc8f164eb5d0ca5c3cb80fd5709550f8661c8cec8220917c469cf24e1ff4ee",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/kathleen_thompson_norris/raw/run_16.txt",
+  "raw_sha256": "27cc8f164eb5d0ca5c3cb80fd5709550f8661c8cec8220917c469cf24e1ff4ee",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/kathleen_thompson_norris/calls/run_16.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 30834,
+  "thinking_tokens": 37967,
+  "prompt_tokens": 27235
+}

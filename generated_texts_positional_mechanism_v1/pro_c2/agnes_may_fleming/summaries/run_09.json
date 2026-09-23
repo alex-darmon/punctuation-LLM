@@ -1,0 +1,32 @@
+{
+  "author_key": "agnes_may_fleming",
+  "author_name": "Agnes May Fleming",
+  "run_id": 9,
+  "model_key": "pro",
+  "model": "gemini-2.5-pro",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6597,
+  "completed": true,
+  "n_calls": 12,
+  "source_book_index": 0,
+  "source_book_path": "full_books/agnes_may_fleming_full.txt",
+  "excerpt_sha256": "aeec79b88ce8333b6e473142d8dc1f089238896e6e4a29c4cd5d6cf5f2e5d783",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/pro_c2/agnes_may_fleming/run_09.txt",
+  "processed_sha256": "247dec599313e7eddd0680cc632f45f6b0d33edc2ca35849b8004cdcd43214fe",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/pro_c2/agnes_may_fleming/raw/run_09.txt",
+  "raw_sha256": "6fcf85f23029a917db4c6f2022e191c11e07c31f9da522b8bf9b4405243ebc6c",
+  "calls_path": "generated_texts_positional_mechanism_v1/pro_c2/agnes_may_fleming/calls/run_09.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 3,
+  "model_versions": [
+    "gemini-2.5-pro"
+  ],
+  "output_tokens": 40681,
+  "thinking_tokens": 26558,
+  "prompt_tokens": 31140
+}

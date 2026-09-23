@@ -1,0 +1,32 @@
+{
+  "author_key": "joseph_conrad",
+  "author_name": "Joseph Conrad",
+  "run_id": 9,
+  "model_key": "pro",
+  "model": "gemini-2.5-pro",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6074,
+  "completed": true,
+  "n_calls": 14,
+  "source_book_index": 0,
+  "source_book_path": "gutenberg_texts/219.txt",
+  "excerpt_sha256": "484482a72b3ff312004e8e243bfa4f959b9d499af7b5e58ff54c7351c3f41000",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/pro_c2/joseph_conrad/run_09.txt",
+  "processed_sha256": "c16ee9f0e0bea44ce5394b3154a2f4ecf2edab1569a34b6908cb46addc21e818",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/pro_c2/joseph_conrad/raw/run_09.txt",
+  "raw_sha256": "cb859aca63a54bb10104fc0cf8f5ddd1f5f3b8344e80da27ff5d92c23182bffb",
+  "calls_path": "generated_texts_positional_mechanism_v1/pro_c2/joseph_conrad/calls/run_09.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 37,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-pro"
+  ],
+  "output_tokens": 42681,
+  "thinking_tokens": 34937,
+  "prompt_tokens": 36598
+}

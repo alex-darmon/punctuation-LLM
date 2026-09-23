@@ -1,0 +1,33 @@
+{
+  "author_key": "oscar_wilde",
+  "author_name": "Oscar Wilde",
+  "run_id": 11,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6902,
+  "completed": true,
+  "n_calls": 17,
+  "resumed_after_call": 0,
+  "source_book_index": 0,
+  "source_book_path": "gutenberg_texts/174.txt",
+  "excerpt_sha256": "d1ea3f569090a634da4252de6002f9d74f5b6d0b32a51b396742971b8ad42bdf",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/oscar_wilde/run_11.txt",
+  "processed_sha256": "7c39c36447b624a0274b6efaf83e5826e68cd372d80e985a11228246ca7d24a0",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/oscar_wilde/raw/run_11.txt",
+  "raw_sha256": "e0daef8c41102aa8cd9976c91d108615078ef817c436d22a6b1a284b19e6c106",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/oscar_wilde/calls/run_11.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 22,
+  "raw_en_dash_count": 3,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 41903,
+  "thinking_tokens": 91030,
+  "prompt_tokens": 44343
+}

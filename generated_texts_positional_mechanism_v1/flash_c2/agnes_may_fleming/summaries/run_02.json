@@ -1,0 +1,33 @@
+{
+  "author_key": "agnes_may_fleming",
+  "author_name": "Agnes May Fleming",
+  "run_id": 2,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6677,
+  "completed": true,
+  "n_calls": 8,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/7063.txt",
+  "excerpt_sha256": "cdb8e1c5f908341c01935f19dd6036e02771f5a4197f27b97b8c0f35c5ff62e6",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/agnes_may_fleming/run_02.txt",
+  "processed_sha256": "ba6bb51e23b983c184b8775b72c520ca29b98ab1e0fe12077a21d65823124af8",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/agnes_may_fleming/raw/run_02.txt",
+  "raw_sha256": "5e9f773ea2fb463c262e07cd2699f44f4d1840cfba4f08b9bef484e4ae3720cf",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/agnes_may_fleming/calls/run_02.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 3,
+  "raw_en_dash_count": 3,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 36382,
+  "thinking_tokens": 23393,
+  "prompt_tokens": 21543
+}

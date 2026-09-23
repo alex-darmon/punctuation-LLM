@@ -1,0 +1,32 @@
+{
+  "author_key": "robert_sidney_bowen",
+  "author_name": "Robert Sidney Bowen",
+  "run_id": 4,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5663,
+  "completed": true,
+  "n_calls": 11,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/32331.txt",
+  "excerpt_sha256": "71c7cf282a8341ee449a153c067f5ab87dfd3180244d8d8cde1cb0a055be901e",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/robert_sidney_bowen/run_04.txt",
+  "processed_sha256": "26a4f54cc190d10b685e542c552142c4164626566ff364525cc8016e2735ef55",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/robert_sidney_bowen/raw/run_04.txt",
+  "raw_sha256": "748dc5d9eaf9ff19adc0fb2584c48629e9238aa4c61db20dff3d372571c85429",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/robert_sidney_bowen/calls/run_04.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 3,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 32082,
+  "thinking_tokens": 53481,
+  "prompt_tokens": 29218
+}

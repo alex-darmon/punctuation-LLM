@@ -1,0 +1,33 @@
+{
+  "author_key": "susan_warner",
+  "author_name": "Susan Warner",
+  "run_id": 18,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5145,
+  "completed": true,
+  "n_calls": 14,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/8874.txt",
+  "excerpt_sha256": "4700f63764dc7c1568a9cc1bb8e7c2e48f9440a7e75b4add807636eae0dc297b",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/susan_warner/run_18.txt",
+  "processed_sha256": "2c71baa2b51509522cb931598fa329fca787091e4aa17caeecdfe2a007cfabf9",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/susan_warner/raw/run_18.txt",
+  "raw_sha256": "7b675393f8f197e9f5415bd83ccd40e7cc4ba75195d25fc519430c15e25084c5",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/susan_warner/calls/run_18.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 5,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 32688,
+  "thinking_tokens": 79854,
+  "prompt_tokens": 39719
+}

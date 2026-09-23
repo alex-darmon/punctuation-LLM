@@ -1,0 +1,32 @@
+{
+  "author_key": "arthur_conan_doyle",
+  "author_name": "Arthur Conan Doyle",
+  "run_id": 5,
+  "model_key": "pro",
+  "model": "gemini-2.5-pro",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6162,
+  "completed": true,
+  "n_calls": 13,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/244.txt",
+  "excerpt_sha256": "333417ad33d92e1f52cbd58c6b23561350e81d9639a9612f265054201311b3bf",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/pro_c2/arthur_conan_doyle/run_05.txt",
+  "processed_sha256": "0eb4ad0ca6892e5738ed926ab423f4a81e9876d6c7a00fd4264d876e90f72a32",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/pro_c2/arthur_conan_doyle/raw/run_05.txt",
+  "raw_sha256": "5cf2ab5fb560218cd496d1a4dd46e9e3aaa6449c309bafd2f64b1d870fe5b243",
+  "calls_path": "generated_texts_positional_mechanism_v1/pro_c2/arthur_conan_doyle/calls/run_05.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 4,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-pro"
+  ],
+  "output_tokens": 44193,
+  "thinking_tokens": 31651,
+  "prompt_tokens": 33034
+}

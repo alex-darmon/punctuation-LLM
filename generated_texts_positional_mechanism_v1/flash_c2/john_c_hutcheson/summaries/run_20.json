@@ -1,0 +1,33 @@
+{
+  "author_key": "john_c_hutcheson",
+  "author_name": "John C. Hutcheson",
+  "run_id": 20,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5337,
+  "completed": true,
+  "n_calls": 21,
+  "resumed_after_call": 0,
+  "source_book_index": 1,
+  "source_book_path": "gutenberg_texts/24267.txt",
+  "excerpt_sha256": "7383f2e7020732e7d5f2876003f634797ceea4b56b50f2a25ffd187e071b4351",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/john_c_hutcheson/run_20.txt",
+  "processed_sha256": "10e82636e0fc7e006937ddf5934f3b6d289f9c481b5e777ec575a1ef51ac4c0a",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/john_c_hutcheson/raw/run_20.txt",
+  "raw_sha256": "4d414cc0771f75f982185f44bddc1f4ca4bdc4bbc2ddb1ce5070adcc7edc24e0",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/john_c_hutcheson/calls/run_20.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 3,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 38434,
+  "thinking_tokens": 124222,
+  "prompt_tokens": 55223
+}

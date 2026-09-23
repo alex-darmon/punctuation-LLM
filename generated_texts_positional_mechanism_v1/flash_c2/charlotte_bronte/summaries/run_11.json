@@ -1,0 +1,33 @@
+{
+  "author_key": "charlotte_bronte",
+  "author_name": "Charlotte Bronte",
+  "run_id": 11,
+  "model_key": "flash",
+  "model": "gemini-2.5-flash",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "existing",
+  "target_marks": 6000,
+  "gen_marks": 6942,
+  "completed": true,
+  "n_calls": 12,
+  "resumed_after_call": 0,
+  "source_book_index": 0,
+  "source_book_path": "gutenberg_texts/1260.txt",
+  "excerpt_sha256": "799239554b5c4521295e8afaa2850e69fea35299c6013eb5024ea177b6681926",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/flash_c2/charlotte_bronte/run_11.txt",
+  "processed_sha256": "43978890c7f4795795795461cc31a0a84d87fc8e1fe4b0dbe105f1ab0e8c3233",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/flash_c2/charlotte_bronte/raw/run_11.txt",
+  "raw_sha256": "bec6756d7f315ccf70a203b67fa1c2121f2df6fe6ebe295ead5de61cf7d7c702",
+  "calls_path": "generated_texts_positional_mechanism_v1/flash_c2/charlotte_bronte/calls/run_11.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 1,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-flash"
+  ],
+  "output_tokens": 42367,
+  "thinking_tokens": 52003,
+  "prompt_tokens": 31151
+}

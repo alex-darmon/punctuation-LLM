@@ -1,0 +1,32 @@
+{
+  "author_key": "mildred_wirt",
+  "author_name": "Mildred A. Wirt",
+  "run_id": 3,
+  "model_key": "pro",
+  "model": "gemini-2.5-pro",
+  "condition": "c2",
+  "prompt_policy": "every_call",
+  "cohort": "new",
+  "target_marks": 5000,
+  "gen_marks": 5222,
+  "completed": true,
+  "n_calls": 9,
+  "source_book_index": 0,
+  "source_book_path": "gutenberg_texts/34592.txt",
+  "excerpt_sha256": "2e4d5b54af8702845b11564d87b791858dd23f230fcc60d5ede49a07809161e2",
+  "processed_output_path": "generated_texts_positional_mechanism_v1/pro_c2/mildred_wirt/run_03.txt",
+  "processed_sha256": "e3451cfd38777772aa2054bd5687a4067c44686e352c0831f3c20b27f27d839c",
+  "raw_output_path": "generated_texts_positional_mechanism_v1/pro_c2/mildred_wirt/raw/run_03.txt",
+  "raw_sha256": "e3451cfd38777772aa2054bd5687a4067c44686e352c0831f3c20b27f27d839c",
+  "calls_path": "generated_texts_positional_mechanism_v1/pro_c2/mildred_wirt/calls/run_03.jsonl",
+  "dash_policy": "replace_with_comma",
+  "raw_output_available": true,
+  "raw_em_dash_count": 0,
+  "raw_en_dash_count": 0,
+  "model_versions": [
+    "gemini-2.5-pro"
+  ],
+  "output_tokens": 29281,
+  "thinking_tokens": 25520,
+  "prompt_tokens": 24520
+}
