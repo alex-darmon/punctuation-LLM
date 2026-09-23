@@ -20,6 +20,10 @@ generated_texts_campaign_author20_pro/
 results/repro_check/
 results/**/*_repro/
 
+# Positional-mechanism engineering smoke runs are never evidence.
+generated_texts_positional_mechanism_v1_smoke/
+results/**/positional_mechanism_v1_smoke/
+
 # Keep the manuscript source and generated chapter assets, but not TeX debris.
 paper/build/
 paper/*.aux
@@ -32,3 +36,11 @@ paper/*.out
 paper/*.pdf
 paper/*.synctex.gz
 paper/*.toc
+
+# Session scratch parked for manual deletion; never canonical.
+_to_delete/
+**/_to_delete/
+.claude/settings.local.json
+/paper/*
+/paper_/*
+paper/*
