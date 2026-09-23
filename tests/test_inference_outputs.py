@@ -231,16 +231,16 @@ class InferenceOutputTests(unittest.TestCase):
         self.assertEqual(len(keys), len(set(keys)))
 
     @unittest.skipUnless(
-        (ROOT / "paper" / "tables" / "inference_v2").is_dir(),
+        (ROOT / "paper" / "tables" / "inference_v3").is_dir(),
         "render inference tables first",
     )
     def test_rendered_primary_table_contains_pinned_counts(self) -> None:
         table = (
-            ROOT / "paper" / "tables" / "inference_v2" / "primary_attribution.tex"
+            ROOT / "paper" / "tables" / "inference_v3" / "primary_attribution.tex"
         ).read_text(encoding="utf-8")
         self.assertIn("Human & 20 & 485 & 73.1", table)
-        self.assertIn("Flash & 20 & 400 & 8.8", table)
-        self.assertIn("Pro & 20 & 200 & 8.0", table)
+        self.assertIn("Flash & 20 & 400 & 13.5", table)
+        self.assertIn("Pro & 20 & 200 & 16.0", table)
 
 
 if __name__ == "__main__":
